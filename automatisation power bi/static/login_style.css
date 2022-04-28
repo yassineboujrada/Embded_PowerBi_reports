@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#parent_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#child_login{
+    height: 100vh;
+    padding-top: 20vh;
+}
+
+#email2_form{
+    width: 25vw;
+    height: 55vh;
+}

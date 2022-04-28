@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="parent">
+<form action="" method="POST" id="email_form" class="shadow-lg p-3 mb-5 bg-body rounded">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">please select you're file to continue</label>
+    </div>
+    <div class="file_show">
+        {% for i in files %}
+            <div class="form-check">
+                    <input class="form-check-input" type="radio" name="name_file" value="{{ i[0] }}" id="flexCheckDefault">
+                    <div id="file_pbi">
+                        <img src="static/pbi_icon.png" class="pbi_icon">
+                        <label class="form-check-label" for="{{ i[1] }}">
+                            {{ i[1] }}
+                        </label>
+                    </div>
+            </div>
+        {% endfor %}
+    </div><br>
+    <div class="btns_list" style="display:flex;">
+        <button type="submit" id="email_btn" class="btn btn-primary" style="margin:0 0 0 5%;">Back</button>
+        <button type="submit" id="email_btn" class="btn btn-primary" style="margin:0 18%;">Submit</button>
+    </div>
+</form>
+</div>
+{% endblock content %}
