@@ -7,7 +7,7 @@ import shutil
 
 app=Flask(__name__)
 
-UPLOAD_FOLDER = 'static/'
+UPLOAD_FOLDER = 'static/files/'
 
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 app.secret_key = "5791628bb0b13ce0c676dfde280ba245"
@@ -21,7 +21,7 @@ def login_in():
         if session["email_connect"]=="balabala@gmail.com" and \
             session["password"]=="S9fHNn9H3jsH@eh":
             return redirect(url_for("home"))
-        print(session["email_connect"],session["password"])
+
     return render_template("login.html")
 
 @app.route("/send_mail",methods=["POST","GET"])
@@ -30,9 +30,6 @@ def home():
         session["recieve"]=request.form.get("recieve_adr")
         session["subject"]=request.form.get("subject")
         session["msg"]=request.form.get("msg")
-
-        print("11111",session["recieve"],session["subject"],\
-        session["msg"])
         return redirect(url_for("file_select"))
     return render_template("mail.html")
 
@@ -41,15 +38,12 @@ def file_select():
     all_files=serch_file_path(".pbix")
     if request.method=="POST":
         session["file_name"]=request.form.get("name_file")
-        print("bbb 1: ",session["file_name"])
         shutil.copy(session["file_name"], UPLOAD_FOLDER)
-        print(session["file_name"])
         new_path='\\static\\'+str(session["file_name"].split("\\")[-1])
         b=new_path.split("\\")[-1]
         c=b.split(".pbix")
         c=str(c[0])+".pdf"
         take_screens_from_pbix(b)
-
         if session["file_name"] != None:
             return redirect(url_for('time_selection_time'))
         else:
@@ -64,9 +58,7 @@ def time_selection_time():
         session["which_day"]=request.form.get("value_for_day")
         session["every_"]=request.form.get("period_day")
         print(session["file_name"])
-        # send_pdf_file(new_path,session["msg"],session["recieve"],session["subject"])
-        if send_pdf_file(session["msg"],session["recieve"],session["subject"]):
-
+        if send_pdf_file(session["msg"],session["recieve"].split(","),session["subject"]):
             return redirect(url_for('home'))
         else:
             pass

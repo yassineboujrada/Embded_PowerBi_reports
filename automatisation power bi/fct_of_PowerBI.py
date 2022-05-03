@@ -14,44 +14,43 @@ import glob
 
 ############################################################  envoyer pbi report ou pdf a une email 
 def send_pdf_file(mesg,recieve,subject):
-    #path_of_file,
-    body = f'{mesg},\npiece jointe:'
-    sender,password = 'centre.declaration@gmail.com','bouchaib2021'
-    receiver = recieve
-    
-    message = MIMEMultipart()
-    message['From'] = sender
-    message['To'] = receiver
-    message['Subject'] = subject
-    message.attach(MIMEText(body, 'plain'))
-    
-    pdfname=f'{os.path.abspath(os.getcwd())}\\static\\file.pdf'
-    # pdfname = path_of_file
+    for i in recieve:
+        body = f'{mesg},\npiece jointe:'
+        sender,password = 'centre.declaration@gmail.com','bouchaib2021'
+        
+        message = MIMEMultipart()
+        message['From'] = sender
+        message['To'] = i#receiver
+        message['Subject'] = subject
+        message.attach(MIMEText(body, 'plain'))
+        
+        pdfname=f'{os.path.abspath(os.getcwd())}\\static\\file.pdf'
+        # pdfname = path_of_file
 
-    binary_pdf = open(pdfname, 'rb')
+        binary_pdf = open(pdfname, 'rb')
 
-    payload = MIMEBase('application', 'octate-stream', Name=pdfname)
-    payload.set_payload((binary_pdf).read())
+        payload = MIMEBase('application', 'octate-stream', Name=pdfname)
+        payload.set_payload((binary_pdf).read())
 
-    # enconding the binary into base64
-    encoders.encode_base64(payload)
+        # enconding the binary into base64
+        encoders.encode_base64(payload)
 
-    # add header with pdf name
-    payload.add_header('Content-Decomposition', 'attachment', filename=pdfname)
-    message.attach(payload)
-    
-    session = smtplib.SMTP('smtp.gmail.com', 587)
+        # add header with pdf name
+        payload.add_header('Content-Decomposition', 'attachment', filename=pdfname)
+        message.attach(payload)
+        
+        session = smtplib.SMTP('smtp.gmail.com', 587)
 
-    #enable security
-    session.starttls()
+        #enable security
+        session.starttls()
 
-    #login with mail_id and password
-    session.login(sender, password)
+        #login with mail_id and password
+        session.login(sender, password)
 
-    text = message.as_string()
-    session.sendmail(sender, receiver, text)
-    session.quit()
-    print('Mail Sent')
+        text = message.as_string()
+        session.sendmail(sender, i, text)
+        session.quit()
+        print('Mail Sent')
     return True
 
 
@@ -63,8 +62,8 @@ def refresh_report():
 
 def take_screens_from_pbix(file_name):
     print("hhhhh", file_name)
-    b="".join(file_name.split("/static/"))
-    file_name_derictory=f'{os.path.abspath(os.getcwd())}\\static\\{b}'
+    b="".join(file_name.split("/static/files/"))
+    file_name_derictory=f'{os.path.abspath(os.getcwd())}\\static\\files\\{b}'
     os.startfile(f'{file_name_derictory}')
     time.sleep(40)
     refresh_report()
@@ -92,7 +91,7 @@ def screenshot(window_title=None):
         return im
 
 def screen_to_pdf():
-    image_directory=f'{os.path.abspath(os.getcwd())}\\static\\'
+    image_directory=f'{os.path.abspath(os.getcwd())}\\static\\files\\'
     extensions = ('test1.jpg','test1.png')
     pdf = FPDF()
     imagelist=[]
