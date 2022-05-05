@@ -1,5 +1,5 @@
-2022-05-05 14:35:46,554|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
-2022-05-05 14:35:46,877|session.py|{
+2022-05-05 12:45:12,394|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-05 12:45:12,732|session.py|{
     "error_code": 401,
     "response_url": "https://api.powerbi.com/v1.0/myorg/reports",
     "response_body": "",
@@ -10,8 +10,8 @@
     },
     "response_method": "GET"
 }
-2022-05-05 15:44:53,954|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
-2022-05-05 15:44:54,229|session.py|{
+2022-05-05 12:46:08,998|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-05 12:46:09,588|session.py|{
     "error_code": 401,
     "response_url": "https://api.powerbi.com/v1.0/myorg/reports",
     "response_body": "",
@@ -22,8 +22,8 @@
     },
     "response_method": "GET"
 }
-2022-05-05 15:44:57,000|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
-2022-05-05 15:44:57,373|session.py|{
+2022-05-05 13:27:00,200|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-05 13:27:00,625|session.py|{
     "error_code": 401,
     "response_url": "https://api.powerbi.com/v1.0/myorg/reports",
     "response_body": "",
@@ -34,8 +34,8 @@
     },
     "response_method": "GET"
 }
-2022-05-05 15:46:50,985|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
-2022-05-05 15:46:51,261|session.py|{
+2022-05-05 13:27:30,640|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-05 13:27:31,271|session.py|{
     "error_code": 401,
     "response_url": "https://api.powerbi.com/v1.0/myorg/reports",
     "response_body": "",
@@ -46,20 +46,8 @@
     },
     "response_method": "GET"
 }
-2022-05-05 16:00:45,166|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
-2022-05-05 16:00:45,639|session.py|{
-    "error_code": 401,
-    "response_url": "https://api.powerbi.com/v1.0/myorg/reports",
-    "response_body": "",
-    "response_request": {
-        "Authorization": "Bearer XXXXXXX",
-        "Content-Type": "application/json",
-        "Content-Length": "2"
-    },
-    "response_method": "GET"
-}
-2022-05-05 16:00:56,993|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
-2022-05-05 16:00:57,392|session.py|{
+2022-05-05 13:35:22,081|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-05 13:35:22,648|session.py|{
     "error_code": 401,
     "response_url": "https://api.powerbi.com/v1.0/myorg/reports",
     "response_body": "",
