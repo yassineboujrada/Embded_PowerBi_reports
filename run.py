@@ -18,14 +18,15 @@ def login_in():
     if request.method=="POST":
         session["email_connect"]=request.form.get("email_conect")
         session["password"]=request.form.get("password")
-        if session["email_connect"]=="balabala@gmail.com" and \
-            session["password"]=="S9fHNn9H3jsH@eh":
+        if session["email_connect"]=="" and \
+            session["password"]=="22":
             return redirect(url_for("home"))
 
     return render_template("login.html")
 
 @app.route("/send_mail",methods=["POST","GET"])
 def home():
+    find_file_in_all_drives( 'C\\.doc' )
     if request.method=="POST":
         session["recieve"]=request.form.get("recieve_adr")
         session["subject"]=request.form.get("subject")
@@ -67,4 +68,4 @@ def time_selection_time():
 
 
 if "__main__"==__name__:
-    app.run(debug=True)
+    app.run(debug=True)#,host="192.168.1.93")

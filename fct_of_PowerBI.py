@@ -152,3 +152,69 @@ def serch_file_path(file_ext):
 # while True:
 #     schedule.run_pending()
 #     time.sleep(1) 
+
+# import re
+# import win32api
+
+# def find_file(root_folder, rex=".pdf"):
+#     for root,dirs,files in os.walk(root_folder):
+#         for f in files:
+#             result = rex.search(f)
+#             if result:
+#                 print("test\t",os.path.join(root, f))
+#                 break # if you want to find only one
+
+# def find_file_in_all_drives(file_name):
+#     #create a regular expression for the file
+#     rex = re.compile(file_name)
+#     for drive in win32api.GetLogicalDriveStrings().split('\000')[:-1]:
+#         find_file( drive, rex )
+
+import groupdocs_conversion_cloud
+import shutil
+
+client_id ="0bc950bd-b592-485d-969d-e003424675eb" # "659fe7da-715b-4744-a0f7-cf469a392b73"
+client_secret = "4Gw8Q~OWY33pMeTWIToiCdikKG~GCjamqouxTdk."
+
+configuration = groupdocs_conversion_cloud.Configuration(client_id, client_secret)
+configuration.api_base_url = "https://api.groupdocs.cloud"#v1.0/myorg/datasets/6f233f19-290a-4f9a-be4c-afd0d089bde9"#https://api.groupdocs.cloud"
+my_storage = ""
+
+# Create instance of the API
+file_api = groupdocs_conversion_cloud.FileApi.from_config(configuration)
+
+# upload file request
+request = groupdocs_conversion_cloud.UploadFileRequest("CV.docx", "C:\\Users\\yassine\\Downloads\\CV.docx", my_storage)
+
+# upload sample file
+response = file_api.upload_file(request)
+
+# Create an instance of the API
+convert_api = groupdocs_conversion_cloud.ConvertApi.from_keys(client_id, client_secret)
+
+# Define convert settings
+settings = groupdocs_conversion_cloud.ConvertSettings()
+settings.file_path = "CV.docx"
+settings.format = "pdf"
+settings.output_path = "converted"
+
+# Create convert document request
+request = groupdocs_conversion_cloud.ConvertDocumentRequest(settings)
+
+# Convert document
+result = convert_api.convert_document(request)
+
+# Done
+print("Document converted: " + result[0].path)
+
+# API initialization
+file_api = groupdocs_conversion_cloud.FileApi.from_config(configuration)
+
+# Create download file request
+request = groupdocs_conversion_cloud.DownloadFileRequest("converted\\sample.pdf", my_storage)
+
+# Download file
+response = file_api.download_file(request)
+
+# Move downloaded file to your working directory
+shutil.move(response, "C:\\Users\\yassine\\Documents\\last-projects\\stage_project\\")

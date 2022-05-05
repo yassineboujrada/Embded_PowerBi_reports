@@ -137,4 +137,116 @@
 #     print("Terminating PID:", process.ProcessId) 
 #     os.system("taskkill /pid "+str(process.ProcessId))
 
+# from flask import Flask
+# from flask_restful import Resource, Api, reqparse
+# import pandas as pd
+# import ast
+# app = Flask(__name__)
+# api = Api(app)
+
+# class Users(Resource):
+#     # methods go here
+#     pass
+    
+# class Locations(Resource):
+#     # methods go here
+#     pass
+
+# class Users(Resource):
+#     def get(self):
+#         data = pd.read_csv('C:\\Users\\yassine\\Downloads\\coin_Bitcoin.csv')  # read CSV
+#         data = data.to_dict()  # convert dataframe to dictionary
+#         return {'data': data}, 200  # return data and 200 OK code
+    
+# api.add_resource(Users, '/users')  # '/users' is our entry point for Users
+# api.add_resource(Locations, '/locations')  # and '/locations' is our entry point for Locations
+
+# if __name__ == '__main__':
+#     app.run()  # run our Flask app
+
+# from flask import Flask, jsonify, request
+
+# from cashman.model.expense import Expense, ExpenseSchema
+# from cashman.model.income import Income, IncomeSchema
+# from cashman.model.transaction_type import TransactionType
+
+# app = Flask(__name__)
+
+# transactions = [
+#   Income('Salary', 5000),
+#   Income('Dividends', 200),
+#   Expense('pizza', 50),
+#   Expense('Rock Concert', 100)
+# ]
+
+
+# @app.route('/incomes')
+# def get_incomes():
+#   schema = IncomeSchema(many=True)
+#   incomes = schema.dump(
+#     filter(lambda t: t.type == TransactionType.INCOME, transactions)
+#   )
+#   return jsonify(incomes.data)
+
+
+# @app.route('/incomes', methods=['POST'])
+# def add_income():
+#   income = IncomeSchema().load(request.get_json())
+#   transactions.append(income.data)
+#   return "", 204
+
+
+# @app.route('/expenses')
+# def get_expenses():
+#   schema = ExpenseSchema(many=True)
+#   expenses = schema.dump(
+#       filter(lambda t: t.type == TransactionType.EXPENSE, transactions)
+#   )
+#   return jsonify(expenses.data)
+
+
+# @app.route('/expenses', methods=['POST'])
+# def add_expense():
+#   expense = ExpenseSchema().load(request.get_json())
+#   transactions.append(expense.data)
+#   return "", 204
+
+
+# if __name__ == "__main__":
+#     app.run()
+
+# Build the POST parameters
+import webbrowser
+import os
+import msal
+
+def generate_access_token(app_id, scopes):
+    # Save Session Token as a token file
+    access_token_cache = msal.SerializableTokenCache()
+
+    # read the token file
+    if os.path.exists('api_token.json'):
+        access_token_cache.deserialize(open("api_token.json", "r").read())
+
+    # assign a SerializableTokenCache object to the client instance
+    client = msal.PublicClientApplication(client_id=app_id, token_cache=access_token_cache)
+
+    accounts = client.get_accounts()
+    if accounts:
+        # load the session
+        token_response = client.acquire_token_silent(scopes, accounts[0])
+    else:
+        # authetnicate your accoutn as usual
+        flow = client.initiate_device_flow(scopes=scopes)
+        print('user_code: ' + flow['user_code'])
+        webbrowser.open('https://microsoft.com/devicelogin')
+        token_response = client.acquire_token_by_device_flow(flow)
+
+    with open('api_token.json', 'w') as _f:
+        _f.write(access_token_cache.serialize())
+
+    return token_response
+
+if __name__ == '__main__':
+    ...
 
