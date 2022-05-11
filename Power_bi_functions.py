@@ -11,6 +11,80 @@ from fpdf import FPDF
 from PIL import Image
 import glob
 
+import msal
+import requests
+import json
+from pprint import pprint
+from powerbi.client import PowerBiClient
+
+
+
+ # --------------------------------------------------
+# Set local variables
+# --------------------------------------------------
+CLIENT_ID='5ddb532c-2735-4570-adc2-32eacfd30068'
+username="yassineboujrada@datastory453.onmicrosoft.com"
+password="yassine@2002"
+
+AUTHORITY_URL = 'https://login.microsoftonline.com/a23b80fb-03cf-48e7-b7ea-4a9094cff16c'
+SCOPE = ["https://analysis.windows.net/powerbi/api/.default"]
+URL_TO_GET_GROUPS = 'https://api.powerbi.com/v1.0/myorg/groups'
+
+# CLIENT_POWER_BI = PowerBiClient(
+#     client_id='5ddb532c-2735-4570-adc2-32eacfd30068',
+#     client_secret='L6h8Q~Rsq6lSqdrnmHE-oqKxh7khYO~lkvT6tcAX',
+#     scope=['https://analysis.windows.net/powerbi/api/.default'],
+#     redirect_uri="https://localhost/redirect",
+#     credentials='__pycache__/power_bi_state.jsonc'
+# )
+
+def get_report_informations():
+    client_data = msal.PublicClientApplication(CLIENT_ID, authority=AUTHORITY_URL)
+    result = client_data.acquire_token_by_username_password(username=username,password=password,scopes=SCOPE)
+    if 'access_token' in result:
+        access_token = result['access_token']
+        header = {'Content-Type':'application/json','Authorization': f'Bearer {access_token}'}
+        api_out = requests.get(url=URL_TO_GET_GROUPS, headers=header)
+        return api_out.json()
+    else:
+        # return 
+        print(result.get("error"))
+        print(result.get("error_description"))
+
+
+# def reports_information():
+#     reports_service = CLIENT_POWER_BI.reports()
+#     pprint(
+#         reports_service.get_group_reports(
+#             group_id='3e2cfcff-1fc4-4412-af6d-838fe7707cf6'
+#         )
+#     )
+#     # # Grab all the reports in our workspace.
+
+#     return reports_service.get_reports()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ############################################################  envoyer pbi report ou pdf a une email 
 def send_pdf_file(mesg,recieve,subject):
@@ -169,52 +243,3 @@ def serch_file_path(file_ext):
 #     rex = re.compile(file_name)
 #     for drive in win32api.GetLogicalDriveStrings().split('\000')[:-1]:
 #         find_file( drive, rex )
-
-import groupdocs_conversion_cloud
-import shutil
-
-client_id ="0bc950bd-b592-485d-969d-e003424675eb" # "659fe7da-715b-4744-a0f7-cf469a392b73"
-client_secret = "4Gw8Q~OWY33pMeTWIToiCdikKG~GCjamqouxTdk."
-
-configuration = groupdocs_conversion_cloud.Configuration(client_id, client_secret)
-configuration.api_base_url = "https://api.groupdocs.cloud"#v1.0/myorg/datasets/6f233f19-290a-4f9a-be4c-afd0d089bde9"#https://api.groupdocs.cloud"
-my_storage = ""
-
-# Create instance of the API
-file_api = groupdocs_conversion_cloud.FileApi.from_config(configuration)
-
-# upload file request
-request = groupdocs_conversion_cloud.UploadFileRequest("CV.docx", "C:\\Users\\yassine\\Downloads\\CV.docx", my_storage)
-
-# upload sample file
-response = file_api.upload_file(request)
-
-# Create an instance of the API
-convert_api = groupdocs_conversion_cloud.ConvertApi.from_keys(client_id, client_secret)
-
-# Define convert settings
-settings = groupdocs_conversion_cloud.ConvertSettings()
-settings.file_path = "CV.docx"
-settings.format = "pdf"
-settings.output_path = "converted"
-
-# Create convert document request
-request = groupdocs_conversion_cloud.ConvertDocumentRequest(settings)
-
-# Convert document
-result = convert_api.convert_document(request)
-
-# Done
-print("Document converted: " + result[0].path)
-
-# API initialization
-file_api = groupdocs_conversion_cloud.FileApi.from_config(configuration)
-
-# Create download file request
-request = groupdocs_conversion_cloud.DownloadFileRequest("converted\\sample.pdf", my_storage)
-
-# Download file
-response = file_api.download_file(request)
-
-# Move downloaded file to your working directory
-shutil.move(response, "C:\\Users\\yassine\\Documents\\last-projects\\stage_project\\")

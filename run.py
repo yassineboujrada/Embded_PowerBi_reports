@@ -1,7 +1,7 @@
 # from django.shortcuts import redirect
 from flask import Flask, render_template,request, session,redirect
 import os
-from fct_of_PowerBI import *
+from Power_bi_functions import *
 from flask.helpers import url_for,flash
 import shutil
 

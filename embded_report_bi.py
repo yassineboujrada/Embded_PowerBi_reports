@@ -3,32 +3,22 @@ from configparser import ConfigParser
 from powerbi.client import PowerBiClient
 from powerbi.enums import ExportFileFormats
 
-import configparser
-#Read config.ini file
-config_obj = configparser.ConfigParser()
-config_obj.read("configs/config.ini")
-my_section = config_obj["power_bi_config"]
-# set your parameters for the database connection URI using the keys from the configfile.ini
-client_id = my_section["client_id"]
-client_secret = my_section["client_secret"]
-redirect_uri = my_section["redirect_uri"]
-
-
 # Initialize the Client.
 
 power_bi_client = PowerBiClient(
-    client_id=client_id,
-    client_secret=client_secret,
+    client_id='5ddb532c-2735-4570-adc2-32eacfd30068',
+    client_secret='L6h8Q~Rsq6lSqdrnmHE-oqKxh7khYO~lkvT6tcAX',
     scope=['https://analysis.windows.net/powerbi/api/.default'],
-    redirect_uri=redirect_uri,
-    credentials='configs/power_bi_state.jsonc'
+    redirect_uri="https://localhost/redirect",
+    credentials='__pycache__/power_bi_state.jsonc'
 )
 
 # # Initialize the `Reports` service.
 reports_service = power_bi_client.reports()
 
 # # Grab all the reports in our workspace.
-print(reports_service.get_reports())
+
+pprint(reports_service.get_reports())
 
 # Grab all the reports from a specific workspace.
 # pprint(
