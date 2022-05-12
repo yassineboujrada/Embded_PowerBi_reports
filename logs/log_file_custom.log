@@ -428,3 +428,619 @@
 2022-05-11 22:42:18,691|_internal.py|127.0.0.1 - - [11/May/2022 22:42:18] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
 2022-05-11 22:42:18,729|_internal.py|127.0.0.1 - - [11/May/2022 22:42:18] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
 2022-05-11 22:42:18,747|_internal.py|127.0.0.1 - - [11/May/2022 22:42:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-11 22:49:16,559|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-11 22:49:16,720|_internal.py| * Restarting with stat
+2022-05-11 22:49:20,069|_internal.py| * Debugger is active!
+2022-05-11 22:49:20,075|_internal.py| * Debugger PIN: 124-479-432
+2022-05-11 22:49:20,085|_internal.py| * Running on http://127.0.0.1:4000/ (Press CTRL+C to quit)
+2022-05-11 22:49:36,345|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-11 22:49:41,074|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-11 22:49:42,570|_internal.py|127.0.0.1 - - [11/May/2022 22:49:42] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-11 22:49:42,912|_internal.py|127.0.0.1 - - [11/May/2022 22:49:42] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-11 22:49:42,917|_internal.py|127.0.0.1 - - [11/May/2022 22:49:42] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-11 22:49:42,931|_internal.py|127.0.0.1 - - [11/May/2022 22:49:42] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-11 22:49:42,941|_internal.py|127.0.0.1 - - [11/May/2022 22:49:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-11 23:06:06,476|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-11 23:06:07,078|session.py|{
+    "error_code": 403,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports",
+    "response_body": {
+        "error": {
+            "code": "TokenExpired",
+            "message": "Access token has expired, resubmit with a new access token"
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-11 23:06:07,112|_internal.py|127.0.0.1 - - [11/May/2022 23:06:07] "[35m[1mGET /dashbord HTTP/1.1[0m" 500 -
+2022-05-11 23:06:07,175|_internal.py|127.0.0.1 - - [11/May/2022 23:06:07] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-11 23:06:07,179|_internal.py|127.0.0.1 - - [11/May/2022 23:06:07] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-11 23:06:07,185|_internal.py|127.0.0.1 - - [11/May/2022 23:06:07] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-11 23:06:07,228|_internal.py|127.0.0.1 - - [11/May/2022 23:06:07] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2022-05-11 23:06:07,278|_internal.py|127.0.0.1 - - [11/May/2022 23:06:07] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-11 23:06:12,181|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-11 23:06:12,513|session.py|{
+    "error_code": 403,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports",
+    "response_body": {
+        "error": {
+            "code": "TokenExpired",
+            "message": "Access token has expired, resubmit with a new access token"
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-11 23:06:12,537|_internal.py|127.0.0.1 - - [11/May/2022 23:06:12] "[35m[1mGET /dashbord HTTP/1.1[0m" 500 -
+2022-05-11 23:06:12,583|_internal.py|127.0.0.1 - - [11/May/2022 23:06:12] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-11 23:06:12,589|_internal.py|127.0.0.1 - - [11/May/2022 23:06:12] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-11 23:06:12,592|_internal.py|127.0.0.1 - - [11/May/2022 23:06:12] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-11 23:06:12,653|_internal.py|127.0.0.1 - - [11/May/2022 23:06:12] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-11 23:06:14,706|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-11 23:06:15,118|session.py|{
+    "error_code": 403,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports",
+    "response_body": {
+        "error": {
+            "code": "TokenExpired",
+            "message": "Access token has expired, resubmit with a new access token"
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-11 23:06:15,135|_internal.py|127.0.0.1 - - [11/May/2022 23:06:15] "[35m[1mGET /dashbord HTTP/1.1[0m" 500 -
+2022-05-11 23:06:15,178|_internal.py|127.0.0.1 - - [11/May/2022 23:06:15] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-11 23:06:15,195|_internal.py|127.0.0.1 - - [11/May/2022 23:06:15] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-11 23:06:15,200|_internal.py|127.0.0.1 - - [11/May/2022 23:06:15] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-11 23:06:15,273|_internal.py|127.0.0.1 - - [11/May/2022 23:06:15] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-11 23:06:16,800|_internal.py|127.0.0.1 - - [11/May/2022 23:06:16] "[37mGET / HTTP/1.1[0m" 200 -
+2022-05-11 23:06:20,639|_internal.py|127.0.0.1 - - [11/May/2022 23:06:20] "[32mPOST / HTTP/1.1[0m" 302 -
+2022-05-11 23:06:20,716|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-11 23:06:21,329|session.py|{
+    "error_code": 403,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports",
+    "response_body": {
+        "error": {
+            "code": "TokenExpired",
+            "message": "Access token has expired, resubmit with a new access token"
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-11 23:06:21,356|_internal.py|127.0.0.1 - - [11/May/2022 23:06:21] "[35m[1mGET /dashbord HTTP/1.1[0m" 500 -
+2022-05-11 23:06:21,427|_internal.py|127.0.0.1 - - [11/May/2022 23:06:21] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-11 23:06:21,437|_internal.py|127.0.0.1 - - [11/May/2022 23:06:21] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-11 23:06:21,447|_internal.py|127.0.0.1 - - [11/May/2022 23:06:21] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-11 23:06:21,497|_internal.py|127.0.0.1 - - [11/May/2022 23:06:21] "[37mGET /dashbord?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-11 23:06:55,629|_internal.py| * Restarting with stat
+2022-05-11 23:06:57,422|_internal.py| * Debugger is active!
+2022-05-11 23:06:57,431|_internal.py| * Debugger PIN: 124-479-432
+2022-05-11 23:06:57,443|_internal.py| * Running on http://127.0.0.1:4000/ (Press CTRL+C to quit)
+2022-05-11 23:26:18,448|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-11 23:26:20,035|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-11 23:27:23,039|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-11 23:27:40,857|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 09:56:19,816|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 09:56:20,677|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 09:59:40,869|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 09:59:41,795|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:00:52,696|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:01:06,407|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:01:07,436|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:03:37,279|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:03:38,144|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:04:57,386|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:04:58,229|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:05:57,410|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:05:57,918|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:06:51,620|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:06:52,412|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:09:27,215|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:09:28,029|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:11:23,023|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:12:16,065|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:12:16,524|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:12:52,006|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:12:52,937|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:13:39,214|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:13:40,041|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:14:46,404|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:14:47,233|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:15:05,618|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:15:06,415|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:15:59,704|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:16:00,079|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:16:31,243|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:16:31,625|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:17:01,082|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:17:01,964|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:17:48,753|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:17:49,584|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:23:13,542|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:23:14,348|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:24:55,975|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:24:56,762|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:26:39,152|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:26:40,062|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:27:21,138|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:27:21,895|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:28:36,547|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:28:37,475|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:29:12,535|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:29:13,317|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:29:45,766|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:29:46,699|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:30:12,696|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:30:13,520|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:31:20,995|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:31:21,755|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:31:45,133|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:31:45,983|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:32:20,381|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:32:21,108|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:33:49,156|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:33:49,954|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:34:27,874|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:34:28,705|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:36:12,546|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:36:13,672|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:36:50,671|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:36:51,052|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:37:14,585|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:37:40,146|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:37:58,408|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:37:59,232|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:38:11,389|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:38:11,735|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:40:15,723|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:40:16,658|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:40:37,532|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:40:38,062|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:41:52,802|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:41:53,600|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:42:18,612|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:42:18,976|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:43:18,304|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:43:19,385|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:43:36,705|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:43:37,371|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:44:02,338|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:44:03,156|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:44:31,186|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:44:31,527|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:46:25,797|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:46:26,645|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:47:34,722|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:47:35,521|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:50:26,918|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:50:27,805|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:52:36,016|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:52:36,895|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:52:59,865|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:53:00,220|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:53:21,848|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:53:22,773|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:54:01,308|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:54:01,708|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:54:26,254|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:54:27,330|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:54:56,259|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:54:56,988|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:56:03,331|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:56:04,278|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:57:11,015|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:57:11,756|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:57:54,864|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:57:55,588|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:58:19,938|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:58:21,263|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:58:47,657|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:58:48,033|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 10:59:23,934|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 10:59:24,427|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:00:38,891|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:00:39,706|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:01:39,420|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:01:40,228|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:04:00,104|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:04:01,027|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:04:33,998|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:04:34,918|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:05:09,065|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:05:10,086|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:06:06,406|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:06:07,198|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:07:49,323|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:07:50,252|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:08:32,398|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:10:48,893|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:10:49,732|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:11:37,793|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:11:38,176|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:12:26,129|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:12:26,869|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:12:42,316|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:12:42,727|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:13:59,951|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:14:00,344|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:14:38,669|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:14:39,443|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:15:01,130|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:15:01,532|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:15:33,929|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:15:34,654|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:16:08,483|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:16:08,865|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:24:32,946|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742
+2022-05-12 11:26:18,775|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/Clone
+2022-05-12 11:27:55,756|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:27:56,588|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:29:07,839|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:29:11,522|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:29:24,885|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 11:29:27,390|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 11:30:09,740|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export
+2022-05-12 11:30:10,709|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-12 11:31:28,582|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export
+2022-05-12 11:31:29,098|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-12 11:33:21,750|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export
+2022-05-12 11:33:22,824|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-12 11:34:15,763|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export
+2022-05-12 11:34:16,214|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-12 11:35:05,091|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export
+2022-05-12 11:35:06,176|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-12 11:35:50,198|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export
+2022-05-12 11:35:51,213|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-12 11:36:04,253|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export
+2022-05-12 11:36:05,212|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-12 11:36:43,245|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export
+2022-05-12 11:36:44,186|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-12 11:38:09,397|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export
+2022-05-12 11:38:11,105|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-12 12:00:33,997|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo
+2022-05-12 12:00:34,965|session.py|{
+    "error_code": 403,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo",
+    "response_body": {
+        "error": {
+            "code": "InvalidRequest",
+            "message": "Report requested for export is not on dedicated capacity"
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "109"
+    },
+    "response_method": "POST"
+}
+2022-05-12 12:01:37,780|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo
+2022-05-12 12:01:38,644|session.py|{
+    "error_code": 403,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo",
+    "response_body": {
+        "error": {
+            "code": "InvalidRequest",
+            "message": "Report requested for export is not on dedicated capacity"
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "91"
+    },
+    "response_method": "POST"
+}
+2022-05-12 12:01:49,165|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo
+2022-05-12 12:01:50,231|session.py|{
+    "error_code": 403,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo",
+    "response_body": {
+        "error": {
+            "code": "InvalidRequest",
+            "message": "Report requested for export is not on dedicated capacity"
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "91"
+    },
+    "response_method": "POST"
+}
+2022-05-12 12:02:39,796|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo
+2022-05-12 12:02:40,616|session.py|{
+    "error_code": 403,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo",
+    "response_body": {
+        "error": {
+            "code": "InvalidRequest",
+            "message": "Report requested for export is not on dedicated capacity"
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "91"
+    },
+    "response_method": "POST"
+}
+2022-05-12 12:04:46,660|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo
+2022-05-12 12:04:47,723|session.py|{
+    "error_code": 403,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo",
+    "response_body": {
+        "error": {
+            "code": "InvalidRequest",
+            "message": "Report requested for export is not on dedicated capacity"
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "91"
+    },
+    "response_method": "POST"
+}
+2022-05-12 12:20:59,152|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 12:21:01,835|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-12 12:21:02,924|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo
+2022-05-12 12:21:03,883|session.py|{
+    "error_code": 403,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo",
+    "response_body": {
+        "error": {
+            "code": "InvalidRequest",
+            "message": "Report requested for export is not on dedicated capacity"
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "91"
+    },
+    "response_method": "POST"
+}
+2022-05-12 12:31:01,342|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo
+2022-05-12 12:31:02,127|session.py|{
+    "error_code": 403,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo",
+    "response_body": {
+        "error": {
+            "code": "InvalidRequest",
+            "message": "Report requested for export is not on dedicated capacity"
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "91"
+    },
+    "response_method": "POST"
+}
+2022-05-12 12:33:18,602|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo
+2022-05-12 12:33:19,647|session.py|{
+    "error_code": 403,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo",
+    "response_body": {
+        "error": {
+            "code": "InvalidRequest",
+            "message": "Report requested for export is not on dedicated capacity"
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "91"
+    },
+    "response_method": "POST"
+}
+2022-05-12 12:35:59,924|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-12 12:36:00,894|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo
+2022-05-12 12:36:02,105|session.py|{
+    "error_code": 403,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/reports/c999d266-0291-40ec-aa0f-df0dbe962771/ExportTo",
+    "response_body": {
+        "error": {
+            "code": "InvalidRequest",
+            "message": "Report requested for export is not on dedicated capacity"
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "91"
+    },
+    "response_method": "POST"
+}
+2022-05-12 12:38:41,971|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports

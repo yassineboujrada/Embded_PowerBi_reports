@@ -36,12 +36,13 @@ def login_in():
 
 @app.route("/dashbord",methods=["POST","GET"])
 def home():
+    # report by id workspace
     report_out=reports_service.get_group_reports(
             group_id='3e2cfcff-1fc4-4412-af6d-838fe7707cf6'
         )
-    
-    data_workspace=get_report_informations()
-
+    ## data from ther workspace
+    data_workspace=get_workspace_informations()
+    ## data from my workspace
     report_in_workspace=reports_service.get_reports()#reports_information()
     return render_template("Show_Dashbord.html",data_workspace=data_workspace['value'],report_in_workspace=report_in_workspace['value'],report_out=report_out['value'])
 
