@@ -19,3 +19,33 @@
 //     password_input.setAttribute("type", type);
   
 // }
+
+//////////////////////    fech api for actualisation
+
+// document.getElementById('select_nav').addEventListener("click", e => {
+//     fetch("http://127.0.0.1:3000/dashbord", {
+//         method: "POST",
+//         headers: {
+//           "Accept": "application/json",
+//           "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify({
+//           c_check:String(e.target.innerText)
+//         })
+//       })
+//       .then(res => {
+//         if (!res.ok) {
+//           throw Error(res.status);
+//         }
+
+//         return res.json();
+//       })
+//       .then(({data: {val}}) => {
+//         console.log(val);
+//         const res = document.querySelector(".result");
+//         res.innerText = `client got: ${val}`;
+//       })
+//       .catch(err => console.error(err))
+//     ;
+//   })
+// ;

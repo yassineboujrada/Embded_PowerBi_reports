@@ -14,43 +14,36 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route("/",methods=["POST","GET"])
 def login_in():
+    X=Authentification_for_PowerBI().show_workspace()
     if request.method=="POST":
         session["email_connect"]=request.form.get("email_conect")
         session["password"]=request.form.get("password")
         if session["email_connect"]=="" and \
             session["password"]=="22":
-            return redirect(url_for("home"))
+            return render_template("Show_Dashbord.html",d=X)
 
     return render_template("login.html")
 
 @app.route("/dashbord",methods=["POST","GET"])
 def home():
-    c=[]
-    data_workspace=Authentification_for_PowerBI().show_workspace()
-    for i in data_workspace:
-        print("hh",i[1],"\n")
-        c.append(i[1])
+    X=Authentification_for_PowerBI().show_workspace()
+    # data_workspace=Authentification_for_PowerBI().show_workspace()
+    # h=Authentification_for_PowerBI().hh()
+    # if request.method == "GET":
+    #     return render_template("Show_Dashbord.html",d=data_workspace,h=h)
 
-    if request.method == "GET":
-            return render_template("Show_Dashbord.html",d=data_workspace,\
-                c=Authentification_for_PowerBI().get_report_from_workspace(c))
+    # val = request.json.get("c_check")
+    # print(val)
+    # return jsonify({"data": {"val": val}})
+    
+    return render_template("Show_Dashbord.html",d=X)#,data_workspace=data_workspace,report_in_workspace=report_in_workspace)
 
-    val = request.json.get("c_check")
-    print("32:",val)
-    if not val:
-            print("val vide")
-            # c=Authentification_for_PowerBI().get_report_from_workspace(val)
-    else:
-        print("si")
-        c=Authentification_for_PowerBI().get_report_from_workspace(val)
-        pprint(c)
-        if request.method=="POST":
-            return render_template("Show_Dashbord.html",\
-            c=c)
-        elif request.method=="GET":
-            return render_template("Show_Dashbord.html",\
-            c=c)
-    return render_template("Show_Dashbord.html")#,data_workspace=data_workspace,report_in_workspace=report_in_workspace)
+@app.route('/dashbord/<string:page_id>')
+def page(page_id):
+    X=Authentification_for_PowerBI().show_workspace()
+    h=Authentification_for_PowerBI().get_report_from_workspace(page_id)['value']
+    pprint(h)
+    return render_template("Show_Dashbord.html",d=X,h=h)
 
 # from flask_restful import Api, Resource
 # api =   Api(app)

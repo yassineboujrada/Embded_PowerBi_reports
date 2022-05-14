@@ -41,6 +41,7 @@ class Authentification_for_PowerBI:
         )
 
         self.reports_service = self.CLIENT_POWER_BI.reports()
+        # self.my_work_space=self.reports_service.get_reports()
 
     def get_workspace_informations(self):
         client_data = msal.PublicClientApplication(self.CLIENT_ID, authority=self.AUTHORITY_URL)
@@ -63,26 +64,33 @@ class Authentification_for_PowerBI:
 
     ##  return reports id in each workspace
     def get_report_from_workspace(self,id_work_space):
-        if id_work_space==None:
-        #     return self.reports_service.get_reports()['value']
-        # else:
-            # for i in id_work_space:
-            report_out=self.reports_service.get_group_reports(
-                group_id='3e2cfcff-1fc4-4412-af6d-838fe7707cf6'#str(i)
-            )
-            return report_out['value']
-        else:
-            l=[]
-            k=[]
-            for i in id_work_space:
-                report_out=self.reports_service.get_group_reports(
-                    group_id=str(i)
-                )
-                # l.append(report_out['value'])
-                k.append([i,report_out['value']])
-            print(k)
-            return k
+        report_out=self.reports_service.get_group_reports(
+            group_id=str(id_work_space)
+        )
+        return report_out
+                
 
+    def data_report(self):
+        l,k=[],{}
+        g=self.show_workspace()
+        for i in g:
+            report_out=self.reports_service.get_group_reports(
+                    group_id=str(i[1])
+                )
+            l.append(report_out['value'])
+            k.update({'id':g[1],'name':g[0],'reports':l})
+        return k
+
+    def hh(self):
+        k=[]
+        for i in self.show_workspace():
+            report_out=self.reports_service.get_group_reports(
+                    group_id=str(i[1])
+                )
+            k.append([i[0],report_out['value']])
+        return k
+    # pprint(l)
+# print(Authentification_for_PowerBI().data_report())
 
 # print(show_workspace(),"\n",get_report_from_workspace())
 ### show report
@@ -178,10 +186,26 @@ class Authentification_for_PowerBI:
 #         return report_out['value']
 
 # # b=show_workspace()[0][1]
-# b=None
-# pprint(get_report_from_workspace(b))
-
-
+# def data_report():
+#     l,k=[],{}
+#     g=show_workspace()
+#     for i in g:
+#         report_out=reports_service.get_group_reports(
+#                 group_id=str(i[1])
+#             )
+#         l.append(report_out['value'])
+#         print("----")
+#     for i in l:
+#         k.update({'id':g[1],'name':g[0],'reports':i})
+#     # pprint(l)
+#     return k
+# print(show_workspace())
+# data_report()
+#{
+#    workspace:[1,2]
+#    report: [[1,2] , [3,4]]
+#
+# }
 
 ############################################################  envoyer pbi report ou pdf a une email 
 def send_pdf_file(mesg,recieve,subject):

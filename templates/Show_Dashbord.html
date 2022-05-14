@@ -1,73 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- <link rel= "stylesheet" type= "text/css" href="{{url_for('static',filename='design/dashbord.css')}}"> -->
-
-<div class="dashbord_parent">
-        <div class="show_workspace_data">
-            {% for i in d %}
-            <label >{{ i[0] }}</label>
-            <select class="form-select" name="work_space_select" id="select_nav" aria-label="Default select example">
-                <option selected value="{{ i[1] }}" >{{ i[1] }}</option>
-                <option value="mmm">mmmm</option>
-            </select><br>
-            {% endfor %}
-        </div>
 
     <div class="show_report_graphe">
-        my data
-        bbb<br>
-        {% for i in c %}
-            {{ i[1] }}<br>
-            <!-- <iframe src="{{i.embedUrl}}" frameborder="0"></iframe> -->
-        {% endfor %}
-        hhh
-        <p></p>
-        {{jsonfile}}
-        <!-- {% for i in c %}
-        <iframe class="show_report_graphe" src="{{i.webUrl}}"></iframe> -->
-        <!-- {% endfor %} -->
-        <!-- {% for report in report_in_workspace %}
-           <p> {{ report.id }}
-            {{ report.name }}
-            {{ report.webUrl }}</p><br>
-            {% endfor %} -->
+      <!-- <iframe title="test2" width="1080" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=20d3b902-6605-4c1a-bcbf-fd5895e69afe&autoAuth=true&ctid=a23b80fb-03cf-48e7-b7ea-4a9094cff16c&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXVzLWNlbnRyYWwtYi1wcmltYXJ5LXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0LyJ9" frameborder="0" allowFullScreen="true"></iframe> -->
+      <h2> b3et hamAri</h2><br>
+      {% for i in h %}
+        <p>{{ i.name }}</p><br>
+        <p>{{ i.id }}</p><br>
+        <p>{{ i.embedUrl }}</p><br>
+        -----------------------------------------
+      {% endfor %}
     </div>
-</div>
-<script>
-    document.querySelector("select").addEventListener("click", e => {
-        fetch("http://127.0.0.1:3000/dashbord", {
-            method: "POST",
-            headers: {
-              "Accept": "application/json",
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                c_check: e.target.value
-            })
-          })
-          .then(res => {
-            if (!res.ok) {
-              throw Error(res.status);
-            }
-
-            return res.json();
-          })
-          .then(({data: {val}}) => {
-            console.log(val);
-            const res = document.querySelector(".result");
-            res.innerText = `client got: ${val}`;
-          })
-          .catch(err => console.error(err))
-        ;
-      })
-    ;
-
-    const jsonfile = JSON.parse({jsonfile});
-    document.querySelector('p').style.color='red' 
-    document.querySelector('p').innerHTML="hhh22";
-    console.log(jsonfile);
-  </script>
-  
   
 {% endblock content %}
