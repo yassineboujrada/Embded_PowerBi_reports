@@ -4,13 +4,95 @@
 
     <div class="show_report_graphe">
       <!-- <iframe title="test2" width="1080" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=20d3b902-6605-4c1a-bcbf-fd5895e69afe&autoAuth=true&ctid=a23b80fb-03cf-48e7-b7ea-4a9094cff16c&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXVzLWNlbnRyYWwtYi1wcmltYXJ5LXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0LyJ9" frameborder="0" allowFullScreen="true"></iframe> -->
-      <h2> b3et hamAri</h2><br>
+      <!-- <h2> b3et hamAri</h2><br>
       {% for i in h %}
         <p>{{ i.name }}</p><br>
         <p>{{ i.id }}</p><br>
         <p>{{ i.embedUrl }}</p><br>
         -----------------------------------------
-      {% endfor %}
+      {% endfor %} -->
+      
+      <div class="reports_name_parent">
+          <div class="report_name_child">
+            hhhhtest.pbix
+          </div>
+          <div class="report_name_child">
+            hhhhtest2.pbix
+          </div>
+          <div class="report_name_child">
+            hhhhtest3.pbix
+          </div>
+          <div class="report_name_child">
+            hhhhtest4.pbix
+          </div>
+          <div class="report_name_child">
+            hhhhtest5.pbix
+          </div>
+          <div class="report_name_child">
+            hhhhtest6.pbix
+          </div>
+          <div class="report_name_child">
+            hhhhtest67.pbix
+          </div>
+          <div class="report_name_child">
+            hhhhtest68.pbix
+          </div>
+          <div class="report_name_child">
+            hhhhtest69.pbix
+          </div>
+      </div>
+
+      <div class="functions_for_report">
+
+      </div>
+
+      <div class="report_graph">
+      </div>
     </div>
-  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
+    <script type="text/javascript">
+       
+        $('.reports_name_parent').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+              // You can unslick at a given breakpoint now by adding:
+              // settings: "unslick"
+              // instead of a settings object
+            ]
+          });
+          $('div').find('.slick-prev').css('left', '24px;');
+          
+  </script>
+    
 {% endblock content %}

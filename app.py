@@ -41,9 +41,9 @@ def home():
 @app.route('/dashbord/<string:page_id>')
 def page(page_id):
     X=Authentification_for_PowerBI().show_workspace()
-    h=Authentification_for_PowerBI().get_report_from_workspace(page_id)['value']
-    pprint(h)
-    return render_template("Show_Dashbord.html",d=X,h=h)
+    # h=Authentification_for_PowerBI().get_report_from_workspace(page_id)['value']
+    # pprint(h)
+    return render_template("Show_Dashbord.html",d=X)#,h=h)
 
 # from flask_restful import Api, Resource
 # api =   Api(app)

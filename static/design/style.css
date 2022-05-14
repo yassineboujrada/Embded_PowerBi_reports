@@ -61,7 +61,7 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, F
   }
   
   .navbar__links {
-    color: #fff;
+    color: #0a3c88;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,7 +98,7 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, F
   }
   
   .navbar__links:hover {
-    color: #9518fc;
+    color: #bc0f0f;
     transition: all 0.3s ease;
   }
   
@@ -223,12 +223,54 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, F
   border:none;
 }
 
+.reports_name_parent{
+  border: 3px solid black;
+  height: 70px;
+  background: #bc0f0f;
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+}
 
+.report_name_child{
+  border: 3px solid rgb(198, 25, 25);
+  width: 23%;
+  height: 100%;
+  background: orange;
+}
 
+.functions_for_report{
+  border: 3px solid black;
+  height: 65px;
+  background: #42b43a;
+}
 
+.report_graph{
+  border: 3px solid black;
+  height: 80%;
+  background: #833ab4;
+}
+/* .slick-prev {
+  left: 24px;
+  z-index: 999;
+  opacity: 1;
+}
+.slick-next {
+  right: 13%;
+} */
 
+.slick-prev:before {
+  content: "<";
+  color: red;
+  font-size: 30px;
+  z-index: 999;
+}
 
-
+.slick-next:before {
+  content: ">";
+  color: red;
+  font-size: 30px;
+  z-index: 999;
+}
 
 
 
