@@ -4,28 +4,70 @@
 <!-- <link rel= "stylesheet" type= "text/css" href="{{url_for('static',filename='design/dashbord.css')}}"> -->
 
 <div class="dashbord_parent">
-    <div class="show_workspace_data">
-        {% for work in data_workspace %}
-        <select class="form-select" id="select_nav"aria-label="Default select example">
-            <option selected>{{ work.name }}</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select><br>
-          {% endfor %} 
-    </div>
-    
+        <div class="show_workspace_data">
+            {% for i in d %}
+            <label >{{ i[0] }}</label>
+            <select class="form-select" name="work_space_select" id="select_nav" aria-label="Default select example">
+                <option selected value="{{ i[1] }}" >{{ i[1] }}</option>
+                <option value="mmm">mmmm</option>
+            </select><br>
+            {% endfor %}
+        </div>
+
     <div class="show_report_graphe">
         my data
-        {% for report in report_in_workspace %}
+        bbb<br>
+        {% for i in c %}
+            {{ i[1] }}<br>
+            <!-- <iframe src="{{i.embedUrl}}" frameborder="0"></iframe> -->
+        {% endfor %}
+        hhh
+        <p></p>
+        {{jsonfile}}
+        <!-- {% for i in c %}
+        <iframe class="show_report_graphe" src="{{i.webUrl}}"></iframe> -->
+        <!-- {% endfor %} -->
+        <!-- {% for report in report_in_workspace %}
            <p> {{ report.id }}
             {{ report.name }}
             {{ report.webUrl }}</p><br>
-            {% endfor %}
-            {% for report in report_out %}
-            <p> {{ report }}</p>
-        {% endfor %}
+            {% endfor %} -->
     </div>
 </div>
+<script>
+    document.querySelector("select").addEventListener("click", e => {
+        fetch("http://127.0.0.1:3000/dashbord", {
+            method: "POST",
+            headers: {
+              "Accept": "application/json",
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                c_check: e.target.value
+            })
+          })
+          .then(res => {
+            if (!res.ok) {
+              throw Error(res.status);
+            }
 
+            return res.json();
+          })
+          .then(({data: {val}}) => {
+            console.log(val);
+            const res = document.querySelector(".result");
+            res.innerText = `client got: ${val}`;
+          })
+          .catch(err => console.error(err))
+        ;
+      })
+    ;
+
+    const jsonfile = JSON.parse({jsonfile});
+    document.querySelector('p').style.color='red' 
+    document.querySelector('p').innerHTML="hhh22";
+    console.log(jsonfile);
+  </script>
+  
+  
 {% endblock content %}

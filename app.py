@@ -1,10 +1,9 @@
 # from flask import Flask
-from flask import Flask, render_template,request, session,redirect
+from flask import Flask, render_template,request, session,redirect,jsonify,make_response
 import os
 from Power_bi_functions import *
 from flask.helpers import url_for,flash
 import shutil
-from powerbi.client import PowerBiClient
 
 app=Flask(__name__)
 
@@ -12,16 +11,6 @@ UPLOAD_FOLDER = 'static/files/'
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 app.secret_key = "5791628bb0b13ce0c676dfde280ba245"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-CLIENT_POWER_BI = PowerBiClient(
-    client_id='5ddb532c-2735-4570-adc2-32eacfd30068',
-    client_secret='L6h8Q~Rsq6lSqdrnmHE-oqKxh7khYO~lkvT6tcAX',
-    scope=['https://analysis.windows.net/powerbi/api/.default'],
-    redirect_uri="https://localhost/redirect",
-    credentials='__pycache__/power_bi_state.jsonc'
-)
-
-reports_service = CLIENT_POWER_BI.reports()
 
 @app.route("/",methods=["POST","GET"])
 def login_in():
@@ -36,18 +25,48 @@ def login_in():
 
 @app.route("/dashbord",methods=["POST","GET"])
 def home():
-    # report by id workspace
-    report_out=reports_service.get_group_reports(
-            group_id='3e2cfcff-1fc4-4412-af6d-838fe7707cf6'
-        )
-    ## data from ther workspace
-    data_workspace=get_workspace_informations()
-    ## data from my workspace
-    report_in_workspace=reports_service.get_reports()#reports_information()
-    return render_template("Show_Dashbord.html",data_workspace=data_workspace['value'],report_in_workspace=report_in_workspace['value'],report_out=report_out['value'])
+    c=[]
+    data_workspace=Authentification_for_PowerBI().show_workspace()
+    for i in data_workspace:
+        print("hh",i[1],"\n")
+        c.append(i[1])
+
+    if request.method == "GET":
+            return render_template("Show_Dashbord.html",d=data_workspace,\
+                c=Authentification_for_PowerBI().get_report_from_workspace(c))
+
+    val = request.json.get("c_check")
+    print("32:",val)
+    if not val:
+            print("val vide")
+            # c=Authentification_for_PowerBI().get_report_from_workspace(val)
+    else:
+        print("si")
+        c=Authentification_for_PowerBI().get_report_from_workspace(val)
+        pprint(c)
+        if request.method=="POST":
+            return render_template("Show_Dashbord.html",\
+            c=c)
+        elif request.method=="GET":
+            return render_template("Show_Dashbord.html",\
+            c=c)
+    return render_template("Show_Dashbord.html")#,data_workspace=data_workspace,report_in_workspace=report_in_workspace)
+
+# from flask_restful import Api, Resource
+# api =   Api(app)
+  
+# class returnjson(Resource):
+#     def get(self):
+#         data={
+#             "Modules": 15, 
+#             "Subject": "Data Structures and Algorithms"
+#         }
+#         return data
+  
+# api.add_resource(returnjson,'/returnjson')
 
 if "__main__"==__name__:
-    app.run(debug=True,port=4000)
+    app.run(debug=True,port=3000)
 
 
 
