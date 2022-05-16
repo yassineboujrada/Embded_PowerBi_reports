@@ -1,22 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-    <div class="show_report_graphe">
-      <!-- <iframe title="test2" width="1080" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=20d3b902-6605-4c1a-bcbf-fd5895e69afe&autoAuth=true&ctid=a23b80fb-03cf-48e7-b7ea-4a9094cff16c&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXVzLWNlbnRyYWwtYi1wcmltYXJ5LXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0LyJ9" frameborder="0" allowFullScreen="true"></iframe> -->
-      <!-- <h2> b3et hamAri</h2><br>
-      {% for i in h %}
-        <p>{{ i.name }}</p><br>
-        <p>{{ i.id }}</p><br>
-        <p>{{ i.embedUrl }}</p><br>
-        -----------------------------------------
-      {% endfor %} -->
-      
+hhh
+    <!-- <div class="show_report_graphe">
       <div class="reports_name_parent">
         {% for i in h %}
           <div class="report_name_child" id='report_listen' >
-            <!-- <input class="form-check-input" type="radio" name="name_file" value="{{ i.name }}" id="flexCheckDefault"> -->
-              <img src="{{url_for('static',filename='pictures/pbi_icon.png')}}" class="pbi_report_icon">
+             <img src="{{url_for('static',filename='pictures/pbi_icon.png')}}" class="pbi_report_icon">
               <label class="form-check-label" class="name_report" for="{{ i.id }}">
                 {{ i.name }}
               </label>
@@ -41,12 +31,9 @@
       </div>
 
       <div class="report_graph">
-        <!-- <iframe class='graphe_of_embded_report'src='{{ l }}' frameborder="0" allowFullScreen="true"></iframe> -->
-        <!-- <h1> Python Fetch Example</h1>
-        <p id='embed'>{{embed}}</p><p id='mylog'></p> -->
       
       </div>
-    </div>
+    </div> -->
 
 <script>
   var server_data=document.getElementById('report_listen').innerHTML;

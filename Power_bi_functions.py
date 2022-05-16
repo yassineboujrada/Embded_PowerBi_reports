@@ -27,8 +27,8 @@ class Authentification_for_PowerBI:
         self.CLIENT_ID='5ddb532c-2735-4570-adc2-32eacfd30068'
         self.username="yassineboujrada@datastory453.onmicrosoft.com"
         self.password="yassine@2002"
-
-        self.AUTHORITY_URL = 'https://login.microsoftonline.com/a23b80fb-03cf-48e7-b7ea-4a9094cff16c'
+        self.TENANT_ID='a23b80fb-03cf-48e7-b7ea-4a9094cff16c'
+        self.AUTHORITY_URL = 'https://login.microsoftonline.com/'+self.TENANT_ID
         self.SCOPE = ["https://analysis.windows.net/powerbi/api/.default"]
         self.URL_TO_GET_GROUPS = 'https://api.powerbi.com/v1.0/myorg/groups'
 
@@ -42,6 +42,9 @@ class Authentification_for_PowerBI:
 
         self.reports_service = self.CLIENT_POWER_BI.reports()
         # self.my_work_space=self.reports_service.get_reports()
+        
+    def get_tenant(self):
+        return str(self.TENANT_ID)
 
     def get_workspace_informations(self):
         client_data = msal.PublicClientApplication(self.CLIENT_ID, authority=self.AUTHORITY_URL)

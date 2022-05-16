@@ -1,4 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="show_report_graphe">
+    
+    <div class="reports_name_parent">
+        <div class="report_name_child" id='report_listen' >
+         <img src="{{url_for('static',filename='pictures/pbi_icon.png')}}" class="pbi_report_icon">
+            <label class="form-check-label" class="name_report" for="{{ report_id }}">
+              {{ j.name }}.pbix
+            </label>
+        </div>
+
+        <div class="his_function">
+            <div class="share_report">
+              <img src="{{url_for('static',filename='pictures/share.svg')}}" >
+            </div>
+            <div class="download_report" >
+              <img src="{{url_for('static',filename='pictures/download.svg')}}" onclick="console.log('download')">
+            </div>
+          </div>
+
+      </div><br>
+
+    <div class="report_graph">
+      <iframe titre="{{ j.name }}" class='graphe_of_embded_report'src='{{ l }}' frameborder="0" allowFullScreen="true"></iframe>
+      
+    </div>
+  </div>
+
 {% endblock content %}

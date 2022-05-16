@@ -4,9 +4,9 @@
 <div class="dashbord_parent"><br>
     
     <div class="name_workspace">
-        Reports {{workspace_id}}
+        Reports List
     </div><br>
-    <div style="display: flex; justify-content: center; align-items: center; height: 78%; border: solid red;">
+    <div style="display: flex; justify-content: center; align-items: center; height: 78%;">
         <div class="all_report_of_current_repport">
             {% for report in reports %}
                 <div class="report" onclick="location='/dashbord/{{workspace_id}}/{{report.id}}'">

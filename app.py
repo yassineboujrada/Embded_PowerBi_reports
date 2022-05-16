@@ -14,18 +14,18 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route("/",methods=["POST","GET"])
 def login_in():
-    X=Authentification_for_PowerBI().show_workspace()
+    # X=Authentification_for_PowerBI().show_workspace()
     if request.method=="POST":
         session["email_connect"]=request.form.get("email_conect")
         session["password"]=request.form.get("password")
         if session["email_connect"]=="" and \
             session["password"]=="22":
-            return render_template("Show_Dashbord.html",d=X)
+            return redirect(url_for('dashbord'))#render_template("Show_Dashbord.html",d=X)
 
     return render_template("login.html")
 
 @app.route("/dashbord",methods=["POST","GET"])
-def home():
+def dashbord():
     X=Authentification_for_PowerBI().show_workspace()
     # if request.method == "POST":
     #     qtc_data = request.json.get_json()
@@ -40,34 +40,35 @@ def home():
     # val = request.json.get("c_check")
     # print(val)
     # return jsonify({"data": {"val": val}})
-    return render_template("Dashbord.html",d=X)#,data_workspace=data_workspace,report_in_workspace=report_in_workspace)
-global reports
+    return render_template("Dashbord.html",d=X)
 
 @app.route('/dashbord/<string:work_id>')
 def workspace(work_id):
-    
     workspace_id=work_id
     reports=Authentification_for_PowerBI().get_report_from_workspace(workspace_id)['value']
-
-    # X=Authentification_for_PowerBI().show_workspace()
-    # h=Authentification_for_PowerBI().get_report_from_workspace(page_id)['value']
-    # l=h[0]['embedUrl']+'&autoAuth=true&ctid=a23b80fb-03cf-48e7-b7ea-4a9094cff16c'
-    # pprint(h)
+    session['test']=reports
     return render_template('report.html',reports=reports,workspace_id=workspace_id)  
 
 @app.route('/dashbord/<string:work_id>/<string:report_id>')
 def report_show(work_id,report_id):
     work_space=work_id
     report_id=report_id
-    i=reports
-    return f'<h1>{work_space}<br>{report_id}<br>{i}</h1>'
+    i=session['test']
+    for k in i:
+        if k['id']==str(report_id):
+            j=k
+        else: 
+            pass
+    # print(Authentification_for_PowerBI().TENANT_ID)
+    l=j['embedUrl']+'&autoAuth=true&ctid='+Authentification_for_PowerBI().get_tenant()#'a23b80fb-03cf-48e7-b7ea-4a9094cff16c'
+    return render_template('Show_report.html',work_space=work_space,report_id=report_id,j=j,l=l)
 
 @app.route('/dashboord/<string:page_id>')
 def page(page_id):
     X=Authentification_for_PowerBI().show_workspace()
     h=Authentification_for_PowerBI().get_report_from_workspace(page_id)['value']
     l=h[0]['embedUrl']+'&autoAuth=true&ctid=a23b80fb-03cf-48e7-b7ea-4a9094cff16c'
-    # pprint(h)
+    
     if request.method == "GET":
         qtc_data = request.get_json()
         print("kkkrkr",qtc_data)
