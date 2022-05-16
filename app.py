@@ -27,6 +27,11 @@ def login_in():
 @app.route("/dashbord",methods=["POST","GET"])
 def home():
     X=Authentification_for_PowerBI().show_workspace()
+    # if request.method == "POST":
+    #     qtc_data = request.json.get_json()
+    #     print("kkkrkr",qtc_data)
+
+
     # data_workspace=Authentification_for_PowerBI().show_workspace()
     # h=Authentification_for_PowerBI().hh()
     # if request.method == "GET":
@@ -35,28 +40,40 @@ def home():
     # val = request.json.get("c_check")
     # print(val)
     # return jsonify({"data": {"val": val}})
-    
-    return render_template("Show_Dashbord.html",d=X)#,data_workspace=data_workspace,report_in_workspace=report_in_workspace)
+    return render_template("Dashbord.html",d=X)#,data_workspace=data_workspace,report_in_workspace=report_in_workspace)
+global reports
 
-@app.route('/dashbord/<string:page_id>')
+@app.route('/dashbord/<string:work_id>')
+def workspace(work_id):
+    
+    workspace_id=work_id
+    reports=Authentification_for_PowerBI().get_report_from_workspace(workspace_id)['value']
+
+    # X=Authentification_for_PowerBI().show_workspace()
+    # h=Authentification_for_PowerBI().get_report_from_workspace(page_id)['value']
+    # l=h[0]['embedUrl']+'&autoAuth=true&ctid=a23b80fb-03cf-48e7-b7ea-4a9094cff16c'
+    # pprint(h)
+    return render_template('report.html',reports=reports,workspace_id=workspace_id)  
+
+@app.route('/dashbord/<string:work_id>/<string:report_id>')
+def report_show(work_id,report_id):
+    work_space=work_id
+    report_id=report_id
+    i=reports
+    return f'<h1>{work_space}<br>{report_id}<br>{i}</h1>'
+
+@app.route('/dashboord/<string:page_id>')
 def page(page_id):
     X=Authentification_for_PowerBI().show_workspace()
-    # h=Authentification_for_PowerBI().get_report_from_workspace(page_id)['value']
+    h=Authentification_for_PowerBI().get_report_from_workspace(page_id)['value']
+    l=h[0]['embedUrl']+'&autoAuth=true&ctid=a23b80fb-03cf-48e7-b7ea-4a9094cff16c'
     # pprint(h)
-    return render_template("Show_Dashbord.html",d=X)#,h=h)
-
-# from flask_restful import Api, Resource
-# api =   Api(app)
-  
-# class returnjson(Resource):
-#     def get(self):
-#         data={
-#             "Modules": 15, 
-#             "Subject": "Data Structures and Algorithms"
-#         }
-#         return data
-  
-# api.add_resource(returnjson,'/returnjson')
+    if request.method == "GET":
+        qtc_data = request.get_json()
+        print("kkkrkr",qtc_data)
+        return render_template("Show_Dashbord.html",d=X,h=h,l=l)
+    
+    return render_template('Show_Dashbord.html',d=X,h=h,l=l)        
 
 if "__main__"==__name__:
     app.run(debug=True,port=3000)

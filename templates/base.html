@@ -38,13 +38,13 @@
         </div>
       </nav>
 
-      <div class="dashbord_parent">
-        <div class="show_workspace_data">
+      
+        <!-- <div class="show_workspace_data">
           <p>My Workspaces:</p>
             {% for i in d %}
               <button onclick="location='/dashbord/{{i[1]}}'" >{{ i[0] }}</button><br>
             {% endfor %}
-        </div>
+        </div> -->
         {% block content %}
         {% endblock content %}
       </div>

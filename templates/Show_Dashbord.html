@@ -13,44 +13,60 @@
       {% endfor %} -->
       
       <div class="reports_name_parent">
-          <div class="report_name_child">
-            hhhhtest.pbix
+        {% for i in h %}
+          <div class="report_name_child" id='report_listen' >
+            <!-- <input class="form-check-input" type="radio" name="name_file" value="{{ i.name }}" id="flexCheckDefault"> -->
+              <img src="{{url_for('static',filename='pictures/pbi_icon.png')}}" class="pbi_report_icon">
+              <label class="form-check-label" class="name_report" for="{{ i.id }}">
+                {{ i.name }}
+              </label>
           </div>
-          <div class="report_name_child">
-            hhhhtest2.pbix
-          </div>
-          <div class="report_name_child">
-            hhhhtest3.pbix
-          </div>
-          <div class="report_name_child">
-            hhhhtest4.pbix
-          </div>
-          <div class="report_name_child">
-            hhhhtest5.pbix
-          </div>
-          <div class="report_name_child">
-            hhhhtest6.pbix
-          </div>
-          <div class="report_name_child">
-            hhhhtest67.pbix
-          </div>
-          <div class="report_name_child">
-            hhhhtest68.pbix
-          </div>
-          <div class="report_name_child">
-            hhhhtest69.pbix
-          </div>
+        {% endfor %}
       </div>
 
       <div class="functions_for_report">
+        <div class="name_of_report_embded">
+          test{{ h[0].name }}
+        </div>
 
+        <div class="his_function">
+          <div class="share_report">
+            <img src="{{url_for('static',filename='pictures/share.svg')}}" >
+          </div>
+          <div class="download_report" >
+            <img src="{{url_for('static',filename='pictures/download.svg')}}" onclick="console.log('download')">
+          </div>
+        </div>
+        
       </div>
 
       <div class="report_graph">
+        <!-- <iframe class='graphe_of_embded_report'src='{{ l }}' frameborder="0" allowFullScreen="true"></iframe> -->
+        <!-- <h1> Python Fetch Example</h1>
+        <p id='embed'>{{embed}}</p><p id='mylog'></p> -->
+      
       </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+<script>
+  var server_data=document.getElementById('report_listen').innerHTML;
+  console.log(server_data)
+  const Url='http://127.0.0.1:3000/dashbord'
+  $.ajax({
+    type: "GET",
+    url: Url,
+    data: JSON.stringify(server_data),
+    contentType: "application/json",
+    dataType: 'json',
+    success: function(result) {
+      console.log("Result:");
+      console.log(result);
+    } 
+  });
+ </script>
+    <!-- slick slide -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
@@ -93,6 +109,6 @@
           });
           $('div').find('.slick-prev').css('left', '24px;');
           
-  </script>
+  </script> -->
     
 {% endblock content %}

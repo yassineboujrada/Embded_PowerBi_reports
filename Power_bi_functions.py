@@ -58,7 +58,6 @@ class Authentification_for_PowerBI:
     def show_workspace(self):
         work_space=[]
         for i in self.get_workspace_informations()['value']:
-            # work_space.update({i['name']:i['id']})
             work_space.append([i['name'],i['id']])
         return work_space
 

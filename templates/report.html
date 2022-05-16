@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="dashbord_parent"><br>
+    
+    <div class="name_workspace">
+        Reports {{workspace_id}}
+    </div><br>
+    <div style="display: flex; justify-content: center; align-items: center; height: 78%; border: solid red;">
+        <div class="all_report_of_current_repport">
+            {% for report in reports %}
+                <div class="report" onclick="location='/dashbord/{{workspace_id}}/{{report.id}}'">
+
+                    <div class="pbi_icon">
+                        <img class="pbi_icon" src="{{url_for('static',filename='pictures/pbi_icon.png')}}">
+                    </div>
+
+                    <div class="title_of_workspace">
+                            {{report.name}}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
