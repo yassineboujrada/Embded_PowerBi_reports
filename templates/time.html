@@ -2,29 +2,31 @@
 
 {% block content %}
 <div id="parent">
-<form action="" method="POST" id="email_form" class="shadow-lg p-3 mb-5 bg-body rounded" style="height: 35vh;">
+<form action="" method="POST" id="email_form" class="shadow-lg p-3 mb-5 bg-body rounded" style="height: 300px;">
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">select time to send</label><br>
-      <input type="time" class="time_selection" name="time_to_send" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    </div>
+      <label for="exampleInputEmail1" class="form-label">Choisis le temps pour envoyer l'email :</label><br>
+      <div class="period_timing">
+        <input type="time" class="time_selection" name="time_to_send" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+    </div><br>
 
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Choisis period pour envoyer l'email</label>
+      <label for="exampleInputPassword1" class="form-label">Choisis periode pour envoyer l'email :</label>
       <div class="period_area">
-        <input type="text" name="value_for_day" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:40px;">
+        <input type="text" name="value_for_day" class="form-control" value="2" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:100px; display: flex; text-align: center;">
         <select name="period_day" id="period-select" class="form-select" aria-label="Default select example">
-                <option selected>Choisis period pour envoyer l'email</option>
-                <option value="Day">Day</option>
+                <!-- <option selected value="Day">Choisis period pour envoyer l'email</option> -->
+                <option selected value="Day">Day</option>
                 <option value="Week">Week</option>
                 <option value="Month">Month</option>
                 <option value="Year">Year</option>
             </select>
         </div>
-    </div>
-    <div class="btns_list" style="display:flex;">
-        <button type="submit" id="email_btn" class="btn btn-primary" style="margin:0 0 0 5%;">Back</button>
-        <button type="submit" id="email_btn" class="btn btn-primary" style="margin:0 18%;">Submit</button>
-    </div>
+    </div><br>
+    <div class="btns_list" id="btn_valid" style="display:flex;">
+      <button type="button"id="annuler_btn" class="btn btn-primary"  onclick="location='/send_mail'">Retour</button>
+      <input type="submit" id="submit_btn" class="btn btn-primary" value="Envoyer">
+  </div>
     </form>
 </div>
 
