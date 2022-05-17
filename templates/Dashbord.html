@@ -7,6 +7,17 @@
         workspace
     </div><br>
     <div class="all_report_of_current_work">
+            <div class="workspace" onclick="location='/dashbord/my_workspace'">
+
+                <div class="workspace_icon">
+                    <img class="workspace_icon" src="{{url_for('static',filename='pictures/workspace.png')}}">
+                </div>
+
+                <div class="title_of_workspace">
+                        My Workspace
+                </div>
+            </div>
+
         {% for i in d%}
             <div class="workspace" onclick="location='/dashbord/{{i[1]}}'">
 

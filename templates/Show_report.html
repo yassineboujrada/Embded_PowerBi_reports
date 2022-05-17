@@ -13,9 +13,9 @@
 
         <div class="his_function">
             <div class="share_report">
-              <img src="{{url_for('static',filename='pictures/share.svg')}}" >
+              <img id="imgg" src="{{url_for('static',filename='pictures/share.svg')}}" onclick="location='/send_mail'">
             </div>
-            <div class="download_report" >
+            <div action="" method="post" class="download_report" >
               <img src="{{url_for('static',filename='pictures/download.svg')}}" onclick="console.log('download')">
             </div>
           </div>
@@ -23,9 +23,26 @@
       </div><br>
 
     <div class="report_graph">
-      <iframe titre="{{ j.name }}" class='graphe_of_embded_report'src='{{ l }}' frameborder="0" allowFullScreen="true"></iframe>
-      
+      <iframe titre="{{ j.name }}" class='graphe_of_embded_report'src='{{ j.embedUrl }}' frameborder="0" allowFullScreen="true"></iframe>
     </div>
   </div>
 
+  <script>
+    let b=document.getElementById("imgg").src
+    console.log(b)
+    $.ajax({
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      url: "/dashbord/<string:work_id>/<string:report_id>",
+      data: JSON.stringify({test:'hello'}),
+      success: function (data) {
+        // alert("DONE!")
+        console.log("daine")
+      },
+      error: function(err) {
+        console.log(err);
+      }
+      // dataType: "json"
+    });
+  </script>
 {% endblock content %}

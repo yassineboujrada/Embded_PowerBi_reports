@@ -133,10 +133,10 @@ pprint(reports_service.get_reports())
 # )
 
 
-# my_report_content = reports_service.export_to_file(
-#     report_id='cd5fd3b0-e806-4e38-a02b-ff13ef594c09',
-#     file_format=ExportFileFormats.Pdf
-# )
+my_report_content = reports_service.export_to_file(
+    report_id='cd5fd3b0-e806-4e38-a02b-ff13ef594c09',
+    file_format=ExportFileFormats.Pdf
+)
 
 # pprint(my_report_content)
 

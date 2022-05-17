@@ -5,12 +5,12 @@
     <form action="" method="POST" id="email_form" class="shadow-lg p-3 mb-5 bg-body rounded">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email address (separete between emails by ' , ' )</label>
-          <input name="recieve_adr" type="text" placeholder="reciever mail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input name="recieve_adr" type="text" placeholder="reciever mail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
         </div>
 
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Subject</label>
-          <input name="subject" type="text" placeholder="subject" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input name="subject" type="text" placeholder="subject" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
         </div>
 
         <div class="mb-3">
@@ -20,8 +20,8 @@
             </div>
         </div>
         <div class="btns_list" style="display:flex;">
-            <!-- <button type="submit" id="email_btn" class="btn btn-primary" style="margin:0 0 0 5%;">Back</button> -->
-            <button type="submit" id="email_btn" class="btn btn-primary" style="margin:0 55%;">Submit</button>
+            <button type="button"id="email_btn" class="btn btn-primary" style="margin:0 0 0 10%;" onclick="location='/dashbord'">Back</button>
+            <input type="submit" id="email_btn" class="btn btn-primary" style="margin:0 50%;" value="Submit">
         </div>
       </form>
 </div>

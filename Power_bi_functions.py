@@ -17,6 +17,7 @@ import requests
 import json
 from pprint import pprint
 from powerbi.client import PowerBiClient
+from powerbi.enums import ExportFileFormats
 
 # --------------------------------------------------
 # Set local variables
@@ -43,8 +44,27 @@ class Authentification_for_PowerBI:
         self.reports_service = self.CLIENT_POWER_BI.reports()
         # self.my_work_space=self.reports_service.get_reports()
         
+    def get_my_workspace(self):
+        return self.reports_service.get_reports()
+
     def get_tenant(self):
         return str(self.TENANT_ID)
+
+    def download_pbi(self,GROUP_ID,REPORT_ID,REPORT_NAME):
+        my_report_content = self.reports_service.export_group_report(
+            group_id=GROUP_ID,
+            report_id=REPORT_ID
+        )
+        with open(file=f'files/{REPORT_NAME}.pbix', mode='wb+') as power_bi_file:
+            power_bi_file.write(my_report_content)
+
+    def export_to_pdf(self,REPORT_ID,REPORT_NAME):
+        my_report_content = self.reports_service.export_to_file(
+            report_id=REPORT_ID,
+            file_format=ExportFileFormats.Pdf
+        )
+        with open(file=f'files/{REPORT_NAME}.pdf', mode='wb+') as power_bi_file:
+            power_bi_file.write(my_report_content)
 
     def get_workspace_informations(self):
         client_data = msal.PublicClientApplication(self.CLIENT_ID, authority=self.AUTHORITY_URL)
@@ -91,6 +111,13 @@ class Authentification_for_PowerBI:
                 )
             k.append([i[0],report_out['value']])
         return k
+
+# print("export\n")
+# Authentification_for_PowerBI().export_to_pdf('d111e6c2-4fed-48e5-8e32-78c06ffeb742','mm')
+
+
+
+
     # pprint(l)
 # print(Authentification_for_PowerBI().data_report())
 

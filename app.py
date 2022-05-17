@@ -5,6 +5,17 @@ from Power_bi_functions import *
 from flask.helpers import url_for,flash
 import shutil
 
+# import sentry_sdk
+# from sentry_sdk.integrations.flask import FlaskIntegration
+
+# sentry_sdk.init(
+#     dsn="http://<key>@127.0.0.1:3000/<project>dashbord/<string:work_id>/<string:report_id>",
+#     integrations=[FlaskIntegration()],
+#     traces_sample_rate=1.0,
+#     send_default_pii=True
+# )
+
+
 app=Flask(__name__)
 
 UPLOAD_FOLDER = 'static/files/'
@@ -14,67 +25,73 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route("/",methods=["POST","GET"])
 def login_in():
-    # X=Authentification_for_PowerBI().show_workspace()
     if request.method=="POST":
         session["email_connect"]=request.form.get("email_conect")
         session["password"]=request.form.get("password")
         if session["email_connect"]=="" and \
             session["password"]=="22":
-            return redirect(url_for('dashbord'))#render_template("Show_Dashbord.html",d=X)
+            return redirect(url_for('dashbord'))
 
     return render_template("login.html")
 
 @app.route("/dashbord",methods=["POST","GET"])
 def dashbord():
-    X=Authentification_for_PowerBI().show_workspace()
-    # if request.method == "POST":
-    #     qtc_data = request.json.get_json()
-    #     print("kkkrkr",qtc_data)
+    return render_template("Dashbord.html",d=Authentification_for_PowerBI().show_workspace())
 
-
-    # data_workspace=Authentification_for_PowerBI().show_workspace()
-    # h=Authentification_for_PowerBI().hh()
-    # if request.method == "GET":
-    #     return render_template("Show_Dashbord.html",d=data_workspace,h=h)
-
-    # val = request.json.get("c_check")
-    # print(val)
-    # return jsonify({"data": {"val": val}})
-    return render_template("Dashbord.html",d=X)
+@app.route('/dashbord/my_workspace')
+def my_work():
+    c=Authentification_for_PowerBI().get_my_workspace()['value']
+    session['report_embded']=c
+    return render_template('report.html',reports=c,workspace_id='me')
 
 @app.route('/dashbord/<string:work_id>')
 def workspace(work_id):
     workspace_id=work_id
     reports=Authentification_for_PowerBI().get_report_from_workspace(workspace_id)['value']
-    session['test']=reports
+    session['report_embded']=reports
     return render_template('report.html',reports=reports,workspace_id=workspace_id)  
 
-@app.route('/dashbord/<string:work_id>/<string:report_id>')
+@app.route('/dashbord/<string:work_id>/<string:report_id>',methods=["POST","GET"])
 def report_show(work_id,report_id):
     work_space=work_id
     report_id=report_id
-    i=session['test']
+    i=session['report_embded']
     for k in i:
         if k['id']==str(report_id):
             j=k
+            j['embedUrl']+='&autoAuth=true&ctid='+Authentification_for_PowerBI().get_tenant()#'a23b80fb-03cf-48e7-b7ea-4a9094cff16c'
+            # Authentification_for_PowerBI().download_pbi(work_space,report_id,j['name'])
+            # session.pop('report_embded',None)
+            session['report_name_for_send']=j['id']+"||"+j['name']
         else: 
             pass
-    # print(Authentification_for_PowerBI().TENANT_ID)
-    l=j['embedUrl']+'&autoAuth=true&ctid='+Authentification_for_PowerBI().get_tenant()#'a23b80fb-03cf-48e7-b7ea-4a9094cff16c'
-    return render_template('Show_report.html',work_space=work_space,report_id=report_id,j=j,l=l)
+    return render_template('Show_report.html',work_space=work_space,report_id=report_id,j=j)
 
-@app.route('/dashboord/<string:page_id>')
-def page(page_id):
-    X=Authentification_for_PowerBI().show_workspace()
-    h=Authentification_for_PowerBI().get_report_from_workspace(page_id)['value']
-    l=h[0]['embedUrl']+'&autoAuth=true&ctid=a23b80fb-03cf-48e7-b7ea-4a9094cff16c'
-    
-    if request.method == "GET":
-        qtc_data = request.get_json()
-        print("kkkrkr",qtc_data)
-        return render_template("Show_Dashbord.html",d=X,h=h,l=l)
-    
-    return render_template('Show_Dashbord.html',d=X,h=h,l=l)        
+@app.route("/send_mail",methods=["POST","GET"])
+def send_mail():
+    print(session['report_name_for_send'])
+    if request.method=="POST":
+        session["recieve"]=request.form.get("recieve_adr")
+        session["subject"]=request.form.get("subject")
+        session["msg"]=request.form.get("msg")
+        print(session["recieve"],session["subject"])
+        return redirect(url_for("time_selection_time"))
+    return render_template("mail.html")
+
+@app.route("/send_mail/define_time",methods=["POST","GET"])
+def time_selection_time():
+    if request.method=="POST":
+        session["send_timing"]=request.form.get("time_to_send")
+        session["which_day"]=request.form.get("value_for_day")
+        session["every_"]=request.form.get("period_day")
+
+        print(session["send_timing"],"\n",session["which_day"],session["every_"])
+        # if send_pdf_file(session["msg"],session["recieve"].split(","),session["subject"]):
+        #     return redirect(url_for('home'))
+        # else:
+        #     pass
+
+    return render_template("time.html")
 
 if "__main__"==__name__:
     app.run(debug=True,port=3000)
@@ -84,24 +101,6 @@ if "__main__"==__name__:
 
 
 
-# @app.route("/",methods=["POST","GET"])
-# find_file_in_all_drives( 'C\\.doc' )
-    # if request.method=="POST":
-    #     session["recieve"]=request.form.get("recieve_adr")
-    #     session["subject"]=request.form.get("subject")
-    #     session["msg"]=request.form.get("msg")
-    #     return redirect(url_for("file_select"))
-    # return render_template("mail.html")
-
-# @app.route("/send_mail",methods=["POST","GET"])
-# def home():
-#     find_file_in_all_drives( 'C\\.doc' )
-#     if request.method=="POST":
-#         session["recieve"]=request.form.get("recieve_adr")
-#         session["subject"]=request.form.get("subject")
-#         session["msg"]=request.form.get("msg")
-#         return redirect(url_for("file_select"))
-#     return render_template("mail.html")
 
 # @app.route("/file_select",methods=["POST","GET"])
 # def file_select():
@@ -121,17 +120,5 @@ if "__main__"==__name__:
 
 #     return render_template("file_show.html",files=all_files)
 
-# @app.route("/define_time",methods=["POST","GET"])
-# def time_selection_time():
-#     if request.method=="POST":
-#         session["send_timing"]=request.form.get("time_to_send")
-#         session["which_day"]=request.form.get("value_for_day")
-#         session["every_"]=request.form.get("period_day")
-#         print(session["file_name"])
-#         if send_pdf_file(session["msg"],session["recieve"].split(","),session["subject"]):
-#             return redirect(url_for('home'))
-#         else:
-#             pass
 
-#     return render_template("time.html")
 
