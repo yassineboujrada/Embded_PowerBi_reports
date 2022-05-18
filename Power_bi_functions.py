@@ -55,13 +55,14 @@ class Authentification_for_PowerBI:
             group_id=GROUP_ID,
             report_id=REPORT_ID
         )
+
         with open(file=f'files/{REPORT_NAME}.pbix', mode='wb+') as power_bi_file:
             power_bi_file.write(my_report_content)
 
     def export_to_pdf(self,REPORT_ID,REPORT_NAME):
         my_report_content = self.reports_service.export_to_file(
             report_id=REPORT_ID,
-            file_format=ExportFileFormats.Pdf
+            file_format='CSV'#ExportFileFormats.Pdf
         )
         with open(file=f'files/{REPORT_NAME}.pdf', mode='wb+') as power_bi_file:
             power_bi_file.write(my_report_content)
@@ -96,12 +97,12 @@ class Authentification_for_PowerBI:
         l,k=[],{}
         g=self.show_workspace()
         for i in g:
+            print(i)
             report_out=self.reports_service.get_group_reports(
                     group_id=str(i[1])
                 )
-            l.append(report_out['value'])
-            k.update({'id':g[1],'name':g[0],'reports':l})
-        return k
+            print(report_out['value'])
+            print('######################3\n')
 
     def hh(self):
         k=[]
@@ -113,7 +114,12 @@ class Authentification_for_PowerBI:
         return k
 
 # print("export\n")
-# Authentification_for_PowerBI().export_to_pdf('d111e6c2-4fed-48e5-8e32-78c06ffeb742','mm')
+# Authentification_for_PowerBI().data_report()
+
+# Authentification_for_PowerBI().download_pbi('3e2cfcff-1fc4-4412-af6d-838fe7707cf6','20d3b902-6605-4c1a-bcbf-fd5895e69afe','mm2')
+
+# except requests.exceptions.RequestException as e:
+#     print('hakak')
 
 
 

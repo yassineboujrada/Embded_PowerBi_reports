@@ -7413,3 +7413,1217 @@
 2022-05-17 19:39:31,480|_internal.py|127.0.0.1 - - [17/May/2022 19:39:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 2022-05-17 19:39:40,112|_internal.py|127.0.0.1 - - [17/May/2022 19:39:40] "[37mGET /send_mail HTTP/1.1[0m" 200 -
 2022-05-17 19:39:44,845|_internal.py|127.0.0.1 - - [17/May/2022 19:39:44] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-17 19:54:50,433|_internal.py|127.0.0.1 - - [17/May/2022 19:54:50] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-17 19:54:53,107|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-17 19:54:55,753|_internal.py|127.0.0.1 - - [17/May/2022 19:54:55] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80 HTTP/1.1[0m" 200 -
+2022-05-17 19:54:59,163|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/export
+2022-05-17 19:55:00,526|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-17 19:55:00,586|_internal.py|127.0.0.1 - - [17/May/2022 19:55:00] "[35m[1mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e HTTP/1.1[0m" 500 -
+2022-05-17 19:55:01,474|_internal.py|127.0.0.1 - - [17/May/2022 19:55:01] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-17 19:55:01,475|_internal.py|127.0.0.1 - - [17/May/2022 19:55:01] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-17 19:55:01,477|_internal.py|127.0.0.1 - - [17/May/2022 19:55:01] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-17 19:55:01,537|_internal.py|127.0.0.1 - - [17/May/2022 19:55:01] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2022-05-17 19:55:01,660|_internal.py|127.0.0.1 - - [17/May/2022 19:55:01] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-17 19:55:01,689|_internal.py|127.0.0.1 - - [17/May/2022 19:55:01] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-17 19:55:17,182|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-17 19:55:18,484|_internal.py|127.0.0.1 - - [17/May/2022 19:55:18] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80 HTTP/1.1[0m" 200 -
+2022-05-17 19:55:28,645|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/export
+2022-05-17 19:55:29,874|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-17 19:55:29,921|_internal.py|127.0.0.1 - - [17/May/2022 19:55:29] "[35m[1mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e HTTP/1.1[0m" 500 -
+2022-05-17 19:55:30,004|_internal.py|127.0.0.1 - - [17/May/2022 19:55:30] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-17 19:55:30,049|_internal.py|127.0.0.1 - - [17/May/2022 19:55:30] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-17 19:55:30,062|_internal.py|127.0.0.1 - - [17/May/2022 19:55:30] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-17 19:55:34,130|_internal.py|127.0.0.1 - - [17/May/2022 19:55:34] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2022-05-17 19:55:34,199|_internal.py|127.0.0.1 - - [17/May/2022 19:55:34] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-17 20:00:50,841|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-17 20:01:44,502|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/work_space/reports/07e07e11-d689-4876-bcde-bcca09603d8e/export
+2022-05-17 20:01:45,705|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/work_space/reports/07e07e11-d689-4876-bcde-bcca09603d8e/export",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-17 20:01:45,762|_internal.py|127.0.0.1 - - [17/May/2022 20:01:45] "[35m[1mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e HTTP/1.1[0m" 500 -
+2022-05-17 20:01:46,628|_internal.py|127.0.0.1 - - [17/May/2022 20:01:46] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-17 20:01:46,629|_internal.py|127.0.0.1 - - [17/May/2022 20:01:46] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-17 20:01:46,629|_internal.py|127.0.0.1 - - [17/May/2022 20:01:46] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-17 20:01:50,004|_internal.py|127.0.0.1 - - [17/May/2022 20:01:50] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2022-05-17 20:01:50,017|_internal.py|127.0.0.1 - - [17/May/2022 20:01:50] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-17 20:01:53,500|_internal.py|127.0.0.1 - - [17/May/2022 20:01:53] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-17 20:01:56,419|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-17 20:01:58,507|_internal.py|127.0.0.1 - - [17/May/2022 20:01:58] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80 HTTP/1.1[0m" 200 -
+2022-05-17 20:01:58,919|_internal.py|127.0.0.1 - - [17/May/2022 20:01:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-17 20:02:08,539|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/work_space/reports/07e07e11-d689-4876-bcde-bcca09603d8e/export
+2022-05-17 20:02:11,091|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/work_space/reports/07e07e11-d689-4876-bcde-bcca09603d8e/export",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-17 20:02:11,161|_internal.py|127.0.0.1 - - [17/May/2022 20:02:11] "[35m[1mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e HTTP/1.1[0m" 500 -
+2022-05-17 20:02:11,279|_internal.py|127.0.0.1 - - [17/May/2022 20:02:11] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-17 20:02:11,294|_internal.py|127.0.0.1 - - [17/May/2022 20:02:11] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-17 20:02:11,300|_internal.py|127.0.0.1 - - [17/May/2022 20:02:11] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-17 20:02:15,411|_internal.py|127.0.0.1 - - [17/May/2022 20:02:15] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2022-05-17 20:02:15,457|_internal.py|127.0.0.1 - - [17/May/2022 20:02:15] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-17 20:02:42,264|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-17 20:03:09,239|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/export
+2022-05-17 20:03:10,576|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-17 20:03:10,665|_internal.py|127.0.0.1 - - [17/May/2022 20:03:10] "[35m[1mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e HTTP/1.1[0m" 500 -
+2022-05-17 20:03:11,595|_internal.py|127.0.0.1 - - [17/May/2022 20:03:11] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-17 20:03:11,596|_internal.py|127.0.0.1 - - [17/May/2022 20:03:11] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-17 20:03:11,604|_internal.py|127.0.0.1 - - [17/May/2022 20:03:11] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-17 20:03:14,864|_internal.py|127.0.0.1 - - [17/May/2022 20:03:14] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2022-05-17 20:03:14,882|_internal.py|127.0.0.1 - - [17/May/2022 20:03:14] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-17 20:03:18,362|_internal.py|127.0.0.1 - - [17/May/2022 20:03:18] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-17 20:04:17,128|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-17 20:04:19,895|_internal.py|127.0.0.1 - - [17/May/2022 20:04:19] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80 HTTP/1.1[0m" 200 -
+2022-05-17 20:04:38,703|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-17 20:12:07,897|_internal.py|127.0.0.1 - - [17/May/2022 20:12:07] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-17 20:12:18,573|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-17 20:12:20,693|_internal.py|127.0.0.1 - - [17/May/2022 20:12:20] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6 HTTP/1.1[0m" 200 -
+2022-05-17 20:12:31,553|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/467cbb3a-5783-4c37-8354-1e99aa03f41b/export
+2022-05-17 20:12:36,434|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/467cbb3a-5783-4c37-8354-1e99aa03f41b/export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-17 20:12:36,510|_internal.py|127.0.0.1 - - [17/May/2022 20:12:36] "[35m[1mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 500 -
+2022-05-17 20:12:37,527|_internal.py|127.0.0.1 - - [17/May/2022 20:12:37] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-17 20:12:37,529|_internal.py|127.0.0.1 - - [17/May/2022 20:12:37] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-17 20:12:37,531|_internal.py|127.0.0.1 - - [17/May/2022 20:12:37] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-17 20:12:37,569|_internal.py|127.0.0.1 - - [17/May/2022 20:12:37] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2022-05-17 20:12:37,620|_internal.py|127.0.0.1 - - [17/May/2022 20:12:37] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-17 20:12:37,686|_internal.py|127.0.0.1 - - [17/May/2022 20:12:37] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-17 20:12:44,473|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-17 20:12:45,889|_internal.py|127.0.0.1 - - [17/May/2022 20:12:45] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6 HTTP/1.1[0m" 200 -
+2022-05-17 20:12:59,090|_internal.py|127.0.0.1 - - [17/May/2022 20:12:59] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-17 20:13:52,640|_internal.py|127.0.0.1 - - [17/May/2022 20:13:52] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-17 20:13:52,740|_internal.py|127.0.0.1 - - [17/May/2022 20:13:52] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-17 20:13:52,763|_internal.py|127.0.0.1 - - [17/May/2022 20:13:52] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-17 20:13:52,770|_internal.py|127.0.0.1 - - [17/May/2022 20:13:52] "[37mGET /static/pictures/workspace.png HTTP/1.1[0m" 200 -
+2022-05-17 20:13:52,775|_internal.py|127.0.0.1 - - [17/May/2022 20:13:52] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-17 20:13:54,259|_internal.py|127.0.0.1 - - [17/May/2022 20:13:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-17 20:14:10,764|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-17 20:14:12,074|_internal.py|127.0.0.1 - - [17/May/2022 20:14:12] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-17 20:14:14,347|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/export
+2022-05-17 20:14:20,183|_internal.py|127.0.0.1 - - [17/May/2022 20:14:20] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-17 20:14:54,723|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-17 20:14:55,882|_internal.py|127.0.0.1 - - [17/May/2022 20:14:55] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-17 20:17:50,844|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-17 20:17:53,912|_internal.py|127.0.0.1 - - [17/May/2022 20:17:53] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-17 20:18:02,472|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/export
+2022-05-17 20:18:42,829|_internal.py|127.0.0.1 - - [17/May/2022 20:18:42] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-17 20:18:43,170|_internal.py|127.0.0.1 - - [17/May/2022 20:18:43] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-17 20:18:43,267|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-17 20:18:53,331|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-17 20:18:55,212|_internal.py|127.0.0.1 - - [17/May/2022 20:18:55] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-17 20:20:03,933|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-17 20:20:12,676|_internal.py|127.0.0.1 - - [17/May/2022 20:20:12] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-17 20:20:12,814|_internal.py|127.0.0.1 - - [17/May/2022 20:20:12] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-17 20:20:13,727|_internal.py|127.0.0.1 - - [17/May/2022 20:20:13] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-17 20:20:13,731|_internal.py|127.0.0.1 - - [17/May/2022 20:20:13] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-17 20:20:13,734|_internal.py|127.0.0.1 - - [17/May/2022 20:20:13] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-17 20:20:14,643|_internal.py|127.0.0.1 - - [17/May/2022 20:20:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-17 20:20:47,752|_internal.py|127.0.0.1 - - [17/May/2022 20:20:47] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-18 09:28:02,595|session.py|URL: https://api.powerbi.com/v1.0/https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/Export
+2022-05-18 09:28:02,893|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/Export",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:29:58,540|session.py|URL: https://api.powerbi.com/v1.0//myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/Export
+2022-05-18 09:31:24,447|session.py|URL: https://api.powerbi.com/v1.0//myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export
+2022-05-18 09:31:25,898|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0//myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:31:46,009|session.py|URL: https://api.powerbi.com/v1.0//myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export
+2022-05-18 09:31:47,362|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0//myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:32:17,504|session.py|URL: https://api.powerbi.com/v1.0//myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export
+2022-05-18 09:32:18,725|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0//myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:32:32,012|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export
+2022-05-18 09:32:33,137|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:33:04,745|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export
+2022-05-18 09:33:05,787|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:33:59,832|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export
+2022-05-18 09:34:01,184|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:34:54,020|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export
+2022-05-18 09:34:55,367|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:35:56,585|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export
+2022-05-18 09:35:57,668|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:37:18,512|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export
+2022-05-18 09:37:18,966|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:38:16,923|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export
+2022-05-18 09:38:18,319|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:39:37,425|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export
+2022-05-18 09:39:38,512|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:41:26,815|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export
+2022-05-18 09:41:27,762|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:42:55,148|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export
+2022-05-18 09:42:56,069|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:54:55,906|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export
+2022-05-18 09:54:57,008|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:57:10,911|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export
+2022-05-18 09:57:11,823|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:57:47,072|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export
+2022-05-18 09:57:48,067|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 09:59:26,910|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export
+2022-05-18 09:59:27,917|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports/07e07e11-d689-4876-bcde-bcca09603d8e/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 10:01:21,176|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-18 10:01:22,084|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-18 10:01:23,093|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-18 10:02:50,734|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-18 10:02:51,665|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-18 10:02:52,954|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-18 10:05:17,280|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export
+2022-05-18 10:05:18,337|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 10:07:52,122|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export
+2022-05-18 10:07:53,251|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 10:08:31,142|_internal.py|127.0.0.1 - - [18/May/2022 10:08:31] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-18 10:08:32,438|_internal.py|127.0.0.1 - - [18/May/2022 10:08:32] "[36mGET /static/design/style.css HTTP/1.1[0m" 304 -
+2022-05-18 10:08:32,439|_internal.py|127.0.0.1 - - [18/May/2022 10:08:32] "[36mGET /static/pictures/workspace.png HTTP/1.1[0m" 304 -
+2022-05-18 10:08:32,439|_internal.py|127.0.0.1 - - [18/May/2022 10:08:32] "[36mGET /static/pictures/logo.png HTTP/1.1[0m" 304 -
+2022-05-18 10:08:34,331|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-18 10:08:35,304|_internal.py|127.0.0.1 - - [18/May/2022 10:08:35] "[37mGET /dashbord/my_workspace HTTP/1.1[0m" 200 -
+2022-05-18 10:08:35,412|_internal.py|127.0.0.1 - - [18/May/2022 10:08:35] "[36mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 304 -
+2022-05-18 10:08:47,811|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-18 10:08:58,170|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-18 10:08:58,670|_internal.py|127.0.0.1 - - [18/May/2022 10:08:58] "[37mGET /dashbord/my_workspace HTTP/1.1[0m" 200 -
+2022-05-18 10:08:58,787|_internal.py|127.0.0.1 - - [18/May/2022 10:08:58] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 10:08:59,718|_internal.py|127.0.0.1 - - [18/May/2022 10:08:59] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 10:08:59,720|_internal.py|127.0.0.1 - - [18/May/2022 10:08:59] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-18 10:08:59,727|_internal.py|127.0.0.1 - - [18/May/2022 10:08:59] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 10:08:59,873|_internal.py|127.0.0.1 - - [18/May/2022 10:08:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 10:09:10,458|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-18 10:09:11,441|_internal.py|127.0.0.1 - - [18/May/2022 10:09:11] "[37mGET /dashbord/my_workspace HTTP/1.1[0m" 200 -
+2022-05-18 10:10:52,331|_internal.py|127.0.0.1 - - [18/May/2022 10:10:52] "[37mGET /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093 HTTP/1.1[0m" 200 -
+2022-05-18 10:10:52,452|_internal.py|127.0.0.1 - - [18/May/2022 10:10:52] "[36mGET /static/pictures/share.svg HTTP/1.1[0m" 304 -
+2022-05-18 10:10:52,476|_internal.py|127.0.0.1 - - [18/May/2022 10:10:52] "[36mGET /static/pictures/back.svg HTTP/1.1[0m" 304 -
+2022-05-18 10:10:52,478|_internal.py|127.0.0.1 - - [18/May/2022 10:10:52] "[36mGET /static/pictures/download.svg HTTP/1.1[0m" 304 -
+2022-05-18 12:46:53,615|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export
+2022-05-18 12:46:54,972|session.py|{
+    "error_code": 404,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe/Export",
+    "response_body": {
+        "error": {
+            "code": "ExportPBIX_ModelessWorkbookNotFound",
+            "pbi.error": {
+                "code": "ExportPBIX_ModelessWorkbookNotFound",
+                "parameters": {},
+                "details": []
+            }
+        }
+    },
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 12:47:19,326|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-18 12:47:20,341|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-18 12:47:21,554|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-18 13:13:22,915|_internal.py|127.0.0.1 - - [18/May/2022 13:13:22] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-18 13:13:23,053|_internal.py|127.0.0.1 - - [18/May/2022 13:13:23] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:13:23,084|_internal.py|127.0.0.1 - - [18/May/2022 13:13:23] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:13:23,126|_internal.py|127.0.0.1 - - [18/May/2022 13:13:23] "[37mGET /static/pictures/workspace.png HTTP/1.1[0m" 200 -
+2022-05-18 13:13:23,267|_internal.py|127.0.0.1 - - [18/May/2022 13:13:23] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:13:30,513|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-18 13:13:32,025|_internal.py|127.0.0.1 - - [18/May/2022 13:13:32] "[37mGET /dashbord/my_workspace HTTP/1.1[0m" 200 -
+2022-05-18 13:13:32,228|_internal.py|127.0.0.1 - - [18/May/2022 13:13:32] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-18 13:13:34,985|_internal.py|127.0.0.1 - - [18/May/2022 13:13:34] "[37mGET /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093 HTTP/1.1[0m" 200 -
+2022-05-18 13:13:35,151|_internal.py|127.0.0.1 - - [18/May/2022 13:13:35] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-18 13:13:35,257|_internal.py|127.0.0.1 - - [18/May/2022 13:13:35] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-18 13:13:35,290|_internal.py|127.0.0.1 - - [18/May/2022 13:13:35] "[37mGET /static/pictures/download.svg HTTP/1.1[0m" 200 -
+2022-05-18 13:14:15,919|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/me/reports
+2022-05-18 13:14:16,442|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/me/reports",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 13:14:16,521|_internal.py|127.0.0.1 - - [18/May/2022 13:14:16] "[35m[1mGET /dashbord/me HTTP/1.1[0m" 500 -
+2022-05-18 13:14:16,755|_internal.py|127.0.0.1 - - [18/May/2022 13:14:16] "[37mGET /dashbord/me?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:14:16,772|_internal.py|127.0.0.1 - - [18/May/2022 13:14:16] "[37mGET /dashbord/me?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-18 13:14:16,874|_internal.py|127.0.0.1 - - [18/May/2022 13:14:16] "[37mGET /dashbord/me?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-18 13:14:17,009|_internal.py|127.0.0.1 - - [18/May/2022 13:14:17] "[37mGET /dashbord/me?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2022-05-18 13:14:17,123|_internal.py|127.0.0.1 - - [18/May/2022 13:14:17] "[37mGET /dashbord/me?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-18 13:14:17,267|_internal.py|127.0.0.1 - - [18/May/2022 13:14:17] "[37mGET /dashbord/me?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-18 13:14:21,447|_internal.py|127.0.0.1 - - [18/May/2022 13:14:21] "[37mGET /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093 HTTP/1.1[0m" 200 -
+2022-05-18 13:14:24,152|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/me/reports
+2022-05-18 13:14:24,589|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/me/reports",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 13:14:24,656|_internal.py|127.0.0.1 - - [18/May/2022 13:14:24] "[35m[1mGET /dashbord/me HTTP/1.1[0m" 500 -
+2022-05-18 13:14:24,816|_internal.py|127.0.0.1 - - [18/May/2022 13:14:24] "[37mGET /dashbord/me?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:14:24,821|_internal.py|127.0.0.1 - - [18/May/2022 13:14:24] "[37mGET /dashbord/me?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-18 13:14:24,856|_internal.py|127.0.0.1 - - [18/May/2022 13:14:24] "[37mGET /dashbord/me?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-18 13:14:24,923|_internal.py|127.0.0.1 - - [18/May/2022 13:14:24] "[37mGET /dashbord/me?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2022-05-18 13:14:25,017|_internal.py|127.0.0.1 - - [18/May/2022 13:14:25] "[37mGET /dashbord/me?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-18 13:14:25,122|_internal.py|127.0.0.1 - - [18/May/2022 13:14:25] "[37mGET /dashbord/me?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-18 13:14:34,844|_internal.py|127.0.0.1 - - [18/May/2022 13:14:34] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-18 13:14:36,802|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-18 13:14:37,980|_internal.py|127.0.0.1 - - [18/May/2022 13:14:37] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6 HTTP/1.1[0m" 200 -
+2022-05-18 13:14:40,821|_internal.py|127.0.0.1 - - [18/May/2022 13:14:40] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 200 -
+2022-05-18 13:14:43,945|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-18 13:14:45,097|_internal.py|127.0.0.1 - - [18/May/2022 13:14:45] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6 HTTP/1.1[0m" 200 -
+2022-05-18 13:14:48,033|_internal.py|127.0.0.1 - - [18/May/2022 13:14:48] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 200 -
+2022-05-18 13:15:17,023|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-18 13:15:18,496|_internal.py|127.0.0.1 - - [18/May/2022 13:15:18] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6 HTTP/1.1[0m" 200 -
+2022-05-18 13:15:26,931|_internal.py|127.0.0.1 - - [18/May/2022 13:15:26] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-18 13:15:28,890|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-18 13:15:29,980|_internal.py|127.0.0.1 - - [18/May/2022 13:15:29] "[37mGET /dashbord/my_workspace HTTP/1.1[0m" 200 -
+2022-05-18 13:15:32,396|_internal.py|127.0.0.1 - - [18/May/2022 13:15:32] "[37mGET /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093 HTTP/1.1[0m" 200 -
+2022-05-18 13:16:02,035|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-18 13:16:12,854|_internal.py|127.0.0.1 - - [18/May/2022 13:16:12] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-18 13:16:46,845|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/my_workspace/reports
+2022-05-18 13:16:47,785|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/my_workspace/reports",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-18 13:16:47,853|_internal.py|127.0.0.1 - - [18/May/2022 13:16:47] "[35m[1mGET /dashbord/my_workspace HTTP/1.1[0m" 500 -
+2022-05-18 13:16:49,057|_internal.py|127.0.0.1 - - [18/May/2022 13:16:49] "[37mGET /dashbord/my_workspace?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-18 13:16:49,057|_internal.py|127.0.0.1 - - [18/May/2022 13:16:49] "[37mGET /dashbord/my_workspace?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-18 13:16:49,058|_internal.py|127.0.0.1 - - [18/May/2022 13:16:49] "[37mGET /dashbord/my_workspace?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:16:49,124|_internal.py|127.0.0.1 - - [18/May/2022 13:16:49] "[37mGET /dashbord/my_workspace?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2022-05-18 13:16:49,238|_internal.py|127.0.0.1 - - [18/May/2022 13:16:49] "[37mGET /dashbord/my_workspace?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-18 13:16:49,406|_internal.py|127.0.0.1 - - [18/May/2022 13:16:49] "[37mGET /dashbord/my_workspace?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-18 13:17:31,649|_internal.py|127.0.0.1 - - [18/May/2022 13:17:31] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-18 13:17:33,454|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-18 13:17:34,440|_internal.py|127.0.0.1 - - [18/May/2022 13:17:34] "[37mGET /dashbord/me HTTP/1.1[0m" 200 -
+2022-05-18 13:17:36,460|_internal.py|127.0.0.1 - - [18/May/2022 13:17:36] "[37mGET /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093 HTTP/1.1[0m" 200 -
+2022-05-18 13:17:38,669|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-18 13:17:39,663|_internal.py|127.0.0.1 - - [18/May/2022 13:17:39] "[37mGET /dashbord/me HTTP/1.1[0m" 200 -
+2022-05-18 13:25:29,279|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-18 13:27:58,138|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-18 13:27:59,388|_internal.py|127.0.0.1 - - [18/May/2022 13:27:59] "[37mGET /dashbord/me HTTP/1.1[0m" 200 -
+2022-05-18 13:27:59,663|_internal.py|127.0.0.1 - - [18/May/2022 13:27:59] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:28:00,493|_internal.py|127.0.0.1 - - [18/May/2022 13:28:00] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:28:00,502|_internal.py|127.0.0.1 - - [18/May/2022 13:28:00] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:28:00,509|_internal.py|127.0.0.1 - - [18/May/2022 13:28:00] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-18 13:28:01,147|_internal.py|127.0.0.1 - - [18/May/2022 13:28:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:28:04,617|_internal.py|127.0.0.1 - - [18/May/2022 13:28:04] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:28:10,349|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-18 13:28:14,935|_internal.py|127.0.0.1 - - [18/May/2022 13:28:14] "[37mGET /dashbord/me HTTP/1.1[0m" 200 -
+2022-05-18 13:28:28,492|_internal.py|127.0.0.1 - - [18/May/2022 13:28:28] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-18 13:28:44,541|_internal.py|127.0.0.1 - - [18/May/2022 13:28:44] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-18 13:28:44,750|_internal.py|127.0.0.1 - - [18/May/2022 13:28:44] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:28:44,751|_internal.py|127.0.0.1 - - [18/May/2022 13:28:44] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:28:44,766|_internal.py|127.0.0.1 - - [18/May/2022 13:28:44] "[37mGET /static/pictures/workspace.png HTTP/1.1[0m" 200 -
+2022-05-18 13:28:44,793|_internal.py|127.0.0.1 - - [18/May/2022 13:28:44] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:28:44,991|_internal.py|127.0.0.1 - - [18/May/2022 13:28:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:28:49,314|_internal.py|127.0.0.1 - - [18/May/2022 13:28:49] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:30:00,861|_internal.py|127.0.0.1 - - [18/May/2022 13:30:00] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:30:01,217|_internal.py|127.0.0.1 - - [18/May/2022 13:30:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:30:12,714|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-18 13:30:45,784|_internal.py|127.0.0.1 - - [18/May/2022 13:30:45] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-18 13:30:47,854|_internal.py|127.0.0.1 - - [18/May/2022 13:30:47] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:32:46,377|_internal.py|127.0.0.1 - - [18/May/2022 13:32:46] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:32:46,520|_internal.py|127.0.0.1 - - [18/May/2022 13:32:46] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:32:46,576|_internal.py|127.0.0.1 - - [18/May/2022 13:32:46] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:32:46,586|_internal.py|127.0.0.1 - - [18/May/2022 13:32:46] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:32:46,906|_internal.py|127.0.0.1 - - [18/May/2022 13:32:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:33:17,602|_internal.py|127.0.0.1 - - [18/May/2022 13:33:17] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:33:17,768|_internal.py|127.0.0.1 - - [18/May/2022 13:33:17] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:33:17,839|_internal.py|127.0.0.1 - - [18/May/2022 13:33:17] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:33:17,861|_internal.py|127.0.0.1 - - [18/May/2022 13:33:17] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:33:18,456|_internal.py|127.0.0.1 - - [18/May/2022 13:33:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:40:43,933|_internal.py|127.0.0.1 - - [18/May/2022 13:40:43] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:40:44,119|_internal.py|127.0.0.1 - - [18/May/2022 13:40:44] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:40:44,170|_internal.py|127.0.0.1 - - [18/May/2022 13:40:44] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:40:44,182|_internal.py|127.0.0.1 - - [18/May/2022 13:40:44] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:40:44,488|_internal.py|127.0.0.1 - - [18/May/2022 13:40:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:41:28,295|_internal.py|127.0.0.1 - - [18/May/2022 13:41:28] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:41:28,523|_internal.py|127.0.0.1 - - [18/May/2022 13:41:28] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:41:28,595|_internal.py|127.0.0.1 - - [18/May/2022 13:41:28] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:41:28,720|_internal.py|127.0.0.1 - - [18/May/2022 13:41:28] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:41:28,955|_internal.py|127.0.0.1 - - [18/May/2022 13:41:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:41:54,213|_internal.py|127.0.0.1 - - [18/May/2022 13:41:54] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:41:54,421|_internal.py|127.0.0.1 - - [18/May/2022 13:41:54] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:41:54,481|_internal.py|127.0.0.1 - - [18/May/2022 13:41:54] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:41:54,548|_internal.py|127.0.0.1 - - [18/May/2022 13:41:54] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:41:54,845|_internal.py|127.0.0.1 - - [18/May/2022 13:41:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:42:24,440|_internal.py|127.0.0.1 - - [18/May/2022 13:42:24] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:42:24,585|_internal.py|127.0.0.1 - - [18/May/2022 13:42:24] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:42:24,603|_internal.py|127.0.0.1 - - [18/May/2022 13:42:24] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:42:24,632|_internal.py|127.0.0.1 - - [18/May/2022 13:42:24] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:42:24,946|_internal.py|127.0.0.1 - - [18/May/2022 13:42:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:42:35,057|_internal.py|127.0.0.1 - - [18/May/2022 13:42:35] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:42:35,225|_internal.py|127.0.0.1 - - [18/May/2022 13:42:35] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:42:35,262|_internal.py|127.0.0.1 - - [18/May/2022 13:42:35] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:42:35,295|_internal.py|127.0.0.1 - - [18/May/2022 13:42:35] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:42:35,724|_internal.py|127.0.0.1 - - [18/May/2022 13:42:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:42:37,011|_internal.py|127.0.0.1 - - [18/May/2022 13:42:37] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:43:46,303|_internal.py|127.0.0.1 - - [18/May/2022 13:43:46] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:43:46,931|_internal.py|127.0.0.1 - - [18/May/2022 13:43:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:46:33,302|_internal.py|127.0.0.1 - - [18/May/2022 13:46:33] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:46:35,381|_internal.py|127.0.0.1 - - [18/May/2022 13:46:35] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:46:35,400|_internal.py|127.0.0.1 - - [18/May/2022 13:46:35] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:46:37,464|_internal.py|127.0.0.1 - - [18/May/2022 13:46:37] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:46:41,160|_internal.py|127.0.0.1 - - [18/May/2022 13:46:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:49:57,854|_internal.py|127.0.0.1 - - [18/May/2022 13:49:57] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:49:59,924|_internal.py|127.0.0.1 - - [18/May/2022 13:49:59] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:50:00,015|_internal.py|127.0.0.1 - - [18/May/2022 13:50:00] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:50:02,077|_internal.py|127.0.0.1 - - [18/May/2022 13:50:02] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:50:05,799|_internal.py|127.0.0.1 - - [18/May/2022 13:50:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:52:24,293|_internal.py|127.0.0.1 - - [18/May/2022 13:52:24] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:52:24,376|_internal.py|127.0.0.1 - - [18/May/2022 13:52:24] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:52:24,421|_internal.py|127.0.0.1 - - [18/May/2022 13:52:24] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:52:24,434|_internal.py|127.0.0.1 - - [18/May/2022 13:52:24] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:52:24,722|_internal.py|127.0.0.1 - - [18/May/2022 13:52:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:52:46,509|_internal.py|127.0.0.1 - - [18/May/2022 13:52:46] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:52:46,575|_internal.py|127.0.0.1 - - [18/May/2022 13:52:46] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:52:46,629|_internal.py|127.0.0.1 - - [18/May/2022 13:52:46] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:52:46,648|_internal.py|127.0.0.1 - - [18/May/2022 13:52:46] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:52:46,777|_internal.py|127.0.0.1 - - [18/May/2022 13:52:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:53:00,872|_internal.py|127.0.0.1 - - [18/May/2022 13:53:00] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:53:00,949|_internal.py|127.0.0.1 - - [18/May/2022 13:53:00] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:53:01,003|_internal.py|127.0.0.1 - - [18/May/2022 13:53:01] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:53:01,030|_internal.py|127.0.0.1 - - [18/May/2022 13:53:01] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:53:01,347|_internal.py|127.0.0.1 - - [18/May/2022 13:53:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:54:54,061|_internal.py|127.0.0.1 - - [18/May/2022 13:54:54] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:54:54,143|_internal.py|127.0.0.1 - - [18/May/2022 13:54:54] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:54:54,220|_internal.py|127.0.0.1 - - [18/May/2022 13:54:54] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:54:54,237|_internal.py|127.0.0.1 - - [18/May/2022 13:54:54] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:54:54,515|_internal.py|127.0.0.1 - - [18/May/2022 13:54:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:56:03,345|_internal.py|127.0.0.1 - - [18/May/2022 13:56:03] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:56:03,386|_internal.py|127.0.0.1 - - [18/May/2022 13:56:03] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:56:03,408|_internal.py|127.0.0.1 - - [18/May/2022 13:56:03] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:56:03,417|_internal.py|127.0.0.1 - - [18/May/2022 13:56:03] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:56:03,585|_internal.py|127.0.0.1 - - [18/May/2022 13:56:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:57:10,739|_internal.py|127.0.0.1 - - [18/May/2022 13:57:10] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:57:10,801|_internal.py|127.0.0.1 - - [18/May/2022 13:57:10] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:57:10,830|_internal.py|127.0.0.1 - - [18/May/2022 13:57:10] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:57:10,842|_internal.py|127.0.0.1 - - [18/May/2022 13:57:10] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:57:10,966|_internal.py|127.0.0.1 - - [18/May/2022 13:57:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:57:25,737|_internal.py|127.0.0.1 - - [18/May/2022 13:57:25] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:57:25,810|_internal.py|127.0.0.1 - - [18/May/2022 13:57:25] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:57:25,857|_internal.py|127.0.0.1 - - [18/May/2022 13:57:25] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:57:25,880|_internal.py|127.0.0.1 - - [18/May/2022 13:57:25] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:57:26,017|_internal.py|127.0.0.1 - - [18/May/2022 13:57:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:57:39,322|_internal.py|127.0.0.1 - - [18/May/2022 13:57:39] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:57:39,380|_internal.py|127.0.0.1 - - [18/May/2022 13:57:39] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:57:39,412|_internal.py|127.0.0.1 - - [18/May/2022 13:57:39] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:57:39,428|_internal.py|127.0.0.1 - - [18/May/2022 13:57:39] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:57:39,566|_internal.py|127.0.0.1 - - [18/May/2022 13:57:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:57:51,121|_internal.py|127.0.0.1 - - [18/May/2022 13:57:51] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:57:51,206|_internal.py|127.0.0.1 - - [18/May/2022 13:57:51] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:57:51,278|_internal.py|127.0.0.1 - - [18/May/2022 13:57:51] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:57:51,307|_internal.py|127.0.0.1 - - [18/May/2022 13:57:51] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:57:51,568|_internal.py|127.0.0.1 - - [18/May/2022 13:57:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:58:00,301|_internal.py|127.0.0.1 - - [18/May/2022 13:58:00] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:58:00,401|_internal.py|127.0.0.1 - - [18/May/2022 13:58:00] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:58:00,461|_internal.py|127.0.0.1 - - [18/May/2022 13:58:00] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:58:00,476|_internal.py|127.0.0.1 - - [18/May/2022 13:58:00] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:58:00,593|_internal.py|127.0.0.1 - - [18/May/2022 13:58:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:58:07,924|_internal.py|127.0.0.1 - - [18/May/2022 13:58:07] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:58:07,989|_internal.py|127.0.0.1 - - [18/May/2022 13:58:07] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:58:08,029|_internal.py|127.0.0.1 - - [18/May/2022 13:58:08] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:58:08,038|_internal.py|127.0.0.1 - - [18/May/2022 13:58:08] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:58:08,180|_internal.py|127.0.0.1 - - [18/May/2022 13:58:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:58:18,130|_internal.py|127.0.0.1 - - [18/May/2022 13:58:18] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:58:18,202|_internal.py|127.0.0.1 - - [18/May/2022 13:58:18] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:58:18,246|_internal.py|127.0.0.1 - - [18/May/2022 13:58:18] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:58:18,270|_internal.py|127.0.0.1 - - [18/May/2022 13:58:18] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:58:18,494|_internal.py|127.0.0.1 - - [18/May/2022 13:58:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:58:28,974|_internal.py|127.0.0.1 - - [18/May/2022 13:58:28] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:58:29,086|_internal.py|127.0.0.1 - - [18/May/2022 13:58:29] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:58:29,154|_internal.py|127.0.0.1 - - [18/May/2022 13:58:29] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:58:29,168|_internal.py|127.0.0.1 - - [18/May/2022 13:58:29] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:58:29,462|_internal.py|127.0.0.1 - - [18/May/2022 13:58:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:59:13,321|_internal.py|127.0.0.1 - - [18/May/2022 13:59:13] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:59:13,396|_internal.py|127.0.0.1 - - [18/May/2022 13:59:13] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:59:13,463|_internal.py|127.0.0.1 - - [18/May/2022 13:59:13] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:59:13,474|_internal.py|127.0.0.1 - - [18/May/2022 13:59:13] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:59:13,675|_internal.py|127.0.0.1 - - [18/May/2022 13:59:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 13:59:34,469|_internal.py|127.0.0.1 - - [18/May/2022 13:59:34] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 13:59:34,499|_internal.py|127.0.0.1 - - [18/May/2022 13:59:34] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 13:59:34,529|_internal.py|127.0.0.1 - - [18/May/2022 13:59:34] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 13:59:34,538|_internal.py|127.0.0.1 - - [18/May/2022 13:59:34] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 13:59:34,845|_internal.py|127.0.0.1 - - [18/May/2022 13:59:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:00:05,833|_internal.py|127.0.0.1 - - [18/May/2022 14:00:05] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:00:05,877|_internal.py|127.0.0.1 - - [18/May/2022 14:00:05] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:00:05,914|_internal.py|127.0.0.1 - - [18/May/2022 14:00:05] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:00:05,923|_internal.py|127.0.0.1 - - [18/May/2022 14:00:05] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:00:06,163|_internal.py|127.0.0.1 - - [18/May/2022 14:00:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:00:58,882|_internal.py|127.0.0.1 - - [18/May/2022 14:00:58] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:00:58,953|_internal.py|127.0.0.1 - - [18/May/2022 14:00:58] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:00:59,006|_internal.py|127.0.0.1 - - [18/May/2022 14:00:59] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:00:59,016|_internal.py|127.0.0.1 - - [18/May/2022 14:00:59] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:00:59,212|_internal.py|127.0.0.1 - - [18/May/2022 14:00:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:01:41,681|_internal.py|127.0.0.1 - - [18/May/2022 14:01:41] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:01:41,775|_internal.py|127.0.0.1 - - [18/May/2022 14:01:41] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:01:41,818|_internal.py|127.0.0.1 - - [18/May/2022 14:01:41] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:01:41,828|_internal.py|127.0.0.1 - - [18/May/2022 14:01:41] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:01:42,043|_internal.py|127.0.0.1 - - [18/May/2022 14:01:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:01:53,209|_internal.py|127.0.0.1 - - [18/May/2022 14:01:53] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:01:53,363|_internal.py|127.0.0.1 - - [18/May/2022 14:01:53] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:01:53,424|_internal.py|127.0.0.1 - - [18/May/2022 14:01:53] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:01:53,480|_internal.py|127.0.0.1 - - [18/May/2022 14:01:53] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:01:53,641|_internal.py|127.0.0.1 - - [18/May/2022 14:01:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:03:50,943|_internal.py|127.0.0.1 - - [18/May/2022 14:03:50] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:03:50,974|_internal.py|127.0.0.1 - - [18/May/2022 14:03:50] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:03:50,992|_internal.py|127.0.0.1 - - [18/May/2022 14:03:50] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:03:51,006|_internal.py|127.0.0.1 - - [18/May/2022 14:03:51] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:03:51,159|_internal.py|127.0.0.1 - - [18/May/2022 14:03:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:04:42,256|_internal.py|127.0.0.1 - - [18/May/2022 14:04:42] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:04:42,336|_internal.py|127.0.0.1 - - [18/May/2022 14:04:42] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:04:42,379|_internal.py|127.0.0.1 - - [18/May/2022 14:04:42] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:04:42,394|_internal.py|127.0.0.1 - - [18/May/2022 14:04:42] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:04:42,556|_internal.py|127.0.0.1 - - [18/May/2022 14:04:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:04:43,929|_internal.py|127.0.0.1 - - [18/May/2022 14:04:43] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:04:44,007|_internal.py|127.0.0.1 - - [18/May/2022 14:04:44] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:04:44,091|_internal.py|127.0.0.1 - - [18/May/2022 14:04:44] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:04:44,131|_internal.py|127.0.0.1 - - [18/May/2022 14:04:44] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:04:44,186|_internal.py|127.0.0.1 - - [18/May/2022 14:04:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:04:44,622|_internal.py|127.0.0.1 - - [18/May/2022 14:04:44] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:04:44,711|_internal.py|127.0.0.1 - - [18/May/2022 14:04:44] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:04:44,779|_internal.py|127.0.0.1 - - [18/May/2022 14:04:44] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:04:44,812|_internal.py|127.0.0.1 - - [18/May/2022 14:04:44] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:04:44,831|_internal.py|127.0.0.1 - - [18/May/2022 14:04:44] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:04:44,898|_internal.py|127.0.0.1 - - [18/May/2022 14:04:44] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:04:44,913|_internal.py|127.0.0.1 - - [18/May/2022 14:04:44] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:04:44,922|_internal.py|127.0.0.1 - - [18/May/2022 14:04:44] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:04:44,972|_internal.py|127.0.0.1 - - [18/May/2022 14:04:44] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:04:45,012|_internal.py|127.0.0.1 - - [18/May/2022 14:04:45] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:04:45,035|_internal.py|127.0.0.1 - - [18/May/2022 14:04:45] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:04:45,045|_internal.py|127.0.0.1 - - [18/May/2022 14:04:45] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:04:45,214|_internal.py|127.0.0.1 - - [18/May/2022 14:04:45] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:04:45,313|_internal.py|127.0.0.1 - - [18/May/2022 14:04:45] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:04:45,355|_internal.py|127.0.0.1 - - [18/May/2022 14:04:45] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:04:45,364|_internal.py|127.0.0.1 - - [18/May/2022 14:04:45] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:04:45,484|_internal.py|127.0.0.1 - - [18/May/2022 14:04:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:05:00,622|_internal.py|127.0.0.1 - - [18/May/2022 14:05:00] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:05:00,697|_internal.py|127.0.0.1 - - [18/May/2022 14:05:00] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:05:00,744|_internal.py|127.0.0.1 - - [18/May/2022 14:05:00] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:05:00,770|_internal.py|127.0.0.1 - - [18/May/2022 14:05:00] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:05:00,945|_internal.py|127.0.0.1 - - [18/May/2022 14:05:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:05:02,510|_internal.py|127.0.0.1 - - [18/May/2022 14:05:02] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:06:33,520|_internal.py|127.0.0.1 - - [18/May/2022 14:06:33] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:06:33,601|_internal.py|127.0.0.1 - - [18/May/2022 14:06:33] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:06:33,670|_internal.py|127.0.0.1 - - [18/May/2022 14:06:33] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:06:33,685|_internal.py|127.0.0.1 - - [18/May/2022 14:06:33] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:06:33,799|_internal.py|127.0.0.1 - - [18/May/2022 14:06:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:08:07,847|_internal.py|127.0.0.1 - - [18/May/2022 14:08:07] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:08:07,957|_internal.py|127.0.0.1 - - [18/May/2022 14:08:07] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:08:07,985|_internal.py|127.0.0.1 - - [18/May/2022 14:08:07] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:08:07,997|_internal.py|127.0.0.1 - - [18/May/2022 14:08:07] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:08:08,229|_internal.py|127.0.0.1 - - [18/May/2022 14:08:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:09:17,692|_internal.py|127.0.0.1 - - [18/May/2022 14:09:17] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:09:17,821|_internal.py|127.0.0.1 - - [18/May/2022 14:09:17] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:09:17,866|_internal.py|127.0.0.1 - - [18/May/2022 14:09:17] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:09:17,879|_internal.py|127.0.0.1 - - [18/May/2022 14:09:17] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:09:18,281|_internal.py|127.0.0.1 - - [18/May/2022 14:09:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:11:07,839|_internal.py|127.0.0.1 - - [18/May/2022 14:11:07] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:11:07,880|_internal.py|127.0.0.1 - - [18/May/2022 14:11:07] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:11:07,884|_internal.py|127.0.0.1 - - [18/May/2022 14:11:07] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:11:07,895|_internal.py|127.0.0.1 - - [18/May/2022 14:11:07] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:11:08,152|_internal.py|127.0.0.1 - - [18/May/2022 14:11:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:11:32,558|_internal.py|127.0.0.1 - - [18/May/2022 14:11:32] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:11:32,592|_internal.py|127.0.0.1 - - [18/May/2022 14:11:32] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:11:32,609|_internal.py|127.0.0.1 - - [18/May/2022 14:11:32] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:11:32,620|_internal.py|127.0.0.1 - - [18/May/2022 14:11:32] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:11:32,905|_internal.py|127.0.0.1 - - [18/May/2022 14:11:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:11:52,797|_internal.py|127.0.0.1 - - [18/May/2022 14:11:52] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:11:52,833|_internal.py|127.0.0.1 - - [18/May/2022 14:11:52] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:11:52,848|_internal.py|127.0.0.1 - - [18/May/2022 14:11:52] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:11:52,859|_internal.py|127.0.0.1 - - [18/May/2022 14:11:52] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:11:53,306|_internal.py|127.0.0.1 - - [18/May/2022 14:11:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:12:10,254|_internal.py|127.0.0.1 - - [18/May/2022 14:12:10] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:12:10,288|_internal.py|127.0.0.1 - - [18/May/2022 14:12:10] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:12:10,301|_internal.py|127.0.0.1 - - [18/May/2022 14:12:10] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:12:10,310|_internal.py|127.0.0.1 - - [18/May/2022 14:12:10] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:12:10,737|_internal.py|127.0.0.1 - - [18/May/2022 14:12:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:12:11,542|_internal.py|127.0.0.1 - - [18/May/2022 14:12:11] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:12:11,566|_internal.py|127.0.0.1 - - [18/May/2022 14:12:11] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:12:11,590|_internal.py|127.0.0.1 - - [18/May/2022 14:12:11] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:12:11,598|_internal.py|127.0.0.1 - - [18/May/2022 14:12:11] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:12:12,049|_internal.py|127.0.0.1 - - [18/May/2022 14:12:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:12:22,676|_internal.py|127.0.0.1 - - [18/May/2022 14:12:22] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:12:22,700|_internal.py|127.0.0.1 - - [18/May/2022 14:12:22] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:12:22,719|_internal.py|127.0.0.1 - - [18/May/2022 14:12:22] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:12:22,727|_internal.py|127.0.0.1 - - [18/May/2022 14:12:22] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:12:22,939|_internal.py|127.0.0.1 - - [18/May/2022 14:12:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:12:24,597|_internal.py|127.0.0.1 - - [18/May/2022 14:12:24] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:12:24,630|_internal.py|127.0.0.1 - - [18/May/2022 14:12:24] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:12:24,645|_internal.py|127.0.0.1 - - [18/May/2022 14:12:24] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:12:24,654|_internal.py|127.0.0.1 - - [18/May/2022 14:12:24] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:12:24,869|_internal.py|127.0.0.1 - - [18/May/2022 14:12:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:12:25,321|_internal.py|127.0.0.1 - - [18/May/2022 14:12:25] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:12:25,346|_internal.py|127.0.0.1 - - [18/May/2022 14:12:25] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:12:25,362|_internal.py|127.0.0.1 - - [18/May/2022 14:12:25] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:12:25,370|_internal.py|127.0.0.1 - - [18/May/2022 14:12:25] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:12:25,563|_internal.py|127.0.0.1 - - [18/May/2022 14:12:25] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:12:25,586|_internal.py|127.0.0.1 - - [18/May/2022 14:12:25] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:12:25,604|_internal.py|127.0.0.1 - - [18/May/2022 14:12:25] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:12:25,612|_internal.py|127.0.0.1 - - [18/May/2022 14:12:25] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:12:26,003|_internal.py|127.0.0.1 - - [18/May/2022 14:12:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:12:26,637|_internal.py|127.0.0.1 - - [18/May/2022 14:12:26] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:12:26,670|_internal.py|127.0.0.1 - - [18/May/2022 14:12:26] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:12:26,687|_internal.py|127.0.0.1 - - [18/May/2022 14:12:26] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:12:26,697|_internal.py|127.0.0.1 - - [18/May/2022 14:12:26] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:12:26,867|_internal.py|127.0.0.1 - - [18/May/2022 14:12:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:13:02,124|_internal.py|127.0.0.1 - - [18/May/2022 14:13:02] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:13:02,148|_internal.py|127.0.0.1 - - [18/May/2022 14:13:02] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:13:02,169|_internal.py|127.0.0.1 - - [18/May/2022 14:13:02] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:13:02,178|_internal.py|127.0.0.1 - - [18/May/2022 14:13:02] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:13:02,292|_internal.py|127.0.0.1 - - [18/May/2022 14:13:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:13:22,680|_internal.py|127.0.0.1 - - [18/May/2022 14:13:22] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:13:22,703|_internal.py|127.0.0.1 - - [18/May/2022 14:13:22] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:13:22,720|_internal.py|127.0.0.1 - - [18/May/2022 14:13:22] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:13:22,728|_internal.py|127.0.0.1 - - [18/May/2022 14:13:22] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:13:22,903|_internal.py|127.0.0.1 - - [18/May/2022 14:13:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:14:07,888|_internal.py|127.0.0.1 - - [18/May/2022 14:14:07] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:14:07,918|_internal.py|127.0.0.1 - - [18/May/2022 14:14:07] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:14:07,928|_internal.py|127.0.0.1 - - [18/May/2022 14:14:07] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:14:07,937|_internal.py|127.0.0.1 - - [18/May/2022 14:14:07] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:14:08,138|_internal.py|127.0.0.1 - - [18/May/2022 14:14:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:14:20,999|_internal.py|127.0.0.1 - - [18/May/2022 14:14:20] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:14:21,023|_internal.py|127.0.0.1 - - [18/May/2022 14:14:21] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:14:21,036|_internal.py|127.0.0.1 - - [18/May/2022 14:14:21] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:14:21,044|_internal.py|127.0.0.1 - - [18/May/2022 14:14:21] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:14:21,150|_internal.py|127.0.0.1 - - [18/May/2022 14:14:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:15:40,359|_internal.py|127.0.0.1 - - [18/May/2022 14:15:40] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:15:40,387|_internal.py|127.0.0.1 - - [18/May/2022 14:15:40] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:15:40,400|_internal.py|127.0.0.1 - - [18/May/2022 14:15:40] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:15:40,407|_internal.py|127.0.0.1 - - [18/May/2022 14:15:40] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:15:40,536|_internal.py|127.0.0.1 - - [18/May/2022 14:15:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:16:20,205|_internal.py|127.0.0.1 - - [18/May/2022 14:16:20] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:16:20,231|_internal.py|127.0.0.1 - - [18/May/2022 14:16:20] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:16:20,242|_internal.py|127.0.0.1 - - [18/May/2022 14:16:20] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:16:20,250|_internal.py|127.0.0.1 - - [18/May/2022 14:16:20] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:16:20,417|_internal.py|127.0.0.1 - - [18/May/2022 14:16:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:16:57,176|_internal.py|127.0.0.1 - - [18/May/2022 14:16:57] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:16:57,198|_internal.py|127.0.0.1 - - [18/May/2022 14:16:57] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:16:57,217|_internal.py|127.0.0.1 - - [18/May/2022 14:16:57] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:16:57,224|_internal.py|127.0.0.1 - - [18/May/2022 14:16:57] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:16:57,334|_internal.py|127.0.0.1 - - [18/May/2022 14:16:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:17:00,432|_internal.py|127.0.0.1 - - [18/May/2022 14:17:00] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:17:00,457|_internal.py|127.0.0.1 - - [18/May/2022 14:17:00] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:17:00,468|_internal.py|127.0.0.1 - - [18/May/2022 14:17:00] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:17:00,475|_internal.py|127.0.0.1 - - [18/May/2022 14:17:00] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:17:00,580|_internal.py|127.0.0.1 - - [18/May/2022 14:17:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:17:01,341|_internal.py|127.0.0.1 - - [18/May/2022 14:17:01] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:17:01,364|_internal.py|127.0.0.1 - - [18/May/2022 14:17:01] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:17:01,376|_internal.py|127.0.0.1 - - [18/May/2022 14:17:01] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:17:01,383|_internal.py|127.0.0.1 - - [18/May/2022 14:17:01] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:17:01,493|_internal.py|127.0.0.1 - - [18/May/2022 14:17:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:17:14,542|_internal.py|127.0.0.1 - - [18/May/2022 14:17:14] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:17:14,569|_internal.py|127.0.0.1 - - [18/May/2022 14:17:14] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:17:14,581|_internal.py|127.0.0.1 - - [18/May/2022 14:17:14] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:17:14,588|_internal.py|127.0.0.1 - - [18/May/2022 14:17:14] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:17:14,734|_internal.py|127.0.0.1 - - [18/May/2022 14:17:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:17:41,110|_internal.py|127.0.0.1 - - [18/May/2022 14:17:41] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:17:41,134|_internal.py|127.0.0.1 - - [18/May/2022 14:17:41] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:17:41,147|_internal.py|127.0.0.1 - - [18/May/2022 14:17:41] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:17:41,153|_internal.py|127.0.0.1 - - [18/May/2022 14:17:41] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:17:41,271|_internal.py|127.0.0.1 - - [18/May/2022 14:17:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:18:18,843|_internal.py|127.0.0.1 - - [18/May/2022 14:18:18] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:18:18,866|_internal.py|127.0.0.1 - - [18/May/2022 14:18:18] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:18:18,879|_internal.py|127.0.0.1 - - [18/May/2022 14:18:18] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:18:18,887|_internal.py|127.0.0.1 - - [18/May/2022 14:18:18] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:18:18,995|_internal.py|127.0.0.1 - - [18/May/2022 14:18:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:18:28,889|_internal.py|127.0.0.1 - - [18/May/2022 14:18:28] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:18:28,915|_internal.py|127.0.0.1 - - [18/May/2022 14:18:28] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:18:28,932|_internal.py|127.0.0.1 - - [18/May/2022 14:18:28] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:18:28,939|_internal.py|127.0.0.1 - - [18/May/2022 14:18:28] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:18:29,047|_internal.py|127.0.0.1 - - [18/May/2022 14:18:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:18:38,438|_internal.py|127.0.0.1 - - [18/May/2022 14:18:38] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:18:38,468|_internal.py|127.0.0.1 - - [18/May/2022 14:18:38] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:18:38,487|_internal.py|127.0.0.1 - - [18/May/2022 14:18:38] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:18:38,494|_internal.py|127.0.0.1 - - [18/May/2022 14:18:38] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:18:38,593|_internal.py|127.0.0.1 - - [18/May/2022 14:18:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:18:51,771|_internal.py|127.0.0.1 - - [18/May/2022 14:18:51] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:18:51,793|_internal.py|127.0.0.1 - - [18/May/2022 14:18:51] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:18:51,809|_internal.py|127.0.0.1 - - [18/May/2022 14:18:51] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:18:51,816|_internal.py|127.0.0.1 - - [18/May/2022 14:18:51] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:18:52,009|_internal.py|127.0.0.1 - - [18/May/2022 14:18:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:19:08,782|_internal.py|127.0.0.1 - - [18/May/2022 14:19:08] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:19:08,806|_internal.py|127.0.0.1 - - [18/May/2022 14:19:08] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:19:08,826|_internal.py|127.0.0.1 - - [18/May/2022 14:19:08] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:19:08,834|_internal.py|127.0.0.1 - - [18/May/2022 14:19:08] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:19:08,967|_internal.py|127.0.0.1 - - [18/May/2022 14:19:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:19:17,910|_internal.py|127.0.0.1 - - [18/May/2022 14:19:17] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:19:17,937|_internal.py|127.0.0.1 - - [18/May/2022 14:19:17] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:19:17,948|_internal.py|127.0.0.1 - - [18/May/2022 14:19:17] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:19:17,956|_internal.py|127.0.0.1 - - [18/May/2022 14:19:17] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:19:18,053|_internal.py|127.0.0.1 - - [18/May/2022 14:19:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:19:28,438|_internal.py|127.0.0.1 - - [18/May/2022 14:19:28] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:19:28,469|_internal.py|127.0.0.1 - - [18/May/2022 14:19:28] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:19:28,485|_internal.py|127.0.0.1 - - [18/May/2022 14:19:28] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:19:28,495|_internal.py|127.0.0.1 - - [18/May/2022 14:19:28] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:19:28,598|_internal.py|127.0.0.1 - - [18/May/2022 14:19:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:19:58,506|_internal.py|127.0.0.1 - - [18/May/2022 14:19:58] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:19:58,529|_internal.py|127.0.0.1 - - [18/May/2022 14:19:58] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:19:58,553|_internal.py|127.0.0.1 - - [18/May/2022 14:19:58] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:19:58,562|_internal.py|127.0.0.1 - - [18/May/2022 14:19:58] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:19:58,739|_internal.py|127.0.0.1 - - [18/May/2022 14:19:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:20:13,062|_internal.py|127.0.0.1 - - [18/May/2022 14:20:13] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:20:13,089|_internal.py|127.0.0.1 - - [18/May/2022 14:20:13] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:20:13,098|_internal.py|127.0.0.1 - - [18/May/2022 14:20:13] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:20:13,107|_internal.py|127.0.0.1 - - [18/May/2022 14:20:13] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:20:13,243|_internal.py|127.0.0.1 - - [18/May/2022 14:20:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:20:43,462|_internal.py|127.0.0.1 - - [18/May/2022 14:20:43] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:20:43,492|_internal.py|127.0.0.1 - - [18/May/2022 14:20:43] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:20:43,507|_internal.py|127.0.0.1 - - [18/May/2022 14:20:43] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:20:43,517|_internal.py|127.0.0.1 - - [18/May/2022 14:20:43] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:20:43,653|_internal.py|127.0.0.1 - - [18/May/2022 14:20:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:21:07,551|_internal.py|127.0.0.1 - - [18/May/2022 14:21:07] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:21:07,577|_internal.py|127.0.0.1 - - [18/May/2022 14:21:07] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:21:07,600|_internal.py|127.0.0.1 - - [18/May/2022 14:21:07] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:21:07,613|_internal.py|127.0.0.1 - - [18/May/2022 14:21:07] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:21:07,828|_internal.py|127.0.0.1 - - [18/May/2022 14:21:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:22:40,941|_internal.py|127.0.0.1 - - [18/May/2022 14:22:40] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:22:40,965|_internal.py|127.0.0.1 - - [18/May/2022 14:22:40] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:22:40,991|_internal.py|127.0.0.1 - - [18/May/2022 14:22:40] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:22:40,999|_internal.py|127.0.0.1 - - [18/May/2022 14:22:40] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:22:41,283|_internal.py|127.0.0.1 - - [18/May/2022 14:22:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:23:25,919|_internal.py|127.0.0.1 - - [18/May/2022 14:23:25] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:23:25,952|_internal.py|127.0.0.1 - - [18/May/2022 14:23:25] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:23:25,963|_internal.py|127.0.0.1 - - [18/May/2022 14:23:25] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:23:25,971|_internal.py|127.0.0.1 - - [18/May/2022 14:23:25] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:23:26,134|_internal.py|127.0.0.1 - - [18/May/2022 14:23:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:23:45,964|_internal.py|127.0.0.1 - - [18/May/2022 14:23:45] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:23:45,993|_internal.py|127.0.0.1 - - [18/May/2022 14:23:45] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:23:46,003|_internal.py|127.0.0.1 - - [18/May/2022 14:23:46] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:23:46,010|_internal.py|127.0.0.1 - - [18/May/2022 14:23:46] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:23:46,117|_internal.py|127.0.0.1 - - [18/May/2022 14:23:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:24:05,687|_internal.py|127.0.0.1 - - [18/May/2022 14:24:05] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:24:05,710|_internal.py|127.0.0.1 - - [18/May/2022 14:24:05] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:24:05,741|_internal.py|127.0.0.1 - - [18/May/2022 14:24:05] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:24:05,751|_internal.py|127.0.0.1 - - [18/May/2022 14:24:05] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:24:05,930|_internal.py|127.0.0.1 - - [18/May/2022 14:24:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:24:19,351|_internal.py|127.0.0.1 - - [18/May/2022 14:24:19] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:24:19,377|_internal.py|127.0.0.1 - - [18/May/2022 14:24:19] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:24:19,391|_internal.py|127.0.0.1 - - [18/May/2022 14:24:19] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:24:19,397|_internal.py|127.0.0.1 - - [18/May/2022 14:24:19] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:24:19,528|_internal.py|127.0.0.1 - - [18/May/2022 14:24:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:24:27,204|_internal.py|127.0.0.1 - - [18/May/2022 14:24:27] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:24:27,232|_internal.py|127.0.0.1 - - [18/May/2022 14:24:27] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:24:27,245|_internal.py|127.0.0.1 - - [18/May/2022 14:24:27] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:24:27,252|_internal.py|127.0.0.1 - - [18/May/2022 14:24:27] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:24:27,373|_internal.py|127.0.0.1 - - [18/May/2022 14:24:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:24:38,242|_internal.py|127.0.0.1 - - [18/May/2022 14:24:38] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:24:38,268|_internal.py|127.0.0.1 - - [18/May/2022 14:24:38] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:24:38,284|_internal.py|127.0.0.1 - - [18/May/2022 14:24:38] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:24:38,293|_internal.py|127.0.0.1 - - [18/May/2022 14:24:38] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:24:38,455|_internal.py|127.0.0.1 - - [18/May/2022 14:24:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:24:47,857|_internal.py|127.0.0.1 - - [18/May/2022 14:24:47] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:24:47,889|_internal.py|127.0.0.1 - - [18/May/2022 14:24:47] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:24:47,905|_internal.py|127.0.0.1 - - [18/May/2022 14:24:47] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:24:47,912|_internal.py|127.0.0.1 - - [18/May/2022 14:24:47] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:24:48,026|_internal.py|127.0.0.1 - - [18/May/2022 14:24:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:25:10,082|_internal.py|127.0.0.1 - - [18/May/2022 14:25:10] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:25:10,114|_internal.py|127.0.0.1 - - [18/May/2022 14:25:10] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:25:10,131|_internal.py|127.0.0.1 - - [18/May/2022 14:25:10] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:25:10,140|_internal.py|127.0.0.1 - - [18/May/2022 14:25:10] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:25:10,265|_internal.py|127.0.0.1 - - [18/May/2022 14:25:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:25:23,651|_internal.py|127.0.0.1 - - [18/May/2022 14:25:23] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:25:23,678|_internal.py|127.0.0.1 - - [18/May/2022 14:25:23] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:25:23,691|_internal.py|127.0.0.1 - - [18/May/2022 14:25:23] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:25:23,698|_internal.py|127.0.0.1 - - [18/May/2022 14:25:23] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:25:23,829|_internal.py|127.0.0.1 - - [18/May/2022 14:25:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:26:19,740|_internal.py|127.0.0.1 - - [18/May/2022 14:26:19] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:26:19,761|_internal.py|127.0.0.1 - - [18/May/2022 14:26:19] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:26:19,786|_internal.py|127.0.0.1 - - [18/May/2022 14:26:19] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:26:19,796|_internal.py|127.0.0.1 - - [18/May/2022 14:26:19] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:26:20,250|_internal.py|127.0.0.1 - - [18/May/2022 14:26:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:26:32,143|_internal.py|127.0.0.1 - - [18/May/2022 14:26:32] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:26:32,166|_internal.py|127.0.0.1 - - [18/May/2022 14:26:32] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:26:32,177|_internal.py|127.0.0.1 - - [18/May/2022 14:26:32] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:26:32,186|_internal.py|127.0.0.1 - - [18/May/2022 14:26:32] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:26:32,345|_internal.py|127.0.0.1 - - [18/May/2022 14:26:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:26:49,116|_internal.py|127.0.0.1 - - [18/May/2022 14:26:49] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:26:49,145|_internal.py|127.0.0.1 - - [18/May/2022 14:26:49] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:26:49,159|_internal.py|127.0.0.1 - - [18/May/2022 14:26:49] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:26:49,166|_internal.py|127.0.0.1 - - [18/May/2022 14:26:49] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:26:49,284|_internal.py|127.0.0.1 - - [18/May/2022 14:26:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:27:24,088|_internal.py|127.0.0.1 - - [18/May/2022 14:27:24] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:27:24,123|_internal.py|127.0.0.1 - - [18/May/2022 14:27:24] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:27:24,135|_internal.py|127.0.0.1 - - [18/May/2022 14:27:24] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:27:24,143|_internal.py|127.0.0.1 - - [18/May/2022 14:27:24] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:27:24,271|_internal.py|127.0.0.1 - - [18/May/2022 14:27:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:27:42,906|_internal.py|127.0.0.1 - - [18/May/2022 14:27:42] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:27:42,933|_internal.py|127.0.0.1 - - [18/May/2022 14:27:42] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:27:42,944|_internal.py|127.0.0.1 - - [18/May/2022 14:27:42] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:27:42,951|_internal.py|127.0.0.1 - - [18/May/2022 14:27:42] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:27:43,064|_internal.py|127.0.0.1 - - [18/May/2022 14:27:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:28:21,208|_internal.py|127.0.0.1 - - [18/May/2022 14:28:21] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:28:21,238|_internal.py|127.0.0.1 - - [18/May/2022 14:28:21] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:28:21,256|_internal.py|127.0.0.1 - - [18/May/2022 14:28:21] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:28:21,264|_internal.py|127.0.0.1 - - [18/May/2022 14:28:21] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:28:21,385|_internal.py|127.0.0.1 - - [18/May/2022 14:28:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:29:14,394|_internal.py|127.0.0.1 - - [18/May/2022 14:29:14] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-05-18 14:29:14,427|_internal.py|127.0.0.1 - - [18/May/2022 14:29:14] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-18 14:29:14,449|_internal.py|127.0.0.1 - - [18/May/2022 14:29:14] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-18 14:29:14,456|_internal.py|127.0.0.1 - - [18/May/2022 14:29:14] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-18 14:29:14,589|_internal.py|127.0.0.1 - - [18/May/2022 14:29:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-18 14:30:21,691|_internal.py|127.0.0.1 - - [18/May/2022 14:30:21] "[37mGET /send_mail/define_time HTTP/1.1[0m" 200 -

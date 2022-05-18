@@ -4,6 +4,7 @@
 <div class="show_report_graphe">
     
     <div class="reports_name_parent">
+      <img src="{{url_for('static',filename='pictures/back.svg')}}" class="pbi_report_icon" onclick="location='/dashbord/{{work_space}}'">
         <div class="report_name_child" id='report_listen' >
          <img src="{{url_for('static',filename='pictures/pbi_icon.png')}}" class="pbi_report_icon">
             <label class="form-check-label" class="name_report" for="{{ report_id }}">

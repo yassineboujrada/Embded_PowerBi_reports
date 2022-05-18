@@ -5,6 +5,7 @@ from Power_bi_functions import *
 from flask.helpers import url_for,flash
 import shutil
 
+
 # import sentry_sdk
 # from sentry_sdk.integrations.flask import FlaskIntegration
 
@@ -14,7 +15,6 @@ import shutil
 #     traces_sample_rate=1.0,
 #     send_default_pii=True
 # )
-
 
 app=Flask(__name__)
 
@@ -30,18 +30,23 @@ def login_in():
         session["password"]=request.form.get("password")
         if session["email_connect"]=="" and \
             session["password"]=="22":
-            return redirect(url_for('dashbord'))
+            return redirect(url_for('table_period'))
 
     return render_template("login.html")
+
+@app.route("/my_table_of_period",methods=["POST","GET"])
+def table_period():
+    return render_template('table_preriod.html')
 
 @app.route("/dashbord",methods=["POST","GET"])
 def dashbord():
     return render_template("Dashbord.html",d=Authentification_for_PowerBI().show_workspace())
 
-@app.route('/dashbord/my_workspace')
+@app.route('/dashbord/me')
 def my_work():
     c=Authentification_for_PowerBI().get_my_workspace()['value']
     session['report_embded']=c
+    print(c)
     return render_template('report.html',reports=c,workspace_id='me')
 
 @app.route('/dashbord/<string:work_id>')
@@ -56,6 +61,7 @@ def report_show(work_id,report_id):
     work_space=work_id
     report_id=report_id
     i=session['report_embded']
+    print(work_space)
     for k in i:
         if k['id']==str(report_id):
             j=k
