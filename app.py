@@ -77,11 +77,14 @@ def report_show(work_id,report_id):
 
     val = request.json.get("c_check")
     print('test',val)
+    print(request.json.get('data'))
     if val=='1':
+        screen_shot(1)
         print('hi')
+
         # return redirect(url_for('send_mail'))
 
-    return jsonify({"data": {"val": val}})
+        return jsonify({"data": {"val": 'plz wait to export you file'}})
     
     # return render_template('Show_report.html',work_space=work_space,report_id=report_id,j=j)
 
