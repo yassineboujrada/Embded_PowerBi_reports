@@ -42,11 +42,6 @@
         </div>
     </div>
 
-    <button onclick="takeshot()">
-        Take Screenshot
-    </button>
-    <div id="output"></div>
-
 </div>
 
 <script>
@@ -55,7 +50,6 @@
     table.addEventListener('onclick',addRowHandlers())
 
     function addRowHandlers() {
-        // var table = document.getElementById("tableId");
         var rows = table.getElementsByTagName("tr");
         for (i = 0; i < rows.length; i++) {
             var currentRow = table.rows[i];
@@ -70,18 +64,6 @@
         }
     }
 
-    function takeshot() {
-            let div =document.getElementById('table_place');
-  
-            // Use the html2canvas
-            // function to take a screenshot
-            // and append it
-            // to the output div
-            html2canvas(div).then(
-                function (canvas) {
-                    document.getElementById('output').appendChild(canvas);
-                })
-        }
 </script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+
 {% endblock content %}

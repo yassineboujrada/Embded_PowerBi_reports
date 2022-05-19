@@ -71,7 +71,19 @@ def report_show(work_id,report_id):
             session['report_name_for_send']=j['id']+"||"+j['name']
         else: 
             pass
-    return render_template('Show_report.html',work_space=work_space,report_id=report_id,j=j)
+
+    if request.method=='GET':
+        return render_template('Show_report.html',work_space=work_space,report_id=report_id,j=j)
+
+    val = request.json.get("c_check")
+    print('test',val)
+    if val=='1':
+        print('hi')
+        # return redirect(url_for('send_mail'))
+
+    return jsonify({"data": {"val": val}})
+    
+    # return render_template('Show_report.html',work_space=work_space,report_id=report_id,j=j)
 
 @app.route("/send_mail",methods=["POST","GET"])
 def send_mail():
@@ -82,6 +94,7 @@ def send_mail():
         session["msg"]=request.form.get("msg")
         print(session["recieve"],session["subject"])
         return redirect(url_for("time_selection_time"))
+
     return render_template("mail.html")
 
 @app.route("/send_mail/define_time",methods=["POST","GET"])

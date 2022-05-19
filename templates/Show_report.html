@@ -3,47 +3,76 @@
 
 <div class="show_report_graphe">
     
-    <div class="reports_name_parent">
-      <img src="{{url_for('static',filename='pictures/back.svg')}}" class="pbi_report_icon" onclick="location='/dashbord/{{work_space}}'">
+    <div class="reports_name_parent" >
+      <img src="{{url_for('static',filename='pictures/back.svg')}}" style="width: 30px; height:30px;" onclick="location='/dashbord/{{work_space}}'">
         <div class="report_name_child" id='report_listen' >
          <img src="{{url_for('static',filename='pictures/pbi_icon.png')}}" class="pbi_report_icon">
-            <label class="form-check-label" class="name_report" for="{{ report_id }}">
+            <label class="form-check-label" class="name_report" for="{{work_space}}/{{ report_id }}">
               {{ j.name }}.pbix
             </label>
         </div>
 
-        <div class="his_function">
+        <div methods='POST' action=''class="his_function">
             <div class="share_report">
-              <img id="imgg" src="{{url_for('static',filename='pictures/share.svg')}}" onclick="location='/send_mail'">
+              <img id="imgg" src="{{url_for('static',filename='pictures/share.svg')}}" alt="1">
+              <!-- onclick="location='/send_mail'"> -->
             </div>
-            <div action="" method="post" class="download_report" >
-              <img src="{{url_for('static',filename='pictures/download.svg')}}" onclick="console.log('download')">
+            <div class="download_report" >
+              <!-- <img src="{{url_for('static',filename='pictures/download.svg')}}" > -->
             </div>
           </div>
 
-      </div><br>
+    </div><br>
 
-    <div class="report_graph">
-      <iframe titre="{{ j.name }}" class='graphe_of_embded_report'src='{{ j.embedUrl }}' frameborder="0" allowFullScreen="true"></iframe>
+    <div class="report_graph" id="report_frame11">
+      <iframe titre="{{ j.name }}" id='report_frame22' class='graphe_of_embded_report' src='{{ j.embedUrl }}' frameborder="0" allowFullScreen="true"></iframe>
     </div>
+    <img src="" id="result" /><br><br><br><br>
   </div>
+  
 
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
   <script>
-    let b=document.getElementById("imgg").src
-    console.log(b)
-    $.ajax({
-      type: "POST",
-      contentType: "application/json; charset=utf-8",
-      url: "/dashbord/<string:work_id>/<string:report_id>",
-      data: JSON.stringify({test:'hello'}),
-      success: function (data) {
-        // alert("DONE!")
-        console.log("daine")
-      },
-      error: function(err) {
-        console.log(err);
-      }
-      // dataType: "json"
-    });
+    // function takeshot() {
+    //         // let div =document.getElementById('report_frame11');
+    //         // console.log(div);
+    //         // html2canvas(div).then(
+    //         //     function (canvas) {
+    //         //         document.getElementById('output').appendChild(canvas);
+    //         //     })
+
+    //         // console.log(server_data)
+    //         }
+    // var cc=document.getElementById('imgg').alt
+    // var url=
+
+    document.getElementById('imgg').addEventListener("click", e => {
+        fetch(`http://127.0.0.1:3000/dashbord/${document.querySelector('label').htmlFor}?`, {
+            method: "POST",
+            headers: {
+              "Accept": "application/json",
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              c_check: document.getElementById('imgg').alt
+            })
+          })
+          .then(res => {
+            if (!res.ok) {
+              throw Error(res.status);
+            }
+
+            return res.json();
+          })
+          .then(({data: {val}}) => {
+            console.log(val);
+            if (val==='1'){
+                document.getElementById('imgg').setAttribute("onclick", "location='/send_mail'");
+            }
+            // const res = document.querySelector(".result");
+            // res.innerText = `client got: ${val}`;
+          }).catch(err => console.error(err));
+      });
+
   </script>
 {% endblock content %}
