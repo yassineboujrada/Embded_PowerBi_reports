@@ -62,6 +62,7 @@ def report_show(work_id,report_id):
     report_id=report_id
     i=session['report_embded']
     print(work_space)
+    screen_shot(1)
     for k in i:
         if k['id']==str(report_id):
             j=k
@@ -69,10 +70,13 @@ def report_show(work_id,report_id):
             # Authentification_for_PowerBI().download_pbi(work_space,report_id,j['name'])
             # session.pop('report_embded',None)
             session['report_name_for_send']=j['id']+"||"+j['name']
+            
         else: 
             pass
 
     if request.method=='GET':
+        # screen_shot(1)
+        # Authentification_for_PowerBI().export_to_pdf('6341d428-a600-4ee6-8185-5ae8616fd093','test')
         return render_template('Show_report.html',work_space=work_space,report_id=report_id,j=j)
 
     val = request.json.get("c_check")
@@ -108,15 +112,11 @@ def time_selection_time():
         session["every_"]=request.form.get("period_day")
 
         print(session["send_timing"],"\n",session["which_day"],session["every_"])
-        # if send_pdf_file(session["msg"],session["recieve"].split(","),session["subject"]):
-        #     return redirect(url_for('home'))
-        # else:
-        #     pass
-
+        
     return render_template("time.html")
 
 if "__main__"==__name__:
-    app.run(debug=True,port=3000)
+    app.run(debug=True,port=3000)#,host='192.168.1.85')
 
 
 

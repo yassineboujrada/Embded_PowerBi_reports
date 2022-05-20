@@ -1,10 +1,12 @@
-from binascii import b2a_hex
+
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 import os
+from webbrowser import Chrome
+from xml.etree.ElementTree import Element
 import pyautogui
 import win32gui
 import time 
@@ -62,9 +64,9 @@ class Authentification_for_PowerBI:
     def export_to_pdf(self,REPORT_ID,REPORT_NAME):
         my_report_content = self.reports_service.export_to_file(
             report_id=REPORT_ID,
-            file_format='CSV'#ExportFileFormats.Pdf
+            file_format=ExportFileFormats.Pdf
         )
-        with open(file=f'files/{REPORT_NAME}.pdf', mode='wb+') as power_bi_file:
+        with open(file=f'files/{REPORT_NAME}.png', mode='wb+') as power_bi_file:
             power_bi_file.write(my_report_content)
 
     def get_workspace_informations(self):
@@ -113,11 +115,14 @@ class Authentification_for_PowerBI:
             k.append([i[0],report_out['value']])
         return k
 
-def screen_shot(len_raport):
+def screen_shot(len_raport,val=0):
     # for _ in range(len_raport):region1=(390,330,1100 ,610)
-        myScreenshot = pyautogui.screenshot(region=(390,330,1100 ,610))
+        myScreenshot = pyautogui.screenshot(region=(120,320,1280 ,689))
         myScreenshot.save(r'ile2 name.png')
+    # x=val.split(',')[0]
 
+    # pyautogui.moveTo(120,320)
+# def testt():
 
 ############################################################  envoyer pbi report ou pdf a une email 
 def send_pdf_file(mesg,recieve,subject):
