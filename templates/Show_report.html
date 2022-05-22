@@ -12,9 +12,10 @@
             </label>
         </div>
 
-        <div methods='POST' action=''class="his_function">
+        <div class="his_function">
             <div class="share_report">
               <img id="imgg" src="{{url_for('static',filename='pictures/share.svg')}}" alt="1">
+              <!-- onclick="saveDiv('report_frame22','title')"> -->
             </div>
             <div class="download_report" >
             </div>
@@ -22,54 +23,85 @@
 
     </div>
 
-    <div class="report_graph" id="report_frame11">
+    <!-- {{ j.embedUrl }} -->
+    <div class="report_graph" id="report_frame_for_screen">
       <iframe titre="{{ j.name }}" id='report_frame22' class='graphe_of_embded_report' src='{{ j.embedUrl }}' frameborder="0" allowFullScreen="true"></iframe>
-    </div><br><br>
-    <div class="report_graph" id="canvas">
-        <!-- <iframe titre="{{ j.name }}" id='report_frame22' class='graphe_of_embded_report' src='{{ j.embedUrl }}' frameborder="0" allowFullScreen="true"></iframe> -->
-      </div>
+    </div>
+
   </div>
   
 
-  <script type="text/javascript" src="https://html2canvas.hertzen.com/build/html2canvas.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
   <script>
-    document.getElementById('imgg').addEventListener("click",()=>{
-        let div =document.getElementsByClassName('visualContainerHost');
-            console.log('1',div);
-            html2canvas(div[0]).then(
-                function (canvas) {
-                    console.log(canvas)
-                    document.getElementById('result').appendChild(canvas);
-                })
-    });
+    //   var doc = new jsPDF();
+    //     var specialElementHandlers = {
+    //         '#editor': function (element, renderer) {
+    //             return true;
+    //         }
+    //     };
 
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
+    //     $('#imgg').click(function () {
+    //         doc.fromHTML($('.report_graph').html(), 15, 15, {
+    //             'width': 768,
+    //                 'elementHandlers': specialElementHandlers
+    //         });
+    //         doc.save('sample-file.pdf');
+    //     });
 
-    const image = new Image(60, 45); // Using optional size for image
-    image.onload = drawImageActualSize; // Draw when image has loaded
 
-    // Load an image of intrinsic size 300x227 in CSS pixels
-    image.src = 'ile2 name.png';
+    // document.getElementById('imgg').onclick=(e)=>{
+    //     console.log('mmmm')
+    //     const canvas = document.getElementById('report_frame11');
+    //     const ctx = canvas.getContext('2d');
 
-    function drawImageActualSize() {
-    // Use the intrinsic size of image in CSS pixels for the canvas element
-    canvas.width = this.naturalWidth;
-    canvas.height = this.naturalHeight;
+    //     // const image = new Image(60, 45); // Using optional size for image
+    //     const image = new Image(60, 45);
+    //     image.onload = drawImageActualSize; // Draw when image has loaded
 
-    // Will draw the image as 300x227, ignoring the custom size of 60x45
-    // given in the constructor
-    ctx.drawImage(this, 0, 0);
+    //     // Load an image of intrinsic size 300x227 in CSS pixels
+    //     image.src = 'ile2 name.png';
+    //     console.log(canvas)
+    //     function drawImageActualSize() {
+    //     // Use the intrinsic size of image in CSS pixels for the canvas element
+    //     canvas.width = this.naturalWidth;
+    //     canvas.height = this.naturalHeight;
+        
+    //     // Will draw the image as 300x227, ignoring the custom size of 60x45
+    //     // given in the constructor
+    //     ctx.drawImage(this, 0, 0);
 
-    // To use the custom size we'll have to specify the scale parameters
-    // using the element's width and height properties - lets draw one
-    // on top in the corner:
-    ctx.drawImage(this, 0, 0, this.width, this.height);
-    }
+    //     // To use the custom size we'll have to specify the scale parameters
+    //     // using the element's width and height properties - lets draw one
+    //     // on top in the corner:
+    //     ctx.drawImage(this, 0, 0, this.width, this.height);
+    //     }
+    // };
+
+    //     function getScreenShot(){
+    //         const screenshotTarget = document.querySelector('.graphe_of_embded_report');
+
+    //         html2canvas(screenshotTarget).then((canvas) => {
+    //             const base64image = canvas.toDataURL("image/png");
+    //             // window.location.href = base64image;
+    //             document.querySelector('.testt').src=base64image
+    //             console.log('am here')
+    //         });
+    //    }
+
+    // html2canvas(document.querySelector("#report_frame_for_screen")).then(canvas => {
+    //     document.body.appendChild(canvas)
+    // });
+
+    
+            // html2canvas(div[0]).then(
+            //     function (canvas) {
+            //         console.log(canvas)
+            //         document.body.appendChild(canvas);
+            //     })
 
     // i will nneeed u later
     var documentWidth = parent.window.innerWidth;
@@ -81,34 +113,37 @@
     // Get Top Position
     var iframeY = window.parent.document.getElementById('report_frame22').offsetTop;
     
-    alert('X '+iframeX+' Y '+iframeY+' width '+iframeWidth+' height '+iframeHeight+' docu '+documentWidth)
+    // alert('X '+iframeX+' Y '+iframeY+' width '+iframeWidth+' height '+iframeHeight+' docu '+documentWidth)
+
+       
+
+    document.getElementById('imgg').addEventListener("click", e => {
+        fetch(`/dashbord/${document.querySelector('label').htmlFor}?`, {
+            method: "POST",
+            headers: {
+              "Accept": "application/json",
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              c_check: String(`${iframeX},${iframeY},${iframeWidth},${iframeHeight}`)
+            })
+          })
+          .then(res => {
+            if (!res.ok) {
+              throw Error(res.status);
+            }
+
+            return res.json();
+          })
+          .then(({data: {val}}) => {
+            alert(val);
+            document.getElementById('imgg').setAttribute("src", "{{url_for('static',filename='pictures/send.svg')}}");
+            document.getElementById('imgg').setAttribute("onclick", "location='/send_mail'");
+            
+          }).catch(err => console.error(err));
+      });
 
 
-    // document.getElementById('imgg').addEventListener("click", e => {
-    //     fetch(`http://127.0.0.1:3000/dashbord/${document.querySelector('label').htmlFor}?`, {
-    //         method: "POST",
-    //         headers: {
-    //           "Accept": "application/json",
-    //           "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify({
-    //           c_check: `${iframeX},${iframeY}`
-    //         })
-    //       })
-    //       .then(res => {
-    //         if (!res.ok) {
-    //           throw Error(res.status);
-    //         }
-
-    //         return res.json();
-    //       })
-    //       .then(({data: {val}}) => {
-    //         alert(val,'5s');
-    //         document.getElementById('imgg').setAttribute("onclick", "location='/send_mail'");
-    //         // const res = document.querySelector(".result");
-    //         // res.innerText = `client got: ${val}`;
-    //       }).catch(err => console.error(err));
-    //   });
 
     // i neeed to uderstand it more
     // document.getElementById('imgg').addEventListener("click",()=>{
@@ -132,7 +167,7 @@
     //         var im_data2 = img_data2.replace('data:image/png;base64,', '');
     //         $.ajax({
     //         type: "POST",
-    //         url: `http://127.0.0.1:3000/dashbord/${document.querySelector('label').htmlFor}?`,
+    //         url: `/dashbord/${document.querySelector('label').htmlFor}?`,
     //         data: {
     //             "base64data": im_data2,
     //             // "filename": filename.split(".")[0]
@@ -144,48 +179,5 @@
     //         });
     //     }
     // );
-
-    // function currentFrameAbsolutePosition() {
-    //     let currentWindow = window;
-    //     let currentParentWindow;
-    //     let positions = [];
-    //     let rect;
-
-    //     while (currentWindow !== window.top) {
-    //         currentParentWindow = currentWindow.parent;
-    //         for (let idx = 0; idx < currentParentWindow.frames.length; idx++)
-    //         if (currentParentWindow.frames[idx] === currentWindow) {
-    //             for (let frameElement of currentParentWindow.document.getElementsByTagName('iframe')) {
-    //             if (frameElement.contentWindow === currentWindow) {
-    //                 rect = frameElement.getBoundingClientRect();
-    //                 positions.push({x: rect.x, y: rect.y});
-    //             }
-    //             }
-    //             currentWindow = currentParentWindow;
-    //             break;
-    //         }
-    //     }
-
-        
-
-    //     return positions.reduce((accumulator, currentValue) => {
-    //         return {
-    //         x: accumulator.x + currentValue.x,
-    //         y: accumulator.y + currentValue.y
-    //         };
-    //     }, { x: 0, y: 0 });
-    //     }
-
-
-//    console.log(currentFrameAbsolutePosition().x);
-// $(window).height();
-// $(window).width();
-// c=`${$(window).height()} and ${$(window).width()}`
-// document.write(c)
-// Size of HTML document (same as pageHeight/pageWidth in screenshot).
-// $(document).height();
-// $(document).width();
-// d=`${$(document).height()} and ${$(document).width()}`
-// document.write(d)
   </script>
 {% endblock content %}

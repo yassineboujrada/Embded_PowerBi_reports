@@ -61,36 +61,27 @@ def report_show(work_id,report_id):
     work_space=work_id
     report_id=report_id
     i=session['report_embded']
+    Authentification_for_PowerBI().nwita()
     print(work_space)
-    screen_shot(1)
     for k in i:
         if k['id']==str(report_id):
             j=k
-            j['embedUrl']+='&autoAuth=true&ctid='+Authentification_for_PowerBI().get_tenant()#'a23b80fb-03cf-48e7-b7ea-4a9094cff16c'
-            # Authentification_for_PowerBI().download_pbi(work_space,report_id,j['name'])
-            # session.pop('report_embded',None)
-            session['report_name_for_send']=j['id']+"||"+j['name']
-            
+            j['embedUrl']+='&autoAuth=true&ctid='+Authentification_for_PowerBI().get_tenant()
+            session['report_name_for_send']=j['id']+"||"+j['name']   
         else: 
             pass
 
     if request.method=='GET':
-        # screen_shot(1)
-        # Authentification_for_PowerBI().export_to_pdf('6341d428-a600-4ee6-8185-5ae8616fd093','test')
         return render_template('Show_report.html',work_space=work_space,report_id=report_id,j=j)
 
     val = request.json.get("c_check")
     print('test',val)
-    print(request.json.get('data'))
-    if val=='1':
-        screen_shot(1)
-        print('hi')
-
-        # return redirect(url_for('send_mail'))
-
-        return jsonify({"data": {"val": 'plz wait to export you file'}})
+    if val:
+        # screen_shot(val)
+        Authentification_for_PowerBI().nwita()
+        time.sleep(2)
+        return jsonify({"data": {"val": "wait some minutes to export you're file"}})
     
-    # return render_template('Show_report.html',work_space=work_space,report_id=report_id,j=j)
 
 @app.route("/send_mail",methods=["POST","GET"])
 def send_mail():
@@ -110,13 +101,12 @@ def time_selection_time():
         session["send_timing"]=request.form.get("time_to_send")
         session["which_day"]=request.form.get("value_for_day")
         session["every_"]=request.form.get("period_day")
-
         print(session["send_timing"],"\n",session["which_day"],session["every_"])
-        
+
     return render_template("time.html")
 
 if "__main__"==__name__:
-    app.run(debug=True,port=3000)#,host='192.168.1.85')
+    app.run(debug=True,port=3000)#,host='192.168.69.238')
 
 
 

@@ -20,6 +20,7 @@ import json
 from pprint import pprint
 from powerbi.client import PowerBiClient
 from powerbi.enums import ExportFileFormats
+from scrapingbee import ScrapingBeeClient
 
 # --------------------------------------------------
 # Set local variables
@@ -95,6 +96,21 @@ class Authentification_for_PowerBI:
         return report_out
                 
 
+    def nwita(self):
+        api="9IG2PK0A6O7NV7PNGQYOIURT4IMKW0U0TG5WCHJ6BJ48XM18GK95HMA6TBYXF9KGL75TKY1ZOL0GPDVW"
+        client = ScrapingBeeClient(api_key=api)
+        response = client.get(
+            'https://www.youtube.com/watch?v=DdO3POKDIew', # Demo link
+            params={
+                'screenshot': True, # Take a full screenshot of the page
+            }
+        )
+        if response.ok:
+            with open("./screenshot.png", "wb") as f:
+                f.write(response.content)
+        else:
+            print(response.content)
+
     def data_report(self):
         l,k=[],{}
         g=self.show_workspace()
@@ -115,15 +131,65 @@ class Authentification_for_PowerBI:
             k.append([i[0],report_out['value']])
         return k
 
-def screen_shot(len_raport,val=0):
-    # for _ in range(len_raport):region1=(390,330,1100 ,610)
-        myScreenshot = pyautogui.screenshot(region=(120,320,1280 ,689))
-        myScreenshot.save(r'ile2 name.png')
-    # x=val.split(',')[0]
+def screen_shot(val):
+    if val:
+        path_pic=r'files/page.png'
+        data_recieve=val.split(',')
+        myScreenshot = pyautogui.screenshot(region=(int(data_recieve[0])+155,(int(data_recieve[1])*2),int(data_recieve[2])-260,int(data_recieve[3])-85))
+        myScreenshot.save(path_pic)
+        data_recieve=""
+        return path_pic
+    else:
+        raise ValueError('hhhhh')
 
-    # pyautogui.moveTo(120,320)
-# def testt():
+    # import mss
+    # import cv2
+    # import numpy as np
 
+    # with mss.mss() as sct:
+        
+    # # Get information of monitor 2
+    #     monitor_number = 0
+    #     mon = sct.monitors[monitor_number]
+    #     print(sct.monitors)
+    #     # The screen part to capture
+    #     monitor = {
+    #         "top": mon["top"],
+    #         "left": mon["left"],
+    #         "width": mon["width"],
+    #         "height": mon["height"],
+    #         "mon": monitor_number,
+    #     }
+    #     output = "sct-mon{mon}_{top}x{left}_{width}x{height}.png".format(**monitor)
+
+    #     # Grab the data
+    #     sct_img = sct.grab(monitor)
+    #     img = np.array(sct.grab(monitor)) # BGR Image
+        
+    #     # Display the picture
+    #     cv2.imshow("OpenCV", img)
+    #     cv2.waitKey(0)
+
+import time
+
+import pyscreenshot
+import schedule
+
+
+from datetime import datetime
+
+
+def take_screenshot2():
+    print("Taking screenshot...")
+    image = pyscreenshot.grab(bbox=(10, 10, 500, 500))
+    image.show()
+    image.save("GeeksforGeeks.png")
+    print("Screenshot taken...")
+
+
+def pos(val):
+    x,y=val.split(',')[0],val.split(',')[1]
+    pyautogui.moveTo(int(x),int(y)*2)
 ############################################################  envoyer pbi report ou pdf a une email 
 def send_pdf_file(mesg,recieve,subject):
     for i in recieve:
