@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
+<label id="notification_show2" >
+    {% with messages = get_flashed_messages(with_categories=true) %} 
+        {% if messages %} 
+            {% for category,msg in messages %}
+                <p class='{{ category }}'>{{ msg }}</p>
+            {% endfor %} 
+        {% endif %} 
+    {% endwith %}
+</label>
+<br>
 <div class="table_place"><br>
     <div class="table_name">
         <label >le period d'envoie engistrer </label>
@@ -11,20 +21,23 @@
             <table class="table table-hover" id="tableId" >
                 <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <!-- <th scope="col">#</th> -->
+                    <th scope="col">Emails</th>
+                    <th scope="col">Every</th>
+                    <th scope="col">AT</th>
+                    <th scope="col">Report</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
+                    {% for i in period_data %}
+                        <tr>
+                            <td>{{i.emails}}</td>
+                            <td>{{i.perids}}</td>
+                            <td>{{i.time}}</td>
+                            <td>{{i.name_of_reportBI}}</td>
+                        </tr>
+                    {% endfor %}
+                <!-- <tr>
                     <th scope="row">2</th>
                     <td>Jacob</td>
                     <td>Thornton</td>
@@ -36,7 +49,7 @@
                     <td>mm</td>
                     <td>@fat</td>
                 </tr>
-                
+                 -->
                 </tbody>
             </table>
         </div>

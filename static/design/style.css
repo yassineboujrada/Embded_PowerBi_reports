@@ -6,6 +6,28 @@
     scroll-behavior: smooth;
   }
 
+/*      for notification elements or messages        */
+#notification_show , #notification_show2{
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#notification_show2{
+  height: 80px;
+}
+
+.success{
+  font-size: 16px;
+  color: #2f8617;
+}
+
+.warning{
+  font-size: 16px;
+  color:#bc0f0f;
+}
+
 /**************************************************************
 *                  Navbar part disgn                          *
 **************************************************************/
@@ -406,6 +428,7 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, F
   justify-content: center;
   align-items: center;
   height: 12vh;
+  
 
 }
 
@@ -423,7 +446,7 @@ background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, F
 }
 
 .table_content1{
-  height: 500px;
+  height: 400px;
   display: flex;
   justify-content: center;
   overflow: auto;

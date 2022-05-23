@@ -12096,3 +12096,202 @@
 2022-05-22 01:28:17,740|_internal.py|127.0.0.1 - - [22/May/2022 01:28:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 2022-05-22 01:28:51,803|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
 2022-05-22 01:29:06,196|_internal.py|127.0.0.1 - - [22/May/2022 01:29:06] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e HTTP/1.1[0m" 200 -
+2022-05-22 01:40:39,414|_internal.py|192.168.0.192 - - [22/May/2022 01:40:39] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-22 01:40:42,120|_internal.py|192.168.0.192 - - [22/May/2022 01:40:42] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-22 01:40:42,202|_internal.py|192.168.0.192 - - [22/May/2022 01:40:42] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-22 01:40:42,299|_internal.py|192.168.0.192 - - [22/May/2022 01:40:42] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-22 01:40:42,353|_internal.py|192.168.0.192 - - [22/May/2022 01:40:42] "[37mGET /static/pictures/workspace.png HTTP/1.1[0m" 200 -
+2022-05-22 01:41:08,523|connectionpool.py|Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002C76EC2C550>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /common/v2.0/.well-known/openid-configuration
+2022-05-22 01:41:10,022|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-22 01:41:13,049|_internal.py|192.168.0.192 - - [22/May/2022 01:41:13] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6 HTTP/1.1[0m" 200 -
+2022-05-22 01:41:28,229|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-22 01:41:30,311|_internal.py|192.168.0.192 - - [22/May/2022 01:41:30] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6 HTTP/1.1[0m" 200 -
+2022-05-22 01:41:30,442|_internal.py|192.168.0.192 - - [22/May/2022 01:41:30] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-22 01:41:30,670|_internal.py|192.168.0.192 - - [22/May/2022 01:41:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-22 11:31:52,135|_internal.py|192.168.0.192 - - [22/May/2022 11:31:52] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/20d3b902-6605-4c1a-bcbf-fd5895e69afe HTTP/1.1[0m" 200 -
+2022-05-22 11:31:52,885|_internal.py|192.168.0.192 - - [22/May/2022 11:31:52] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/20d3b902-6605-4c1a-bcbf-fd5895e69afe HTTP/1.1[0m" 200 -
+2022-05-22 11:31:53,311|_internal.py|192.168.0.192 - - [22/May/2022 11:31:53] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-22 11:31:53,311|_internal.py|192.168.0.192 - - [22/May/2022 11:31:53] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-22 11:32:10,913|_internal.py|192.168.0.192 - - [22/May/2022 11:32:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-22 11:33:54,853|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-22 11:35:00,374|_internal.py|192.168.0.192 - - [22/May/2022 11:35:00] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-22 11:35:05,703|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-22 11:35:06,709|_internal.py|192.168.0.192 - - [22/May/2022 11:35:06] "[37mGET /dashbord/me HTTP/1.1[0m" 200 -
+2022-05-22 11:35:49,543|_internal.py|192.168.0.192 - - [22/May/2022 11:35:49] "[37mGET /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093 HTTP/1.1[0m" 200 -
+2022-05-22 11:36:47,116|_internal.py|192.168.0.192 - - [22/May/2022 11:36:47] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-22 11:37:12,612|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-22 11:37:41,752|_internal.py|192.168.0.192 - - [22/May/2022 11:37:41] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-22 11:39:38,131|_internal.py|192.168.0.192 - - [22/May/2022 11:39:38] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 12:22:02,686|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-22 12:44:16,229|_internal.py|127.0.0.1 - - [22/May/2022 12:44:16] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-22 12:44:16,278|_internal.py|127.0.0.1 - - [22/May/2022 12:44:16] "[36mGET /static/pictures/workspace.png HTTP/1.1[0m" 304 -
+2022-05-22 12:44:24,197|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-22 12:44:25,473|_internal.py|127.0.0.1 - - [22/May/2022 12:44:25] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-22 12:44:43,819|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-22 12:45:14,426|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-22 12:45:15,284|_internal.py|127.0.0.1 - - [22/May/2022 12:45:15] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-22 12:45:15,330|_internal.py|127.0.0.1 - - [22/May/2022 12:45:15] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-22 12:45:16,077|_internal.py|127.0.0.1 - - [22/May/2022 12:45:16] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-22 12:45:16,079|_internal.py|127.0.0.1 - - [22/May/2022 12:45:16] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-22 12:45:16,080|_internal.py|127.0.0.1 - - [22/May/2022 12:45:16] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-22 12:45:16,129|_internal.py|127.0.0.1 - - [22/May/2022 12:45:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-22 12:45:19,057|_internal.py|127.0.0.1 - - [22/May/2022 12:45:19] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 12:45:33,059|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/pages
+2022-05-22 12:45:34,348|_internal.py|127.0.0.1 - - [22/May/2022 12:45:34] "[35m[1mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 500 -
+2022-05-22 12:46:34,089|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-22 12:46:35,431|_internal.py|127.0.0.1 - - [22/May/2022 12:46:35] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-22 12:46:37,439|_internal.py|127.0.0.1 - - [22/May/2022 12:46:37] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e HTTP/1.1[0m" 200 -
+2022-05-22 12:46:43,203|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/c4cabace-7684-47e3-b2f3-9e183ae3322e/pages
+2022-05-22 12:46:43,826|_internal.py|127.0.0.1 - - [22/May/2022 12:46:43] "[35m[1mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e HTTP/1.1[0m" 500 -
+2022-05-22 12:54:57,985|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-22 12:56:49,238|_internal.py|127.0.0.1 - - [22/May/2022 12:56:49] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e HTTP/1.1[0m" 200 -
+2022-05-22 12:56:57,255|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/c4cabace-7684-47e3-b2f3-9e183ae3322e/pages
+2022-05-22 12:57:19,398|_internal.py|127.0.0.1 - - [22/May/2022 12:57:19] "[35m[1mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e HTTP/1.1[0m" 500 -
+2022-05-22 12:58:35,770|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-22 12:58:37,670|_internal.py|127.0.0.1 - - [22/May/2022 12:58:37] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-22 12:58:41,264|_internal.py|127.0.0.1 - - [22/May/2022 12:58:41] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 12:58:50,048|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/pages
+2022-05-22 12:58:51,131|_internal.py|127.0.0.1 - - [22/May/2022 12:58:51] "[35m[1mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 500 -
+2022-05-22 12:59:26,536|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-22 12:59:45,463|_internal.py|127.0.0.1 - - [22/May/2022 12:59:45] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 12:59:45,851|_internal.py|127.0.0.1 - - [22/May/2022 12:59:45] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-22 12:59:45,862|_internal.py|127.0.0.1 - - [22/May/2022 12:59:45] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-22 12:59:45,874|_internal.py|127.0.0.1 - - [22/May/2022 12:59:45] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-22 12:59:45,887|_internal.py|127.0.0.1 - - [22/May/2022 12:59:45] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-22 12:59:45,906|_internal.py|127.0.0.1 - - [22/May/2022 12:59:45] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-22 12:59:45,913|_internal.py|127.0.0.1 - - [22/May/2022 12:59:45] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-22 13:00:09,175|_internal.py|127.0.0.1 - - [22/May/2022 13:00:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-22 13:00:26,053|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/pages
+2022-05-22 13:00:27,130|_internal.py|127.0.0.1 - - [22/May/2022 13:00:27] "[35m[1mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 500 -
+2022-05-22 13:00:38,818|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-22 13:00:40,667|_internal.py|127.0.0.1 - - [22/May/2022 13:00:40] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-22 13:00:43,516|_internal.py|127.0.0.1 - - [22/May/2022 13:00:43] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e HTTP/1.1[0m" 200 -
+2022-05-22 13:00:50,630|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/c4cabace-7684-47e3-b2f3-9e183ae3322e/pages
+2022-05-22 13:00:52,667|_internal.py|127.0.0.1 - - [22/May/2022 13:00:52] "[35m[1mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e HTTP/1.1[0m" 500 -
+2022-05-22 13:01:07,739|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-22 13:01:27,072|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-22 13:01:27,814|_internal.py|127.0.0.1 - - [22/May/2022 13:01:27] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-22 13:01:31,219|_internal.py|127.0.0.1 - - [22/May/2022 13:01:31] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:01:36,679|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/pages
+2022-05-22 13:01:39,843|_internal.py|127.0.0.1 - - [22/May/2022 13:01:39] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:01:42,515|_internal.py|127.0.0.1 - - [22/May/2022 13:01:42] "[36mGET /static/pictures/send.svg HTTP/1.1[0m" 304 -
+2022-05-22 13:02:03,019|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-22 13:02:06,274|_internal.py|127.0.0.1 - - [22/May/2022 13:02:06] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:02:06,352|_internal.py|127.0.0.1 - - [22/May/2022 13:02:06] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-22 13:02:07,675|_internal.py|127.0.0.1 - - [22/May/2022 13:02:07] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-22 13:02:07,682|_internal.py|127.0.0.1 - - [22/May/2022 13:02:07] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-22 13:02:07,685|_internal.py|127.0.0.1 - - [22/May/2022 13:02:07] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-22 13:02:07,690|_internal.py|127.0.0.1 - - [22/May/2022 13:02:07] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-22 13:02:07,701|_internal.py|127.0.0.1 - - [22/May/2022 13:02:07] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-22 13:02:17,497|_internal.py|127.0.0.1 - - [22/May/2022 13:02:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-22 13:02:21,655|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/pages
+2022-05-22 13:02:24,850|_internal.py|127.0.0.1 - - [22/May/2022 13:02:24] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:02:40,909|_internal.py|127.0.0.1 - - [22/May/2022 13:02:40] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-22 13:02:41,680|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/pages
+2022-05-22 13:02:45,308|_internal.py|127.0.0.1 - - [22/May/2022 13:02:45] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:03:00,242|_internal.py|127.0.0.1 - - [22/May/2022 13:03:00] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:03:14,489|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/pages
+2022-05-22 13:03:15,253|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/pages
+2022-05-22 13:03:17,831|_internal.py|127.0.0.1 - - [22/May/2022 13:03:17] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:03:18,387|_internal.py|127.0.0.1 - - [22/May/2022 13:03:18] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:04:29,633|_internal.py|127.0.0.1 - - [22/May/2022 13:04:29] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-22 13:04:30,363|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/pages
+2022-05-22 13:04:34,199|_internal.py|127.0.0.1 - - [22/May/2022 13:04:34] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:06:59,781|_internal.py|127.0.0.1 - - [22/May/2022 13:06:59] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:07:29,761|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/pages
+2022-05-22 13:07:30,506|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/pages
+2022-05-22 13:07:33,142|_internal.py|127.0.0.1 - - [22/May/2022 13:07:33] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:07:34,098|_internal.py|127.0.0.1 - - [22/May/2022 13:07:34] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:07:39,287|_internal.py|127.0.0.1 - - [22/May/2022 13:07:39] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-22 13:07:49,470|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/pages
+2022-05-22 13:07:55,256|_internal.py|127.0.0.1 - - [22/May/2022 13:07:55] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:08:01,789|_internal.py|127.0.0.1 - - [22/May/2022 13:08:01] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-22 13:08:05,204|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-22 13:08:05,838|_internal.py|127.0.0.1 - - [22/May/2022 13:08:05] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-22 13:08:08,864|_internal.py|127.0.0.1 - - [22/May/2022 13:08:08] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:08:15,821|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-22 13:08:16,889|_internal.py|127.0.0.1 - - [22/May/2022 13:08:16] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-22 13:08:20,938|_internal.py|127.0.0.1 - - [22/May/2022 13:08:20] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:08:28,963|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/pages
+2022-05-22 13:08:32,292|_internal.py|127.0.0.1 - - [22/May/2022 13:08:32] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:08:35,558|_internal.py|127.0.0.1 - - [22/May/2022 13:08:35] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-22 13:08:36,446|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/pages
+2022-05-22 13:08:39,762|_internal.py|127.0.0.1 - - [22/May/2022 13:08:39] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:08:58,709|_internal.py|127.0.0.1 - - [22/May/2022 13:08:58] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:12:36,791|_internal.py|127.0.0.1 - - [22/May/2022 13:12:36] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:13:08,138|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/pages
+2022-05-22 13:13:12,098|_internal.py|127.0.0.1 - - [22/May/2022 13:13:12] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:13:57,106|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-22 13:14:20,421|_internal.py|127.0.0.1 - - [22/May/2022 13:14:20] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:14:27,956|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/pages
+2022-05-22 13:14:31,350|_internal.py|127.0.0.1 - - [22/May/2022 13:14:31] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:14:33,020|_internal.py|127.0.0.1 - - [22/May/2022 13:14:33] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-22 13:15:04,023|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-22 13:17:28,045|_internal.py|127.0.0.1 - - [22/May/2022 13:17:28] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:17:49,582|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/pages
+2022-05-22 13:17:53,581|_internal.py|127.0.0.1 - - [22/May/2022 13:17:53] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:18:42,137|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-22 13:21:52,985|_internal.py|127.0.0.1 - - [22/May/2022 13:21:52] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:22:42,779|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/pages
+2022-05-22 13:22:48,376|_internal.py|127.0.0.1 - - [22/May/2022 13:22:48] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:22:50,270|_internal.py|127.0.0.1 - - [22/May/2022 13:22:50] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-22 13:23:33,693|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-22 13:24:07,508|_internal.py|127.0.0.1 - - [22/May/2022 13:24:07] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:24:18,123|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/pages
+2022-05-22 13:24:19,669|_internal.py|127.0.0.1 - - [22/May/2022 13:24:19] "[35m[1mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 500 -
+2022-05-22 13:25:29,701|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-22 13:25:51,823|_internal.py|127.0.0.1 - - [22/May/2022 13:25:51] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:26:03,658|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/pages
+2022-05-22 13:26:05,148|_internal.py|127.0.0.1 - - [22/May/2022 13:26:05] "[35m[1mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 500 -
+2022-05-22 13:27:20,670|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-22 13:28:44,480|_internal.py|127.0.0.1 - - [22/May/2022 13:28:44] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:28:44,556|_internal.py|127.0.0.1 - - [22/May/2022 13:28:44] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-22 13:28:45,832|_internal.py|127.0.0.1 - - [22/May/2022 13:28:45] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-22 13:28:45,847|_internal.py|127.0.0.1 - - [22/May/2022 13:28:45] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-22 13:28:45,855|_internal.py|127.0.0.1 - - [22/May/2022 13:28:45] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-22 13:28:45,859|_internal.py|127.0.0.1 - - [22/May/2022 13:28:45] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-22 13:28:45,862|_internal.py|127.0.0.1 - - [22/May/2022 13:28:45] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-22 13:28:53,064|_internal.py|127.0.0.1 - - [22/May/2022 13:28:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-22 13:29:14,851|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/pages
+2022-05-22 13:29:17,981|_internal.py|127.0.0.1 - - [22/May/2022 13:29:17] "[35m[1mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 500 -
+2022-05-22 13:29:37,842|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-22 13:30:15,640|_internal.py|127.0.0.1 - - [22/May/2022 13:30:15] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:30:21,297|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/pages
+2022-05-22 13:30:22,671|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-05-22 13:30:24,153|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-05-22 13:30:26,804|_internal.py|127.0.0.1 - - [22/May/2022 13:30:26] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:30:31,237|_internal.py|127.0.0.1 - - [22/May/2022 13:30:31] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-22 13:31:08,323|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-22 13:31:14,238|_internal.py|127.0.0.1 - - [22/May/2022 13:31:14] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:31:18,445|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/pages
+2022-05-22 13:31:20,421|_internal.py|127.0.0.1 - - [22/May/2022 13:31:20] "[35m[1mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 500 -
+2022-05-22 13:31:53,404|_internal.py|127.0.0.1 - - [22/May/2022 13:31:53] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:31:53,483|_internal.py|127.0.0.1 - - [22/May/2022 13:31:53] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-22 13:31:54,785|_internal.py|127.0.0.1 - - [22/May/2022 13:31:54] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-22 13:31:54,793|_internal.py|127.0.0.1 - - [22/May/2022 13:31:54] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-22 13:31:54,802|_internal.py|127.0.0.1 - - [22/May/2022 13:31:54] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-22 13:31:54,809|_internal.py|127.0.0.1 - - [22/May/2022 13:31:54] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-22 13:31:54,818|_internal.py|127.0.0.1 - - [22/May/2022 13:31:54] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-22 13:32:34,839|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/pages
+2022-05-22 13:32:38,045|_internal.py|127.0.0.1 - - [22/May/2022 13:32:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-22 13:32:38,957|_internal.py|127.0.0.1 - - [22/May/2022 13:32:38] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:32:43,388|_internal.py|127.0.0.1 - - [22/May/2022 13:32:43] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-22 13:33:12,606|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-22 13:34:16,041|_internal.py|127.0.0.1 - - [22/May/2022 13:34:16] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:34:33,741|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a/pages
+2022-05-22 13:34:39,845|_internal.py|127.0.0.1 - - [22/May/2022 13:34:39] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:35:01,527|_internal.py|127.0.0.1 - - [22/May/2022 13:35:01] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-22 13:35:18,244|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-22 13:36:57,633|_internal.py|127.0.0.1 - - [22/May/2022 13:36:57] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-22 13:37:00,155|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-22 13:37:01,594|_internal.py|127.0.0.1 - - [22/May/2022 13:37:01] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-22 13:37:06,070|_internal.py|127.0.0.1 - - [22/May/2022 13:37:06] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:37:15,870|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/pages
+2022-05-22 13:37:21,007|_internal.py|127.0.0.1 - - [22/May/2022 13:37:21] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-22 13:37:21,789|_internal.py|127.0.0.1 - - [22/May/2022 13:37:21] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-22 14:05:42,389|_internal.py|127.0.0.1 - - [22/May/2022 14:05:42] "[32mPOST /send_mail HTTP/1.1[0m" 302 -
+2022-05-22 14:05:42,417|_internal.py|127.0.0.1 - - [22/May/2022 14:05:42] "[37mGET /send_mail/define_time HTTP/1.1[0m" 200 -
+2022-05-22 14:05:49,493|_internal.py|127.0.0.1 - - [22/May/2022 14:05:49] "[37mPOST /send_mail/define_time HTTP/1.1[0m" 200 -
+2022-05-22 14:06:43,824|_internal.py|127.0.0.1 - - [22/May/2022 14:06:43] "[37mPOST /send_mail/define_time HTTP/1.1[0m" 200 -
+2022-05-22 14:06:57,553|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-22 19:02:54,786|_internal.py|127.0.0.1 - - [22/May/2022 19:02:54] "[37mGET /dashbord HTTP/1.1[0m" 200 -

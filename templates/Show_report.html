@@ -52,57 +52,6 @@
     //         doc.save('sample-file.pdf');
     //     });
 
-
-    // document.getElementById('imgg').onclick=(e)=>{
-    //     console.log('mmmm')
-    //     const canvas = document.getElementById('report_frame11');
-    //     const ctx = canvas.getContext('2d');
-
-    //     // const image = new Image(60, 45); // Using optional size for image
-    //     const image = new Image(60, 45);
-    //     image.onload = drawImageActualSize; // Draw when image has loaded
-
-    //     // Load an image of intrinsic size 300x227 in CSS pixels
-    //     image.src = 'ile2 name.png';
-    //     console.log(canvas)
-    //     function drawImageActualSize() {
-    //     // Use the intrinsic size of image in CSS pixels for the canvas element
-    //     canvas.width = this.naturalWidth;
-    //     canvas.height = this.naturalHeight;
-        
-    //     // Will draw the image as 300x227, ignoring the custom size of 60x45
-    //     // given in the constructor
-    //     ctx.drawImage(this, 0, 0);
-
-    //     // To use the custom size we'll have to specify the scale parameters
-    //     // using the element's width and height properties - lets draw one
-    //     // on top in the corner:
-    //     ctx.drawImage(this, 0, 0, this.width, this.height);
-    //     }
-    // };
-
-    //     function getScreenShot(){
-    //         const screenshotTarget = document.querySelector('.graphe_of_embded_report');
-
-    //         html2canvas(screenshotTarget).then((canvas) => {
-    //             const base64image = canvas.toDataURL("image/png");
-    //             // window.location.href = base64image;
-    //             document.querySelector('.testt').src=base64image
-    //             console.log('am here')
-    //         });
-    //    }
-
-    // html2canvas(document.querySelector("#report_frame_for_screen")).then(canvas => {
-    //     document.body.appendChild(canvas)
-    // });
-
-    
-            // html2canvas(div[0]).then(
-            //     function (canvas) {
-            //         console.log(canvas)
-            //         document.body.appendChild(canvas);
-            //     })
-
     // i will nneeed u later
     var documentWidth = parent.window.innerWidth;
     var documentHeight = parent.window.innerHeight;
@@ -137,47 +86,14 @@
           })
           .then(({data: {val}}) => {
             alert(val);
-            document.getElementById('imgg').setAttribute("src", "{{url_for('static',filename='pictures/send.svg')}}");
-            document.getElementById('imgg').setAttribute("onclick", "location='/send_mail'");
-            
+            // document.getElementById('imgg').setAttribute("src", "{{url_for('static',filename='pictures/send.svg')}}");
+            // document.getElementById('imgg').setAttribute("onclick", "location='/send_mail'");
+            // document.getElementById('imgg').setAttribute("id", "img_v2");
+            window.location.href = "/send_mail"
+            // const error = new Error('bach nhbess hena');
+            // error.name = 'CancelPromiseChainError';
+            // throw error;
           }).catch(err => console.error(err));
       });
-
-
-
-    // i neeed to uderstand it more
-    // document.getElementById('imgg').addEventListener("click",()=>{
-    // //   function genPdf(){
-    //     html2canvas(document.body,{
-    //         onrendered: function(canvas){
-    //             var imgData = canvas.toDataURL('image/png');
-    //             console.log('Report Image URL: '+imgData);
-    //             var doc = new jsPDF('p', 'mm', [1097, 7500]); //210mm wide and 297mm high
-
-    //             doc.addImage(imgData, 'PNG', 1097, 7500);
-    //             doc.save('sample.pdf');
-    //         }
-    //     });
-    // })
-
-    
-    // html2canvas(document.getElementById("report_frame22")).then(
-    //     function (canvas2) {
-    //         var img_data2 = canvas2.toDataURL('image/png');
-    //         var im_data2 = img_data2.replace('data:image/png;base64,', '');
-    //         $.ajax({
-    //         type: "POST",
-    //         url: `/dashbord/${document.querySelector('label').htmlFor}?`,
-    //         data: {
-    //             "base64data": im_data2,
-    //             // "filename": filename.split(".")[0]
-    //             "filename": 'il2 name.png'
-    //         }, success: function () {
-    //             //send second image and compare
-    //             console.log('uu')
-    //         }
-    //         });
-    //     }
-    // );
   </script>
 {% endblock content %}

@@ -1,4 +1,3 @@
-
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -21,7 +20,41 @@ from pprint import pprint
 from powerbi.client import PowerBiClient
 from powerbi.enums import ExportFileFormats
 from scrapingbee import ScrapingBeeClient
+import img2pdf
+import schedule
+from pyrebase import pyrebase
 
+CONFIG_DB={
+    'apiKey': "AIzaSyCPeLozDHk6Sn2_KGlqZA_YWdrQQBTNNnc",
+    'authDomain': "db-awelk.firebaseapp.com",
+    'databaseURL': "https://db-awelk-default-rtdb.firebaseio.com",
+    'projectId': "db-awelk",
+    'storageBucket': "db-awelk.appspot.com",
+    'messagingSenderId': "37231178359",
+    'appId': "1:37231178359:web:b4e5fae6e61555dce7cc72",
+    'measurementId': "G-VX1NF3YBG7"
+}
+firebase=pyrebase.initialize_app(CONFIG_DB)
+
+db=firebase.database()
+
+
+def search_about(collection,ref,indice):
+    all_data=db.child(collection).child(ref).get()
+    for data in all_data.each():
+        if data.val()['email'].lower()==indice.lower():
+            return data.val()
+        else:
+            return None
+
+def all_data(collection,child_ref):
+    keys,values=[],[]
+    data=db.child(collection).get()
+    for d in data.each():
+        for key in d.val():
+            keys.append(key)
+            values.append(d.val()[key])
+    return keys,values
 # --------------------------------------------------
 # Set local variables
 # --------------------------------------------------
@@ -49,6 +82,12 @@ class Authentification_for_PowerBI:
         
     def get_my_workspace(self):
         return self.reports_service.get_reports()
+
+    def get_pages_number(self,WORK_ID,REPORT_ID):
+        return self.reports_service.get_group_pages(
+                group_id=WORK_ID,
+                report_id=REPORT_ID
+            )
 
     def get_tenant(self):
         return str(self.TENANT_ID)
@@ -97,10 +136,12 @@ class Authentification_for_PowerBI:
                 
 
     def nwita(self):
+        url="http://192.168.0.192:3000/dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/20d3b902-6605-4c1a-bcbf-fd5895e69afe"
         api="9IG2PK0A6O7NV7PNGQYOIURT4IMKW0U0TG5WCHJ6BJ48XM18GK95HMA6TBYXF9KGL75TKY1ZOL0GPDVW"
         client = ScrapingBeeClient(api_key=api)
         response = client.get(
-            'https://www.youtube.com/watch?v=DdO3POKDIew', # Demo link
+            url,
+            # 'http://192.168.0.192:3000/dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e', # Demo link
             params={
                 'screenshot': True, # Take a full screenshot of the page
             }
@@ -111,36 +152,48 @@ class Authentification_for_PowerBI:
         else:
             print(response.content)
 
-    def data_report(self):
-        l,k=[],{}
-        g=self.show_workspace()
-        for i in g:
-            print(i)
-            report_out=self.reports_service.get_group_reports(
-                    group_id=str(i[1])
-                )
-            print(report_out['value'])
-            print('######################3\n')
+    # def data_report(self):
+    #     l,k=[],{}
+    #     g=self.show_workspace()
+    #     for i in g:
+    #         print(i)
+    #         report_out=self.reports_service.get_group_reports(
+    #                 group_id=str(i[1])
+    #             )
+    #         print(report_out['value'])
+    #         print('######################3\n')
 
-    def hh(self):
-        k=[]
-        for i in self.show_workspace():
-            report_out=self.reports_service.get_group_reports(
-                    group_id=str(i[1])
-                )
-            k.append([i[0],report_out['value']])
-        return k
+    # def hh(self):
+    #     k=[]
+    #     for i in self.show_workspace():
+    #         report_out=self.reports_service.get_group_reports(
+    #                 group_id=str(i[1])
+    #             )
+    #         k.append([i[0],report_out['value']])
+    #     return k
 
-def screen_shot(val):
+def screen_shot(val,pages_nbr):
     if val:
-        path_pic=r'files/page.png'
-        data_recieve=val.split(',')
-        myScreenshot = pyautogui.screenshot(region=(int(data_recieve[0])+155,(int(data_recieve[1])*2),int(data_recieve[2])-260,int(data_recieve[3])-85))
-        myScreenshot.save(path_pic)
-        data_recieve=""
-        return path_pic
+        l=[]
+        for _ in range(pages_nbr):
+            path_pic=f'./files/page{_}.png'
+            data_recieve=val.split(',')
+            myScreenshot = pyautogui.screenshot(region=(int(data_recieve[0]),(int(data_recieve[1])*2),int(data_recieve[2])-220,int(data_recieve[3])-85))
+            myScreenshot.save(path_pic)
+            data_recieve=""
+            l.append(path_pic)
+        return l
     else:
         raise ValueError('hhhhh')
+
+def transform_file_to_pdf(name_folder,pict_list):
+    # k=[str(i) for i in pict_list]
+    # print(k)
+    pdf_name_path="./files/"+name_folder+".pdf"
+    with open(pdf_name_path,"wb") as f:
+        f.write(img2pdf.convert(pict_list))
+
+    return pdf_name_path
 
     # import mss
     # import cv2
@@ -170,29 +223,13 @@ def screen_shot(val):
     #     cv2.imshow("OpenCV", img)
     #     cv2.waitKey(0)
 
-import time
 
-import pyscreenshot
-import schedule
-
-
-from datetime import datetime
-
-
-def take_screenshot2():
-    print("Taking screenshot...")
-    image = pyscreenshot.grab(bbox=(10, 10, 500, 500))
-    image.show()
-    image.save("GeeksforGeeks.png")
-    print("Screenshot taken...")
-
-
-def pos(val):
-    x,y=val.split(',')[0],val.split(',')[1]
-    pyautogui.moveTo(int(x),int(y)*2)
 ############################################################  envoyer pbi report ou pdf a une email 
-def send_pdf_file(mesg,recieve,subject):
-    for i in recieve:
+def send_pdf_file(mesg,recieve,subject,path):
+    print("\n")
+    k=recieve.split(',')
+    for i in k:
+        print("1",k)
         body = f'{mesg},\npiece jointe:'
         sender,password = 'centre.declaration@gmail.com','bouchaib2021'
         
@@ -202,7 +239,7 @@ def send_pdf_file(mesg,recieve,subject):
         message['Subject'] = subject
         message.attach(MIMEText(body, 'plain'))
         
-        pdfname=f'{os.path.abspath(os.getcwd())}\\static\\file.pdf'
+        pdfname=path
         # pdfname = path_of_file
 
         binary_pdf = open(pdfname, 'rb')
@@ -231,87 +268,58 @@ def send_pdf_file(mesg,recieve,subject):
         print('Mail Sent')
     return True
 
+def main(mesg,recieve,subject,path):
+    schedule.every(10).seconds.do(send_pdf_file,mesg,recieve,subject,path)
 
-def refresh_report():
-    time.sleep(1.5)
-    x_median_position,y_median_position=(731+774)/2 , (95+169)/2
-    pyautogui.moveTo(x_median_position,y_median_position)
-    pyautogui.click()
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
 
-def take_screens_from_pbix(file_name):
-    print("hhhhh", file_name)
-    b="".join(file_name.split("/static/files/"))
-    file_name_derictory=f'{os.path.abspath(os.getcwd())}\\static\\files\\{b}'
-    os.startfile(f'{file_name_derictory}')
-    time.sleep(40)
-    refresh_report()
-    time.sleep(35)
-    screenshot(f'{"".join(b.split(".pbix"))} - Power BI Desktop')
-    screen_to_pdf()
+# def take_screens_from_pbix(file_name):
+#     print("hhhhh", file_name)
+#     b="".join(file_name.split("/static/files/"))
+#     file_name_derictory=f'{os.path.abspath(os.getcwd())}\\static\\files\\{b}'
+#     os.startfile(f'{file_name_derictory}')
+#     time.sleep(40)
+#     refresh_report()
+#     time.sleep(35)
+#     screenshot(f'{"".join(b.split(".pbix"))} - Power BI Desktop')
+#     screen_to_pdf()
 
-def screenshot(window_title=None):
-    if window_title:
-        hwnd = win32gui.FindWindow(None, window_title)
+# def screenshot(window_title=None):
+#     if window_title:
+#         hwnd = win32gui.FindWindow(None, window_title)
 
-        if hwnd:
-            win32gui.SetForegroundWindow(hwnd)
-            x, y, x1, y1 = win32gui.GetClientRect(hwnd)
-            x, y = win32gui.ClientToScreen(hwnd, (x, y))
-            x1, y1 = win32gui.ClientToScreen(hwnd, (x1 - x, y1 - y))
-            im = pyautogui.screenshot(region=(60,200,1510 ,750))
-            im.save(r'static/test1.png')
-            os.system("taskkill /f /im PBIDesktop.exe")
-        else:
-            print('Window not found!')
-    else:
-        im = pyautogui.screenshot()
-        os.system("taskkill /f /im PBIDesktop.exe")
-        return im
-
-def screen_to_pdf():
-    image_directory=f'{os.path.abspath(os.getcwd())}\\static\\files\\'
-    extensions = ('test1.jpg','test1.png')
-    pdf = FPDF()
-    imagelist=[]
-    for ext in extensions:
-        imagelist.extend(glob.glob(os.path.join(image_directory,ext)))
-
-    for imageFile in imagelist:
-        cover = Image.open(imageFile)
-        width, height = cover.size
-
-        # convert pixel in mm with 1px=0.264583 mm
-        width, height = float(width * 0.264583), float(height * 0.264583)
-
-        # given we are working with A4 format size 
-        pdf_size = {'P': {'w': 210, 'h': 297}, 'L': {'w': 297, 'h': 210}}
-
-        # get page orientation from image size 
-        orientation = 'P' if width < height else 'L'
-
-        #  make sure image size is not greater than the pdf format size
-        width = width if width < pdf_size[orientation]['w'] else pdf_size[orientation]['w']
-        height = height if height < pdf_size[orientation]['h'] else pdf_size[orientation]['h']
-
-        pdf.add_page(orientation=orientation)
-
-        pdf.image(imageFile, 0, 0, width, height)
-    pdf.output(image_directory + "file.pdf", "F")
-
-def serch_file_path(file_ext):
-    l,b=[],[]
-    for root, dirs, files in os.walk(r'C:\\Users\\yassine\\Documents\\power bi tutorial'):
-        for name in files:
-            if name.endswith(file_ext) :
-                l.append(os.path.abspath(os.path.join(root, name)))
-
-    for i in l:
-        b.append([i,i.split("\\")[-1]])
-
-    return b
+#         if hwnd:
+#             win32gui.SetForegroundWindow(hwnd)
+#             x, y, x1, y1 = win32gui.GetClientRect(hwnd)
+#             x, y = win32gui.ClientToScreen(hwnd, (x, y))
+#             x1, y1 = win32gui.ClientToScreen(hwnd, (x1 - x, y1 - y))
+#             im = pyautogui.screenshot(region=(60,200,1510 ,750))
+#             im.save(r'static/test1.png')
+#             os.system("taskkill /f /im PBIDesktop.exe")
+#         else:
+#             print('Window not found!')
+#     else:
+#         im = pyautogui.screenshot()
+#         os.system("taskkill /f /im PBIDesktop.exe")
+#         return im
 
 
-# import schedule
+# def serch_file_path(file_ext):
+#     l,b=[],[]
+#     for root, dirs, files in os.walk(r'C:\\Users\\yassine\\Documents\\power bi tutorial'):
+#         for name in files:
+#             if name.endswith(file_ext) :
+#                 l.append(os.path.abspath(os.path.join(root, name)))
+
+#     for i in l:
+#         b.append([i,i.split("\\")[-1]])
+
+#     return b
+
+
+
 
 # def job():
 #     print("I'm working...")
