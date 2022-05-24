@@ -35,44 +35,6 @@
   <script data-main="scripts/app" src="scripts/require.js"></script>
 
   <script>
-    // var c=document.querySelector('iframe').src;
-    // console.log(c);
-    // var l=[]
-    // let i=0
-    // window.open(c, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
-
-    // function test(){
-    //     let g=window.open(c, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
-    //     $(g).load(
-    //       function() { 	
-    //         let responseText = newWindow.document.documentElement.;
-    //         console.log(responseText)
-    //       }
-    //       )
-    //     // setTimeout(g.document, 10)
-        
-
-    // }
-    
-    // function m(){
-      
-    // }
-
-    // $(window).on("unload", function(){
-    //   console.log("jjjj")
-    //   l.filter(function(x){
-    //     return x!=window;
-    //   })
-    // })
-    
-    // window.location.href=c
-
-    // window.open(c)
-
-  // document.getElementById("demo").innerHTML = text;
-
-    
-
     //   var doc = new jsPDF();
     //     var specialElementHandlers = {
     //         '#editor': function (element, renderer) {
@@ -97,10 +59,6 @@
     var iframeX = window.parent.document.getElementById('report_frame22').offsetLeft;
     // Get Top Position
     var iframeY = window.parent.document.getElementById('report_frame22').offsetTop;
-    
-    // alert('X '+iframeX+' Y '+iframeY+' width '+iframeWidth+' height '+iframeHeight+' docu '+documentWidth)
-
-       
 
     document.getElementById('imgg').addEventListener("click", e => {
         fetch(`/dashbord/${document.querySelector('label').htmlFor}?`, {

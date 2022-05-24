@@ -1,7 +1,6 @@
 
 from datetime import datetime as d
-from flask import Flask, render_template,request, session,redirect,jsonify,make_response
-# from parso import parse
+from flask import Flask, render_template,request, session,redirect,jsonify
 from Power_bi_functions import *
 from flask.helpers import url_for,flash
 from threading import Thread
@@ -61,7 +60,6 @@ def report_show(work_id,report_id):
     work_space=work_id
     report_id=report_id
     i=session['report_embded']
-    # Authentification_for_PowerBI().nwita()
     print(work_space)
     for k in i:
         if k['id']==str(report_id):
@@ -80,7 +78,6 @@ def report_show(work_id,report_id):
     
     if val:
         g=screen_shot(val,len(pages['value']))
-        # Authentification_for_PowerBI().nwita()
         path_of_pdf=transform_file_to_pdf(j['name'],g)
         session["path_pdf"]=path_of_pdf
         time.sleep(2)
@@ -124,31 +121,3 @@ if "__main__"==__name__:
     # t = Thread(target=main, args=('test','legend.eleve@gmail.com','ok','./files/file.pdf',))
     # t.start()
     app.run(debug=True,port=3000)#,host='192.168.1.42')
-    
-
-
-
-
-
-
-
-# @app.route("/file_select",methods=["POST","GET"])
-# def file_select():
-#     all_files=serch_file_path(".pbix")
-#     if request.method=="POST":
-#         session["file_name"]=request.form.get("name_file")
-#         shutil.copy(session["file_name"], UPLOAD_FOLDER)
-#         new_path='\\static\\'+str(session["file_name"].split("\\")[-1])
-#         b=new_path.split("\\")[-1]
-#         c=b.split(".pbix")
-#         c=str(c[0])+".pdf"
-#         take_screens_from_pbix(b)
-#         if session["file_name"] != None:
-#             return redirect(url_for('time_selection_time'))
-#         else:
-#             pass
-
-#     return render_template("file_show.html",files=all_files)
-
-
-
