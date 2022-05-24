@@ -14,16 +14,13 @@
 
         <div class="his_function">
             <div class="share_report">
-              <img id="imgg" src="{{url_for('static',filename='pictures/share.svg')}}" alt="1">
-              <!-- onclick="saveDiv('report_frame22','title')"> -->
+              <img id="imgg" src="{{url_for('static',filename='pictures/share.svg')}}" alt="share_icon">
             </div>
             <div class="download_report" >
             </div>
           </div>
 
-    </div>
-
-    <!-- {{ j.embedUrl }} -->
+    </div><br>
     <div class="report_graph" id="report_frame_for_screen">
       <iframe titre="{{ j.name }}" id='report_frame22' class='graphe_of_embded_report' src='{{ j.embedUrl }}' frameborder="0" allowFullScreen="true"></iframe>
     </div>
@@ -35,8 +32,47 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script data-main="scripts/app" src="scripts/require.js"></script>
 
   <script>
+    // var c=document.querySelector('iframe').src;
+    // console.log(c);
+    // var l=[]
+    // let i=0
+    // window.open(c, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+
+    // function test(){
+    //     let g=window.open(c, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+    //     $(g).load(
+    //       function() { 	
+    //         let responseText = newWindow.document.documentElement.;
+    //         console.log(responseText)
+    //       }
+    //       )
+    //     // setTimeout(g.document, 10)
+        
+
+    // }
+    
+    // function m(){
+      
+    // }
+
+    // $(window).on("unload", function(){
+    //   console.log("jjjj")
+    //   l.filter(function(x){
+    //     return x!=window;
+    //   })
+    // })
+    
+    // window.location.href=c
+
+    // window.open(c)
+
+  // document.getElementById("demo").innerHTML = text;
+
+    
+
     //   var doc = new jsPDF();
     //     var specialElementHandlers = {
     //         '#editor': function (element, renderer) {
@@ -86,13 +122,7 @@
           })
           .then(({data: {val}}) => {
             alert(val);
-            // document.getElementById('imgg').setAttribute("src", "{{url_for('static',filename='pictures/send.svg')}}");
-            // document.getElementById('imgg').setAttribute("onclick", "location='/send_mail'");
-            // document.getElementById('imgg').setAttribute("id", "img_v2");
             window.location.href = "/send_mail"
-            // const error = new Error('bach nhbess hena');
-            // error.name = 'CancelPromiseChainError';
-            // throw error;
           }).catch(err => console.error(err));
       });
   </script>

@@ -79,7 +79,8 @@ class Authentification_for_PowerBI:
 
         self.reports_service = self.CLIENT_POWER_BI.reports()
         # self.my_work_space=self.reports_service.get_reports()
-        
+        # self.CLIENT_POWER_BI
+        # pprint(template_apps_service = self.CLIENT_POWER_BI.template_apps())
     def get_my_workspace(self):
         return self.reports_service.get_reports()
 
@@ -151,7 +152,7 @@ class Authentification_for_PowerBI:
                 f.write(response.content)
         else:
             print(response.content)
-
+            
     # def data_report(self):
     #     l,k=[],{}
     #     g=self.show_workspace()
@@ -187,42 +188,10 @@ def screen_shot(val,pages_nbr):
         raise ValueError('hhhhh')
 
 def transform_file_to_pdf(name_folder,pict_list):
-    # k=[str(i) for i in pict_list]
-    # print(k)
     pdf_name_path="./files/"+name_folder+".pdf"
     with open(pdf_name_path,"wb") as f:
         f.write(img2pdf.convert(pict_list))
-
     return pdf_name_path
-
-    # import mss
-    # import cv2
-    # import numpy as np
-
-    # with mss.mss() as sct:
-        
-    # # Get information of monitor 2
-    #     monitor_number = 0
-    #     mon = sct.monitors[monitor_number]
-    #     print(sct.monitors)
-    #     # The screen part to capture
-    #     monitor = {
-    #         "top": mon["top"],
-    #         "left": mon["left"],
-    #         "width": mon["width"],
-    #         "height": mon["height"],
-    #         "mon": monitor_number,
-    #     }
-    #     output = "sct-mon{mon}_{top}x{left}_{width}x{height}.png".format(**monitor)
-
-    #     # Grab the data
-    #     sct_img = sct.grab(monitor)
-    #     img = np.array(sct.grab(monitor)) # BGR Image
-        
-    #     # Display the picture
-    #     cv2.imshow("OpenCV", img)
-    #     cv2.waitKey(0)
-
 
 ############################################################  envoyer pbi report ou pdf a une email 
 def send_pdf_file(mesg,recieve,subject,path):
@@ -317,41 +286,3 @@ def main(mesg,recieve,subject,path):
 #         b.append([i,i.split("\\")[-1]])
 
 #     return b
-
-
-
-
-# def job():
-#     print("I'm working...")
-
-# schedule.every(1).minutes.do(function)
-
-# #########  RUN IN SPECIFIC TIME AN DAY  #############
-# schedule.every().day.at("13:48").do(function)
-
-# ##########  RUN IN SPECIFIC TIME AN MONTH  #############
-# schedule.every(30).day.at("13:48").do(function)
-
-# ##########  RUN IN SPECIFIC TIME AN YEAR  #############
-# schedule.every(365).day.at("13:48").do(function)
-
-# while True:
-#     schedule.run_pending()
-#     time.sleep(1) 
-
-# import re
-# import win32api
-
-# def find_file(root_folder, rex=".pdf"):
-#     for root,dirs,files in os.walk(root_folder):
-#         for f in files:
-#             result = rex.search(f)
-#             if result:
-#                 print("test\t",os.path.join(root, f))
-#                 break # if you want to find only one
-
-# def find_file_in_all_drives(file_name):
-#     #create a regular expression for the file
-#     rex = re.compile(file_name)
-#     for drive in win32api.GetLogicalDriveStrings().split('\000')[:-1]:
-#         find_file( drive, rex )

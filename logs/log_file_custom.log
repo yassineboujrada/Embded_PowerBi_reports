@@ -12295,3 +12295,795 @@
 2022-05-22 14:06:43,824|_internal.py|127.0.0.1 - - [22/May/2022 14:06:43] "[37mPOST /send_mail/define_time HTTP/1.1[0m" 200 -
 2022-05-22 14:06:57,553|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
 2022-05-22 19:02:54,786|_internal.py|127.0.0.1 - - [22/May/2022 19:02:54] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-23 13:15:31,124|_internal.py|127.0.0.1 - - [23/May/2022 13:15:31] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-23 13:15:31,595|_internal.py|127.0.0.1 - - [23/May/2022 13:15:31] "[36mGET /static/pictures/workspace.png HTTP/1.1[0m" 304 -
+2022-05-23 13:15:37,972|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 13:15:39,181|_internal.py|127.0.0.1 - - [23/May/2022 13:15:39] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-23 13:15:39,234|_internal.py|127.0.0.1 - - [23/May/2022 13:15:39] "[36mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 304 -
+2022-05-23 13:15:42,116|_internal.py|127.0.0.1 - - [23/May/2022 13:15:42] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 13:15:42,178|_internal.py|127.0.0.1 - - [23/May/2022 13:15:42] "[36mGET /static/pictures/back.svg HTTP/1.1[0m" 304 -
+2022-05-23 13:15:42,219|_internal.py|127.0.0.1 - - [23/May/2022 13:15:42] "[36mGET /static/pictures/share.svg HTTP/1.1[0m" 304 -
+2022-05-23 13:16:06,444|_internal.py|127.0.0.1 - - [23/May/2022 13:16:06] "[35m[1mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 500 -
+2022-05-23 13:16:18,492|_internal.py|127.0.0.1 - - [23/May/2022 13:16:18] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742/ HTTP/1.1[0m" 404 -
+2022-05-23 13:16:23,537|_internal.py|127.0.0.1 - - [23/May/2022 13:16:23] "[35m[1mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 500 -
+2022-05-23 13:16:50,004|_internal.py|127.0.0.1 - - [23/May/2022 13:16:50] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-23 13:17:04,011|_internal.py|127.0.0.1 - - [23/May/2022 13:17:04] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-23 13:28:24,048|_internal.py|127.0.0.1 - - [23/May/2022 13:28:24] "[37mGET /dashbord?building_condition=3%257C8%257C4&category_main_cb=1&category_sub_cb=2%257C3%257C4%257C5%257C6%257C7%257C8%257C9%257C10%257C11%257C12%257C16&category_type_cb=1&locality_region_id=10&per_page=20&tms=1592389441017 HTTP/1.1[0m" 200 -
+2022-05-23 13:35:25,701|_internal.py|127.0.0.1 - - [23/May/2022 13:35:25] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-23 13:36:22,232|_internal.py|127.0.0.1 - - [23/May/2022 13:36:22] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-23 13:37:08,325|_internal.py|127.0.0.1 - - [23/May/2022 13:37:08] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-23 13:37:32,077|_internal.py|127.0.0.1 - - [23/May/2022 13:37:32] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-23 13:37:44,583|_internal.py|127.0.0.1 - - [23/May/2022 13:37:44] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-23 14:36:10,714|_internal.py|127.0.0.1 - - [23/May/2022 14:36:10] "[35m[1mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 500 -
+2022-05-23 14:36:56,031|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 14:36:57,600|_internal.py|127.0.0.1 - - [23/May/2022 14:36:57] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-23 14:37:42,936|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 14:37:44,551|_internal.py|127.0.0.1 - - [23/May/2022 14:37:44] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-23 14:37:50,474|_internal.py|127.0.0.1 - - [23/May/2022 14:37:50] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 14:38:08,215|_internal.py|127.0.0.1 - - [23/May/2022 14:38:08] "[35m[1mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 500 -
+2022-05-23 14:38:38,086|_internal.py|127.0.0.1 - - [23/May/2022 14:38:38] "[35m[1mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 500 -
+2022-05-23 14:42:11,073|_internal.py|127.0.0.1 - - [23/May/2022 14:42:11] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 14:42:11,242|_internal.py|127.0.0.1 - - [23/May/2022 14:42:11] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-23 14:42:12,410|_internal.py|127.0.0.1 - - [23/May/2022 14:42:12] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-23 14:42:12,439|_internal.py|127.0.0.1 - - [23/May/2022 14:42:12] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-23 14:42:12,471|_internal.py|127.0.0.1 - - [23/May/2022 14:42:12] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-23 14:42:12,480|_internal.py|127.0.0.1 - - [23/May/2022 14:42:12] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-23 14:42:12,488|_internal.py|127.0.0.1 - - [23/May/2022 14:42:12] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-23 14:42:23,030|_internal.py|127.0.0.1 - - [23/May/2022 14:42:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-23 14:59:55,850|_internal.py|192.168.1.42 - - [23/May/2022 14:59:55] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-23 14:59:55,923|_internal.py|192.168.1.42 - - [23/May/2022 14:59:55] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-23 14:59:56,146|_internal.py|192.168.1.42 - - [23/May/2022 14:59:56] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-23 14:59:56,152|_internal.py|192.168.1.42 - - [23/May/2022 14:59:56] "[37mGET /static/pictures/workspace.png HTTP/1.1[0m" 200 -
+2022-05-23 14:59:56,163|_internal.py|192.168.1.42 - - [23/May/2022 14:59:56] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-23 14:59:56,193|_internal.py|192.168.1.42 - - [23/May/2022 14:59:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-23 15:18:30,744|_internal.py|127.0.0.1 - - [23/May/2022 15:18:30] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-23 15:23:08,588|_internal.py|127.0.0.1 - - [23/May/2022 15:23:08] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-23 15:34:17,893|_internal.py|127.0.0.1 - - [23/May/2022 15:34:17] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-23 15:35:19,627|_internal.py|127.0.0.1 - - [23/May/2022 15:35:19] "[35m[1mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 500 -
+2022-05-23 15:36:09,229|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 15:36:13,755|_internal.py|127.0.0.1 - - [23/May/2022 15:36:13] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-23 15:40:53,388|_internal.py|127.0.0.1 - - [23/May/2022 15:40:53] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 15:40:53,476|_internal.py|127.0.0.1 - - [23/May/2022 15:40:53] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-23 15:40:54,696|_internal.py|127.0.0.1 - - [23/May/2022 15:40:54] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-23 15:40:54,704|_internal.py|127.0.0.1 - - [23/May/2022 15:40:54] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-23 15:40:54,711|_internal.py|127.0.0.1 - - [23/May/2022 15:40:54] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-23 15:40:54,713|_internal.py|127.0.0.1 - - [23/May/2022 15:40:54] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-23 15:40:54,724|_internal.py|127.0.0.1 - - [23/May/2022 15:40:54] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-23 15:41:00,990|_internal.py|127.0.0.1 - - [23/May/2022 15:41:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-23 15:43:39,598|_internal.py|127.0.0.1 - - [23/May/2022 15:43:39] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 15:43:39,631|_internal.py|127.0.0.1 - - [23/May/2022 15:43:39] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-23 15:43:39,662|_internal.py|127.0.0.1 - - [23/May/2022 15:43:39] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-23 15:43:39,675|_internal.py|127.0.0.1 - - [23/May/2022 15:43:39] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-23 15:43:39,696|_internal.py|127.0.0.1 - - [23/May/2022 15:43:39] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-23 15:43:39,712|_internal.py|127.0.0.1 - - [23/May/2022 15:43:39] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-23 15:43:39,720|_internal.py|127.0.0.1 - - [23/May/2022 15:43:39] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-23 15:43:39,728|_internal.py|127.0.0.1 - - [23/May/2022 15:43:39] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-23 15:43:50,300|_internal.py|127.0.0.1 - - [23/May/2022 15:43:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-23 15:47:54,729|_internal.py|127.0.0.1 - - [23/May/2022 15:47:54] "[35m[1mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 500 -
+2022-05-23 15:49:50,950|_internal.py|127.0.0.1 - - [23/May/2022 15:49:50] "[35m[1mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 500 -
+2022-05-23 15:52:18,852|_internal.py|127.0.0.1 - - [23/May/2022 15:52:18] "[35m[1mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 500 -
+2022-05-23 15:53:26,687|_internal.py|127.0.0.1 - - [23/May/2022 15:53:26] "[35m[1mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 500 -
+2022-05-23 15:54:53,237|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-23 15:55:24,252|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 15:55:25,763|_internal.py|127.0.0.1 - - [23/May/2022 15:55:25] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-23 15:55:28,449|_internal.py|127.0.0.1 - - [23/May/2022 15:55:28] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 15:55:28,597|_internal.py|127.0.0.1 - - [23/May/2022 15:55:28] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-23 15:56:02,040|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-23 15:57:22,321|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 15:57:24,542|_internal.py|127.0.0.1 - - [23/May/2022 15:57:24] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 15:57:24,662|_internal.py|127.0.0.1 - - [23/May/2022 15:57:24] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-23 15:57:42,593|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 15:57:44,421|_internal.py|127.0.0.1 - - [23/May/2022 15:57:44] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 15:59:12,332|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 15:59:14,507|_internal.py|127.0.0.1 - - [23/May/2022 15:59:14] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:02:39,085|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-23 16:03:28,188|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:03:30,559|_internal.py|192.168.1.42 - - [23/May/2022 16:03:30] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:14:28,767|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:14:31,364|_internal.py|127.0.0.1 - - [23/May/2022 16:14:31] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:18:53,798|connectionpool.py|Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022D472955B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /common/v2.0/.well-known/openid-configuration
+2022-05-23 16:18:53,866|_internal.py|127.0.0.1 - - [23/May/2022 16:18:53] "[35m[1mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 500 -
+2022-05-23 16:18:57,574|connectionpool.py|Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022D4762A370>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /common/v2.0/.well-known/openid-configuration
+2022-05-23 16:18:57,641|_internal.py|127.0.0.1 - - [23/May/2022 16:18:57] "[35m[1mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 500 -
+2022-05-23 16:19:44,616|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:19:46,007|_internal.py|127.0.0.1 - - [23/May/2022 16:19:46] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:23:58,006|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:23:59,450|_internal.py|127.0.0.1 - - [23/May/2022 16:23:59] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:32:29,024|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:32:30,765|_internal.py|127.0.0.1 - - [23/May/2022 16:32:30] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:34:00,586|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:34:02,085|_internal.py|127.0.0.1 - - [23/May/2022 16:34:02] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:34:16,345|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:34:18,064|_internal.py|127.0.0.1 - - [23/May/2022 16:34:18] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:37:37,054|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:37:38,442|_internal.py|127.0.0.1 - - [23/May/2022 16:37:38] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:40:34,725|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:40:36,286|_internal.py|127.0.0.1 - - [23/May/2022 16:40:36] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:42:19,243|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:42:20,620|_internal.py|127.0.0.1 - - [23/May/2022 16:42:20] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:42:55,261|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:42:56,230|_internal.py|127.0.0.1 - - [23/May/2022 16:42:56] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:44:35,543|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:44:36,937|_internal.py|127.0.0.1 - - [23/May/2022 16:44:36] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:45:40,450|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:45:42,110|_internal.py|127.0.0.1 - - [23/May/2022 16:45:42] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:46:22,495|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:46:23,386|_internal.py|127.0.0.1 - - [23/May/2022 16:46:23] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:48:32,816|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:48:34,586|_internal.py|127.0.0.1 - - [23/May/2022 16:48:34] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:48:34,760|_internal.py|127.0.0.1 - - [23/May/2022 16:48:34] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-23 16:48:34,769|_internal.py|127.0.0.1 - - [23/May/2022 16:48:34] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-23 16:48:36,622|_internal.py|127.0.0.1 - - [23/May/2022 16:48:36] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-23 16:48:36,642|_internal.py|127.0.0.1 - - [23/May/2022 16:48:36] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-23 16:48:36,679|_internal.py|127.0.0.1 - - [23/May/2022 16:48:36] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-23 16:48:36,685|_internal.py|127.0.0.1 - - [23/May/2022 16:48:36] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-23 16:48:36,693|_internal.py|127.0.0.1 - - [23/May/2022 16:48:36] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-23 16:48:40,474|_internal.py|127.0.0.1 - - [23/May/2022 16:48:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-23 16:49:05,598|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:49:07,355|_internal.py|127.0.0.1 - - [23/May/2022 16:49:07] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:49:07,467|_internal.py|127.0.0.1 - - [23/May/2022 16:49:07] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-23 16:49:07,543|_internal.py|127.0.0.1 - - [23/May/2022 16:49:07] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-23 16:49:07,570|_internal.py|127.0.0.1 - - [23/May/2022 16:49:07] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-23 16:49:07,591|_internal.py|127.0.0.1 - - [23/May/2022 16:49:07] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-23 16:49:07,601|_internal.py|127.0.0.1 - - [23/May/2022 16:49:07] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-23 16:49:07,605|_internal.py|127.0.0.1 - - [23/May/2022 16:49:07] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-23 16:49:07,620|_internal.py|127.0.0.1 - - [23/May/2022 16:49:07] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-23 16:49:11,225|_internal.py|127.0.0.1 - - [23/May/2022 16:49:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-23 16:49:21,884|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:49:23,163|_internal.py|127.0.0.1 - - [23/May/2022 16:49:23] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:51:38,467|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:51:40,123|_internal.py|127.0.0.1 - - [23/May/2022 16:51:40] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:51:40,190|_internal.py|127.0.0.1 - - [23/May/2022 16:51:40] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-23 16:51:40,252|_internal.py|127.0.0.1 - - [23/May/2022 16:51:40] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-23 16:51:40,277|_internal.py|127.0.0.1 - - [23/May/2022 16:51:40] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-23 16:51:40,295|_internal.py|127.0.0.1 - - [23/May/2022 16:51:40] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-23 16:51:40,298|_internal.py|127.0.0.1 - - [23/May/2022 16:51:40] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-23 16:51:40,306|_internal.py|127.0.0.1 - - [23/May/2022 16:51:40] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-23 16:51:40,312|_internal.py|127.0.0.1 - - [23/May/2022 16:51:40] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-23 16:51:41,011|_internal.py|127.0.0.1 - - [23/May/2022 16:51:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-23 16:52:38,177|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:52:39,595|_internal.py|127.0.0.1 - - [23/May/2022 16:52:39] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:53:46,115|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:53:47,575|_internal.py|127.0.0.1 - - [23/May/2022 16:53:47] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:53:47,634|_internal.py|127.0.0.1 - - [23/May/2022 16:53:47] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-23 16:53:47,701|_internal.py|127.0.0.1 - - [23/May/2022 16:53:47] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-23 16:53:47,713|_internal.py|127.0.0.1 - - [23/May/2022 16:53:47] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-23 16:53:47,732|_internal.py|127.0.0.1 - - [23/May/2022 16:53:47] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-23 16:53:47,743|_internal.py|127.0.0.1 - - [23/May/2022 16:53:47] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-23 16:53:47,747|_internal.py|127.0.0.1 - - [23/May/2022 16:53:47] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-23 16:53:47,749|_internal.py|127.0.0.1 - - [23/May/2022 16:53:47] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-23 16:53:51,673|_internal.py|127.0.0.1 - - [23/May/2022 16:53:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-23 16:57:34,691|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 16:57:36,145|_internal.py|127.0.0.1 - - [23/May/2022 16:57:36] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 16:57:36,244|_internal.py|127.0.0.1 - - [23/May/2022 16:57:36] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-23 16:57:36,295|_internal.py|127.0.0.1 - - [23/May/2022 16:57:36] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-23 16:57:36,307|_internal.py|127.0.0.1 - - [23/May/2022 16:57:36] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-23 16:57:36,316|_internal.py|127.0.0.1 - - [23/May/2022 16:57:36] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-23 16:57:36,342|_internal.py|127.0.0.1 - - [23/May/2022 16:57:36] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-23 16:57:36,343|_internal.py|127.0.0.1 - - [23/May/2022 16:57:36] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-23 16:57:36,347|_internal.py|127.0.0.1 - - [23/May/2022 16:57:36] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-23 16:57:38,915|_internal.py|127.0.0.1 - - [23/May/2022 16:57:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-23 17:07:03,010|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 17:07:04,373|_internal.py|127.0.0.1 - - [23/May/2022 17:07:04] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 17:07:04,441|_internal.py|127.0.0.1 - - [23/May/2022 17:07:04] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-23 17:07:04,555|_internal.py|127.0.0.1 - - [23/May/2022 17:07:04] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-23 17:07:04,627|_internal.py|127.0.0.1 - - [23/May/2022 17:07:04] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-23 17:07:04,688|_internal.py|127.0.0.1 - - [23/May/2022 17:07:04] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-23 17:07:04,736|_internal.py|127.0.0.1 - - [23/May/2022 17:07:04] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-23 17:07:04,772|_internal.py|127.0.0.1 - - [23/May/2022 17:07:04] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-23 17:07:04,899|_internal.py|127.0.0.1 - - [23/May/2022 17:07:04] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-23 17:07:05,157|_internal.py|127.0.0.1 - - [23/May/2022 17:07:05] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-23 17:07:05,188|_internal.py|127.0.0.1 - - [23/May/2022 17:07:05] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-23 17:07:05,200|_internal.py|127.0.0.1 - - [23/May/2022 17:07:05] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-23 17:07:05,236|_internal.py|127.0.0.1 - - [23/May/2022 17:07:05] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-23 17:07:05,271|_internal.py|127.0.0.1 - - [23/May/2022 17:07:05] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-23 17:07:05,448|_internal.py|127.0.0.1 - - [23/May/2022 17:07:05] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-23 17:07:11,814|_internal.py|127.0.0.1 - - [23/May/2022 17:07:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-23 17:10:27,398|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 17:10:28,974|_internal.py|127.0.0.1 - - [23/May/2022 17:10:28] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 17:10:29,312|_internal.py|127.0.0.1 - - [23/May/2022 17:10:29] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-23 17:10:29,384|_internal.py|127.0.0.1 - - [23/May/2022 17:10:29] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-23 17:10:29,395|_internal.py|127.0.0.1 - - [23/May/2022 17:10:29] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-23 17:10:29,424|_internal.py|127.0.0.1 - - [23/May/2022 17:10:29] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-23 17:10:29,453|_internal.py|127.0.0.1 - - [23/May/2022 17:10:29] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-23 17:10:29,493|_internal.py|127.0.0.1 - - [23/May/2022 17:10:29] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-23 17:10:29,580|_internal.py|127.0.0.1 - - [23/May/2022 17:10:29] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-23 17:10:30,042|_internal.py|127.0.0.1 - - [23/May/2022 17:10:30] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-23 17:10:30,102|_internal.py|127.0.0.1 - - [23/May/2022 17:10:30] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-23 17:10:30,118|_internal.py|127.0.0.1 - - [23/May/2022 17:10:30] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-23 17:10:30,143|_internal.py|127.0.0.1 - - [23/May/2022 17:10:30] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-23 17:10:30,158|_internal.py|127.0.0.1 - - [23/May/2022 17:10:30] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-23 17:10:30,321|_internal.py|127.0.0.1 - - [23/May/2022 17:10:30] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-23 17:10:36,449|_internal.py|127.0.0.1 - - [23/May/2022 17:10:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-23 17:11:02,885|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 17:11:03,956|_internal.py|127.0.0.1 - - [23/May/2022 17:11:03] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 22:40:13,802|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-23 22:40:27,476|_internal.py|127.0.0.1 - - [23/May/2022 22:40:27] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-23 22:40:27,647|_internal.py|127.0.0.1 - - [23/May/2022 22:40:27] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 10:01:33,023|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 10:01:34,771|_internal.py|127.0.0.1 - - [24/May/2022 10:01:34] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 10:01:35,065|_internal.py|127.0.0.1 - - [24/May/2022 10:01:35] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 10:01:37,041|_internal.py|127.0.0.1 - - [24/May/2022 10:01:37] "[36mGET /static/design/style.css HTTP/1.1[0m" 304 -
+2022-05-24 10:01:37,070|_internal.py|127.0.0.1 - - [24/May/2022 10:01:37] "[36mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 304 -
+2022-05-24 10:01:37,078|_internal.py|127.0.0.1 - - [24/May/2022 10:01:37] "[36mGET /static/pictures/logo.png HTTP/1.1[0m" 304 -
+2022-05-24 10:01:37,086|_internal.py|127.0.0.1 - - [24/May/2022 10:01:37] "[36mGET /static/pictures/share.svg HTTP/1.1[0m" 304 -
+2022-05-24 10:01:37,087|_internal.py|127.0.0.1 - - [24/May/2022 10:01:37] "[36mGET /static/pictures/back.svg HTTP/1.1[0m" 304 -
+2022-05-24 10:02:11,618|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 10:02:13,035|_internal.py|127.0.0.1 - - [24/May/2022 10:02:13] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 10:03:21,641|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 10:03:23,064|_internal.py|127.0.0.1 - - [24/May/2022 10:03:23] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 10:04:08,318|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 10:04:09,768|_internal.py|127.0.0.1 - - [24/May/2022 10:04:09] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 10:07:39,946|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-24 10:38:10,795|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 10:38:12,264|_internal.py|127.0.0.1 - - [24/May/2022 10:38:12] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 10:39:06,168|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 10:39:07,556|_internal.py|127.0.0.1 - - [24/May/2022 10:39:07] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 10:39:07,657|_internal.py|127.0.0.1 - - [24/May/2022 10:39:07] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 10:39:39,039|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 10:39:40,533|_internal.py|127.0.0.1 - - [24/May/2022 10:39:40] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 10:40:08,312|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 10:40:09,826|_internal.py|127.0.0.1 - - [24/May/2022 10:40:09] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 10:41:30,690|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 10:41:31,933|_internal.py|127.0.0.1 - - [24/May/2022 10:41:31] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 10:42:17,534|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 10:42:18,969|_internal.py|127.0.0.1 - - [24/May/2022 10:42:18] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 10:43:05,786|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 10:43:07,288|_internal.py|127.0.0.1 - - [24/May/2022 10:43:07] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 10:43:07,334|_internal.py|127.0.0.1 - - [24/May/2022 10:43:07] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 10:44:28,949|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 10:44:30,413|_internal.py|127.0.0.1 - - [24/May/2022 10:44:30] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 10:49:33,468|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 10:49:34,808|_internal.py|127.0.0.1 - - [24/May/2022 10:49:34] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 10:49:34,945|_internal.py|127.0.0.1 - - [24/May/2022 10:49:34] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 10:49:34,972|_internal.py|127.0.0.1 - - [24/May/2022 10:49:34] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 10:49:37,011|_internal.py|127.0.0.1 - - [24/May/2022 10:49:37] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 10:49:37,078|_internal.py|127.0.0.1 - - [24/May/2022 10:49:37] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 10:49:37,155|_internal.py|127.0.0.1 - - [24/May/2022 10:49:37] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 10:49:37,161|_internal.py|127.0.0.1 - - [24/May/2022 10:49:37] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 10:49:37,162|_internal.py|127.0.0.1 - - [24/May/2022 10:49:37] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 11:07:52,018|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:07:53,154|_internal.py|127.0.0.1 - - [24/May/2022 11:07:53] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-24 11:07:53,707|_internal.py|127.0.0.1 - - [24/May/2022 11:07:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 11:07:55,267|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:07:56,662|_internal.py|127.0.0.1 - - [24/May/2022 11:07:56] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 11:07:56,779|_internal.py|127.0.0.1 - - [24/May/2022 11:07:56] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 11:08:56,489|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:08:57,179|_internal.py|127.0.0.1 - - [24/May/2022 11:08:57] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-24 11:08:59,823|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:09:01,437|_internal.py|127.0.0.1 - - [24/May/2022 11:09:01] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e HTTP/1.1[0m" 200 -
+2022-05-24 11:09:01,582|_internal.py|127.0.0.1 - - [24/May/2022 11:09:01] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 11:25:42,709|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:25:44,122|_internal.py|127.0.0.1 - - [24/May/2022 11:25:44] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-24 11:25:47,013|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:25:48,551|_internal.py|127.0.0.1 - - [24/May/2022 11:25:48] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 11:25:48,655|_internal.py|127.0.0.1 - - [24/May/2022 11:25:48] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 11:30:32,863|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:30:34,374|_internal.py|127.0.0.1 - - [24/May/2022 11:30:34] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 11:30:50,309|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:30:51,296|_internal.py|127.0.0.1 - - [24/May/2022 11:30:51] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-24 11:30:54,253|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:30:55,758|_internal.py|127.0.0.1 - - [24/May/2022 11:30:55] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 11:30:56,050|_internal.py|127.0.0.1 - - [24/May/2022 11:30:56] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 11:33:36,725|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:33:37,448|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:33:37,776|_internal.py|127.0.0.1 - - [24/May/2022 11:33:37] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-24 11:33:39,142|_internal.py|127.0.0.1 - - [24/May/2022 11:33:39] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 11:33:39,839|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:33:41,200|_internal.py|127.0.0.1 - - [24/May/2022 11:33:41] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 11:33:41,270|_internal.py|127.0.0.1 - - [24/May/2022 11:33:41] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 11:33:41,765|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:33:42,584|_internal.py|127.0.0.1 - - [24/May/2022 11:33:42] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 11:33:43,439|_internal.py|127.0.0.1 - - [24/May/2022 11:33:43] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 11:34:02,698|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:34:03,678|_internal.py|127.0.0.1 - - [24/May/2022 11:34:03] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-24 11:34:10,894|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:34:12,170|_internal.py|127.0.0.1 - - [24/May/2022 11:34:12] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/e9fde765-f95d-424a-b879-f2f0a89c171f HTTP/1.1[0m" 200 -
+2022-05-24 11:34:12,315|_internal.py|127.0.0.1 - - [24/May/2022 11:34:12] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 11:34:30,574|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:34:31,542|_internal.py|127.0.0.1 - - [24/May/2022 11:34:31] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-24 11:34:36,675|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:34:37,894|_internal.py|127.0.0.1 - - [24/May/2022 11:34:37] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/e9fde765-f95d-424a-b879-f2f0a89c171f HTTP/1.1[0m" 200 -
+2022-05-24 11:34:38,105|_internal.py|127.0.0.1 - - [24/May/2022 11:34:38] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 11:35:04,002|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:35:05,317|_internal.py|127.0.0.1 - - [24/May/2022 11:35:05] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/e9fde765-f95d-424a-b879-f2f0a89c171f HTTP/1.1[0m" 200 -
+2022-05-24 11:35:05,396|_internal.py|127.0.0.1 - - [24/May/2022 11:35:05] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 11:37:08,657|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:37:10,145|_internal.py|127.0.0.1 - - [24/May/2022 11:37:10] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/e9fde765-f95d-424a-b879-f2f0a89c171f HTTP/1.1[0m" 200 -
+2022-05-24 11:37:10,243|_internal.py|127.0.0.1 - - [24/May/2022 11:37:10] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 11:46:04,240|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:46:05,386|_internal.py|127.0.0.1 - - [24/May/2022 11:46:05] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-24 11:46:08,039|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 11:46:09,373|_internal.py|127.0.0.1 - - [24/May/2022 11:46:09] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e HTTP/1.1[0m" 200 -
+2022-05-24 11:46:09,507|_internal.py|127.0.0.1 - - [24/May/2022 11:46:09] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:00:08,629|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:00:09,697|_internal.py|127.0.0.1 - - [24/May/2022 12:00:09] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-24 12:00:12,500|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:00:13,762|_internal.py|127.0.0.1 - - [24/May/2022 12:00:13] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/e9fde765-f95d-424a-b879-f2f0a89c171f HTTP/1.1[0m" 200 -
+2022-05-24 12:00:14,009|_internal.py|127.0.0.1 - - [24/May/2022 12:00:14] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:12:43,218|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:12:44,382|_internal.py|127.0.0.1 - - [24/May/2022 12:12:44] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-24 12:12:47,204|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:12:48,232|_internal.py|127.0.0.1 - - [24/May/2022 12:12:48] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-24 12:12:48,281|_internal.py|127.0.0.1 - - [24/May/2022 12:12:48] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:12:48,299|_internal.py|127.0.0.1 - - [24/May/2022 12:12:48] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:12:48,308|_internal.py|127.0.0.1 - - [24/May/2022 12:12:48] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:12:48,328|_internal.py|127.0.0.1 - - [24/May/2022 12:12:48] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:12:48,877|_internal.py|127.0.0.1 - - [24/May/2022 12:12:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:12:52,751|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:12:54,075|_internal.py|127.0.0.1 - - [24/May/2022 12:12:54] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:12:54,357|_internal.py|127.0.0.1 - - [24/May/2022 12:12:54] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:13:30,641|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:13:32,000|_internal.py|127.0.0.1 - - [24/May/2022 12:13:32] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:13:32,085|_internal.py|127.0.0.1 - - [24/May/2022 12:13:32] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:13:32,193|_internal.py|127.0.0.1 - - [24/May/2022 12:13:32] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:13:32,213|_internal.py|127.0.0.1 - - [24/May/2022 12:13:32] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:13:32,269|_internal.py|127.0.0.1 - - [24/May/2022 12:13:32] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:13:32,306|_internal.py|127.0.0.1 - - [24/May/2022 12:13:32] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:13:32,359|_internal.py|127.0.0.1 - - [24/May/2022 12:13:32] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:13:32,413|_internal.py|127.0.0.1 - - [24/May/2022 12:13:32] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:13:36,801|_internal.py|127.0.0.1 - - [24/May/2022 12:13:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:15:55,727|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:15:57,143|_internal.py|127.0.0.1 - - [24/May/2022 12:15:57] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:15:57,205|_internal.py|127.0.0.1 - - [24/May/2022 12:15:57] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:15:57,403|_internal.py|127.0.0.1 - - [24/May/2022 12:15:57] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:15:57,458|_internal.py|127.0.0.1 - - [24/May/2022 12:15:57] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:15:57,487|_internal.py|127.0.0.1 - - [24/May/2022 12:15:57] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:15:57,509|_internal.py|127.0.0.1 - - [24/May/2022 12:15:57] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:15:57,584|_internal.py|127.0.0.1 - - [24/May/2022 12:15:57] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:15:57,766|_internal.py|127.0.0.1 - - [24/May/2022 12:15:57] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:18:18,016|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:18:19,077|_internal.py|127.0.0.1 - - [24/May/2022 12:18:19] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-24 12:18:19,976|_internal.py|127.0.0.1 - - [24/May/2022 12:18:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:18:21,831|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:18:23,169|_internal.py|127.0.0.1 - - [24/May/2022 12:18:23] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:18:23,336|_internal.py|127.0.0.1 - - [24/May/2022 12:18:23] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:19:50,040|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:19:51,483|_internal.py|127.0.0.1 - - [24/May/2022 12:19:51] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:19:51,517|_internal.py|127.0.0.1 - - [24/May/2022 12:19:51] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:19:51,595|_internal.py|127.0.0.1 - - [24/May/2022 12:19:51] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:19:51,673|_internal.py|127.0.0.1 - - [24/May/2022 12:19:51] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:19:51,703|_internal.py|127.0.0.1 - - [24/May/2022 12:19:51] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:19:51,709|_internal.py|127.0.0.1 - - [24/May/2022 12:19:51] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:19:51,742|_internal.py|127.0.0.1 - - [24/May/2022 12:19:51] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:19:51,781|_internal.py|127.0.0.1 - - [24/May/2022 12:19:51] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:19:55,816|_internal.py|127.0.0.1 - - [24/May/2022 12:19:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:20:58,132|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:20:59,473|_internal.py|127.0.0.1 - - [24/May/2022 12:20:59] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:20:59,515|_internal.py|127.0.0.1 - - [24/May/2022 12:20:59] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:20:59,601|_internal.py|127.0.0.1 - - [24/May/2022 12:20:59] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:20:59,642|_internal.py|127.0.0.1 - - [24/May/2022 12:20:59] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:20:59,665|_internal.py|127.0.0.1 - - [24/May/2022 12:20:59] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:20:59,673|_internal.py|127.0.0.1 - - [24/May/2022 12:20:59] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:20:59,695|_internal.py|127.0.0.1 - - [24/May/2022 12:20:59] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:20:59,720|_internal.py|127.0.0.1 - - [24/May/2022 12:20:59] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:21:04,066|_internal.py|127.0.0.1 - - [24/May/2022 12:21:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:22:54,299|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:22:55,803|_internal.py|127.0.0.1 - - [24/May/2022 12:22:55] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:22:55,839|_internal.py|127.0.0.1 - - [24/May/2022 12:22:55] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:22:55,936|_internal.py|127.0.0.1 - - [24/May/2022 12:22:55] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:22:55,969|_internal.py|127.0.0.1 - - [24/May/2022 12:22:55] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:22:55,988|_internal.py|127.0.0.1 - - [24/May/2022 12:22:55] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:22:56,012|_internal.py|127.0.0.1 - - [24/May/2022 12:22:56] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:22:56,061|_internal.py|127.0.0.1 - - [24/May/2022 12:22:56] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:22:56,077|_internal.py|127.0.0.1 - - [24/May/2022 12:22:56] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:23:00,147|_internal.py|127.0.0.1 - - [24/May/2022 12:23:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:27:35,333|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:27:36,655|_internal.py|127.0.0.1 - - [24/May/2022 12:27:36] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:27:36,714|_internal.py|127.0.0.1 - - [24/May/2022 12:27:36] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:27:36,800|_internal.py|127.0.0.1 - - [24/May/2022 12:27:36] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:27:36,843|_internal.py|127.0.0.1 - - [24/May/2022 12:27:36] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:27:36,904|_internal.py|127.0.0.1 - - [24/May/2022 12:27:36] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:27:36,963|_internal.py|127.0.0.1 - - [24/May/2022 12:27:36] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:27:37,004|_internal.py|127.0.0.1 - - [24/May/2022 12:27:37] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:27:37,041|_internal.py|127.0.0.1 - - [24/May/2022 12:27:37] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:27:41,007|_internal.py|127.0.0.1 - - [24/May/2022 12:27:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:29:30,749|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:29:33,775|_internal.py|127.0.0.1 - - [24/May/2022 12:29:33] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:29:34,059|_internal.py|127.0.0.1 - - [24/May/2022 12:29:34] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:29:34,133|_internal.py|127.0.0.1 - - [24/May/2022 12:29:34] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:29:34,234|_internal.py|127.0.0.1 - - [24/May/2022 12:29:34] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:29:34,348|_internal.py|127.0.0.1 - - [24/May/2022 12:29:34] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:29:34,549|_internal.py|127.0.0.1 - - [24/May/2022 12:29:34] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:29:34,687|_internal.py|127.0.0.1 - - [24/May/2022 12:29:34] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:29:35,200|_internal.py|127.0.0.1 - - [24/May/2022 12:29:35] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:29:41,940|_internal.py|127.0.0.1 - - [24/May/2022 12:29:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:30:52,104|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:30:53,214|_internal.py|127.0.0.1 - - [24/May/2022 12:30:53] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:30:53,253|_internal.py|127.0.0.1 - - [24/May/2022 12:30:53] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:30:53,330|_internal.py|127.0.0.1 - - [24/May/2022 12:30:53] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:30:53,340|_internal.py|127.0.0.1 - - [24/May/2022 12:30:53] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:30:53,351|_internal.py|127.0.0.1 - - [24/May/2022 12:30:53] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:30:53,366|_internal.py|127.0.0.1 - - [24/May/2022 12:30:53] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:30:53,394|_internal.py|127.0.0.1 - - [24/May/2022 12:30:53] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:30:53,395|_internal.py|127.0.0.1 - - [24/May/2022 12:30:53] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:30:58,934|_internal.py|127.0.0.1 - - [24/May/2022 12:30:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:31:57,941|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:32:01,255|_internal.py|127.0.0.1 - - [24/May/2022 12:32:01] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:32:01,297|_internal.py|127.0.0.1 - - [24/May/2022 12:32:01] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:32:01,385|_internal.py|127.0.0.1 - - [24/May/2022 12:32:01] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:32:01,446|_internal.py|127.0.0.1 - - [24/May/2022 12:32:01] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:32:01,479|_internal.py|127.0.0.1 - - [24/May/2022 12:32:01] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:32:01,503|_internal.py|127.0.0.1 - - [24/May/2022 12:32:01] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:32:01,519|_internal.py|127.0.0.1 - - [24/May/2022 12:32:01] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:32:01,522|_internal.py|127.0.0.1 - - [24/May/2022 12:32:01] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:32:10,567|_internal.py|127.0.0.1 - - [24/May/2022 12:32:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:33:28,097|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:33:29,586|_internal.py|127.0.0.1 - - [24/May/2022 12:33:29] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:33:29,684|_internal.py|127.0.0.1 - - [24/May/2022 12:33:29] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:33:29,765|_internal.py|127.0.0.1 - - [24/May/2022 12:33:29] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:33:29,778|_internal.py|127.0.0.1 - - [24/May/2022 12:33:29] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:33:29,792|_internal.py|127.0.0.1 - - [24/May/2022 12:33:29] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:33:29,794|_internal.py|127.0.0.1 - - [24/May/2022 12:33:29] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:33:29,810|_internal.py|127.0.0.1 - - [24/May/2022 12:33:29] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:33:29,861|_internal.py|127.0.0.1 - - [24/May/2022 12:33:29] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:33:33,309|_internal.py|127.0.0.1 - - [24/May/2022 12:33:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:36:09,803|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:36:11,641|_internal.py|127.0.0.1 - - [24/May/2022 12:36:11] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:36:11,701|_internal.py|127.0.0.1 - - [24/May/2022 12:36:11] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:36:11,846|_internal.py|127.0.0.1 - - [24/May/2022 12:36:11] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:36:11,892|_internal.py|127.0.0.1 - - [24/May/2022 12:36:11] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:36:11,975|_internal.py|127.0.0.1 - - [24/May/2022 12:36:11] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:36:12,025|_internal.py|127.0.0.1 - - [24/May/2022 12:36:12] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:36:12,043|_internal.py|127.0.0.1 - - [24/May/2022 12:36:12] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:36:12,169|_internal.py|127.0.0.1 - - [24/May/2022 12:36:12] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:36:15,966|_internal.py|127.0.0.1 - - [24/May/2022 12:36:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:47:38,331|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:47:40,633|_internal.py|127.0.0.1 - - [24/May/2022 12:47:40] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:47:40,704|_internal.py|127.0.0.1 - - [24/May/2022 12:47:40] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:47:40,774|_internal.py|127.0.0.1 - - [24/May/2022 12:47:40] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:47:41,253|_internal.py|127.0.0.1 - - [24/May/2022 12:47:41] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:47:41,254|_internal.py|127.0.0.1 - - [24/May/2022 12:47:41] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:47:41,269|_internal.py|127.0.0.1 - - [24/May/2022 12:47:41] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:47:41,287|_internal.py|127.0.0.1 - - [24/May/2022 12:47:41] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:47:41,417|_internal.py|127.0.0.1 - - [24/May/2022 12:47:41] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:47:46,588|_internal.py|127.0.0.1 - - [24/May/2022 12:47:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:51:21,567|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:51:23,869|_internal.py|127.0.0.1 - - [24/May/2022 12:51:23] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:51:23,997|_internal.py|127.0.0.1 - - [24/May/2022 12:51:23] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:51:24,103|_internal.py|127.0.0.1 - - [24/May/2022 12:51:24] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:51:24,145|_internal.py|127.0.0.1 - - [24/May/2022 12:51:24] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:51:24,178|_internal.py|127.0.0.1 - - [24/May/2022 12:51:24] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:51:24,181|_internal.py|127.0.0.1 - - [24/May/2022 12:51:24] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:51:24,213|_internal.py|127.0.0.1 - - [24/May/2022 12:51:24] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:51:24,251|_internal.py|127.0.0.1 - - [24/May/2022 12:51:24] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:51:28,703|_internal.py|127.0.0.1 - - [24/May/2022 12:51:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:55:06,004|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:55:08,563|_internal.py|127.0.0.1 - - [24/May/2022 12:55:08] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:55:08,675|_internal.py|127.0.0.1 - - [24/May/2022 12:55:08] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:55:08,712|_internal.py|127.0.0.1 - - [24/May/2022 12:55:08] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:55:08,756|_internal.py|127.0.0.1 - - [24/May/2022 12:55:08] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:55:08,763|_internal.py|127.0.0.1 - - [24/May/2022 12:55:08] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:55:08,774|_internal.py|127.0.0.1 - - [24/May/2022 12:55:08] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:55:08,777|_internal.py|127.0.0.1 - - [24/May/2022 12:55:08] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:55:08,782|_internal.py|127.0.0.1 - - [24/May/2022 12:55:08] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:55:12,156|_internal.py|127.0.0.1 - - [24/May/2022 12:55:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:56:49,033|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:56:50,438|_internal.py|127.0.0.1 - - [24/May/2022 12:56:50] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:56:50,495|_internal.py|127.0.0.1 - - [24/May/2022 12:56:50] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:56:50,536|_internal.py|127.0.0.1 - - [24/May/2022 12:56:50] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:56:50,554|_internal.py|127.0.0.1 - - [24/May/2022 12:56:50] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:56:50,575|_internal.py|127.0.0.1 - - [24/May/2022 12:56:50] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:56:50,581|_internal.py|127.0.0.1 - - [24/May/2022 12:56:50] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:56:50,591|_internal.py|127.0.0.1 - - [24/May/2022 12:56:50] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:56:50,596|_internal.py|127.0.0.1 - - [24/May/2022 12:56:50] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:56:53,389|_internal.py|127.0.0.1 - - [24/May/2022 12:56:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 12:58:09,245|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 12:58:10,725|_internal.py|127.0.0.1 - - [24/May/2022 12:58:10] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 12:58:10,753|_internal.py|127.0.0.1 - - [24/May/2022 12:58:10] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 12:58:10,808|_internal.py|127.0.0.1 - - [24/May/2022 12:58:10] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 12:58:10,817|_internal.py|127.0.0.1 - - [24/May/2022 12:58:10] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 12:58:10,823|_internal.py|127.0.0.1 - - [24/May/2022 12:58:10] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:58:10,877|_internal.py|127.0.0.1 - - [24/May/2022 12:58:10] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 12:58:10,884|_internal.py|127.0.0.1 - - [24/May/2022 12:58:10] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 12:58:10,886|_internal.py|127.0.0.1 - - [24/May/2022 12:58:10] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 12:58:13,255|_internal.py|127.0.0.1 - - [24/May/2022 12:58:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:04:09,102|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:04:10,477|_internal.py|127.0.0.1 - - [24/May/2022 13:04:10] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:04:10,540|_internal.py|127.0.0.1 - - [24/May/2022 13:04:10] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:04:10,592|_internal.py|127.0.0.1 - - [24/May/2022 13:04:10] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:04:10,600|_internal.py|127.0.0.1 - - [24/May/2022 13:04:10] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:04:10,648|_internal.py|127.0.0.1 - - [24/May/2022 13:04:10] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:04:10,680|_internal.py|127.0.0.1 - - [24/May/2022 13:04:10] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:04:10,701|_internal.py|127.0.0.1 - - [24/May/2022 13:04:10] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:04:10,710|_internal.py|127.0.0.1 - - [24/May/2022 13:04:10] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:04:14,246|_internal.py|127.0.0.1 - - [24/May/2022 13:04:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:06:54,633|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:06:55,986|_internal.py|127.0.0.1 - - [24/May/2022 13:06:55] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:06:56,060|_internal.py|127.0.0.1 - - [24/May/2022 13:06:56] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:06:56,106|_internal.py|127.0.0.1 - - [24/May/2022 13:06:56] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:06:56,112|_internal.py|127.0.0.1 - - [24/May/2022 13:06:56] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:06:56,131|_internal.py|127.0.0.1 - - [24/May/2022 13:06:56] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:06:56,144|_internal.py|127.0.0.1 - - [24/May/2022 13:06:56] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:06:56,144|_internal.py|127.0.0.1 - - [24/May/2022 13:06:56] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:06:56,158|_internal.py|127.0.0.1 - - [24/May/2022 13:06:56] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:06:56,548|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:06:57,941|_internal.py|127.0.0.1 - - [24/May/2022 13:06:57] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:06:57,982|_internal.py|127.0.0.1 - - [24/May/2022 13:06:57] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:06:58,031|_internal.py|127.0.0.1 - - [24/May/2022 13:06:58] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:06:58,061|_internal.py|127.0.0.1 - - [24/May/2022 13:06:58] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:06:58,079|_internal.py|127.0.0.1 - - [24/May/2022 13:06:58] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:06:58,113|_internal.py|127.0.0.1 - - [24/May/2022 13:06:58] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:06:58,146|_internal.py|127.0.0.1 - - [24/May/2022 13:06:58] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:06:58,197|_internal.py|127.0.0.1 - - [24/May/2022 13:06:58] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:07:00,529|_internal.py|127.0.0.1 - - [24/May/2022 13:07:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:07:46,164|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:07:47,516|_internal.py|127.0.0.1 - - [24/May/2022 13:07:47] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:07:47,558|_internal.py|127.0.0.1 - - [24/May/2022 13:07:47] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:07:47,597|_internal.py|127.0.0.1 - - [24/May/2022 13:07:47] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:07:47,606|_internal.py|127.0.0.1 - - [24/May/2022 13:07:47] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:07:47,644|_internal.py|127.0.0.1 - - [24/May/2022 13:07:47] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:07:47,644|_internal.py|127.0.0.1 - - [24/May/2022 13:07:47] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:07:47,646|_internal.py|127.0.0.1 - - [24/May/2022 13:07:47] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:07:47,659|_internal.py|127.0.0.1 - - [24/May/2022 13:07:47] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:07:49,900|_internal.py|127.0.0.1 - - [24/May/2022 13:07:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:08:49,168|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:08:50,594|_internal.py|127.0.0.1 - - [24/May/2022 13:08:50] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:08:50,662|_internal.py|127.0.0.1 - - [24/May/2022 13:08:50] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:08:50,755|_internal.py|127.0.0.1 - - [24/May/2022 13:08:50] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:08:50,772|_internal.py|127.0.0.1 - - [24/May/2022 13:08:50] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:08:50,781|_internal.py|127.0.0.1 - - [24/May/2022 13:08:50] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:08:50,796|_internal.py|127.0.0.1 - - [24/May/2022 13:08:50] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:08:50,866|_internal.py|127.0.0.1 - - [24/May/2022 13:08:50] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:08:50,928|_internal.py|127.0.0.1 - - [24/May/2022 13:08:50] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:08:53,467|_internal.py|127.0.0.1 - - [24/May/2022 13:08:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:09:41,981|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:09:43,282|_internal.py|127.0.0.1 - - [24/May/2022 13:09:43] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:09:43,340|_internal.py|127.0.0.1 - - [24/May/2022 13:09:43] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:09:43,378|_internal.py|127.0.0.1 - - [24/May/2022 13:09:43] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:09:43,388|_internal.py|127.0.0.1 - - [24/May/2022 13:09:43] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:09:43,411|_internal.py|127.0.0.1 - - [24/May/2022 13:09:43] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:09:43,422|_internal.py|127.0.0.1 - - [24/May/2022 13:09:43] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:09:43,440|_internal.py|127.0.0.1 - - [24/May/2022 13:09:43] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:09:43,445|_internal.py|127.0.0.1 - - [24/May/2022 13:09:43] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:09:43,975|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:09:45,461|_internal.py|127.0.0.1 - - [24/May/2022 13:09:45] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:09:45,494|_internal.py|127.0.0.1 - - [24/May/2022 13:09:45] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:09:45,548|_internal.py|127.0.0.1 - - [24/May/2022 13:09:45] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:09:45,557|_internal.py|127.0.0.1 - - [24/May/2022 13:09:45] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:09:45,579|_internal.py|127.0.0.1 - - [24/May/2022 13:09:45] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:09:45,599|_internal.py|127.0.0.1 - - [24/May/2022 13:09:45] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:09:45,625|_internal.py|127.0.0.1 - - [24/May/2022 13:09:45] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:09:45,660|_internal.py|127.0.0.1 - - [24/May/2022 13:09:45] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:09:48,114|_internal.py|127.0.0.1 - - [24/May/2022 13:09:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:10:42,594|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:10:43,519|_internal.py|127.0.0.1 - - [24/May/2022 13:10:43] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:10:43,721|_internal.py|127.0.0.1 - - [24/May/2022 13:10:43] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:10:43,772|_internal.py|127.0.0.1 - - [24/May/2022 13:10:43] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:10:43,779|_internal.py|127.0.0.1 - - [24/May/2022 13:10:43] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:10:43,797|_internal.py|127.0.0.1 - - [24/May/2022 13:10:43] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:10:43,822|_internal.py|127.0.0.1 - - [24/May/2022 13:10:43] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:10:43,824|_internal.py|127.0.0.1 - - [24/May/2022 13:10:43] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:10:43,827|_internal.py|127.0.0.1 - - [24/May/2022 13:10:43] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:10:46,307|_internal.py|127.0.0.1 - - [24/May/2022 13:10:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:11:57,875|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:11:59,096|_internal.py|127.0.0.1 - - [24/May/2022 13:11:59] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:11:59,175|_internal.py|127.0.0.1 - - [24/May/2022 13:11:59] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:11:59,185|_internal.py|127.0.0.1 - - [24/May/2022 13:11:59] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:11:59,195|_internal.py|127.0.0.1 - - [24/May/2022 13:11:59] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:11:59,226|_internal.py|127.0.0.1 - - [24/May/2022 13:11:59] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:11:59,238|_internal.py|127.0.0.1 - - [24/May/2022 13:11:59] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:11:59,252|_internal.py|127.0.0.1 - - [24/May/2022 13:11:59] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:11:59,282|_internal.py|127.0.0.1 - - [24/May/2022 13:11:59] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:12:01,419|_internal.py|127.0.0.1 - - [24/May/2022 13:12:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:12:35,892|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:12:36,811|_internal.py|127.0.0.1 - - [24/May/2022 13:12:36] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:12:36,840|_internal.py|127.0.0.1 - - [24/May/2022 13:12:36] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:12:36,877|_internal.py|127.0.0.1 - - [24/May/2022 13:12:36] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:12:36,886|_internal.py|127.0.0.1 - - [24/May/2022 13:12:36] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:12:36,894|_internal.py|127.0.0.1 - - [24/May/2022 13:12:36] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:12:36,910|_internal.py|127.0.0.1 - - [24/May/2022 13:12:36] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:12:36,938|_internal.py|127.0.0.1 - - [24/May/2022 13:12:36] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:12:36,940|_internal.py|127.0.0.1 - - [24/May/2022 13:12:36] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:12:39,236|_internal.py|127.0.0.1 - - [24/May/2022 13:12:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:15:31,117|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:15:32,361|_internal.py|127.0.0.1 - - [24/May/2022 13:15:32] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:15:32,397|_internal.py|127.0.0.1 - - [24/May/2022 13:15:32] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:15:32,428|_internal.py|127.0.0.1 - - [24/May/2022 13:15:32] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:15:32,434|_internal.py|127.0.0.1 - - [24/May/2022 13:15:32] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:15:32,441|_internal.py|127.0.0.1 - - [24/May/2022 13:15:32] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:15:32,450|_internal.py|127.0.0.1 - - [24/May/2022 13:15:32] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:15:32,493|_internal.py|127.0.0.1 - - [24/May/2022 13:15:32] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:15:32,496|_internal.py|127.0.0.1 - - [24/May/2022 13:15:32] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:15:35,068|_internal.py|127.0.0.1 - - [24/May/2022 13:15:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:16:10,749|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:16:12,066|_internal.py|127.0.0.1 - - [24/May/2022 13:16:12] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:16:12,123|_internal.py|127.0.0.1 - - [24/May/2022 13:16:12] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:16:12,143|_internal.py|127.0.0.1 - - [24/May/2022 13:16:12] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:16:12,160|_internal.py|127.0.0.1 - - [24/May/2022 13:16:12] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:16:12,178|_internal.py|127.0.0.1 - - [24/May/2022 13:16:12] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:16:12,205|_internal.py|127.0.0.1 - - [24/May/2022 13:16:12] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:16:12,211|_internal.py|127.0.0.1 - - [24/May/2022 13:16:12] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:16:12,214|_internal.py|127.0.0.1 - - [24/May/2022 13:16:12] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:16:14,671|_internal.py|127.0.0.1 - - [24/May/2022 13:16:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:17:24,867|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:17:26,105|_internal.py|127.0.0.1 - - [24/May/2022 13:17:26] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:17:26,138|_internal.py|127.0.0.1 - - [24/May/2022 13:17:26] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:17:26,181|_internal.py|127.0.0.1 - - [24/May/2022 13:17:26] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:17:26,193|_internal.py|127.0.0.1 - - [24/May/2022 13:17:26] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:17:26,217|_internal.py|127.0.0.1 - - [24/May/2022 13:17:26] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:17:26,242|_internal.py|127.0.0.1 - - [24/May/2022 13:17:26] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:17:26,268|_internal.py|127.0.0.1 - - [24/May/2022 13:17:26] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:17:26,269|_internal.py|127.0.0.1 - - [24/May/2022 13:17:26] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:17:28,894|_internal.py|127.0.0.1 - - [24/May/2022 13:17:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:18:50,235|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:18:51,591|_internal.py|127.0.0.1 - - [24/May/2022 13:18:51] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:18:51,632|_internal.py|127.0.0.1 - - [24/May/2022 13:18:51] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:18:51,660|_internal.py|127.0.0.1 - - [24/May/2022 13:18:51] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:18:51,698|_internal.py|127.0.0.1 - - [24/May/2022 13:18:51] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:18:51,721|_internal.py|127.0.0.1 - - [24/May/2022 13:18:51] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:18:51,727|_internal.py|127.0.0.1 - - [24/May/2022 13:18:51] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:18:51,748|_internal.py|127.0.0.1 - - [24/May/2022 13:18:51] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:18:51,749|_internal.py|127.0.0.1 - - [24/May/2022 13:18:51] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:18:54,194|_internal.py|127.0.0.1 - - [24/May/2022 13:18:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:20:02,217|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:20:03,490|_internal.py|127.0.0.1 - - [24/May/2022 13:20:03] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:20:03,521|_internal.py|127.0.0.1 - - [24/May/2022 13:20:03] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:20:03,578|_internal.py|127.0.0.1 - - [24/May/2022 13:20:03] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:20:03,604|_internal.py|127.0.0.1 - - [24/May/2022 13:20:03] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:20:03,633|_internal.py|127.0.0.1 - - [24/May/2022 13:20:03] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:20:03,643|_internal.py|127.0.0.1 - - [24/May/2022 13:20:03] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:20:03,689|_internal.py|127.0.0.1 - - [24/May/2022 13:20:03] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:20:03,692|_internal.py|127.0.0.1 - - [24/May/2022 13:20:03] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:20:06,432|_internal.py|127.0.0.1 - - [24/May/2022 13:20:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:23:41,011|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-24 13:31:48,084|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:31:49,522|_internal.py|127.0.0.1 - - [24/May/2022 13:31:49] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:31:49,577|_internal.py|127.0.0.1 - - [24/May/2022 13:31:49] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:32:36,703|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:32:38,084|_internal.py|127.0.0.1 - - [24/May/2022 13:32:38] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:32:38,190|_internal.py|127.0.0.1 - - [24/May/2022 13:32:38] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:32:38,223|_internal.py|127.0.0.1 - - [24/May/2022 13:32:38] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:32:39,447|_internal.py|127.0.0.1 - - [24/May/2022 13:32:39] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:32:39,507|_internal.py|127.0.0.1 - - [24/May/2022 13:32:39] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:32:39,514|_internal.py|127.0.0.1 - - [24/May/2022 13:32:39] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:32:39,540|_internal.py|127.0.0.1 - - [24/May/2022 13:32:39] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:32:39,545|_internal.py|127.0.0.1 - - [24/May/2022 13:32:39] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:32:41,394|_internal.py|127.0.0.1 - - [24/May/2022 13:32:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:33:12,934|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:33:14,219|_internal.py|127.0.0.1 - - [24/May/2022 13:33:14] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:33:14,248|_internal.py|127.0.0.1 - - [24/May/2022 13:33:14] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:33:14,311|_internal.py|127.0.0.1 - - [24/May/2022 13:33:14] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:33:14,329|_internal.py|127.0.0.1 - - [24/May/2022 13:33:14] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:33:14,338|_internal.py|127.0.0.1 - - [24/May/2022 13:33:14] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:33:14,340|_internal.py|127.0.0.1 - - [24/May/2022 13:33:14] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:33:14,358|_internal.py|127.0.0.1 - - [24/May/2022 13:33:14] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:33:14,449|_internal.py|127.0.0.1 - - [24/May/2022 13:33:14] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:33:16,741|_internal.py|127.0.0.1 - - [24/May/2022 13:33:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:33:31,958|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:33:32,755|_internal.py|127.0.0.1 - - [24/May/2022 13:33:32] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:33:32,783|_internal.py|127.0.0.1 - - [24/May/2022 13:33:32] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:33:32,824|_internal.py|127.0.0.1 - - [24/May/2022 13:33:32] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:33:32,840|_internal.py|127.0.0.1 - - [24/May/2022 13:33:32] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:33:32,850|_internal.py|127.0.0.1 - - [24/May/2022 13:33:32] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:33:32,852|_internal.py|127.0.0.1 - - [24/May/2022 13:33:32] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:33:32,863|_internal.py|127.0.0.1 - - [24/May/2022 13:33:32] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:33:32,870|_internal.py|127.0.0.1 - - [24/May/2022 13:33:32] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:33:35,552|_internal.py|127.0.0.1 - - [24/May/2022 13:33:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:35:18,441|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:35:19,702|_internal.py|127.0.0.1 - - [24/May/2022 13:35:19] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:35:19,731|_internal.py|127.0.0.1 - - [24/May/2022 13:35:19] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:35:19,788|_internal.py|127.0.0.1 - - [24/May/2022 13:35:19] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:35:19,792|_internal.py|127.0.0.1 - - [24/May/2022 13:35:19] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:35:19,806|_internal.py|127.0.0.1 - - [24/May/2022 13:35:19] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:35:19,851|_internal.py|127.0.0.1 - - [24/May/2022 13:35:19] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:35:19,860|_internal.py|127.0.0.1 - - [24/May/2022 13:35:19] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:35:19,865|_internal.py|127.0.0.1 - - [24/May/2022 13:35:19] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:35:22,551|_internal.py|127.0.0.1 - - [24/May/2022 13:35:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 13:36:09,469|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 13:36:10,756|_internal.py|127.0.0.1 - - [24/May/2022 13:36:10] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 13:36:10,795|_internal.py|127.0.0.1 - - [24/May/2022 13:36:10] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 13:36:10,841|_internal.py|127.0.0.1 - - [24/May/2022 13:36:10] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:36:10,875|_internal.py|127.0.0.1 - - [24/May/2022 13:36:10] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 13:36:10,881|_internal.py|127.0.0.1 - - [24/May/2022 13:36:10] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 13:36:10,902|_internal.py|127.0.0.1 - - [24/May/2022 13:36:10] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 13:36:10,906|_internal.py|127.0.0.1 - - [24/May/2022 13:36:10] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 13:36:10,931|_internal.py|127.0.0.1 - - [24/May/2022 13:36:10] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 13:36:14,820|_internal.py|127.0.0.1 - - [24/May/2022 13:36:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 14:27:30,440|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 14:27:31,764|_internal.py|127.0.0.1 - - [24/May/2022 14:27:31] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 14:27:31,817|_internal.py|127.0.0.1 - - [24/May/2022 14:27:31] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 14:27:31,885|_internal.py|127.0.0.1 - - [24/May/2022 14:27:31] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 14:27:31,909|_internal.py|127.0.0.1 - - [24/May/2022 14:27:31] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 14:27:31,927|_internal.py|127.0.0.1 - - [24/May/2022 14:27:31] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 14:27:31,929|_internal.py|127.0.0.1 - - [24/May/2022 14:27:31] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 14:27:31,936|_internal.py|127.0.0.1 - - [24/May/2022 14:27:31] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 14:27:31,976|_internal.py|127.0.0.1 - - [24/May/2022 14:27:31] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 14:27:34,782|_internal.py|127.0.0.1 - - [24/May/2022 14:27:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 16:11:08,005|_internal.py|127.0.0.1 - - [24/May/2022 16:11:08] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-24 16:11:08,094|_internal.py|127.0.0.1 - - [24/May/2022 16:11:08] "[37mGET /static/pictures/workspace.png HTTP/1.1[0m" 200 -
+2022-05-24 16:11:10,815|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-05-24 16:11:11,708|_internal.py|127.0.0.1 - - [24/May/2022 16:11:11] "[37mGET /dashbord/me HTTP/1.1[0m" 200 -
+2022-05-24 16:11:11,762|_internal.py|127.0.0.1 - - [24/May/2022 16:11:11] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 16:11:13,310|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/me/reports
+2022-05-24 16:11:14,142|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/me/reports",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-24 16:11:14,177|_internal.py|127.0.0.1 - - [24/May/2022 16:11:14] "[35m[1mGET /dashbord/me/c999d266-0291-40ec-aa0f-df0dbe962771 HTTP/1.1[0m" 500 -
+2022-05-24 16:11:14,311|_internal.py|127.0.0.1 - - [24/May/2022 16:11:14] "[37mGET /dashbord/me/c999d266-0291-40ec-aa0f-df0dbe962771?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-24 16:11:14,353|_internal.py|127.0.0.1 - - [24/May/2022 16:11:14] "[37mGET /dashbord/me/c999d266-0291-40ec-aa0f-df0dbe962771?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-24 16:11:14,408|_internal.py|127.0.0.1 - - [24/May/2022 16:11:14] "[37mGET /dashbord/me/c999d266-0291-40ec-aa0f-df0dbe962771?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-24 16:11:14,451|_internal.py|127.0.0.1 - - [24/May/2022 16:11:14] "[37mGET /dashbord/me/c999d266-0291-40ec-aa0f-df0dbe962771?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-24 16:11:14,499|_internal.py|127.0.0.1 - - [24/May/2022 16:11:14] "[37mGET /dashbord/me/c999d266-0291-40ec-aa0f-df0dbe962771?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2022-05-24 16:11:14,541|_internal.py|127.0.0.1 - - [24/May/2022 16:11:14] "[37mGET /dashbord/me/c999d266-0291-40ec-aa0f-df0dbe962771?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-24 16:11:33,709|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/me/reports
+2022-05-24 16:11:34,576|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/me/reports",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-05-24 16:11:34,595|_internal.py|127.0.0.1 - - [24/May/2022 16:11:34] "[35m[1mGET /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093 HTTP/1.1[0m" 500 -
+2022-05-24 16:11:34,672|_internal.py|127.0.0.1 - - [24/May/2022 16:11:34] "[37mGET /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-24 16:11:34,676|_internal.py|127.0.0.1 - - [24/May/2022 16:11:34] "[37mGET /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-24 16:11:34,679|_internal.py|127.0.0.1 - - [24/May/2022 16:11:34] "[37mGET /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-24 16:11:34,726|_internal.py|127.0.0.1 - - [24/May/2022 16:11:34] "[37mGET /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2022-05-24 16:11:34,739|_internal.py|127.0.0.1 - - [24/May/2022 16:11:34] "[37mGET /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-24 16:11:34,766|_internal.py|127.0.0.1 - - [24/May/2022 16:11:34] "[37mGET /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-24 16:11:39,120|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-24 16:11:39,507|_internal.py|127.0.0.1 - - [24/May/2022 16:11:39] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6 HTTP/1.1[0m" 200 -
+2022-05-24 16:11:41,140|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-24 16:11:41,829|_internal.py|127.0.0.1 - - [24/May/2022 16:11:41] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 200 -
+2022-05-24 16:11:41,880|_internal.py|127.0.0.1 - - [24/May/2022 16:11:41] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 16:11:41,889|_internal.py|127.0.0.1 - - [24/May/2022 16:11:41] "[33mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 16:11:41,892|_internal.py|127.0.0.1 - - [24/May/2022 16:11:41] "[36mGET /static/pictures/share.svg HTTP/1.1[0m" 304 -
+2022-05-24 16:11:42,257|_internal.py|127.0.0.1 - - [24/May/2022 16:11:42] "[33mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 16:11:48,805|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-24 16:11:49,722|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/467cbb3a-5783-4c37-8354-1e99aa03f41b/pages
+2022-05-24 16:11:52,924|_internal.py|127.0.0.1 - - [24/May/2022 16:11:52] "[37mPOST /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 200 -
+2022-05-24 16:11:55,270|_internal.py|127.0.0.1 - - [24/May/2022 16:11:55] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-24 16:12:08,942|_internal.py|127.0.0.1 - - [24/May/2022 16:12:08] "[32mPOST /send_mail HTTP/1.1[0m" 302 -
+2022-05-24 16:12:08,968|_internal.py|127.0.0.1 - - [24/May/2022 16:12:08] "[37mGET /send_mail/define_time HTTP/1.1[0m" 200 -
+2022-05-24 16:12:14,452|_internal.py|127.0.0.1 - - [24/May/2022 16:12:14] "[37mPOST /send_mail/define_time HTTP/1.1[0m" 200 -
+2022-05-24 16:12:37,900|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-24 16:14:31,437|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-24 16:14:32,729|_internal.py|127.0.0.1 - - [24/May/2022 16:14:32] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 200 -
+2022-05-24 16:14:32,813|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-24 16:14:33,731|_internal.py|127.0.0.1 - - [24/May/2022 16:14:33] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6 HTTP/1.1[0m" 200 -
+2022-05-24 16:14:35,225|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-24 16:14:37,315|_internal.py|127.0.0.1 - - [24/May/2022 16:14:37] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 200 -
+2022-05-24 16:14:37,777|_internal.py|127.0.0.1 - - [24/May/2022 16:14:37] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 16:15:05,404|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-24 16:15:06,755|_internal.py|127.0.0.1 - - [24/May/2022 16:15:06] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 200 -
+2022-05-24 16:15:06,806|_internal.py|127.0.0.1 - - [24/May/2022 16:15:06] "[33mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 16:15:06,807|_internal.py|127.0.0.1 - - [24/May/2022 16:15:06] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-24 16:15:07,033|_internal.py|127.0.0.1 - - [24/May/2022 16:15:07] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-24 16:15:07,102|_internal.py|127.0.0.1 - - [24/May/2022 16:15:07] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 16:15:07,127|_internal.py|127.0.0.1 - - [24/May/2022 16:15:07] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 16:15:07,134|_internal.py|127.0.0.1 - - [24/May/2022 16:15:07] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 16:15:07,142|_internal.py|127.0.0.1 - - [24/May/2022 16:15:07] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-05-24 16:15:07,177|_internal.py|127.0.0.1 - - [24/May/2022 16:15:07] "[33mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 16:15:07,202|_internal.py|127.0.0.1 - - [24/May/2022 16:15:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-24 16:17:25,723|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-24 16:17:27,110|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/467cbb3a-5783-4c37-8354-1e99aa03f41b/pages
+2022-05-24 16:17:30,286|_internal.py|127.0.0.1 - - [24/May/2022 16:17:30] "[37mPOST /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 200 -
+2022-05-24 16:17:31,579|_internal.py|127.0.0.1 - - [24/May/2022 16:17:31] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-24 16:23:12,534|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-24 16:23:35,851|_internal.py|127.0.0.1 - - [24/May/2022 16:23:35] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-24 16:23:36,449|_internal.py|127.0.0.1 - - [24/May/2022 16:23:36] "[36mGET /static/pictures/workspace.png HTTP/1.1[0m" 304 -
+2022-05-24 16:23:39,987|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 16:23:40,834|_internal.py|127.0.0.1 - - [24/May/2022 16:23:40] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-24 16:23:40,888|_internal.py|127.0.0.1 - - [24/May/2022 16:23:40] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-24 16:23:44,905|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 16:23:45,889|_internal.py|127.0.0.1 - - [24/May/2022 16:23:45] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 16:23:45,924|_internal.py|127.0.0.1 - - [24/May/2022 16:23:45] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-24 16:23:45,985|_internal.py|127.0.0.1 - - [24/May/2022 16:23:45] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-24 16:23:46,007|_internal.py|127.0.0.1 - - [24/May/2022 16:23:46] "[33mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/scripts/require.js HTTP/1.1[0m" 404 -
+2022-05-24 16:23:53,271|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-24 16:23:54,908|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/pages
+2022-05-24 16:23:58,032|_internal.py|127.0.0.1 - - [24/May/2022 16:23:58] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-24 16:23:59,265|_internal.py|127.0.0.1 - - [24/May/2022 16:23:59] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-24 16:24:42,244|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading

@@ -13,27 +13,12 @@ app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 app.secret_key = "5791628bb0b13ce0c676dfde280ba245"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-# app = Flask(__name__)
-
-try:
-    from urllib.parse import unquote  # PY3
-except ImportError:
-    from urllib import unquote
-
-@app.route('/v1/<path:param>')  # NOTE: <path:param> is required to match /
-def f(param=''):
-    return (
-        f"param: {param}\ndecoded param: {unquote(param)}\n",
-        200,
-        {'content-type': 'text/plain'}
-    )
-
 @app.route("/",methods=["POST","GET"])
 def login_in():
-
     if request.method=="POST":
         session["email_connect"]=request.form.get("email_conect")
         session["password"]=request.form.get("password")
+        print(session["email_connect"],session["password"])
         res=search_about("User","-N2hHzN_G51X1PurUwyB",session["email_connect"])
         if res !=None:
             if session["password"]==res['password']:
@@ -45,7 +30,6 @@ def login_in():
         else:
             flash("gmail ou mot de passe sont incorrecte","warning")
             return redirect(url_for('login_in'))
-
     return render_template("login.html")
 
 @app.route("/my_table_of_period",methods=["POST","GET"])
@@ -73,7 +57,7 @@ def workspace(work_id):
 
 @app.route('/dashbord/<string:work_id>/<string:report_id>',methods=["POST","GET"])
 def report_show(work_id,report_id):
-
+    session['report_embded']=Authentification_for_PowerBI().get_report_from_workspace(work_id)['value']
     work_space=work_id
     report_id=report_id
     i=session['report_embded']
@@ -83,6 +67,7 @@ def report_show(work_id,report_id):
         if k['id']==str(report_id):
             j=k
             j['embedUrl']+='&autoAuth=true&ctid='+Authentification_for_PowerBI().get_tenant()
+            print(j)
             session['report_name_for_send']=j['id']+"||"+j['name']   
         else: 
             pass
@@ -124,9 +109,8 @@ def time_selection_time():
             session["send_timing"]=d.now().strftime("%H:%M")
         else:
             pass
-
-        # return redirect(url_for('file_pdf_send'))
-
+        return redirect(url_for('dashbord'))
+        
     return render_template("time.html")
 
 @app.route('/send_mail/file_sending',methods=["POST","GET"])
