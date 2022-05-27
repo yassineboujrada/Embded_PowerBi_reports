@@ -23,6 +23,7 @@ from scrapingbee import ScrapingBeeClient
 import img2pdf
 import schedule
 from pyrebase import pyrebase
+import bcrypt
 
 CONFIG_DB={
     'apiKey': "AIzaSyCPeLozDHk6Sn2_KGlqZA_YWdrQQBTNNnc",
@@ -39,10 +40,12 @@ firebase=pyrebase.initialize_app(CONFIG_DB)
 db=firebase.database()
 
 
-def search_about(collection,ref,indice):
+def search_about(collection,ref,indice,key):
     all_data=db.child(collection).child(ref).get()
     for data in all_data.each():
         if data.val()['email'].lower()==indice.lower():
+            
+            data.val()['password']=bcrypt.hashpw(bytes(data.val()['password'], 'utf-8'), key)
             return data.val()
         else:
             return None
@@ -55,6 +58,7 @@ def all_data(collection,child_ref):
             keys.append(key)
             values.append(d.val()[key])
     return keys,values
+
 # --------------------------------------------------
 # Set local variables
 # --------------------------------------------------
@@ -99,15 +103,15 @@ class Authentification_for_PowerBI:
             report_id=REPORT_ID
         )
 
-        with open(file=f'files/{REPORT_NAME}.pbix', mode='wb+') as power_bi_file:
+        with open(file=f'{REPORT_NAME}.pbix', mode='wb+') as power_bi_file:
             power_bi_file.write(my_report_content)
 
     def export_to_pdf(self,REPORT_ID,REPORT_NAME):
         my_report_content = self.reports_service.export_to_file(
             report_id=REPORT_ID,
-            file_format=ExportFileFormats.Pdf
+            file_format=ExportFileFormats.Csv
         )
-        with open(file=f'files/{REPORT_NAME}.png', mode='wb+') as power_bi_file:
+        with open(file=f'{REPORT_NAME}.csv', mode='wb+') as power_bi_file:
             power_bi_file.write(my_report_content)
 
     def get_workspace_informations(self):
@@ -135,9 +139,11 @@ class Authentification_for_PowerBI:
         )
         return report_out
                 
+    def grab_my_report(self,REPORT_ID):
+        return self.reports_service.get_report(report_id=str(REPORT_ID))
 
     def nwita(self):
-        url="http://192.168.0.192:3000/dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/20d3b902-6605-4c1a-bcbf-fd5895e69afe"
+        url="http://192.168.1.46:3000/"
         api="9IG2PK0A6O7NV7PNGQYOIURT4IMKW0U0TG5WCHJ6BJ48XM18GK95HMA6TBYXF9KGL75TKY1ZOL0GPDVW"
         client = ScrapingBeeClient(api_key=api)
         response = client.get(
@@ -152,26 +158,64 @@ class Authentification_for_PowerBI:
                 f.write(response.content)
         else:
             print(response.content)
-            
-    # def data_report(self):
-    #     l,k=[],{}
-    #     g=self.show_workspace()
-    #     for i in g:
-    #         print(i)
-    #         report_out=self.reports_service.get_group_reports(
-    #                 group_id=str(i[1])
-    #             )
-    #         print(report_out['value'])
-    #         print('######################3\n')
 
-    # def hh(self):
-    #     k=[]
-    #     for i in self.show_workspace():
-    #         report_out=self.reports_service.get_group_reports(
-    #                 group_id=str(i[1])
-    #             )
-    #         k.append([i[0],report_out['value']])
-    #     return k
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+
+def screen_not_kidding(url_info):
+    chrome_options = Options() #
+    chrome_options.add_argument('--headless')
+
+    chrome_options.add_argument("--window-size=1920x1080")
+    driver = webdriver.Chrome(options=chrome_options, executable_path="C:/Users/yassine/Downloads/chromedriver_win32/chromedriver.exe")
+    # service object
+    driver.get(url_info)
+    # driver.get("https://app.powerbi.com/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/e9fde765-f95d-424a-b879-f2f0a89c171f/ReportSection")
+    # driver.get("http://127.0.0.1:3000/dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/e9fde765-f95d-424a-b879-f2f0a89c171f")
+    # driver.find_element_by_tag_name("iframe").click()
+    time.sleep(6)
+    driver.find_element_by_id('email').send_keys("yassineboujrada@datastory453.onmicrosoft.com")
+    driver.find_element_by_id('submitBtn').click()
+
+    l=WebDriverWait(driver=driver, timeout=10).until(
+        lambda x: x.execute_script("return document.readyState === 'complete'")
+    )
+    if l:
+        time.sleep(6)
+        driver.find_element_by_name('passwd').send_keys("yassine@2002")
+        driver.find_element_by_id('idSIButton9').click()
+        g=WebDriverWait(driver=driver, timeout=10).until(
+            lambda x: x.execute_script("return document.readyState === 'complete'")
+        )
+        if g:
+            time.sleep(6)
+            driver.find_element_by_id('idSIButton9').click()
+            h=WebDriverWait(driver=driver, timeout=10).until(
+                lambda x: x.execute_script("return document.readyState === 'complete'")
+            )
+            if h:
+                print('mmmm')
+                time.sleep(6)
+                driver.get_screenshot_as_file("page0.png")
+
+    driver.close()
+            
+# work='d72eff1f-51d2-4e98-b093-fddce847145d'
+# repo='c4cabace-7684-47e3-b2f3-9e183ae3322e'
+
+# c=Authentification_for_PowerBI().export_to_pdf(repo,'nwita')
+# d=Authentification_for_PowerBI().download_pbi(work,repo,'nwita')
+
+# my_report_content = Authentification_for_PowerBI().reports_service.export_to_file(
+#     report_id='c999d266-0291-40ec-aa0f-df0dbe962771',
+#     file_format=ExportFileFormats.Pdf
+# )
+
+# pprint(my_report_content)
+
+# with open(file='my_group_report_export.pdf', mode='wb+') as power_bi_file:
+#     power_bi_file.write(my_report_content)
 
 def screen_shot(val,pages_nbr):
     if val:
@@ -179,7 +223,7 @@ def screen_shot(val,pages_nbr):
         for _ in range(pages_nbr):
             path_pic=f'./files/page{_}.png'
             data_recieve=val.split(',')
-            myScreenshot = pyautogui.screenshot(region=(int(data_recieve[0]),(int(data_recieve[1])*2),int(data_recieve[2])-220,int(data_recieve[3])-85))
+            myScreenshot = pyautogui.screenshot(region=(int(data_recieve[0]),(int(data_recieve[1])*2)-30,int(data_recieve[2])-220,int(data_recieve[3])-130))
             myScreenshot.save(path_pic)
             data_recieve=""
             l.append(path_pic)
@@ -195,7 +239,6 @@ def transform_file_to_pdf(name_folder,pict_list):
 
 ############################################################  envoyer pbi report ou pdf a une email 
 def send_pdf_file(mesg,recieve,subject,path):
-    print("\n")
     k=recieve.split(',')
     for i in k:
         print("1",k)
@@ -204,31 +247,26 @@ def send_pdf_file(mesg,recieve,subject,path):
         
         message = MIMEMultipart()
         message['From'] = sender
-        message['To'] = i#receiver
+        message['To'] = i
         message['Subject'] = subject
         message.attach(MIMEText(body, 'plain'))
         
         pdfname=path
-        # pdfname = path_of_file
 
         binary_pdf = open(pdfname, 'rb')
 
         payload = MIMEBase('application', 'octate-stream', Name=pdfname)
         payload.set_payload((binary_pdf).read())
 
-        # enconding the binary into base64
         encoders.encode_base64(payload)
 
-        # add header with pdf name
         payload.add_header('Content-Decomposition', 'attachment', filename=pdfname)
         message.attach(payload)
         
         session = smtplib.SMTP('smtp.gmail.com', 587)
 
-        #enable security
         session.starttls()
 
-        #login with mail_id and password
         session.login(sender, password)
 
         text = message.as_string()
@@ -243,6 +281,20 @@ def main(mesg,recieve,subject,path):
     while True:
         schedule.run_pending()
         time.sleep(1)
+
+# def ancienne_data():
+#     _,d=all_data("send_email_informations","-N2hHzKSrK4id3pKLCgF")
+#     l=[]
+#     for i in d:
+#         # print(i)
+#         email=i['emails']
+#         path_pd=i['file_path']
+#         period=i['perids']
+#         subj=i['subject']
+#         duree=i['time']
+#         l.append([email,path_pd,period,subj,duree])
+#     return l
+
 
 # def take_screens_from_pbix(file_name):
 #     print("hhhhh", file_name)
