@@ -38,7 +38,6 @@ def login_in():
 
 @app.route("/my_table_of_period",methods=["POST","GET"])
 def table_period():
-    # print(ancienne_data())
     _,period_data=all_data("send_email_informations","-N2hHzKSrK4id3pKLCgF")
     return render_template('table_preriod.html',period_data=period_data)
 
@@ -50,7 +49,6 @@ def dashbord():
 def my_work():
     c=Authentification_for_PowerBI().get_my_workspace()['value']
     session['report_embded']=c
-    print(c)
     return render_template('report.html',reports=c,workspace_id='me')
 
 @app.route('/dashbord/<string:work_id>')
@@ -67,7 +65,6 @@ def report_show(work_id,report_id):
     if work_space == 'me':
         print('hi')
         j=Authentification_for_PowerBI().grab_my_report(report_id)
-        # print(d)
         j['embedUrl']+='&autoAuth=true&ctid='+Authentification_for_PowerBI().get_tenant()
     else:
         session['report_embded']=Authentification_for_PowerBI().get_report_from_workspace(work_id)['value']
@@ -86,12 +83,10 @@ def report_show(work_id,report_id):
         return render_template('Show_report.html',work_space=work_space,report_id=report_id,j=j)
 
     val = request.json.get("c_check")
-    pages=Authentification_for_PowerBI().get_pages_number(work_space,report_id)
     
     if val:
-        screen_not_kidding(j['webUrl'])
-        g=screen_shot(val,len(pages['value']))
-        path_of_pdf=transform_file_to_pdf(j['name'],g)
+        img_path=screen_matidhekech(j['webUrl'])
+        path_of_pdf=transform_file_to_pdf(j['name'],img_path)
         session["path_pdf"]=path_of_pdf
         time.sleep(2)
         return jsonify({"data": {"val": "wait some minutes to export you're file","fun":"hhhhhhhhhh"}})
@@ -133,6 +128,7 @@ def file_pdf_send():
 
 
 if "__main__"==__name__:
-    # t = Thread(target=main, args=('test','legend.eleve@gmail.com','ok','./files/file.pdf',))
-    # t.start()
+    c=ancienne_data()
+    t = Thread(target=main, args=(c,))
+    t.start()
     app.run(debug=True,port=3000)#,host='192.168.1.46')

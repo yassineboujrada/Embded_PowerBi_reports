@@ -14262,3 +14262,57 @@
 2022-05-27 20:44:42,441|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
 2022-05-27 20:44:43,490|_internal.py|127.0.0.1 - - [27/May/2022 20:44:43] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e HTTP/1.1[0m" 200 -
 2022-05-27 20:46:07,491|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-05-27 21:39:57,636|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-27 21:39:59,272|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-27 21:40:00,286|_internal.py|127.0.0.1 - - [27/May/2022 21:40:00] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e HTTP/1.1[0m" 200 -
+2022-05-27 21:40:06,390|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-27 21:40:07,653|_internal.py|127.0.0.1 - - [27/May/2022 21:40:07] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-27 21:40:17,487|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-27 21:40:19,109|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-27 21:40:20,063|_internal.py|127.0.0.1 - - [27/May/2022 21:40:20] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-27 21:40:27,720|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-27 21:40:28,877|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-27 21:40:29,736|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742/pages
+2022-05-27 21:41:05,140|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-05-27 21:41:07,307|_internal.py|127.0.0.1 - - [27/May/2022 21:41:07] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-27 21:41:10,457|_internal.py|127.0.0.1 - - [27/May/2022 21:41:10] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-29 01:03:25,112|_internal.py|127.0.0.1 - - [29/May/2022 01:03:25] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-29 01:03:25,251|_internal.py|127.0.0.1 - - [29/May/2022 01:03:25] "[36mGET /static/pictures/workspace.png HTTP/1.1[0m" 304 -
+2022-05-29 01:03:30,190|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-29 01:03:31,454|_internal.py|127.0.0.1 - - [29/May/2022 01:03:31] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80 HTTP/1.1[0m" 200 -
+2022-05-29 01:03:31,518|_internal.py|127.0.0.1 - - [29/May/2022 01:03:31] "[36mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 304 -
+2022-05-29 01:03:34,883|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-29 01:03:37,353|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-29 01:03:38,577|_internal.py|127.0.0.1 - - [29/May/2022 01:03:38] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e HTTP/1.1[0m" 200 -
+2022-05-29 01:03:38,664|_internal.py|127.0.0.1 - - [29/May/2022 01:03:38] "[36mGET /static/pictures/back.svg HTTP/1.1[0m" 304 -
+2022-05-29 01:03:38,706|_internal.py|127.0.0.1 - - [29/May/2022 01:03:38] "[36mGET /static/pictures/share.svg HTTP/1.1[0m" 304 -
+2022-05-29 01:03:49,014|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-29 01:03:51,514|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-29 01:04:30,300|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-05-29 01:04:32,500|_internal.py|127.0.0.1 - - [29/May/2022 01:04:32] "[37mPOST /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e HTTP/1.1[0m" 200 -
+2022-05-29 01:04:38,288|_internal.py|127.0.0.1 - - [29/May/2022 01:04:38] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-29 01:06:22,633|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-29 01:06:25,060|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-29 01:06:25,722|_internal.py|127.0.0.1 - - [29/May/2022 01:06:25] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e HTTP/1.1[0m" 200 -
+2022-05-29 01:06:45,154|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-29 01:06:47,172|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-29 01:06:48,246|_internal.py|127.0.0.1 - - [29/May/2022 01:06:48] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e HTTP/1.1[0m" 200 -
+2022-05-29 01:20:33,585|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-29 01:20:35,821|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-29 01:20:36,986|_internal.py|127.0.0.1 - - [29/May/2022 01:20:36] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e HTTP/1.1[0m" 200 -
+2022-05-29 01:20:47,364|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-29 01:20:49,541|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-29 01:21:26,433|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-05-29 01:21:28,578|_internal.py|127.0.0.1 - - [29/May/2022 01:21:28] "[37mPOST /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80/07e07e11-d689-4876-bcde-bcca09603d8e HTTP/1.1[0m" 200 -
+2022-05-29 01:21:32,221|_internal.py|127.0.0.1 - - [29/May/2022 01:21:32] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-29 01:21:59,360|_internal.py|127.0.0.1 - - [29/May/2022 01:21:59] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-29 01:22:05,528|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-29 01:22:06,887|_internal.py|127.0.0.1 - - [29/May/2022 01:22:06] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-29 01:22:09,506|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-29 01:22:12,034|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-29 01:22:12,846|_internal.py|127.0.0.1 - - [29/May/2022 01:22:12] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-29 01:22:22,600|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-29 01:22:25,018|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-29 01:23:01,019|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-05-29 01:23:03,141|_internal.py|127.0.0.1 - - [29/May/2022 01:23:03] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-29 01:23:12,428|_internal.py|127.0.0.1 - - [29/May/2022 01:23:12] "[37mGET /send_mail HTTP/1.1[0m" 200 -

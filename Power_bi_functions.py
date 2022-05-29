@@ -1,3 +1,4 @@
+from re import I
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -24,6 +25,10 @@ import img2pdf
 import schedule
 from pyrebase import pyrebase
 import bcrypt
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import NoSuchElementException
 
 CONFIG_DB={
     'apiKey': "AIzaSyCPeLozDHk6Sn2_KGlqZA_YWdrQQBTNNnc",
@@ -58,6 +63,7 @@ def all_data(collection,child_ref):
             keys.append(key)
             values.append(d.val()[key])
     return keys,values
+
 
 # --------------------------------------------------
 # Set local variables
@@ -159,9 +165,9 @@ class Authentification_for_PowerBI:
         else:
             print(response.content)
 
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
+# from selenium import webdriver
+# from selenium.webdriver.chrome.options import Options
+# from selenium.webdriver.support.ui import WebDriverWait
 
 def screen_not_kidding(url_info):
     chrome_options = Options() #
@@ -195,41 +201,79 @@ def screen_not_kidding(url_info):
                 lambda x: x.execute_script("return document.readyState === 'complete'")
             )
             if h:
+                file=[]
                 print('mmmm')
                 time.sleep(6)
-                driver.get_screenshot_as_file("page0.png")
-
+                _=0
+                path_pic=f'./files/page{_}.png'
+                driver.get_screenshot_as_file(path_pic)
+                file.append(path_pic)
     driver.close()
-            
-# work='d72eff1f-51d2-4e98-b093-fddce847145d'
-# repo='c4cabace-7684-47e3-b2f3-9e183ae3322e'
+    return file
 
-# c=Authentification_for_PowerBI().export_to_pdf(repo,'nwita')
-# d=Authentification_for_PowerBI().download_pbi(work,repo,'nwita')
+def screen_matidhekech(url_link):
+    chrome_options = Options() #
+    chrome_options.add_argument('--headless')
 
-# my_report_content = Authentification_for_PowerBI().reports_service.export_to_file(
-#     report_id='c999d266-0291-40ec-aa0f-df0dbe962771',
-#     file_format=ExportFileFormats.Pdf
-# )
+    chrome_options.add_argument("--window-size=1920x1080")
+    driver = webdriver.Chrome(options=chrome_options, executable_path="C:/Users/yassine/Downloads/chromedriver_win32/chromedriver.exe")
+    # service object
+    driver.get(url_link)
+    time.sleep(6)
+    driver.find_element_by_id('email').send_keys("yassineboujrada@datastory453.onmicrosoft.com")
+    driver.find_element_by_id('submitBtn').click()
 
-# pprint(my_report_content)
+    l=WebDriverWait(driver=driver, timeout=10).until(
+        lambda x: x.execute_script("return document.readyState === 'complete'")
+    )
+    if l:
+        time.sleep(6)
+        driver.find_element_by_name('passwd').send_keys("yassine@2002")
+        driver.find_element_by_id('idSIButton9').click()
+        g=WebDriverWait(driver=driver, timeout=12).until(
+            lambda x: x.execute_script("return document.readyState === 'complete'")
+        )
+        if g:
+            time.sleep(6)
+            driver.find_element_by_id('idSIButton9').click()
+            h=WebDriverWait(driver=driver, timeout=10).until(
+                lambda x: x.execute_script("return document.readyState === 'complete'")
+            )
+            if h:
+                print('mmmm')
+                time.sleep(6)
+                file=[]
+                try:
+                    element = driver.find_element_by_class_name("displayAreaViewport")
+                    try:
+                        pages_data=driver.find_element_by_tag_name('mat-list')
+                        print('oh yeah')
+                        items = pages_data.find_elements_by_tag_name("li")
+                        i=0
+                        for item in items:
+                            item.click()
+                            hhhhh=WebDriverWait(driver=driver, timeout=10).until(
+                                lambda x: x.execute_script("return document.readyState === 'complete'")
+                            )
+                            if hhhhh:
+                                time.sleep(6)
+                                i+=1
+                                path_pic=f'./files/page{i}.png'
+                                element.screenshot(path_pic)
+                                file.append(path_pic)
+                    except NoSuchElementException:
+                        print('mmmm1')
+                        _=0
+                        path_pic=f'./files/page{_}.png'
+                        element.screenshot(path_pic)
+                        return path_pic
 
-# with open(file='my_group_report_export.pdf', mode='wb+') as power_bi_file:
-#     power_bi_file.write(my_report_content)
+                except NoSuchElementException:
+                    print('ina lilah')
+    driver.close()
+    return file
 
-def screen_shot(val,pages_nbr):
-    if val:
-        l=[]
-        for _ in range(pages_nbr):
-            path_pic=f'./files/page{_}.png'
-            data_recieve=val.split(',')
-            myScreenshot = pyautogui.screenshot(region=(int(data_recieve[0]),(int(data_recieve[1])*2)-30,int(data_recieve[2])-220,int(data_recieve[3])-130))
-            myScreenshot.save(path_pic)
-            data_recieve=""
-            l.append(path_pic)
-        return l
-    else:
-        raise ValueError('hhhhh')
+
 
 def transform_file_to_pdf(name_folder,pict_list):
     pdf_name_path="./files/"+name_folder+".pdf"
@@ -238,12 +282,12 @@ def transform_file_to_pdf(name_folder,pict_list):
     return pdf_name_path
 
 ############################################################  envoyer pbi report ou pdf a une email 
-def send_pdf_file(mesg,recieve,subject,path):
-    k=recieve.split(',')
+def send_pdf_file(recieve,subject,path,mesg="Power BI report"):
+    k=recieve
     for i in k:
-        print("1",k)
+        print("1",i)
         body = f'{mesg},\npiece jointe:'
-        sender,password = 'centre.declaration@gmail.com','bouchaib2021'
+        sender,password = 'centre.declaration@gmail.com','yassine@2002'
         
         message = MIMEMultipart()
         message['From'] = sender
@@ -275,66 +319,51 @@ def send_pdf_file(mesg,recieve,subject,path):
         print('Mail Sent')
     return True
 
-def main(mesg,recieve,subject,path):
-    schedule.every(10).seconds.do(send_pdf_file,mesg,recieve,subject,path)
+# def main(mesg,recieve,subject,path,time_for_send,date_for_send):
+#     schedule.every(10).seconds.do(send_pdf_file,mesg,recieve,subject,path)
+
+#     while True:
+#         schedule.run_pending()
+#         time.sleep(1)
+
+def main(data_returned):
+    for i in data_returned:
+        email=i[0]
+        path_pd=i[1]
+        period=i[2]
+        subj=i[3]
+        duree=i[4]
+        schedule.every(10).seconds.do(send_pdf_file,email,subj,path_pd)
 
     while True:
         schedule.run_pending()
         time.sleep(1)
 
-# def ancienne_data():
-#     _,d=all_data("send_email_informations","-N2hHzKSrK4id3pKLCgF")
-#     l=[]
-#     for i in d:
-#         # print(i)
-#         email=i['emails']
-#         path_pd=i['file_path']
-#         period=i['perids']
-#         subj=i['subject']
-#         duree=i['time']
-#         l.append([email,path_pd,period,subj,duree])
-#     return l
 
+def ancienne_data():
+    _,d=all_data("send_email_informations","-N2hHzKSrK4id3pKLCgF")
+    l=[]
+    for i in d:
+        print(i)
+        email=i['emails']
+        path_pd=i['file_path']
+        period=i['perids']
+        subj=i['subject']
+        duree=i['time']
+        l.append([email,path_pd,period,subj,duree])
+    return l
 
-# def take_screens_from_pbix(file_name):
-#     print("hhhhh", file_name)
-#     b="".join(file_name.split("/static/files/"))
-#     file_name_derictory=f'{os.path.abspath(os.getcwd())}\\static\\files\\{b}'
-#     os.startfile(f'{file_name_derictory}')
-#     time.sleep(40)
-#     refresh_report()
-#     time.sleep(35)
-#     screenshot(f'{"".join(b.split(".pbix"))} - Power BI Desktop')
-#     screen_to_pdf()
+######################   add new collection ##############
+# data = {
+#     "gp2":{
+#         "emails":["yassine.boujrada@gmail.com"],
+#         "file_path":"./files/report4.pdf",
+#         "name_of_reportBI":"report4",
+#         "perids":"1 Day",
+#         "subject":"thread test",
+#         "time":"2:13"
+#     }
+# }
 
-# def screenshot(window_title=None):
-#     if window_title:
-#         hwnd = win32gui.FindWindow(None, window_title)
-
-#         if hwnd:
-#             win32gui.SetForegroundWindow(hwnd)
-#             x, y, x1, y1 = win32gui.GetClientRect(hwnd)
-#             x, y = win32gui.ClientToScreen(hwnd, (x, y))
-#             x1, y1 = win32gui.ClientToScreen(hwnd, (x1 - x, y1 - y))
-#             im = pyautogui.screenshot(region=(60,200,1510 ,750))
-#             im.save(r'static/test1.png')
-#             os.system("taskkill /f /im PBIDesktop.exe")
-#         else:
-#             print('Window not found!')
-#     else:
-#         im = pyautogui.screenshot()
-#         os.system("taskkill /f /im PBIDesktop.exe")
-#         return im
-
-
-# def serch_file_path(file_ext):
-#     l,b=[],[]
-#     for root, dirs, files in os.walk(r'C:\\Users\\yassine\\Documents\\power bi tutorial'):
-#         for name in files:
-#             if name.endswith(file_ext) :
-#                 l.append(os.path.abspath(os.path.join(root, name)))
-
-#     for i in l:
-#         b.append([i,i.split("\\")[-1]])
-
-#     return b
+# db.child("send_email_informations").push(data)
+# print("Data added to real time database ")
