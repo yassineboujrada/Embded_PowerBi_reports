@@ -8,7 +8,7 @@
     <link rel="stylesheet" type= "text/css" href="{{url_for('static',filename='design/style2.css')}}">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <script src="{{url_for('static',filename='design/script.js')}}" defer></script>
-    <title>Envoyer Rapport</title>
+    <title>Send Rapport</title>
   </head>
   <body>
     <form class="form" action="" method="POST">
@@ -48,21 +48,21 @@
           </div>
           <div class="btns_list" id="btn_valid" style="display:flex;">
             <!-- <button type="submit" class="btn btn-next width-50 ml-auto">Next</button> -->
-            <button type="button"id="annuler_btn" onclick="location='/dashbord'">Annuler</button>
+            <button type="button"id="annuler_btn" onclick="location='/dashbord'">Back</button>
             <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
           </div>
       </div>
 
       <div class="form-step">
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Choisis le temps pour envoyer l'email :</label><br>
+            <label for="exampleInputEmail1" class="form-label">Choose the time to send the email:</label><br>
             <div class="period_timing">
               <input type="time" class="time_selection" name="time_to_send" >
             </div>
           </div><br>
       
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Choisis periode pour envoyer l'email :</label>
+            <label for="exampleInputPassword1" class="form-label">Every :</label>
             <div class="period_area">
               <input type="text" name="value_for_day" class="form-control" value="2" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:100px; display: flex; text-align: center;">
               <select name="period_day" id="period-select" class="form-select" aria-label="Default select example">
@@ -75,8 +75,8 @@
           </div><br>
 
           <div class="btns-group" id="btn_valid" style="display:flex;">
-            <button type="button"id="annuler_btn" onclick="location='/dashbord'">Annuler</button>
-            <input type="submit" value="Envoyer" class="btn" />
+            <button type="button"id="annuler_btn" onclick="location='/dashbord'">Back</button>
+            <input type="submit" value="Send" class="btn" />
           </div>
       </div>
     </form>

@@ -174,43 +174,43 @@ class Authentification_for_PowerBI:
     def get_my_workspace(self):
         return self.reports_service.get_reports()
 
-    def get_pages_number(self,WORK_ID,REPORT_ID):
-        return self.reports_service.get_group_pages(
-                group_id=WORK_ID,
-                report_id=REPORT_ID
-            )
+    # def get_pages_number(self,WORK_ID,REPORT_ID):
+    #     return self.reports_service.get_group_pages(
+    #             group_id=WORK_ID,
+    #             report_id=REPORT_ID
+    #         )
 
     def get_tenant(self):
         return str(self.TENANT_ID)
 
-    def download_pbi(self,GROUP_ID,REPORT_ID,REPORT_NAME):
-        my_report_content = self.reports_service.export_group_report(
-            group_id=GROUP_ID,
-            report_id=REPORT_ID
-        )
+    # def download_pbi(self,GROUP_ID,REPORT_ID,REPORT_NAME):
+    #     my_report_content = self.reports_service.export_group_report(
+    #         group_id=GROUP_ID,
+    #         report_id=REPORT_ID
+    #     )
 
-        with open(file=f'{REPORT_NAME}.pbix', mode='wb+') as power_bi_file:
-            power_bi_file.write(my_report_content)
+    #     with open(file=f'{REPORT_NAME}.pbix', mode='wb+') as power_bi_file:
+    #         power_bi_file.write(my_report_content)
 
-    def export_to_pdf(self,REPORT_ID,REPORT_NAME):
-        my_report_content = self.reports_service.export_to_file(
-            report_id=REPORT_ID,
-            file_format=ExportFileFormats.Csv
-        )
-        with open(file=f'{REPORT_NAME}.csv', mode='wb+') as power_bi_file:
-            power_bi_file.write(my_report_content)
+    # def export_to_pdf(self,REPORT_ID,REPORT_NAME):
+    #     my_report_content = self.reports_service.export_to_file(
+    #         report_id=REPORT_ID,
+    #         file_format=ExportFileFormats.Csv
+    #     )
+    #     with open(file=f'{REPORT_NAME}.csv', mode='wb+') as power_bi_file:
+    #         power_bi_file.write(my_report_content)
 
-    def get_workspace_informations(self):
-        client_data = msal.PublicClientApplication(self.CLIENT_ID, authority=self.AUTHORITY_URL)
-        result = client_data.acquire_token_by_username_password(username=self.username,password=self.password,scopes=self.SCOPE)
-        if 'access_token' in result:
-            access_token = result['access_token']
-            header = {'Content-Type':'application/json','Authorization': f'Bearer {access_token}'}
-            api_out = requests.get(url=self.URL_TO_GET_GROUPS, headers=header)
-            return api_out.json()
-        else:
-            print(result.get("error"))
-            print(result.get("error_description"))
+    # def get_workspace_informations(self):
+    #     client_data = msal.PublicClientApplication(self.CLIENT_ID, authority=self.AUTHORITY_URL)
+    #     result = client_data.acquire_token_by_username_password(username=self.username,password=self.password,scopes=self.SCOPE)
+    #     if 'access_token' in result:
+    #         access_token = result['access_token']
+    #         header = {'Content-Type':'application/json','Authorization': f'Bearer {access_token}'}
+    #         api_out = requests.get(url=self.URL_TO_GET_GROUPS, headers=header)
+    #         return api_out.json()
+    #     else:
+    #         print(result.get("error"))
+    #         print(result.get("error_description"))
 
     def show_workspace(self):
         work_space=[]
@@ -228,64 +228,64 @@ class Authentification_for_PowerBI:
     def grab_my_report(self,REPORT_ID):
         return self.reports_service.get_report(report_id=str(REPORT_ID))
 
-    def nwita(self):
-        url="http://192.168.1.46:3000/"
-        api="9IG2PK0A6O7NV7PNGQYOIURT4IMKW0U0TG5WCHJ6BJ48XM18GK95HMA6TBYXF9KGL75TKY1ZOL0GPDVW"
-        client = ScrapingBeeClient(api_key=api)
-        response = client.get(
-            url,
-            # 'http://192.168.0.192:3000/dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e', # Demo link
-            params={
-                'screenshot': True, # Take a full screenshot of the page
-            }
-        )
-        if response.ok:
-            with open("./screenshot.png", "wb") as f:
-                f.write(response.content)
-        else:
-            print(response.content)
+    # def nwita(self):
+    #     url="http://192.168.1.46:3000/"
+    #     api="9IG2PK0A6O7NV7PNGQYOIURT4IMKW0U0TG5WCHJ6BJ48XM18GK95HMA6TBYXF9KGL75TKY1ZOL0GPDVW"
+    #     client = ScrapingBeeClient(api_key=api)
+    #     response = client.get(
+    #         url,
+    #         # 'http://192.168.0.192:3000/dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e', # Demo link
+    #         params={
+    #             'screenshot': True, # Take a full screenshot of the page
+    #         }
+    #     )
+    #     if response.ok:
+    #         with open("./screenshot.png", "wb") as f:
+    #             f.write(response.content)
+    #     else:
+    #         print(response.content)
 
-def screen_not_kidding(url_info):
-    chrome_options = Options() #
-    chrome_options.add_argument('--headless')
+# def screen_not_kidding(url_info):
+#     chrome_options = Options() #
+#     chrome_options.add_argument('--headless')
 
-    chrome_options.add_argument("--window-size=1920x1080")
-    driver = webdriver.Chrome(options=chrome_options, executable_path="C:/Users/yassine/Downloads/chromedriver_win32/chromedriver.exe")
-    # service object
-    driver.get(url_info)
-    # driver.get("https://app.powerbi.com/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/e9fde765-f95d-424a-b879-f2f0a89c171f/ReportSection")
-    # driver.get("http://127.0.0.1:3000/dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/e9fde765-f95d-424a-b879-f2f0a89c171f")
-    # driver.find_element_by_tag_name("iframe").click()
-    time.sleep(6)
-    driver.find_element_by_id('email').send_keys("yassineboujrada@datastory453.onmicrosoft.com")
-    driver.find_element_by_id('submitBtn').click()
+#     chrome_options.add_argument("--window-size=1920x1080")
+#     driver = webdriver.Chrome(options=chrome_options, executable_path="C:/Users/yassine/Downloads/chromedriver_win32/chromedriver.exe")
+#     # service object
+#     driver.get(url_info)
+#     # driver.get("https://app.powerbi.com/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/e9fde765-f95d-424a-b879-f2f0a89c171f/ReportSection")
+#     # driver.get("http://127.0.0.1:3000/dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/e9fde765-f95d-424a-b879-f2f0a89c171f")
+#     # driver.find_element_by_tag_name("iframe").click()
+#     time.sleep(6)
+#     driver.find_element_by_id('email').send_keys("yassineboujrada@datastory453.onmicrosoft.com")
+#     driver.find_element_by_id('submitBtn').click()
 
-    l=WebDriverWait(driver=driver, timeout=10).until(
-        lambda x: x.execute_script("return document.readyState === 'complete'")
-    )
-    if l:
-        time.sleep(6)
-        driver.find_element_by_name('passwd').send_keys("yassine@2002")
-        driver.find_element_by_id('idSIButton9').click()
-        g=WebDriverWait(driver=driver, timeout=10).until(
-            lambda x: x.execute_script("return document.readyState === 'complete'")
-        )
-        if g:
-            time.sleep(6)
-            driver.find_element_by_id('idSIButton9').click()
-            h=WebDriverWait(driver=driver, timeout=10).until(
-                lambda x: x.execute_script("return document.readyState === 'complete'")
-            )
-            if h:
-                file=[]
-                print('mmmm')
-                time.sleep(6)
-                _=0
-                path_pic=f'./files/page{_}.png'
-                driver.get_screenshot_as_file(path_pic)
-                file.append(path_pic)
-    driver.close()
-    return file
+#     l=WebDriverWait(driver=driver, timeout=10).until(
+#         lambda x: x.execute_script("return document.readyState === 'complete'")
+#     )
+#     if l:
+#         time.sleep(6)
+#         driver.find_element_by_name('passwd').send_keys("yassine@2002")
+#         driver.find_element_by_id('idSIButton9').click()
+#         g=WebDriverWait(driver=driver, timeout=10).until(
+#             lambda x: x.execute_script("return document.readyState === 'complete'")
+#         )
+#         if g:
+#             time.sleep(6)
+#             driver.find_element_by_id('idSIButton9').click()
+#             h=WebDriverWait(driver=driver, timeout=10).until(
+#                 lambda x: x.execute_script("return document.readyState === 'complete'")
+#             )
+#             if h:
+#                 file=[]
+#                 print('mmmm')
+#                 time.sleep(6)
+#                 _=0
+#                 path_pic=f'./files/page{_}.png'
+#                 driver.get_screenshot_as_file(path_pic)
+#                 file.append(path_pic)
+#     driver.close()
+#     return file
 
 def screen_matidhekech(url_link):
     chrome_options = Options() #
@@ -348,8 +348,6 @@ def screen_matidhekech(url_link):
                     print('ina lilah')
     driver.close()
     return file
-
-
 
 def transform_file_to_pdf(name_folder,pict_list):
     pdf_name_path="./files/"+name_folder+".pdf"
@@ -422,7 +420,6 @@ def main(data_returned):
     while True:
         schedule.run_pending()
         time.sleep(1)
-
 
 def ancienne_data():
     _,d=all_data("send_email_informations","-N2hHzKSrK4id3pKLCgF")

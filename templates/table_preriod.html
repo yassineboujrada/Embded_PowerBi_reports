@@ -102,46 +102,6 @@
     //       }).catch(err => console.error(err));
     //   });
 
-    
-    // console.log(idd)
-
-    // function deleteTodo(e) {
-    //     firebase.database().ref('send_email_informations').child('-N3YnEPzaI_pelpacMIc').remove();
-    // }
-    // deleteTodo();
-
-
 </script>
-<!-- <script>
-    const puppeteer = require('puppeteer');
-
-    async function scrapeProduct(url) {
-        const browser = await puppeteer.launch();
-        const page = await browser.newPage();
-        await page.goto(url);
-
-        const [el] = await page.$x('/html/body/div[1]/div[2]/div[9]/div[4]/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div[1]/ul/li[1]/span/span/div/img');
-        const src = await el.getProperty('src');
-        const imgURL = await src.jsonValue();
-
-        const [el2] = await page.$x('/html/body/div[1]/div[2]/div[9]/div[4]/div[4]/div[1]/div/h1/span');
-        const txt = await el2.getProperty('textContent');
-        const title = await txt.jsonValue();
-
-        const [el3] = await page.$x('/html/body/div[1]/div[2]/div[9]/div[4]/div[4]/div[10]/div[1]/div/table/tbody/tr[2]/td[2]/span[1]');
-        const txt2 = await el3.getProperty('textContent');
-        const price = await txt2.jsonValue();
-
-        console.log({
-            imgURL,
-            title,
-            price
-        });
-
-        browser.close();
-    }
-
-    scrapeProduct('https://www.amazon.com/Business-Microphone-Upgraded-NexiGo-Computer/dp/B08BHX7GYY/?_encoding=UTF8&smid=A1HNC035CZ2MR5&pd_rd_w=GsaOJ&pf_rd_p=45f0d3b0-8ddc-4840-9ac2-c26f2608345f&pf_rd_r=A1TQ15FXBKJH1JWYXXAD&pd_rd_r=82f7f31d-db1c-4831-96a3-bb110b1133f9&pd_rd_wg=urW4C&ref_=pd_gw_unk');
-</script> -->
 
 {% endblock content %}
