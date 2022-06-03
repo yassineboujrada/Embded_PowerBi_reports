@@ -18,14 +18,36 @@
   height: 80px;
 }
 
-.success{
+.success,.warning{
   font-size: 16px;
   color: #2f8617;
+  visibility: visible;
+  animation: move 5s;
+  -webkit-animation: move 5s infinite;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
 }
 
 .warning{
-  font-size: 16px;
   color:#bc0f0f;
+}
+
+@-webkit-keyframes move{
+    0% {
+        opacity: 1;
+    }
+    15% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    75% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /**************************************************************

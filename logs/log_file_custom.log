@@ -14316,3 +14316,182 @@
 2022-05-29 01:23:01,019|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
 2022-05-29 01:23:03,141|_internal.py|127.0.0.1 - - [29/May/2022 01:23:03] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
 2022-05-29 01:23:12,428|_internal.py|127.0.0.1 - - [29/May/2022 01:23:12] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-30 14:40:44,089|_internal.py|127.0.0.1 - - [30/May/2022 14:40:44] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-30 14:40:44,297|_internal.py|127.0.0.1 - - [30/May/2022 14:40:44] "[36mGET /static/pictures/workspace.png HTTP/1.1[0m" 304 -
+2022-05-30 14:59:33,062|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 14:59:34,312|_internal.py|127.0.0.1 - - [30/May/2022 14:59:34] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-30 14:59:34,561|_internal.py|127.0.0.1 - - [30/May/2022 14:59:34] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-30 14:59:36,039|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 14:59:38,018|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 14:59:39,285|_internal.py|127.0.0.1 - - [30/May/2022 14:59:39] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/e9fde765-f95d-424a-b879-f2f0a89c171f HTTP/1.1[0m" 200 -
+2022-05-30 14:59:39,518|_internal.py|127.0.0.1 - - [30/May/2022 14:59:39] "[36mGET /static/pictures/back.svg HTTP/1.1[0m" 304 -
+2022-05-30 14:59:39,520|_internal.py|127.0.0.1 - - [30/May/2022 14:59:39] "[36mGET /static/pictures/share.svg HTTP/1.1[0m" 304 -
+2022-05-30 14:59:55,346|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 14:59:56,668|_internal.py|127.0.0.1 - - [30/May/2022 14:59:56] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-30 15:03:55,970|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 15:03:57,106|_internal.py|127.0.0.1 - - [30/May/2022 15:03:57] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-30 15:03:57,265|_internal.py|127.0.0.1 - - [30/May/2022 15:03:57] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-05-30 15:03:57,270|_internal.py|127.0.0.1 - - [30/May/2022 15:03:57] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-30 15:03:57,277|_internal.py|127.0.0.1 - - [30/May/2022 15:03:57] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-30 15:03:57,386|_internal.py|127.0.0.1 - - [30/May/2022 15:03:57] "[36mGET /static/pictures/logo.png HTTP/1.1[0m" 304 -
+2022-05-30 15:03:59,778|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 15:04:01,799|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 15:04:03,014|_internal.py|127.0.0.1 - - [30/May/2022 15:04:03] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-30 15:04:03,201|_internal.py|127.0.0.1 - - [30/May/2022 15:04:03] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-30 15:04:03,218|_internal.py|127.0.0.1 - - [30/May/2022 15:04:03] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-30 15:05:26,450|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-30 15:06:27,900|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 15:06:29,531|_internal.py|127.0.0.1 - - [30/May/2022 15:06:29] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-30 15:07:27,039|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 15:07:28,542|_internal.py|127.0.0.1 - - [30/May/2022 15:07:28] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-30 15:07:36,474|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 15:08:23,566|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-05-30 15:08:25,772|_internal.py|127.0.0.1 - - [30/May/2022 15:08:25] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-30 15:08:37,215|_internal.py|127.0.0.1 - - [30/May/2022 15:08:37] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-30 15:08:51,723|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 15:08:53,405|_internal.py|127.0.0.1 - - [30/May/2022 15:08:53] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/d111e6c2-4fed-48e5-8e32-78c06ffeb742 HTTP/1.1[0m" 200 -
+2022-05-30 15:14:16,802|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 15:14:17,879|_internal.py|127.0.0.1 - - [30/May/2022 15:14:17] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-30 15:14:19,889|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 15:14:21,387|_internal.py|127.0.0.1 - - [30/May/2022 15:14:21] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-30 15:23:52,849|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 15:25:06,124|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-05-30 15:25:08,355|_internal.py|127.0.0.1 - - [30/May/2022 15:25:08] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/a44c6993-6b4d-44d2-b983-d7effe82705a HTTP/1.1[0m" 200 -
+2022-05-30 15:33:47,080|_internal.py|127.0.0.1 - - [30/May/2022 15:33:47] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-30 15:33:54,439|_internal.py|127.0.0.1 - - [30/May/2022 15:33:54] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-30 15:34:00,955|_internal.py|127.0.0.1 - - [30/May/2022 15:34:00] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-30 15:34:01,556|_internal.py|127.0.0.1 - - [30/May/2022 15:34:01] "[37mGET /static/pictures/workspace.png HTTP/1.1[0m" 200 -
+2022-05-30 15:34:03,043|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-30 15:34:04,061|_internal.py|127.0.0.1 - - [30/May/2022 15:34:04] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80 HTTP/1.1[0m" 200 -
+2022-05-30 15:34:04,235|_internal.py|127.0.0.1 - - [30/May/2022 15:34:04] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-05-30 15:34:22,203|_internal.py|127.0.0.1 - - [30/May/2022 15:34:22] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-30 15:34:27,739|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 15:34:28,856|_internal.py|127.0.0.1 - - [30/May/2022 15:34:28] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-05-30 15:34:31,200|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 15:34:32,709|_internal.py|127.0.0.1 - - [30/May/2022 15:34:32] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e HTTP/1.1[0m" 200 -
+2022-05-30 15:34:32,940|_internal.py|127.0.0.1 - - [30/May/2022 15:34:32] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-05-30 15:34:32,943|_internal.py|127.0.0.1 - - [30/May/2022 15:34:32] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-05-30 15:35:26,841|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 15:36:35,294|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-05-30 15:36:35,482|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-05-30 15:36:35,663|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-05-30 15:36:37,847|_internal.py|127.0.0.1 - - [30/May/2022 15:36:37] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e HTTP/1.1[0m" 200 -
+2022-05-30 15:36:43,806|_internal.py|127.0.0.1 - - [30/May/2022 15:36:43] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-05-30 15:36:43,967|_internal.py|127.0.0.1 - - [30/May/2022 15:36:43] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-05-30 15:36:46,705|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-05-30 15:36:48,237|_internal.py|127.0.0.1 - - [30/May/2022 15:36:48] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e HTTP/1.1[0m" 200 -
+2022-05-30 15:49:48,354|_internal.py|127.0.0.1 - - [30/May/2022 15:49:48] "[32mPOST /send_mail HTTP/1.1[0m" 302 -
+2022-05-30 15:49:48,412|_internal.py|127.0.0.1 - - [30/May/2022 15:49:48] "[37mGET /send_mail/define_time HTTP/1.1[0m" 200 -
+2022-05-30 15:59:37,411|_internal.py|127.0.0.1 - - [30/May/2022 15:59:37] "[35m[1mPOST /send_mail/define_time HTTP/1.1[0m" 500 -
+2022-05-30 15:59:37,565|_internal.py|127.0.0.1 - - [30/May/2022 15:59:37] "[37mGET /send_mail/define_time?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+2022-05-30 15:59:37,609|_internal.py|127.0.0.1 - - [30/May/2022 15:59:37] "[37mGET /send_mail/define_time?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+2022-05-30 15:59:37,695|_internal.py|127.0.0.1 - - [30/May/2022 15:59:37] "[37mGET /send_mail/define_time?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+2022-05-30 15:59:37,788|_internal.py|127.0.0.1 - - [30/May/2022 15:59:37] "[37mGET /send_mail/define_time?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+2022-05-30 15:59:37,806|_internal.py|127.0.0.1 - - [30/May/2022 15:59:37] "[37mGET /send_mail/define_time?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-30 15:59:37,845|_internal.py|127.0.0.1 - - [30/May/2022 15:59:37] "[37mGET /send_mail/define_time?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+2022-05-30 16:00:20,206|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-05-30 16:03:09,758|_internal.py|127.0.0.1 - - [30/May/2022 16:03:09] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-31 15:29:49,423|_internal.py|127.0.0.1 - - [31/May/2022 15:29:49] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-31 15:29:49,518|_internal.py|127.0.0.1 - - [31/May/2022 15:29:49] "[36mGET /static/pictures/workspace.png HTTP/1.1[0m" 304 -
+2022-05-31 15:29:49,527|_internal.py|127.0.0.1 - - [31/May/2022 15:29:49] "[36mGET /static/pictures/logo.png HTTP/1.1[0m" 304 -
+2022-05-31 15:29:51,611|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-05-31 15:29:52,554|_internal.py|127.0.0.1 - - [31/May/2022 15:29:52] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6 HTTP/1.1[0m" 200 -
+2022-05-31 15:29:52,643|_internal.py|127.0.0.1 - - [31/May/2022 15:29:52] "[36mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 304 -
+2022-05-31 15:30:54,627|_internal.py|127.0.0.1 - - [31/May/2022 15:30:54] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-05-31 15:30:59,959|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-05-31 15:31:00,858|_internal.py|127.0.0.1 - - [31/May/2022 15:31:00] "[37mGET /dashbord/59f25170-0c0b-4b8b-870d-9bbd291aec80 HTTP/1.1[0m" 200 -
+2022-05-31 15:31:28,540|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-06-01 21:59:03,301|_internal.py|127.0.0.1 - - [01/Jun/2022 21:59:03] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-06-01 21:59:03,405|_internal.py|127.0.0.1 - - [01/Jun/2022 21:59:03] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-06-01 21:59:03,425|_internal.py|127.0.0.1 - - [01/Jun/2022 21:59:03] "[37mGET /static/pictures/workspace.png HTTP/1.1[0m" 200 -
+2022-06-01 21:59:03,431|_internal.py|127.0.0.1 - - [01/Jun/2022 21:59:03] "[36mGET /static/pictures/logo.png HTTP/1.1[0m" 304 -
+2022-06-01 21:59:03,478|_internal.py|127.0.0.1 - - [01/Jun/2022 21:59:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-06-01 22:00:42,587|_internal.py|127.0.0.1 - - [01/Jun/2022 22:00:42] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-06-01 22:24:27,480|_internal.py| * Detected change in 'C:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading
+2022-06-01 23:09:33,205|_internal.py|127.0.0.1 - - [01/Jun/2022 23:09:33] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-06-01 23:09:33,433|_internal.py|127.0.0.1 - - [01/Jun/2022 23:09:33] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-06-01 23:09:33,442|_internal.py|127.0.0.1 - - [01/Jun/2022 23:09:33] "[37mGET /static/pictures/workspace.png HTTP/1.1[0m" 200 -
+2022-06-01 23:09:33,464|_internal.py|127.0.0.1 - - [01/Jun/2022 23:09:33] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-06-01 23:09:38,404|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-06-01 23:09:41,074|_internal.py|127.0.0.1 - - [01/Jun/2022 23:09:41] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6 HTTP/1.1[0m" 200 -
+2022-06-01 23:09:41,208|_internal.py|127.0.0.1 - - [01/Jun/2022 23:09:41] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-06-01 23:09:44,120|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-06-01 23:09:48,584|_internal.py|127.0.0.1 - - [01/Jun/2022 23:09:48] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 200 -
+2022-06-01 23:09:48,735|_internal.py|127.0.0.1 - - [01/Jun/2022 23:09:48] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-06-01 23:09:48,737|_internal.py|127.0.0.1 - - [01/Jun/2022 23:09:48] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-06-01 23:13:01,450|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-06-01 23:13:37,762|_internal.py|127.0.0.1 - - [01/Jun/2022 23:13:37] "[35m[1mPOST /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 500 -
+2022-06-01 23:15:27,265|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-06-01 23:20:36,344|_internal.py|127.0.0.1 - - [01/Jun/2022 23:20:36] "[35m[1mPOST /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 500 -
+2022-06-02 14:16:48,475|_internal.py|127.0.0.1 - - [02/Jun/2022 14:16:48] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-06-02 14:16:48,548|_internal.py|127.0.0.1 - - [02/Jun/2022 14:16:48] "[37mGET /static/pictures/workspace.png HTTP/1.1[0m" 200 -
+2022-06-02 14:16:50,440|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-06-02 14:16:51,422|_internal.py|127.0.0.1 - - [02/Jun/2022 14:16:51] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6 HTTP/1.1[0m" 200 -
+2022-06-02 14:16:51,531|_internal.py|127.0.0.1 - - [02/Jun/2022 14:16:51] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-06-02 14:16:53,020|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-06-02 14:16:53,692|_internal.py|127.0.0.1 - - [02/Jun/2022 14:16:53] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 200 -
+2022-06-02 14:16:53,778|_internal.py|127.0.0.1 - - [02/Jun/2022 14:16:53] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-06-02 14:16:53,780|_internal.py|127.0.0.1 - - [02/Jun/2022 14:16:53] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-06-02 14:17:07,584|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-06-02 14:17:50,975|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-06-02 14:17:53,106|_internal.py|127.0.0.1 - - [02/Jun/2022 14:17:53] "[37mPOST /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 200 -
+2022-06-02 14:18:12,079|_internal.py|127.0.0.1 - - [02/Jun/2022 14:18:12] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-06-02 14:18:12,148|_internal.py|127.0.0.1 - - [02/Jun/2022 14:18:12] "[37mGET /static/design/style2.css HTTP/1.1[0m" 200 -
+2022-06-02 14:18:12,171|_internal.py|127.0.0.1 - - [02/Jun/2022 14:18:12] "[37mGET /static/design/script.js HTTP/1.1[0m" 200 -
+2022-06-02 14:19:09,293|_internal.py|127.0.0.1 - - [02/Jun/2022 14:19:09] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-06-02 14:19:11,086|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-06-02 14:19:11,861|_internal.py|127.0.0.1 - - [02/Jun/2022 14:19:11] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6 HTTP/1.1[0m" 200 -
+2022-06-02 14:19:14,016|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-06-02 14:19:15,341|_internal.py|127.0.0.1 - - [02/Jun/2022 14:19:15] "[37mGET /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 200 -
+2022-06-02 14:19:15,402|_internal.py|127.0.0.1 - - [02/Jun/2022 14:19:15] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-06-02 14:19:15,406|_internal.py|127.0.0.1 - - [02/Jun/2022 14:19:15] "[37mGET /static/pictures/share.svg HTTP/1.1[0m" 200 -
+2022-06-02 14:19:21,760|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-06-02 14:20:00,920|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-06-02 14:20:01,762|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-06-02 14:20:03,861|_internal.py|127.0.0.1 - - [02/Jun/2022 14:20:03] "[37mPOST /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 200 -
+2022-06-02 14:20:06,582|_internal.py|127.0.0.1 - - [02/Jun/2022 14:20:06] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-06-02 14:20:42,034|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-06-02 14:20:44,162|_internal.py|127.0.0.1 - - [02/Jun/2022 14:20:44] "[37mPOST /dashbord/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/467cbb3a-5783-4c37-8354-1e99aa03f41b HTTP/1.1[0m" 200 -
+2022-06-02 14:52:55,665|_internal.py|127.0.0.1 - - [02/Jun/2022 14:52:55] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-06-02 14:52:55,775|_internal.py|127.0.0.1 - - [02/Jun/2022 14:52:55] "[37mGET /static/pictures/workspace.png HTTP/1.1[0m" 200 -
+2022-06-02 14:52:55,787|_internal.py|127.0.0.1 - - [02/Jun/2022 14:52:55] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-06-02 15:13:31,904|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-06-02 15:13:33,093|_internal.py|127.0.0.1 - - [02/Jun/2022 15:13:33] "[37mGET /dashbord/me HTTP/1.1[0m" 200 -
+2022-06-02 15:13:33,177|_internal.py|127.0.0.1 - - [02/Jun/2022 15:13:33] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-06-02 15:13:35,835|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports/6341d428-a600-4ee6-8185-5ae8616fd093
+2022-06-02 15:13:37,096|_internal.py|127.0.0.1 - - [02/Jun/2022 15:13:37] "[37mGET /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093 HTTP/1.1[0m" 200 -
+2022-06-02 15:13:37,183|_internal.py|127.0.0.1 - - [02/Jun/2022 15:13:37] "[37mGET /static/pictures/back.svg HTTP/1.1[0m" 200 -
+2022-06-02 15:13:43,415|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports/6341d428-a600-4ee6-8185-5ae8616fd093
+2022-06-02 15:14:22,690|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-06-02 15:14:24,773|_internal.py|127.0.0.1 - - [02/Jun/2022 15:14:24] "[37mPOST /dashbord/me/6341d428-a600-4ee6-8185-5ae8616fd093 HTTP/1.1[0m" 200 -
+2022-06-02 15:16:08,430|_internal.py|127.0.0.1 - - [02/Jun/2022 15:16:08] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-06-03 10:18:45,568|_internal.py|127.0.0.1 - - [03/Jun/2022 10:18:45] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-06-03 10:18:45,722|_internal.py|127.0.0.1 - - [03/Jun/2022 10:18:45] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-06-03 10:18:45,747|_internal.py|127.0.0.1 - - [03/Jun/2022 10:18:45] "[37mGET /static/pictures/workspace.png HTTP/1.1[0m" 200 -
+2022-06-03 10:18:45,768|_internal.py|127.0.0.1 - - [03/Jun/2022 10:18:45] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-06-03 10:18:49,198|_internal.py|127.0.0.1 - - [03/Jun/2022 10:18:49] "[37mGET /my_table_of_period HTTP/1.1[0m" 200 -
+2022-06-03 10:19:06,336|_internal.py|127.0.0.1 - - [03/Jun/2022 10:19:06] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-06-03 10:19:06,392|_internal.py|127.0.0.1 - - [03/Jun/2022 10:19:06] "[37mGET /static/design/style.css HTTP/1.1[0m" 200 -
+2022-06-03 10:19:06,547|_internal.py|127.0.0.1 - - [03/Jun/2022 10:19:06] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-06-03 10:19:06,569|_internal.py|127.0.0.1 - - [03/Jun/2022 10:19:06] "[37mGET /static/pictures/workspace.png HTTP/1.1[0m" 200 -
+2022-06-03 10:19:06,573|_internal.py|127.0.0.1 - - [03/Jun/2022 10:19:06] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-06-03 10:19:28,162|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\Power_bi_functions.py', reloading
+2022-06-03 10:44:16,730|_internal.py|127.0.0.1 - - [03/Jun/2022 10:44:16] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-06-03 10:44:17,388|_internal.py|127.0.0.1 - - [03/Jun/2022 10:44:17] "[37mGET /static/pictures/logo.png HTTP/1.1[0m" 200 -
+2022-06-03 10:44:22,464|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-06-03 10:44:23,682|_internal.py|127.0.0.1 - - [03/Jun/2022 10:44:23] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d HTTP/1.1[0m" 200 -
+2022-06-03 10:44:23,902|_internal.py|127.0.0.1 - - [03/Jun/2022 10:44:23] "[37mGET /static/pictures/pbi_icon.png HTTP/1.1[0m" 200 -
+2022-06-03 10:44:28,589|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-06-03 10:44:30,132|_internal.py|127.0.0.1 - - [03/Jun/2022 10:44:30] "[37mGET /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/e9fde765-f95d-424a-b879-f2f0a89c171f HTTP/1.1[0m" 200 -
+2022-06-03 10:44:30,282|_internal.py|127.0.0.1 - - [03/Jun/2022 10:44:30] "[36mGET /static/pictures/back.svg HTTP/1.1[0m" 304 -
+2022-06-03 10:44:30,286|_internal.py|127.0.0.1 - - [03/Jun/2022 10:44:30] "[36mGET /static/pictures/share.svg HTTP/1.1[0m" 304 -
+2022-06-03 10:44:51,828|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-06-03 10:45:44,039|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-06-03 10:45:46,381|_internal.py|127.0.0.1 - - [03/Jun/2022 10:45:46] "[37mPOST /dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/e9fde765-f95d-424a-b879-f2f0a89c171f HTTP/1.1[0m" 200 -
+2022-06-03 10:46:56,916|_internal.py|127.0.0.1 - - [03/Jun/2022 10:46:56] "[37mGET /send_mail HTTP/1.1[0m" 200 -
+2022-06-03 10:46:57,042|_internal.py|127.0.0.1 - - [03/Jun/2022 10:46:57] "[37mGET /static/design/style2.css HTTP/1.1[0m" 200 -
+2022-06-03 10:46:57,109|_internal.py|127.0.0.1 - - [03/Jun/2022 10:46:57] "[37mGET /static/design/script.js HTTP/1.1[0m" 200 -
+2022-06-03 10:47:52,220|_internal.py|127.0.0.1 - - [03/Jun/2022 10:47:52] "[32mPOST /send_mail HTTP/1.1[0m" 302 -
+2022-06-03 10:47:55,405|_internal.py|127.0.0.1 - - [03/Jun/2022 10:47:55] "[37mGET /dashbord HTTP/1.1[0m" 200 -
+2022-06-03 10:47:55,645|_internal.py|127.0.0.1 - - [03/Jun/2022 10:47:55] "[32mGET /static//pictures/logo.png HTTP/1.1[0m" 308 -
+2022-06-03 10:48:28,677|_internal.py| * Detected change in 'c:\\Users\\yassine\\Documents\\last-projects\\Embded_PowerBi_reports\\app.py', reloading

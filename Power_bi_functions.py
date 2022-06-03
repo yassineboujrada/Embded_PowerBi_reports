@@ -1,3 +1,4 @@
+from email.message import EmailMessage
 from re import I
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -44,16 +45,57 @@ firebase=pyrebase.initialize_app(CONFIG_DB)
 
 db=firebase.database()
 
+# charities_d = {
+#     "gr6": {
+#         "emails": ['test@gmail.com'],
+#         "file_path": './files/multi_report.pdf',
+#         'name_of_reportBI':'multi_report',
+#         'perids':'2 Day',
+#         "subject":'idk',
+#         'time':'10:42'
+#     },
+#     "gr7": {
+#         "emails": ['test2@gmail.com'],
+#         "file_path": './files/multi_report.pdf',
+#         'name_of_reportBI':'multi_report',
+#         'perids':'2 Day',
+#         "subject":'idk',
+#         'time':'10:42'
+#     },
+#     # "gr5": {
+#     #     "emails": ['test22@gmail.com'],
+#     #     "file_path": './files/test3.pdf',
+#     #     'name_of_reportBI':'test3',
+#     #     'perids':'3 Day',
+#     #     "subject":'idk 2',
+#     #     'time':'11:42'
+#     # },
+# }
+# db.child("send_email_informations").child("-N3YnEPzaI_pelpacMIc").push(charities_d)
+# db.child("send_email_informations").child("-N3YnEPzaI_pelpacMIc").remove("gr6")
 
 def search_about(collection,ref,indice,key):
-    all_data=db.child(collection).child(ref).get()
-    for data in all_data.each():
-        if data.val()['email'].lower()==indice.lower():
+    # if indice =="":
+    #     all_data=db.child(collection).child(ref).get()
+    #     for data in all_data.each():
             
-            data.val()['password']=bcrypt.hashpw(bytes(data.val()['password'], 'utf-8'), key)
-            return data.val()
-        else:
-            return None
+    # else:
+    if key=="":
+        all_data=db.child(collection).child(ref).get()
+        for data in all_data.each():
+            if data.val()['email'].lower()==indice.lower():
+                return True
+            else:
+                return False
+
+    else:
+        all_data=db.child(collection).child(ref).get()
+        for data in all_data.each():
+            if data.val()['email'].lower()==indice.lower():
+                data.val()['password']=bcrypt.hashpw(bytes(data.val()['password'], 'utf-8'), key)
+                return data.val()
+            else:
+                return None
 
 def all_data(collection,child_ref):
     keys,values=[],[]
@@ -61,13 +103,53 @@ def all_data(collection,child_ref):
     for d in data.each():
         for key in d.val():
             keys.append(key)
+            d.val()[key]['emails']="  ".join(d.val()[key]['emails'])
             values.append(d.val()[key])
     return keys,values
 
+def change(indice,n):
+    all_data=db.child("User").get()
+    for data in all_data.each():
+        for i in data.val():
+            if data.val()[i]['email'].lower()==indice.lower():
+                db.child("User").child("-N2hHzN_G51X1PurUwyB").child(i).update({"password":n})
 
-# --------------------------------------------------
-# Set local variables
-# --------------------------------------------------
+def drop():
+    # from firebase_admin import db as D
+    all_data=db.child("send_email_informations").get()
+    # print(all_data.child())
+    for data in all_data.each():
+        id_=data.key()
+        print(id_)
+        for i in data.val():
+            print(i)
+    # ref = db.reference('send_email_informations')
+
+    # # Read the data at the posts reference (this is a blocking operation)
+    # print(ref.get())
+
+    # db.child("send_email_informations").remove("gr3")
+def add(email,path,name_repport_bi,per,sub,time):
+    nb=1
+    all_data=db.child("send_email_informations").get()
+    for data in all_data.each():
+        id_=data.key()
+        nb += len(data.val())
+
+
+    db.child("send_email_informations").push(
+        {
+        "gr"+str(nb) : {
+            "emails": list(email),
+            "file_path": path,
+            'name_of_reportBI': name_repport_bi,
+            'perids':per,
+            "subject":sub,
+            'time':time
+        }}
+    )
+
+    return True
 
 class Authentification_for_PowerBI:
     def __init__(self):
@@ -88,9 +170,7 @@ class Authentification_for_PowerBI:
         )
 
         self.reports_service = self.CLIENT_POWER_BI.reports()
-        # self.my_work_space=self.reports_service.get_reports()
-        # self.CLIENT_POWER_BI
-        # pprint(template_apps_service = self.CLIENT_POWER_BI.template_apps())
+        
     def get_my_workspace(self):
         return self.reports_service.get_reports()
 
@@ -164,10 +244,6 @@ class Authentification_for_PowerBI:
                 f.write(response.content)
         else:
             print(response.content)
-
-# from selenium import webdriver
-# from selenium.webdriver.chrome.options import Options
-# from selenium.webdriver.support.ui import WebDriverWait
 
 def screen_not_kidding(url_info):
     chrome_options = Options() #
@@ -282,8 +358,11 @@ def transform_file_to_pdf(name_folder,pict_list):
     return pdf_name_path
 
 ############################################################  envoyer pbi report ou pdf a une email 
-def send_pdf_file(recieve,subject,path,mesg="Power BI report"):
+def send_pdf_file(recieve,subject,path,mesg):
     k=recieve
+    if mesg=="":
+        mesg="Power BI report"
+        
     for i in k:
         print("1",i)
         body = f'{mesg},\npiece jointe:'
@@ -294,7 +373,6 @@ def send_pdf_file(recieve,subject,path,mesg="Power BI report"):
         message['To'] = i
         message['Subject'] = subject
         message.attach(MIMEText(body, 'plain'))
-        
         pdfname=path
 
         binary_pdf = open(pdfname, 'rb')
@@ -319,12 +397,18 @@ def send_pdf_file(recieve,subject,path,mesg="Power BI report"):
         print('Mail Sent')
     return True
 
-# def main(mesg,recieve,subject,path,time_for_send,date_for_send):
-#     schedule.every(10).seconds.do(send_pdf_file,mesg,recieve,subject,path)
-
-#     while True:
-#         schedule.run_pending()
-#         time.sleep(1)
+def verif_msg(randnbr,email):
+    server = smtplib.SMTP("smtp.gmail.com",587)
+    server.starttls()
+    server.login('centre.declaration@gmail.com','yassine@2002')
+    msg = EmailMessage()
+    message=f"\n code est : {randnbr}"
+    msg.set_content(message)
+    msg['Subject']="code de verification :"
+    msg['From']='centre.declaration@gmail.com'
+    msg['To']=email
+    server.sendmail('centre.declaration@gmail.com',email,msg.as_string())
+    server.quit()
 
 def main(data_returned):
     for i in data_returned:
@@ -352,18 +436,3 @@ def ancienne_data():
         duree=i['time']
         l.append([email,path_pd,period,subj,duree])
     return l
-
-######################   add new collection ##############
-# data = {
-#     "gp2":{
-#         "emails":["yassine.boujrada@gmail.com"],
-#         "file_path":"./files/report4.pdf",
-#         "name_of_reportBI":"report4",
-#         "perids":"1 Day",
-#         "subject":"thread test",
-#         "time":"2:13"
-#     }
-# }
-
-# db.child("send_email_informations").push(data)
-# print("Data added to real time database ")
