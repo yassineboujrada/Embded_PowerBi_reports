@@ -1,0 +1,39 @@
+{% extends "blog/base.html" %}
+{% block content %}
+{% load static %}
+<br><br>
+<main role="main" class="main-content">
+    <!-- {{ report }} -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="row">
+                    {% for i in report %}
+                        <div class="col-md-4" onclick="location='/report/{{ i.id }}'">
+                            <div class="card shadow mb-4">
+                                <div class="card-body">
+                                    <div class="chart-widget" style="display: flex; align-items:center; justify-content:center;">
+                                        
+                                        <img  src="{% static 'blog/logos/pbi_icon.png' %}" style="width: 165px; height: 150px; border-radius: 10px;" alt="workspace">
+                                        
+                                    </div><br>
+
+                                    <div class="row"  style="display: flex; align-items:center; justify-content:center;">
+                                        <div class="col-6 text-center">
+                                            <p class="text-muted mb-0">{{ i.name }}.pbix</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div> 
+                        </div> 
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+{% endblock content %}

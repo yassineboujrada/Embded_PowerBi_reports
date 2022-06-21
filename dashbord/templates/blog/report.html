@@ -1,0 +1,36 @@
+{% extends "blog/base.html" %}
+{% block content %}
+{% load static %}
+<br><br>
+<main role="main" class="main-content">
+    <div class="row">
+      <div class="col-md-12" style="height: 77vh;">
+
+        <div style="display: flex; align-items:center; justify-content:space-evenly;">
+            <img src="{% static 'blog/logos/back.svg' %}" style="width: 30px; height: 30px;"alt="back" onclick="location='/workspace/{{current}}'"/>
+            <h6 class="mb-3">{{ j.name }}.pbix</h6><br>
+        </div><br>
+        
+        <div class="report_graph">
+          <iframe titre="{{ j.name }}" class='graphe_of_embded_report' src='{{ j.embedUrl }}' frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+
+      </div>
+    </div>
+
+    <style>
+      .report_graph{
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .graphe_of_embded_report{
+        width: 90%;
+        height: 98%;
+      }
+    </style>
+</main>
+
+{% endblock content %}
