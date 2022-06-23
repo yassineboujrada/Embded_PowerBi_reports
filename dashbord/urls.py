@@ -8,4 +8,5 @@ urlpatterns = [
     path('history_of_playlist/',views.playlist,name='dashbord-playlist'),
     # path('history_of_playlist/',views.postView.as_view(),name='dashbord-playlist'),
     path('playlist/create/',views.create_playlist,name='dashbord-create'),
+    path('playlist/create/select_report/',views.select_report,name='dashbord-create-report'),
 ]

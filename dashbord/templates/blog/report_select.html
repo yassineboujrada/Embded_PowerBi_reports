@@ -1,0 +1,72 @@
+{% extends "blog/base.html" %}
+{% block content %}
+{% load static %}
+<main role="main" class="main-content">
+    <legend class="border-bottom mb-4">Select Dashboards and/or Reports</legend>
+    <div id="form_content">
+        <!-- <div class="col-12 col-lg-10 col-xl-8"> -->
+        <form method='POST' action=''>
+            {% csrf_token %}
+            <br>
+            <div class="select_dash">
+                <div class="form-row" style="border: solid black; width: 24%; height: 70vh;">
+                    <ul class="navbar-nav flex-fill w-100 mb-2">
+        
+                        <li class="nav-item dropdown">
+                            {% for i,j in all_report %}
+                            <a href="#{{i}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                                <i class="fe fe-user fe-16"></i>
+                                <span class="ml-3 item-text">{{i}}</span>
+                            </a>
+                          
+                        
+                          <ul class="collapse list-unstyled pl-4 w-100 w-100" id="{{i}}">
+                            {% for k in j.value %}
+                                <li class="nav-item">
+                                    <a class="nav-link pl-3" id="{{k.src}}" onclick="reply_click(this)">
+                                        <span class="ml-1 item-text">{{k.name}}</span>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                          </ul>
+                          {% endfor %}
+                        </li>
+                    </ul>
+                </div>
+                <div style="border: solid black; width: 65%; height: 70vh;">
+                    <div class="form-row" style=" width: 98%; height: 60vh;">
+                        <iframe src="" frameborder="0" width="65%" height="70vh"></iframe>
+                    </div>
+                    <br>
+                    <div style="display: flex; align-items:center; justify-content:space-evenly;">
+                        <a class="btn btn-danger" style="color :#fff;" href="{% url 'dashbord-playlist' %}" id="cancel">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Next -></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</main>
+
+<style>
+    .select_dash{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #form_content{
+        border: solid black;
+        height: 76vh;
+    }
+</style>
+
+<script>
+    var reply_click = function(e)
+        {
+            alert("Button clicked, id "+this.id+", text"+this.innerHTML+e.id);
+        }
+</script>
+
+{% endblock content %}

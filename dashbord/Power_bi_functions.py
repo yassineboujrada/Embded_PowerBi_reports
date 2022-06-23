@@ -223,6 +223,22 @@ class Authentification_for_PowerBI:
     def grab_my_report(self,REPORT_ID):
         return self.reports_service.get_report(report_id=str(REPORT_ID))
 
+    def all_report(self):
+        l=[]
+        nb=0
+        id_work_space=self.show_workspace()
+        for i in id_work_space:
+            l.append([i[0],self.get_report_from_workspace(i[1])])
+            nb+=len([_['name'] for _ in self.get_report_from_workspace(i[1])['value']])
+        kk=[i['name'] for i in self.get_my_workspace()['value']]
+        nb+=len(kk)
+        return [l,nb]
+        
+    # def get_length_report(self):
+    #     print("######### ",self.all_report())
+    #     return len(self.all_report())
+    #     # return report_out
+
     # def nwita(self):
     #     url="http://192.168.1.46:3000/"
     #     api="9IG2PK0A6O7NV7PNGQYOIURT4IMKW0U0TG5WCHJ6BJ48XM18GK95HMA6TBYXF9KGL75TKY1ZOL0GPDVW"

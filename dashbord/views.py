@@ -7,9 +7,11 @@ from django.contrib import messages
 def home(request):
     request.session['work']=Authentification_for_PowerBI().show_workspace()
     return render(request,'blog/dashbord.html',{
-        'work':request.session['work'] 
+        'work':request.session['work'] ,
+        'len_playlist':Post.objects.all().count(),
+        'len_report':Authentification_for_PowerBI().all_report()[1],
+        
     })
-
 
 def workspace(request,work):
     request.session['cuurent_space']=work
@@ -58,6 +60,18 @@ def playlist(request):
         'work':request.session['work'],
         'db':Post.objects.all()
     })
+
+def select_report(request):
+    if request.method == 'POST':
+        print(request.POST)
+        return HttpResponseRedirect('/playlist/create/')
+    Authentification_for_PowerBI().all_report()
+    return render(request,'blog/report_select.html',{
+        'work':request.session['work'],
+        'all_work':request.session['work'], 
+        'all_report':Authentification_for_PowerBI().all_report()[0],
+    })
+
 
 def create_playlist(request):
     if request.method == 'POST':
