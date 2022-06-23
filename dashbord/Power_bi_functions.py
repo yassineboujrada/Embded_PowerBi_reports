@@ -228,6 +228,11 @@ class Authentification_for_PowerBI:
         nb=0
         id_work_space=self.show_workspace()
         for i in id_work_space:
+            for _ in self.get_report_from_workspace(i[1])['value']:
+                _['embedUrl']+=f'&autoAuth=true&ctid={self.get_tenant()}'
+                _['webUrl']+='/ReportSection'
+                print("########\n",_['embedUrl'],"############\n")
+
             l.append([i[0],self.get_report_from_workspace(i[1])])
             nb+=len([_['name'] for _ in self.get_report_from_workspace(i[1])['value']])
         kk=[i['name'] for i in self.get_my_workspace()['value']]
@@ -298,6 +303,7 @@ class Authentification_for_PowerBI:
 #     driver.close()
 #     return file
 
+import os
 def screen_matidhekech(url_link):
     chrome_options = Options() #
     chrome_options.add_argument('--headless')
@@ -345,13 +351,12 @@ def screen_matidhekech(url_link):
                             if hhhhh:
                                 time.sleep(6)
                                 i+=1
-                                path_pic=f'./files/page{i}.png'
+                                path_pic=f'{os.path.abspath(os.getcwd())}\\dashbord\\static\\blog\\files\\page{i}.png'
                                 element.screenshot(path_pic)
                                 file.append(path_pic)
                     except NoSuchElementException:
                         print('mmmm1')
-                        _=0
-                        path_pic=f'./files/page{_}.png'
+                        path_pic=f'{os.path.abspath(os.getcwd())}\\dashbord\\static\\blog\\files\\page{0}.png'
                         element.screenshot(path_pic)
                         return path_pic
 
@@ -361,7 +366,7 @@ def screen_matidhekech(url_link):
     return file
 
 def transform_file_to_pdf(name_folder,pict_list):
-    pdf_name_path="./files/"+name_folder+".pdf"
+    pdf_name_path=f'{os.path.abspath(os.getcwd())}\\dashbord\\static\\blog\\files\\'+name_folder+".pdf"
     with open(pdf_name_path,"wb") as f:
         f.write(img2pdf.convert(pict_list))
     return pdf_name_path

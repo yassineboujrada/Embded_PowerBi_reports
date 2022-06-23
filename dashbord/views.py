@@ -3,6 +3,7 @@ from .Power_bi_functions import *
 from .models import Post
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.http import JsonResponse
 
 def home(request):
     request.session['work']=Authentification_for_PowerBI().show_workspace()
@@ -62,10 +63,17 @@ def playlist(request):
     })
 
 def select_report(request):
+
     if request.method == 'POST':
-        print(request.POST)
-        return HttpResponseRedirect('/playlist/create/')
-    Authentification_for_PowerBI().all_report()
+        web_url = request.POST.get('c_check', None)
+        print(web_url.split(",")[0],web_url.split(",")[1])
+        if web_url:
+            file=screen_matidhekech(f'{web_url.split(",")[0]}/ReportSection')
+            pdf_path=transform_file_to_pdf(web_url.split(",")[1],file)
+            request.session['pdf']=pdf_path
+            request.session["name"]=web_url.split(",")[1]
+            return JsonResponse({'message':'This is the message'})
+    
     return render(request,'blog/report_select.html',{
         'work':request.session['work'],
         'all_work':request.session['work'], 
@@ -76,7 +84,8 @@ def select_report(request):
 def create_playlist(request):
     if request.method == 'POST':
         print(request.POST)
+        request.session['pdf']
         messages.success(request,f'Youre playlist has been  added'+"\U0001f600")
         return HttpResponseRedirect('/history_of_playlist/')
 
-    return render(request, 'blog/create.html', {'work':request.session['work']})
+    return render(request, 'blog/create.html', {'work':request.session['work'],'name':request.session["name"]})
