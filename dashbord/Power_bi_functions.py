@@ -39,7 +39,7 @@ class Authentification_for_PowerBI:
         self.URL_TO_GET_GROUPS = 'https://api.powerbi.com/v1.0/myorg/groups'
         self.file=file
         
-        print(client_id,user,passwd,tenant,client_secret,file)
+        # print(client_id,user,passwd,tenant,client_secret,file)
         
         self.CLIENT_POWER_BI = PowerBiClient(
             client_id=self.CLIENT_ID,
@@ -182,18 +182,27 @@ def screen_matidhekech(url_link,email,passwd):
     driver.close()
     return kkk
 
-# url="https://app.powerbi.com/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742"
-# gg=screen_matidhekech(url)
-# print(gg)
+from pptx import Presentation
 
-def transform_file_to_pdf(name_folder,pict_list):
-    pdf_name_path=f'{os.path.abspath(os.getcwd())}\\dashbord\\static\\blog\\files\\'+name_folder+".pdf"
-    print(pdf_name_path)
-    with open(pdf_name_path,"wb") as f:
-        f.write(img2pdf.convert(pict_list))
-    return pdf_name_path
+def transform_file_to_pdf(name_folder,pict_list,format):
+    if format == "PDF File":
+        pdf_name_path=f'{os.path.abspath(os.getcwd())}\\dashbord\\static\\blog\\files\\'+name_folder+".pdf"
+        print(pdf_name_path)
+        with open(pdf_name_path,"wb") as f:
+            f.write(img2pdf.convert(pict_list))
+        return pdf_name_path
 
-# transform_file_to_pdf("multiple things",gg)
+    if format=="pptx":
+        p = Presentation()
+        ims = pict_list
+        blank_slide_layout= p.slide_layouts[6]
+        for im in ims:
+            slide = p.slides.add_slide(blank_slide_layout)
+            slide.shapes.add_picture(im, 0, 0, p.slide_width, p.slide_height)
+        p.save(os.path.abspath(os.getcwd())+"\\static\\blog\\files\\test.pptx")
+
+
+# transform_file_to_pdf("multiple things","gg","pptx")
 ############################################################  envoyer pbi report ou pdf a une email 
 def send_pdf_file(recieve,subject,path,mesg):
     k=recieve.split(",")

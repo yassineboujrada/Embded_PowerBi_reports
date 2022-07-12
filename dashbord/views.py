@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.shortcuts import render, redirect
 from .Power_bi_functions import *
 from .models import Post,microsoft_account
@@ -37,16 +38,16 @@ import time as time_
         
 def f(title_of_report,who,form,url,every_what,email,passwd):
     print(every_what)
-    try:
-        k=screen_matidhekech(url,email,passwd)
-        print(title_of_report,"=======>",k)
-        pdf_path=transform_file_to_pdf(title_of_report,k)
-        print("file saved"+pdf_path)
+    # try:
+    k=screen_matidhekech(url,email,passwd)
+    print(title_of_report,"=======>",k)
+    pdf_path=transform_file_to_pdf(title_of_report,k,form)
+    print("file saved"+pdf_path)
 
-        if send_pdf_file(recieve=who,subject="nothing",path=pdf_path,mesg="hahowa"):
-            print("hola")
-    except :
-        print("it's just probleme in email")
+    if send_pdf_file(recieve=who,subject="nothing",path=pdf_path,mesg="hahowa"):
+        print("hola")
+    # except :
+    #     print("it's just probleme in email")
 
 def minute(title_of_report,who,form,url,every_what,every,email,passwd):
     
@@ -131,8 +132,8 @@ def main2():
             t6=Thread(target=year_,args=(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email,passwd))
             t6.start()
 
-t = Thread(target=main2)
-t.start()
+# t = Thread(target=main2)
+# t.start()
 
 @login_required
 def user_informations(request):
@@ -169,10 +170,13 @@ def user_informations(request):
 @login_required
 def home(request):
     try:
-        print(request.session['d'])
         dd=request.session['WORK_DATA']
     except KeyError:
         return HttpResponseRedirect('/login/')
+
+    if request.method=="POST":
+        Post.objects.filter(id=request.POST.get('id_to_delete','')).delete()
+        return redirect('dashbord-home')
 
     return render(request,'blog/dashbord.html',{
         'work':dd,
@@ -276,20 +280,20 @@ def report(request,report):
         'j':j
     })
 
-@login_required
-def playlist(request):
+# @login_required
+# def playlist(request):
     
-    if request.method=="POST":
-        order = request.POST.get('c_check', None)
-        if order=='Edit':
-            print('edit')
-        else:
-            print('remove')
+#     if request.method=="POST":
+#         order = request.POST.get('c_check', None)
+#         if order=='Edit':
+#             print('edit')
+#         else:
+#             print('remove')
 
-    return render(request,'blog/playlist.html',{
-        'work':request.session['WORK_DATA'],
-        'db':Post.objects.filter(author=request.user.id)
-    })
+#     return render(request,'blog/playlist.html',{
+#         'work':request.session['WORK_DATA'],
+#         'db':Post.objects.filter(author=request.user.id)
+#     })
 
 @login_required
 def select_report(request):
@@ -350,9 +354,12 @@ def create_playlist(request):
             x=int(every)
             if isinstance(x, int):
                 pass
+            if at=="":
+                at=datetime.now().strftime("%H:%M")
             for i in email.split(","):
                 l.append(allowed_file(i))
             if True in l:   
+                # print(at,format)
                 f=Post(title=title,delivery=",".join(email.split(",")),format=format,at=at,every=every,reccurence=reccurecy,url_of_reports=",".join(url),author=request.user)
                 f.save()
 

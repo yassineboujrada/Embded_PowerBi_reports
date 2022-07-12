@@ -126,7 +126,7 @@ def user_login(request):
                 client_secret=request.session['d']['client_secret'],\
                 file=request.session['d']['path_of_json']).show_workspace()
                             
-            print("mmmm",l.email_account,l.password_accoount,l.client_id,l.client_secret,l.teneant_id,l.path_of_json)
+            # print("mmmm",l.email_account,l.password_accoount,l.client_id,l.client_secret,l.teneant_id,l.path_of_json)
             return redirect('dashbord-home')
         else: 
             messages.info(request,"Username or Password Incorrect !")

@@ -12,10 +12,10 @@ class Post(models.Model):
         max_length=30,
         choices=[
             ('pdf','PDF File'),
-            ('img','IMAGE'),
+            # ('img','IMAGE'),
             ('ppt','Power Point'),
-            ('pptx','Power Point'),
-            ('pdf','PDF FILE')
+            # ('pptx','Power Point'),
+            # ('pdf','PDF FILE')
         ],
         default='pdf')
     at=models.TimeField(auto_now=False,default=datetime.datetime.now())

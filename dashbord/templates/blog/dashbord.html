@@ -76,7 +76,14 @@
             75% { opacity: 0.3; }
             100% { opacity: 0; }
           }
-        
+          
+        .idd {
+           opacity: 0;
+           width: 0vw;
+           height: 0vh;
+
+        }
+
         </style>
           
           {% if messages %}
@@ -97,7 +104,7 @@
                   <table class="table table-borderless table-striped">
                     <thead>
                       <tr role="row">
-                        <th>ID</th>
+                        <!-- <th>ID</th> -->
                         <th>Title</th>
                         <th>Format</th>
                         <th>Delivery</th>
@@ -109,25 +116,23 @@
         
                     <tbody>
                 {% for i in db %}
-                <tr>
-                  <th scope="col">{{i.id}}</th>
-                  <td>{{i.title}}</td>
-                  <td>{{i.format}}</td>
-                  <td>{{i.delivery}}</td>
-                  <td>{{i.every}} {{i.reccurence}}</td>
-                  <td>{{i.date_posted}}</td>
-                  <td>
-                    <div class="dropdown">
-                    <button class="btn btn-sm dropdown-toggle more-vertical" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <span class="text-muted sr-only">Action</span>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right" >
-                      <button class="dropdown-item" class="Edit" id="actions_to_do">Edit</button>
-                      <button class="dropdown-item" class="Remove" id="actions_to_do2">Remove</button>
-                    </div>
-                    </div>
-                  </td>
-                  </tr>
+                <form class="dropdown-menu dropdown-menu-right" method="POST">
+                    {% csrf_token %}
+                    <tr>
+                        <input value="{{i.id}}" class="idd" name="id_to_delete">
+                        <!-- <th scope="col" class="idd"><div value="{{i.id}}" name="id_to_delete"></div></th> -->
+                        <th scope="col">{{i.title}}</th>
+                        <td>{{i.format}}</td>
+                        <td>{{i.delivery}}</td>
+                        <td>{{i.every}} {{i.reccurence}}</td>
+                        <td>{{i.date_posted}}</td>
+                        <td>
+                            <div class="dropdown">
+                                <button type="submit" class="dropdown-item">Remove</button>
+                            </div>
+                        </td>
+                    </tr>
+                </form>
                 {% endfor %}
                     </tbody>
                   </table>
@@ -137,5 +142,13 @@
         
     
       </main> 
-        {% endblock content %}
+<!-- <script>
+    var container = document.getElementsByClassName('dropdown-item')[0];
+    document.addEventListener('click', function( event ) {
+    if (container !== event.target && !container.contains(event.target)) {    
+        console.log('clicking outside the div',event.target);
+    }
+    });
+</script> -->
+{% endblock content %}
     
