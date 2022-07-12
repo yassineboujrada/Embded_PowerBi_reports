@@ -1,0 +1,128 @@
+
+    <style>
+      body{
+        background: #FFE000;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #799F0C, #FFE000);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #799F0C, #FFE000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      .conponenet{
+        height: 75vh;
+        /* display: flex;
+        align-items: center;
+        justify-content: flex-start; */
+        padding-top: 9%;
+        padding-left: 13%;
+      }
+      .description{
+        height: 55%;
+        width: 30%;
+        color: #4A00E0;
+        font-size: 30px;
+        font-family: 'Big Caslon';
+        line-height: 60px;
+        /* text-shadow: 1px 1px 2px black; */
+      }
+      .btn_onbored{
+        border-radius: 10px;
+        height: 7vh;
+        width: 10vw;
+        background: #c94b4b;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #4b134f, #c94b4b);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #4b134f, #c94b4b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: aliceblue;
+        font-size: 15px;
+        border: none;
+      }
+      .btn_div{
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    </style>
+    
+    
+    {% load static %}
+
+    <div class="conponenet">
+      <div class="description">
+        First, you need to go to this link below to set up a dev environment and start embedding analytics for the application
+      </div><br><br>
+      <div class="btn_div">
+        <button class="btn_onbored">click me</button>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector(".btn_onbored").addEventListener('click',()=>{
+        window.open(String('https://app.powerbi.com/embedsetup/AppOwnsData'))
+        window.location.href="/steps_for_register_two/"
+      })
+    </script>
+    <!-- <div>Registration Form</div> -->
+    
+    
+    <!-- <form class="form" method="POST" action=""> 
+        {% csrf_token %}
+      
+      <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        
+        <div
+          class="progress-step progress-step-active"
+          data-title="Embedding BI"
+        ></div>
+        <div class="progress-step" data-title="Azure Portal"></div>
+        <div class="progress-step" data-title="Get informations"></div>
+      </div>
+
+      <div class="form-step form-step-active">
+        <div class="input-group">
+          <div class="first_link" style="padding: 0.65rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 16px; border: none;">
+            First, you need to go to this link below to set up a dev environment and start embedding analytics for the application
+          </div><br>
+          <div class="first_link"><div class="link">https://app.powerbi.com/embedsetup/AppOwnsData</div><button class="btn_onbored">click me</button></div>
+        </div>
+
+        <div class="">
+          <a href="#azure_validate" class="btn btn-next width-50 ml-auto">Next</a>
+        </div>
+      </div>
+
+
+      <div class="form-step" id="azure_validate">
+        <div class="input-group">
+          <div class="first_link" style="padding: 0.65rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 16px; border: none;">
+            After finishing setting up a dev environment, now we open this link to the app registrations of the azure portal follow next video
+          </div><br>
+          <div class="first_link" style="display: flex; align-items:center; justify-content:center;border:none;"><button class="btn_onbored"style="width:70%;" onclick="window.open('https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/ApplicationsListBlade')">App registrations for azure portal</button></div>
+        </div><br>
+
+        <div class="btns-group">
+            <a href="#" class="btn btn-prev">Previous</a>
+            <a href="#follow_steps" class="btn btn-next width-50 ml-auto">Next</a>
+        </div>
+      </div>
+
+
+      <div class="form-step" id="follow_steps">
+        
+        <video width="400" controls>
+            <source src="{% static 'blog/logos/app_tutoriol.mp4' %}" type="video/mp4">
+            <source src="{% static 'blog/logos/app_tutoriol.ogg' %}" type="video/ogg">
+            Your browser does not support HTML video.
+          </video>
+        
+        <div class="btns-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <input type="submit" value="Submit" class="btn" />
+        </div>
+      </div>
+
+    </form>
+
+
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}" />
+    <script src="{% static 'blog/js/script.js' %}" defer></script> -->
+  <!-- </body>
+</html> -->

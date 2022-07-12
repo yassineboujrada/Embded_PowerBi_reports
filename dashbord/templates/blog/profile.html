@@ -1,0 +1,83 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+  .cap{
+      color: cornflowerblue;
+  }
+
+</style>
+
+<main role="main" class="main-content" style="padding: 0.2rem;">
+  <div class="container py-5 h-100" style="display: flex; align-items:center; justify-content:center;">
+        <div class="card mb-3 vh-80" style="border-radius: .5rem; width: 59vw; height: 74vh; ">
+          <form action="" method="POST">
+            {% csrf_token %}
+            <div class="row g-0">
+              <div class="col-md-4 gradient-custom text-center text-white"
+                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                <img src="https://media.istockphoto.com/vectors/user-icon-flat-isolated-on-white-background-user-symbol-vector-vector-id1300845620?k=20&m=1300845620&s=612x612&w=0&h=f4XTZDAv7NPuZbG0habSpU0sNgECM0X7nbKzTUta3n8="
+                  alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                  <h5 class="text-secondary">{{ user.username }}</h5><br>
+                <p class="text-secondary" style="font-size: small;">Tenant ID <br><span class="text-primary">{{tenant}}</span></p>
+                
+                <button type="submit" class="btn btn-md btn-secondary my-3 ">Edit profile</button>
+              </div>
+              <div class="col-md-8">
+                <br>
+                <div class="card-body p-4">
+                  <h6>Information</h6>
+                  <hr class="mt-0 mb-4">
+                  <div class="row pt-1">
+                    
+                    <div class="col-6 mb-3">
+                      <h6>Username</h6>
+                      <p class="text-muted">
+                        <!-- {{ user.username }}  -->
+                        {{form_up.username}}
+                      </p>
+                    </div>
+                    <div class="col-6 mb-3">
+                      <h6>Email</h6>
+                      <p class="text-muted">
+                        {{ user.email }}
+                        <!-- {{form_up.email}} -->
+                      </p>
+                    </div>
+                  </div>
+
+                  <h6>PowerBI Account</h6>
+
+                  <hr class="mt-0 mb-4">
+
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3">
+                      <h6>Client_ID</h6>
+                      <p class="text-muted">{{key}}</p>
+                    </div>
+
+                    <div class="col-6 mb-3">
+                      <h6>Account Type</h6>
+                      <p class="text-muted">{{acc_type}}</p>
+                    </div>
+                    <div class="col-6 mb-3">
+                      <h6>Capacities</h6>
+                      {% for e in capaities %}
+                        <p class="text-muted"><span class="cap">ID : </span>{{e.id}}</p>
+                        <p class="text-muted"><span class="cap">displayName : </span>{{e.displayName}}</p>
+                        <p class="text-muted"><span class="cap">state : </span>{{e.state}}</p>
+                      {% endfor %}
+                    </div><br>
+                  </div>
+
+              </div>
+            </div>
+          <!-- </div>
+        </div> -->
+      </form>
+      </div>
+    </div>
+  <!-- </section> -->
+</main>
+{% endblock content %}

@@ -1,8 +1,50 @@
-{% extends "blog/base.html" %}
-{% block content %}
 {% load static %}
-<main role="main" class="main-content">
+<link rel="stylesheet" href="{% static 'blog/css/app-light.css' %}" id="lightTheme">
+<!-- Icons CSS -->
+<link rel="stylesheet" href="{% static 'blog/css/feather.css' %}">
+<body>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+	.message_non_valid{
+		height: 7vh; 
+		font-size: 17px; 
+		display:flex; 
+		justify-content: center; 
+		align-items: center; 
+		color: red;
+		visibility: visible;
+		animation: move 5s;
+		-webkit-animation: move 5s infinite;
+		-webkit-animation-iteration-count: 1;
+		-webkit-animation-fill-mode: forwards;
+	}
+
+	@-webkit-keyframes move{
+		0% { opacity: 1; }
+		15% { opacity: 0.7; }
+		50% { opacity: 0.7; }
+		75% { opacity: 0.3; }
+		100% { opacity: 0; }
+	}
+
+</style>
+
+<div role="main" class="main-content" style="width: 70vw;">
     <legend class="border-bottom mb-4">New Playlist</legend>
+
+    {% if messages %}
+			{% for message in messages %}
+				<div class="message_non_valid">
+					{{ message }}
+				</div>
+			{% endfor %}
+	{% endif %}
+
     <div id="form_content">
         <div class="col-12 col-lg-10 col-xl-8">
         <form method='POST' action=''>
@@ -20,39 +62,50 @@
             </div>
             
             <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputCompany5">format</label>
-                    <select id="inputState5" class="form-control" name="format_file">
-                        <option selected="">PDF File</option>
-                        <option>Image</option>
-                    </select>
-                </div>
-
                 <div class="form-group col-md-2">
                     <label for="inputZip5">Every</label>
-                    <input type="text" class="form-control" id="inputZip5" placeholder="" name="every">
+                    <input type="text" class="form-control" id="inputZip5" name="every">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputState5">Reccurence</label>
                     <select id="inputState5" class="form-control" name="reccur_day">
-                        <option selected="">Minutes</option>
-                        <option>Day</option>
-                        <option>Week</option>
-                        <option>Month</option>
-                        <option>Years</option>
+                        <option selected="minutes">Minutes</option>
+                        <option value="hour">Hour</option>
+                        <option value="day">Day</option>
+                        <option value="week">Week</option>
+                        <option value="month">Month</option>
+                        <option value="year">Years</option>
                     </select>
                 </div>
             </div>
+
+            <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCompany5">format</label>
+                        <select id="inputState5" class="form-control" name="format_file">
+                            <option selected="pdf">PDF File</option>
+                            <option value="img">Image</option>
+                            <option value="pptx">Power Point FILE</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <label for="inputZip5">At</label>
+                        <input type="time" class="form-control" id="inputZip5" name="at">
+                    </div>
+            </div>
+            
+
             <br><br>
             <div style="display: flex; align-items:center; justify-content:space-evenly;">
                 <a class="btn btn-danger" style="color :#fff;" href="{% url 'dashbord-create-report' %}" id="cancel">Back</a>
-                <button type="submit" class="btn btn-primary">Create Now</button>
+                <button type="submit" class="btn btn-primary" id="submit_btn_form">Create Now</button>
             </div>
 
         </form>
         </div>
     </div>
-</main>
+</div>
 
 <style>
     #form_content{
@@ -62,4 +115,4 @@
     }
 </style>
         
-{% endblock content %}
+</body>

@@ -32,12 +32,15 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'dashbord.apps.DashbordConfig',
+    'user_login.apps.UserLoginConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'dashbord.models.Post',
+    # 'dashbord.Power_bi_functions',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +125,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL='dashbord-home'
+
+LOGIN_URL='login'

@@ -18,182 +18,44 @@ from powerbi.client import PowerBiClient
 # from scrapingbee import ScrapingBeeClient
 import img2pdf
 import schedule
-from pyrebase import pyrebase
-import bcrypt
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
-
-CONFIG_DB={
-    'apiKey': "AIzaSyCPeLozDHk6Sn2_KGlqZA_YWdrQQBTNNnc",
-    'authDomain': "db-awelk.firebaseapp.com",
-    'databaseURL': "https://db-awelk-default-rtdb.firebaseio.com",
-    'projectId': "db-awelk",
-    'storageBucket': "db-awelk.appspot.com",
-    'messagingSenderId': "37231178359",
-    'appId': "1:37231178359:web:b4e5fae6e61555dce7cc72",
-    'measurementId': "G-VX1NF3YBG7"
-}
-firebase=pyrebase.initialize_app(CONFIG_DB)
-
-db=firebase.database()
-
-# charities_d = {
-#     "gr6": {
-#         "emails": ['test@gmail.com'],
-#         "file_path": './files/multi_report.pdf',
-#         'name_of_reportBI':'multi_report',
-#         'perids':'2 Day',
-#         "subject":'idk',
-#         'time':'10:42'
-#     },
-#     "gr7": {
-#         "emails": ['test2@gmail.com'],
-#         "file_path": './files/multi_report.pdf',
-#         'name_of_reportBI':'multi_report',
-#         'perids':'2 Day',
-#         "subject":'idk',
-#         'time':'10:42'
-#     },
-#     # "gr5": {
-#     #     "emails": ['test22@gmail.com'],
-#     #     "file_path": './files/test3.pdf',
-#     #     'name_of_reportBI':'test3',
-#     #     'perids':'3 Day',
-#     #     "subject":'idk 2',
-#     #     'time':'11:42'
-#     # },
-# }
-# db.child("send_email_informations").child("-N3YnEPzaI_pelpacMIc").push(charities_d)
-# db.child("send_email_informations").child("-N3YnEPzaI_pelpacMIc").remove("gr6")
-
-def search_about(collection,ref,indice,key):
-    # if indice =="":
-    #     all_data=db.child(collection).child(ref).get()
-    #     for data in all_data.each():
-            
-    # else:
-    if key=="":
-        all_data=db.child(collection).child(ref).get()
-        for data in all_data.each():
-            if data.val()['email'].lower()==indice.lower():
-                return True
-            else:
-                return False
-
-    else:
-        all_data=db.child(collection).child(ref).get()
-        for data in all_data.each():
-            if data.val()['email'].lower()==indice.lower():
-                data.val()['password']=bcrypt.hashpw(bytes(data.val()['password'], 'utf-8'), key)
-                return data.val()
-            else:
-                return None
-
-def all_data(collection,child_ref):
-    keys,values=[],[]
-    data=db.child(collection).get()
-    for d in data.each():
-        for key in d.val():
-            keys.append(key)
-            d.val()[key]['emails']="  ".join(d.val()[key]['emails'])
-            values.append(d.val()[key])
-    return keys,values
-
-def change(indice,n):
-    all_data=db.child("User").get()
-    for data in all_data.each():
-        for i in data.val():
-            if data.val()[i]['email'].lower()==indice.lower():
-                db.child("User").child("-N2hHzN_G51X1PurUwyB").child(i).update({"password":n})
-
-def drop():
-    # from firebase_admin import db as D
-    all_data=db.child("send_email_informations").get()
-    # print(all_data.child())
-    for data in all_data.each():
-        id_=data.key()
-        print(id_)
-        for i in data.val():
-            print(i)
-    # ref = db.reference('send_email_informations')
-
-    # # Read the data at the posts reference (this is a blocking operation)
-    # print(ref.get())
-
-    # db.child("send_email_informations").remove("gr3")
-def add(email,path,name_repport_bi,per,sub,time):
-    nb=1
-    all_data=db.child("send_email_informations").get()
-    for data in all_data.each():
-        id_=data.key()
-        nb += len(data.val())
+import os
+import configparser
 
 
-    db.child("send_email_informations").push(
-        {
-        "gr"+str(nb) : {
-            "emails": list(email),
-            "file_path": path,
-            'name_of_reportBI': name_repport_bi,
-            'perids':per,
-            "subject":sub,
-            'time':time
-        }}
-    )
-
-    return True
 
 class Authentification_for_PowerBI:
-    def __init__(self):
+    def __init__(self,client_id,user,passwd,tenant,client_secret,file):
         
-        self.CLIENT_ID='5ddb532c-2735-4570-adc2-32eacfd30068'
-        self.username="yassineboujrada@datastory453.onmicrosoft.com"
-        self.password="yassine@2002"
-        self.TENANT_ID='a23b80fb-03cf-48e7-b7ea-4a9094cff16c'
+        self.CLIENT_ID=client_id #'0d7afb91-f438-4784-825e-85f7ea7adbb6'
+        self.username=user#"user2userweb@datastory197.onmicrosoft.com"
+        self.password=passwd#"yassine@2002"
+        self.TENANT_ID=tenant#'33b84381-a046-421b-9556-0092f27cc54e'
         self.AUTHORITY_URL = 'https://login.microsoftonline.com/'+self.TENANT_ID
         self.SCOPE = ["https://analysis.windows.net/powerbi/api/.default"]
         self.URL_TO_GET_GROUPS = 'https://api.powerbi.com/v1.0/myorg/groups'
-
+        self.file=file
+        
+        print(client_id,user,passwd,tenant,client_secret,file)
+        
         self.CLIENT_POWER_BI = PowerBiClient(
-            client_id='5ddb532c-2735-4570-adc2-32eacfd30068',
-            client_secret='L6h8Q~Rsq6lSqdrnmHE-oqKxh7khYO~lkvT6tcAX',
+            client_id=self.CLIENT_ID,
+            client_secret=client_secret,#'v7C8Q~39X~uzl3oMntvzUbufkPCBcGokof8iYaf9',
             scope=['https://analysis.windows.net/powerbi/api/.default'],
             redirect_uri="https://localhost/redirect",
-            credentials='power_bi_state.jsonc'
+            credentials=self.file
         )
-
+        # print(self.file)
         self.reports_service = self.CLIENT_POWER_BI.reports()
         
     def get_my_workspace(self):
         return self.reports_service.get_reports()
 
-    # def get_pages_number(self,WORK_ID,REPORT_ID):
-    #     return self.reports_service.get_group_pages(
-    #             group_id=WORK_ID,
-    #             report_id=REPORT_ID
-    #         )
-
     def get_tenant(self):
         return str(self.TENANT_ID)
-
-    # def download_pbi(self,GROUP_ID,REPORT_ID,REPORT_NAME):
-    #     my_report_content = self.reports_service.export_group_report(
-    #         group_id=GROUP_ID,
-    #         report_id=REPORT_ID
-    #     )
-
-    #     with open(file=f'{REPORT_NAME}.pbix', mode='wb+') as power_bi_file:
-    #         power_bi_file.write(my_report_content)
-
-    # def export_to_pdf(self,REPORT_ID,REPORT_NAME):
-    #     my_report_content = self.reports_service.export_to_file(
-    #         report_id=REPORT_ID,
-    #         file_format=ExportFileFormats.Csv
-    #     )
-    #     with open(file=f'{REPORT_NAME}.csv', mode='wb+') as power_bi_file:
-    #         power_bi_file.write(my_report_content)
 
     def get_workspace_informations(self):
         client_data = msal.PublicClientApplication(self.CLIENT_ID, authority=self.AUTHORITY_URL)
@@ -231,7 +93,7 @@ class Authentification_for_PowerBI:
             for _ in self.get_report_from_workspace(i[1])['value']:
                 _['embedUrl']+=f'&autoAuth=true&ctid={self.get_tenant()}'
                 _['webUrl']+='/ReportSection'
-                print("########\n",_['embedUrl'],"############\n")
+                # print("########\n",_['embedUrl'],"############\n")
 
             l.append([i[0],self.get_report_from_workspace(i[1])])
             nb+=len([_['name'] for _ in self.get_report_from_workspace(i[1])['value']])
@@ -239,148 +101,110 @@ class Authentification_for_PowerBI:
         nb+=len(kk)
         return [l,nb]
         
-    # def get_length_report(self):
-    #     print("######### ",self.all_report())
-    #     return len(self.all_report())
-    #     # return report_out
-
-    # def nwita(self):
-    #     url="http://192.168.1.46:3000/"
-    #     api="9IG2PK0A6O7NV7PNGQYOIURT4IMKW0U0TG5WCHJ6BJ48XM18GK95HMA6TBYXF9KGL75TKY1ZOL0GPDVW"
-    #     client = ScrapingBeeClient(api_key=api)
-    #     response = client.get(
-    #         url,
-    #         # 'http://192.168.0.192:3000/dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/c4cabace-7684-47e3-b2f3-9e183ae3322e', # Demo link
-    #         params={
-    #             'screenshot': True, # Take a full screenshot of the page
-    #         }
-    #     )
-    #     if response.ok:
-    #         with open("./screenshot.png", "wb") as f:
-    #             f.write(response.content)
-    #     else:
-    #         print(response.content)
-
-# def screen_not_kidding(url_info):
-#     chrome_options = Options() #
-#     chrome_options.add_argument('--headless')
-
-#     chrome_options.add_argument("--window-size=1920x1080")
-#     driver = webdriver.Chrome(options=chrome_options, executable_path="C:/Users/yassine/Downloads/chromedriver_win32/chromedriver.exe")
-#     # service object
-#     driver.get(url_info)
-#     # driver.get("https://app.powerbi.com/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/e9fde765-f95d-424a-b879-f2f0a89c171f/ReportSection")
-#     # driver.get("http://127.0.0.1:3000/dashbord/d72eff1f-51d2-4e98-b093-fddce847145d/e9fde765-f95d-424a-b879-f2f0a89c171f")
-#     # driver.find_element_by_tag_name("iframe").click()
-#     time.sleep(6)
-#     driver.find_element_by_id('email').send_keys("yassineboujrada@datastory453.onmicrosoft.com")
-#     driver.find_element_by_id('submitBtn').click()
-
-#     l=WebDriverWait(driver=driver, timeout=10).until(
-#         lambda x: x.execute_script("return document.readyState === 'complete'")
-#     )
-#     if l:
-#         time.sleep(6)
-#         driver.find_element_by_name('passwd').send_keys("yassine@2002")
-#         driver.find_element_by_id('idSIButton9').click()
-#         g=WebDriverWait(driver=driver, timeout=10).until(
-#             lambda x: x.execute_script("return document.readyState === 'complete'")
-#         )
-#         if g:
-#             time.sleep(6)
-#             driver.find_element_by_id('idSIButton9').click()
-#             h=WebDriverWait(driver=driver, timeout=10).until(
-#                 lambda x: x.execute_script("return document.readyState === 'complete'")
-#             )
-#             if h:
-#                 file=[]
-#                 print('mmmm')
-#                 time.sleep(6)
-#                 _=0
-#                 path_pic=f'./files/page{_}.png'
-#                 driver.get_screenshot_as_file(path_pic)
-#                 file.append(path_pic)
-#     driver.close()
-#     return file
 
 import os
-def screen_matidhekech(url_link):
-    chrome_options = Options() #
-    chrome_options.add_argument('--headless')
+def screen_matidhekech(url_link,email,passwd):
+    # for e in url_link.split(','):
+    kkk=[]
+    for e in range(len(url_link.split(','))):
+        url_link.split(',')[e]+='/ReportSection'
+        print(url_link.split(',')[e])
+        print("path",os.path.abspath(os.getcwd()))
+        chrome_options = Options() #
+        chrome_options.add_argument('--headless')
 
-    chrome_options.add_argument("--window-size=1920x1080")
-    driver = webdriver.Chrome(options=chrome_options, executable_path="C:/Users/yassine/Downloads/chromedriver_win32/chromedriver.exe")
-    # service object
-    driver.get(url_link)
-    time.sleep(6)
-    driver.find_element_by_id('email').send_keys("yassineboujrada@datastory453.onmicrosoft.com")
-    driver.find_element_by_id('submitBtn').click()
-
-    l=WebDriverWait(driver=driver, timeout=10).until(
-        lambda x: x.execute_script("return document.readyState === 'complete'")
-    )
-    if l:
+        chrome_options.add_argument("--window-size=1920x1080")
+        driver = webdriver.Chrome(options=chrome_options, executable_path="C:/Users/yassine/Downloads/chromedriver_win32/chromedriver.exe")
+        # service object
+        driver.get(url_link.split(',')[e])
         time.sleep(6)
-        driver.find_element_by_name('passwd').send_keys("yassine@2002")
-        driver.find_element_by_id('idSIButton9').click()
-        g=WebDriverWait(driver=driver, timeout=12).until(
+        driver.find_element_by_id('email').send_keys(email)
+        driver.find_element_by_id('submitBtn').click()
+
+        l=WebDriverWait(driver=driver, timeout=10).until(
             lambda x: x.execute_script("return document.readyState === 'complete'")
         )
-        if g:
-            time.sleep(6)
-            driver.find_element_by_id('idSIButton9').click()
-            h=WebDriverWait(driver=driver, timeout=10).until(
-                lambda x: x.execute_script("return document.readyState === 'complete'")
-            )
-            if h:
-                print('mmmm')
+        if l:
+            try:
                 time.sleep(6)
-                file=[]
-                try:
-                    element = driver.find_element_by_class_name("displayAreaViewport")
+                driver.find_element_by_name('passwd').send_keys(passwd)
+                driver.find_element_by_id('idSIButton9').click()
+                g=WebDriverWait(driver=driver, timeout=12).until(
+                    lambda x: x.execute_script("return document.readyState === 'complete'")
+                )
+            except:
+                time.sleep(9)
+                driver.find_element_by_name('passwd').send_keys("yassine@2002")
+                # driver.find_element_by_tag_name('input').send_keys("yassine@2002")
+                driver.find_element_by_id('idSIButton9').click()
+                g=WebDriverWait(driver=driver, timeout=12).until(
+                    lambda x: x.execute_script("return document.readyState === 'complete'")
+                )
+            if g:
+                time.sleep(6)
+                driver.find_element_by_id('idSIButton9').click()
+                h=WebDriverWait(driver=driver, timeout=10).until(
+                    lambda x: x.execute_script("return document.readyState === 'complete'")
+                )
+                if h:
+                    print('mmmm')
+                    time.sleep(6)
+                    file=[]
                     try:
-                        pages_data=driver.find_element_by_tag_name('mat-list')
-                        print('oh yeah')
-                        items = pages_data.find_elements_by_tag_name("li")
-                        i=0
-                        for item in items:
-                            item.click()
-                            hhhhh=WebDriverWait(driver=driver, timeout=10).until(
-                                lambda x: x.execute_script("return document.readyState === 'complete'")
-                            )
-                            if hhhhh:
-                                time.sleep(6)
-                                i+=1
-                                path_pic=f'{os.path.abspath(os.getcwd())}\\dashbord\\static\\blog\\files\\page{i}.png'
-                                element.screenshot(path_pic)
-                                file.append(path_pic)
-                    except NoSuchElementException:
-                        print('mmmm1')
-                        path_pic=f'{os.path.abspath(os.getcwd())}\\dashbord\\static\\blog\\files\\page{0}.png'
-                        element.screenshot(path_pic)
-                        return path_pic
+                        element = driver.find_element_by_class_name("displayAreaViewport")
+                        try:
+                            pages_data=driver.find_element_by_tag_name('mat-list')
+                            print('oh yeah')
+                            items = pages_data.find_elements_by_tag_name("li")
+                            i=0
+                            for item in items:
+                                item.click()
+                                hhhhh=WebDriverWait(driver=driver, timeout=10).until(
+                                    lambda x: x.execute_script("return document.readyState === 'complete'")
+                                )
+                                if hhhhh:
+                                    time.sleep(6)
+                                    i+=1
+                                    path_pic=f'{os.path.abspath(os.getcwd())}\\dashbord\\static\\blog\\files\\page{i}{e}.png'
+                                    element.screenshot(path_pic)
+                                    file.append(path_pic)
+                            kkk.append(file)
 
-                except NoSuchElementException:
-                    print('ina lilah')
+                        except NoSuchElementException:
+                            print('mmmm1')
+                            path_pic=f'{os.path.abspath(os.getcwd())}\\dashbord\\static\\blog\\files\\page{0}{e}.png'
+                            element.screenshot(path_pic)
+                            # return path_pic
+                            kkk.append(path_pic)
+
+                    except NoSuchElementException:
+                        print('ina lilah')
     driver.close()
-    return file
+    return kkk
+
+# url="https://app.powerbi.com/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/d111e6c2-4fed-48e5-8e32-78c06ffeb742"
+# gg=screen_matidhekech(url)
+# print(gg)
 
 def transform_file_to_pdf(name_folder,pict_list):
     pdf_name_path=f'{os.path.abspath(os.getcwd())}\\dashbord\\static\\blog\\files\\'+name_folder+".pdf"
+    print(pdf_name_path)
     with open(pdf_name_path,"wb") as f:
         f.write(img2pdf.convert(pict_list))
     return pdf_name_path
 
+# transform_file_to_pdf("multiple things",gg)
 ############################################################  envoyer pbi report ou pdf a une email 
 def send_pdf_file(recieve,subject,path,mesg):
-    k=recieve
+    k=recieve.split(",")
+    print(path)
     if mesg=="":
         mesg="Power BI report"
-        
+
     for i in k:
         print("1",i)
         body = f'{mesg},\npiece jointe:'
-        sender,password = 'centre.declaration@gmail.com','yassine@2002'
+        sender,password = 'centre.declaration@gmail.com','rcrtbuvmjyxkofcj'
         
         message = MIMEMultipart()
         message['From'] = sender
@@ -409,7 +233,10 @@ def send_pdf_file(recieve,subject,path,mesg):
         session.sendmail(sender, i, text)
         session.quit()
         print('Mail Sent')
+    
     return True
+
+# send_pdf_file("yassine.boujrada@gmail.com","mmm",os.path.abspath(os.getcwd())+"/static/blog/files/multiple things.pdf","hahowa")
 
 def verif_msg(randnbr,email):
     server = smtplib.SMTP("smtp.gmail.com",587)
@@ -424,28 +251,48 @@ def verif_msg(randnbr,email):
     server.sendmail('centre.declaration@gmail.com',email,msg.as_string())
     server.quit()
 
-def main(data_returned):
-    for i in data_returned:
-        email=i[0]
-        path_pd=i[1]
-        period=i[2]
-        subj=i[3]
-        duree=i[4]
-        schedule.every(10).seconds.do(send_pdf_file,email,subj,path_pd)
 
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
 
-def ancienne_data():
-    _,d=all_data("send_email_informations","-N2hHzKSrK4id3pKLCgF")
-    l=[]
-    for i in d:
-        print(i)
-        email=i['emails']
-        path_pd=i['file_path']
-        period=i['perids']
-        subj=i['subject']
-        duree=i['time']
-        l.append([email,path_pd,period,subj,duree])
-    return l
+def add_new_user(super_usr,pw,secre,email,key_id,ten_id):
+    config = configparser.ConfigParser()
+    cc=email.split('@')[0]
+    config.add_section(cc)
+    config.set(cc, 'email', email)
+    config.set(cc, 'passwd', pw)
+    config.set(cc, 'cle_secret', secre)
+    config.set(cc, 'cle_id', key_id)
+    config.set(cc, 'ten', ten_id)
+    with open(os.getcwd()+"\\dashbord\\__pycache__\\configfile.ini", 'w') as configfile:
+        config.write(configfile)
+
+    msg = EmailMessage()
+    msg['Subject'] = 'New notification to add user'
+    msg['From'] = 'centre.declaration@gmail.com' 
+    msg['To'] = super_usr
+
+    msg.set_content('''
+    <!DOCTYPE html>
+    <html>
+        <body>
+            <div style="background-color:#eee;padding:10px 20px;">
+                <h2 style="font-family:Georgia, 'Times New Roman', Times, serif;color#454349;">New Request To Login</h2>
+            </div>
+            <div style="padding:20px 0px">
+                <div style="height: 500px;width:400px">
+                    <div style="text-align:center;">
+                        <h3>Add New User</h3>
+                        <p>We want to declare to you that there's new user want to have access to web</p><br>
+                        <a href="http://127.0.0.1:8000/add_user/?q1='''+cc+'''">Add</a>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>
+    ''', subtype='html')
+
+
+    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+        smtp.login('centre.declaration@gmail.com','rcrtbuvmjyxkofcj') 
+        smtp.send_message(msg)
+
+

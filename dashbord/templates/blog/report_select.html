@@ -1,11 +1,14 @@
-{% extends "blog/base.html" %}
-{% block content %}
+
 {% load static %}
-<main role="main" class="main-content">
+<link rel="stylesheet" href="{% static 'blog/css/app-light.css' %}" id="lightTheme">
+<!-- Icons CSS -->
+<link rel="stylesheet" href="{% static 'blog/css/feather.css' %}">
+<body>
+
+<div role="main" class="main-content" style="width: 85vw;">
     <legend class="border-bottom mb-4">Select Reports To Share</legend>
     <div id="form_content">
-        <!-- <form method='' action=''> -->
-            <!-- {% csrf_token %} -->
+        
             <br>
             <div class="select_dash">
                 <div class="form-row" style=" width: 24%; height: 70vh;">
@@ -13,43 +16,51 @@
         
                         <li class="nav-item dropdown">
                             {% for i,j in all_report %}
-                            <a href="#{{i}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
-                                <i class="fe fe-user fe-16"></i>
-                                <span class="ml-3 item-text">{{i}}</span>
-                            </a>
+                                <a href="#{{i}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
+                                    <i class="fe fe-user fe-16"></i>
+                                    <span class="ml-3 item-text">{{i}}</span>
+                                </a>
                           
                         
-                          <ul class="collapse list-unstyled pl-4 w-100 w-100" id="{{i}}">
-                            {% for k in j.value %}
-                                <li class="nav-item">
-                                    <a class="nav-link pl-3" onclick="show_id_information_of_place_clicked()">
-                                        <span class="ml-1 item-text" id="{{k}}">{{k.name}}</span>
-                                    </a>
-                                </li>
+                                <ul class="collapse list-unstyled pl-4 w-100 w-100" id="{{i}}">
+                                        {% for k in j.value %}
+                                            <li class="nav-item" >
+                                                <a class="nav-link pl-3" style=" display: flex; align-items: center; justify-content: start;">
+                                                    <div class="check_area" id="{{k.id}}" value="{{k}}"></div>
+                                                    <span class="ml-1 item-text">{{k.name}}</span>
+                                                </a>
+                                            </li>
+                                        {% endfor %}
+                                </ul>
                             {% endfor %}
-                          </ul>
-                          {% endfor %}
                         </li>
+
                     </ul>
                 </div>
                 <div style=" width: 65%; height: 70vh;">
                     <div class="form-row" style=" width: 100%; height: 60vh; display: flex; justify-content: center; align-items: center;">
                         <iframe src="" frameborder="0" style="width: 100%; height: 90%;"></iframe>
-                        <!-- <p id="kk"></p> -->
                     </div>
                     <br>
                     <div style="display: flex; align-items:center; justify-content:space-evenly;">
-                        <a class="btn btn-danger" style="color :#fff;" href="{% url 'dashbord-playlist' %}" id="cancel">Cancel</a>
+                        <a class="btn btn-danger" style="color :#fff;" href="{% url 'dashbord-home' %}" id="cancel">Cancel</a>
                         <button type="submit" id="btn_sub" class="btn btn-primary">Next -></button>
                     </div>
                 </div>
             </div>
-        <!-- </form> -->
+            
     </div>
 
-</main>
+</div>
+
 
 <style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .select_dash{
         display: flex;
         justify-content: space-evenly;
@@ -59,48 +70,93 @@
     #form_content{
         height: 76vh;
     }
+    .check_area{
+        border: solid black;
+        width: 13px;
+        height: 13px;
+        border-radius: 5px;
+    }
+    .test{
+        width: 115px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 </style>
 
 <script>
+        var urls_list=[];
+        var reports_list=[];
+        var nb=0
 
-   function show_id_information_of_place_clicked(){
-
-        document.addEventListener('click', function xyz(e){
+        document.addEventListener('click', function search_for_checkbox(e){
             e.preventDefault();
             var target = e.target || event.srcElement;
             var attributes = Array.prototype.slice.call(target.attributes).map(function(i) {
               return String(i.value)
             })
             var my_src=String(attributes).split(',')
-            if(String(my_src[0])==="ml-1 item-text"){
-                var url_web=String(my_src[4]).split("webUrl': '")[1].split("'")[0]
-                var name_report=my_src[3].split("name': '")[1].split("'")[0]
-                document.querySelector('iframe').src=String(my_src[5]).split("embedUrl': '")[1].split("'")[0]+"&autoAuth=true&ctid=a23b80fb-03cf-48e7-b7ea-4a9094cff16c";
+
+            if (my_src[0]==="btn btn-danger"){
+                window.location.href=String(my_src[2])
             }
 
-            document.getElementById('btn_sub').addEventListener("click",e=>{
-                $.ajax({
-                    type : "POST", 
-                    url: "{% url 'dashbord-create-report' %}",
-                    data: {
-                    c_check: String(url_web+","+name_report),
-                    csrfmiddlewaretoken: '{{ csrf_token }}',
-                    dataType: "json",
-                    },
-                    success: function(data){
-                        if(data){
-                            window.location.href="/playlist/create/"
-                        }
-                    },
-                    failure: function() {
-                        
-                    }
             
-                });
-            });
+            if (my_src[0]==="check_area") {
+                
+                document.getElementById(my_src[1]).style.background="red"
+
+                var url_web=String(my_src[5]).split("'webUrl':")[1].trim().split("'")[1]
+                var name_report=my_src[4].split("'name':")[1].trim().split("'")[1]
+                var embd_url=String(my_src[6]).split("'embedUrl':")[1].trim().split("'")[1]+"&autoAuth=true&ctid=a23b80fb-03cf-48e7-b7ea-4a9094cff16c"
+
+                document.querySelector('iframe').src = String(embd_url);
+
+                if (document.getElementById(my_src[1]).style.background ==="red") {
+                    urls_list.push(url_web)
+                    reports_list.push(name_report)
+                    nb+=1
+                }
+                if(nb%2==0 && document.getElementById(my_src[1]).style.background ==="red"){
+                    document.getElementById(my_src[1]).style.background="#fff"
+                    urls_list=urls_list.filter(item => item !== url_web)
+                    reports_list=reports_list.filter(item => item !== name_report)
+                }
+                else{
+                    document.getElementById(my_src[1]).style.background="red"
+                }
+            }  
+            else{
+                nb=0
+            }          
           },true)
 
-        }
+        document.getElementById('btn_sub').addEventListener("click",e=>{
+             $.ajax({
+                        type : "POST", 
+                        url: "{% url 'dashbord-create-report' %}",
+                        data: {
+                        c_check: String([...new Set(urls_list)]+":list:"+[...new Set(reports_list)]),
+                        csrfmiddlewaretoken: '{{ csrf_token }}',
+                        dataType: "json",
+                        },
+                        success: function(data){
+                            if(data.message === "ok"){
+                                window.location.href="/playlist/create/"
+                            }
+                            else{
+                                alert("Select your report");
+                            }
+                        },
+                        failure: function() {
+                            
+                        }
+                
+                    });
+        });
+        
 </script>
+<script src="{% static 'blog/js/jquery.min.js' %}"></script>
+<script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
 
-{% endblock content %}
+</body>
