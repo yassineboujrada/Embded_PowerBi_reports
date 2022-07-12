@@ -12,6 +12,7 @@ from django.contrib.auth.models import User
 from threading import Thread
 import time as time_
 # from .thread import *
+import _thread
 
  # "Minutes","hour"
     # for i in post:
@@ -34,12 +35,13 @@ import time as time_
         #     print("hola")
         # except:
         #     print("aha hamdi")
-
+from django.contrib.auth.hashers import make_password, check_password
         
-def f(title_of_report,who,form,url,every_what,email,passwd):
-    print(every_what)
+def f(title_of_report,who,form,url,every_what,email):
+    
+    print(email,microsoft_account.objects.filter(email_account=email).get().password_accoount)
     # try:
-    k=screen_matidhekech(url,email,passwd)
+    k=screen_matidhekech(url,email,microsoft_account.objects.filter(email_account=email).get().password_accoount)
     print(title_of_report,"=======>",k)
     pdf_path=transform_file_to_pdf(title_of_report,k,form)
     print("file saved"+pdf_path)
@@ -49,49 +51,50 @@ def f(title_of_report,who,form,url,every_what,email,passwd):
     # except :
     #     print("it's just probleme in email")
 
-def minute(title_of_report,who,form,url,every_what,every,email,passwd):
-    
-    schedule.every(int(every)).minutes.do(f,title_of_report,who,form,url,every_what,email,passwd)
+def minute(title_of_report,who,form,url,every_what,every,email):
+    print("minute")
+    # schedule.every(int(every)).minutes.do(f,title_of_report,who,form,url,every_what,email,passwd)
+    schedule.every(5).seconds.do(f,title_of_report,who,form,url,every_what,email)
     while True:
         schedule.run_pending()
         time_.sleep(1)
     
 
-def hour_(title_of_report,who,form,url,every_what,every,email,passwd):
+def hour_(title_of_report,who,form,url,every_what,every,email):
     print(int(every))
-    schedule.every(int(every)).hours.do(f,title_of_report,who,form,url,every_what,email,passwd)
+    schedule.every(int(every)).hours.do(f,title_of_report,who,form,url,every_what,email)
     while True:
         schedule.run_pending()
         time_.sleep(1)
 
-def days(title_of_report,who,form,url,every_what,time,every,email,passwd):
+def days(title_of_report,who,form,url,every_what,time,every,email):
     print(str(time),int(every))
 
-    schedule.every(int(every)).days.at(str(time)).do(f,title_of_report,who,form,url,every_what,email,passwd)
+    schedule.every(int(every)).days.at(str(time)).do(f,title_of_report,who,form,url,every_what,email)
     while True:
         schedule.run_pending()
         time_.sleep(1)
 
-def week_(title_of_report,who,form,url,every_what,time,every,email,passwd):
+def week_(title_of_report,who,form,url,every_what,time,every,email):
     print(str(time),int(every))
 
-    schedule.every(int(every)*7).days.at(str(time)).do(f,title_of_report,who,form,url,every_what,email,passwd)
+    schedule.every(int(every)*7).days.at(str(time)).do(f,title_of_report,who,form,url,every_what,email)
     while True:
         schedule.run_pending()
         time_.sleep(1)
 
-def month_(title_of_report,who,form,url,every_what,time,every,email,passwd):
+def month_(title_of_report,who,form,url,every_what,time,every,email):
     print(str(time),int(every))
 
-    schedule.every(int(every)*30).days.at(str(time)).do(f,title_of_report,who,form,url,every_what,email,passwd)
+    schedule.every(int(every)*30).days.at(str(time)).do(f,title_of_report,who,form,url,every_what,email)
     while True:
         schedule.run_pending()
         time_.sleep(1)
 
-def year_(title_of_report,who,form,url,every_what,time,every,email,passwd):
+def year_(title_of_report,who,form,url,every_what,time,every,email):
     print(str(time),int(every))
 
-    schedule.every(int(every)*365).days.at(str(time)).do(f,title_of_report,who,form,url,every_what,email,passwd)
+    schedule.every(int(every)*365).days.at(str(time)).do(f,title_of_report,who,form,url,every_what,email)
     while True:
         schedule.run_pending()
         time_.sleep(1)
@@ -109,28 +112,33 @@ def main2():
         email,passwd=i.author.email,i.author.password
     
         if every_what == "Minutes":
-            t1=Thread(target=minute,args=(title_of_report,who,form,url,every_what,every,email,passwd))
-            t1.start()
+            # t1=Thread(target=minute,args=(title_of_report,who,form,url,every_what,every,email,passwd))
+            _thread.start_new_thread(minute,(title_of_report,who,form,url,every_what,every,email))
         
         if every_what == "hour":
-            t2=Thread(target=hour_,args=(title_of_report,who,form,url,every_what,every,email,passwd))
-            t2.start()
+            # t2=Thread(target=hour_,args=(title_of_report,who,form,url,every_what,every,email))
+            # t2.start()
+            _thread.start_new_thread(hour_,(title_of_report,who,form,url,every_what,every,email))
             
         if every_what == "day":
-            t3=Thread(target=days,args=(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email,passwd))
-            t3.start()
+            # t3=Thread(target=days,args=(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email))
+            # t3.start()
+            _thread.start_new_thread(days,(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email))
 
         if every_what == "week":
-            t4=Thread(target=week_,args=(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email,passwd))
-            t4.start()
+            # t4=Thread(target=week_,args=(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email))
+            # t4.start()
+            _thread.start_new_thread(week_,(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email))
 
         if every_what == "month":
-            t5=Thread(target=month_,args=(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email,passwd))
-            t5.start()
+            # t5=Thread(target=month_,args=(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email))
+            # t5.start()
+            _thread.start_new_thread(month_,(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email))
 
         if every_what == "year":
-            t6=Thread(target=year_,args=(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email,passwd))
-            t6.start()
+            # t6=Thread(target=year_,args=(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email))
+            # t6.start()
+            _thread.start_new_thread(year_,(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email))
 
 # t = Thread(target=main2)
 # t.start()

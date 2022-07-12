@@ -39,7 +39,7 @@ class Authentification_for_PowerBI:
         self.URL_TO_GET_GROUPS = 'https://api.powerbi.com/v1.0/myorg/groups'
         self.file=file
         
-        # print(client_id,user,passwd,tenant,client_secret,file)
+        print(client_id,user,passwd,tenant,client_secret,file)
         
         self.CLIENT_POWER_BI = PowerBiClient(
             client_id=self.CLIENT_ID,
@@ -116,7 +116,7 @@ def screen_matidhekech(url_link,email,passwd):
         chrome_options.add_argument("--window-size=1920x1080")
         driver = webdriver.Chrome(options=chrome_options, executable_path="C:/Users/yassine/Downloads/chromedriver_win32/chromedriver.exe")
         # service object
-        driver.get(url_link.split(',')[e])
+        driver.get(url_link.split(',')[e]+'/ReportSection')
         time.sleep(6)
         driver.find_element_by_id('email').send_keys(email)
         driver.find_element_by_id('submitBtn').click()
@@ -134,7 +134,7 @@ def screen_matidhekech(url_link,email,passwd):
                 )
             except:
                 time.sleep(9)
-                driver.find_element_by_name('passwd').send_keys("yassine@2002")
+                driver.find_element_by_name('passwd').send_keys(passwd)
                 # driver.find_element_by_tag_name('input').send_keys("yassine@2002")
                 driver.find_element_by_id('idSIButton9').click()
                 g=WebDriverWait(driver=driver, timeout=12).until(
@@ -148,7 +148,7 @@ def screen_matidhekech(url_link,email,passwd):
                 )
                 if h:
                     print('mmmm')
-                    time.sleep(6)
+                    time.sleep(8)
                     file=[]
                     try:
                         element = driver.find_element_by_class_name("displayAreaViewport")
@@ -182,6 +182,9 @@ def screen_matidhekech(url_link,email,passwd):
     driver.close()
     return kkk
 
+# l=screen_matidhekech("https://app.powerbi.com/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe,https://app.powerbi.com/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a","yassineboujrada@datastory453.onmicrosoft.com","yassine@2002")
+# print(l)
+
 from pptx import Presentation
 
 def transform_file_to_pdf(name_folder,pict_list,format):
@@ -194,12 +197,14 @@ def transform_file_to_pdf(name_folder,pict_list,format):
 
     if format=="pptx":
         p = Presentation()
+        ppt_name_path=os.path.abspath(os.getcwd())+"\\dashbord\\static\\blog\\files\\"+name_folder+".pptx"
         ims = pict_list
         blank_slide_layout= p.slide_layouts[6]
         for im in ims:
             slide = p.slides.add_slide(blank_slide_layout)
             slide.shapes.add_picture(im, 0, 0, p.slide_width, p.slide_height)
-        p.save(os.path.abspath(os.getcwd())+"\\static\\blog\\files\\test.pptx")
+        p.save(ppt_name_path)
+        return ppt_name_path
 
 
 # transform_file_to_pdf("multiple things","gg","pptx")
@@ -245,7 +250,7 @@ def send_pdf_file(recieve,subject,path,mesg):
     
     return True
 
-# send_pdf_file("yassine.boujrada@gmail.com","mmm",os.path.abspath(os.getcwd())+"/static/blog/files/multiple things.pdf","hahowa")
+# send_pdf_file("yassine.boujrada@gmail.com","mmm",os.path.abspath(os.getcwd())+"/static/blog/files/test.pptx","hahowa")
 
 def verif_msg(randnbr,email):
     server = smtplib.SMTP("smtp.gmail.com",587)
