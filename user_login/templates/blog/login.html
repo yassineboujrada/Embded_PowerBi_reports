@@ -1,23 +1,11 @@
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'blog/css/simplebar.css'  %}">
-<!-- Fonts CSS -->
-<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="{% static 'blog/css/feather.css'  %}">
-<!-- <link rel="stylesheet" href="{% static 'blog/css/select2.css'  %}">
-<link rel="stylesheet" href="{% static 'blog/css/dropzone.css'  %}">
-<link rel="stylesheet" href="{% static 'blog/css/uppy.min.css'  %}"> -->
 <link rel="stylesheet" href="{% static 'blog/css/jquery.steps.css'  %}">
 <link rel="stylesheet" href="{% static 'blog/css/jquery.timepicker.css'  %}">
-<!-- <link rel="stylesheet" href="{% static 'blog/css/quill.snow.css'  %}"> -->
-
-<!-- App CSS -->
 <link rel="stylesheet" href="{% static 'blog/css/app-light.css' %}" id="lightTheme">
 
 
   <body class="light ">
-    <!-- <div class="wrapper vh-100" style="border: solid;"> -->
       <div class="row align-items-center h-100" style="width: 99%;">
         <form class="col-lg-3 col-md-4 col-10 mx-auto text-center" method="POST">
           {% csrf_token %}
@@ -55,18 +43,13 @@
           <button class="btn btn-lg btn-primary btn-block" type="submit">Login in</button>
           <p class="mt-5 mb-3 text-muted">© <span onclick="location='https://datastory.ma/'">DataStory</span> 2022</p>
         </form>
-      <!-- </div> -->
+        
     </div>
     <script src="{% static 'blog/js/jquery.min.js' %}"></script>
-    <script src="{% static 'blog/js/popper.min.js' %}"></script>
     <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'blog/js/jquery.stickOnScroll.js' %}"></script>
-    <script src="{% static 'blog/js/tinycolor-min.js' %}"></script>
     <script src="{% static 'blog/js/apps.js' %}"></script>
-    <script src="{% static 'blog/js/jquery.mask.min.js' %}"></script>
-    <script src="{% static 'blog/js/jquery.steps.min.js' %}"></script>
-    <script src="{% static 'blog/js/jquery.validate.min.js' %}"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56159088-1"></script>
+
     <script>
       window.dataLayer = window.dataLayer || [];
 
@@ -78,6 +61,6 @@
       gtag('config', 'UA-56159088-1');
     </script>
   </body>
+
 </html>
 </body>
-</html>
