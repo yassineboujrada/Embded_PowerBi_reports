@@ -179,6 +179,10 @@ def user_informations(request):
 def home(request):
     try:
         dd=request.session['WORK_DATA']
+        try:
+            post_taille=Post.objects.filter(author=request.user.id).count()
+        except:
+            post_taille=0
     except KeyError:
         return HttpResponseRedirect('/login/')
 
@@ -188,7 +192,7 @@ def home(request):
 
     return render(request,'blog/dashbord.html',{
         'work':dd,
-        'len_playlist':Post.objects.filter(author=request.user.id).count(),
+        'len_playlist':post_taille,
         'len_report':Authentification_for_PowerBI(
                 client_id=request.session['d']['client_id'],\
                 user=request.session['d']['email'],\
@@ -367,14 +371,16 @@ def create_playlist(request):
             for i in email.split(","):
                 l.append(allowed_file(i))
             if True in l:   
-                # print(at,format)
-                f=Post(title=title,delivery=",".join(email.split(",")),format=format,at=at,every=every,reccurence=reccurecy,url_of_reports=",".join(url),author=request.user)
-                f.save()
-
-                del request.session['names']
-                del request.session['url_web']
+                try:
+                    f=Post(title=title,delivery=",".join(email.split(",")),format=format,at=at,every=every,reccurence=reccurecy,url_of_reports=",".join(url),author=request.user)
+                    f.save()
+                    del request.session['names']
+                    del request.session['url_web']
+                except:
+                    messages.success(request,f'playlist did not saved')
+                    return HttpResponseRedirect('/playlist/create/')
             else:
-                messages.success(request,f'invalid input data')
+                messages.success(request,f'error in email input the acceptable domains are .com and .ma')
                 return HttpResponseRedirect('/playlist/create/')
         except ValueError:
             messages.success(request,f'invalid input data')

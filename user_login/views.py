@@ -7,41 +7,96 @@ import os
 from dashbord.models import microsoft_account
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-# Create your views here.
+import subprocess as sp
 
+def getUrl(file,a):
+    p = sp.run('py '+file+'.py',shell=True, stdout=sp.PIPE,input=a, encoding='ascii')
+    print(p.stdout)
+    if int(p.returncode)==1:
+        return p.stdout.split("your account:")[1].split("Paste")[0]
+    else:
+        return int(p.returncode)
 
 def register_steps(request):    
     return render(request,'blog/steps_to_register.html')
 
-def registre(request):
+def termi(request): 
+    try:
+        initial_login=request.session['log']
+        file_=request.session['file_py_for_redirection']
+    except:
+        return redirect('registre_me')
+
     if request.method=="POST":
-        ####  user information
-        new_user_email=request.POST.get('email')
-        new_user_password=request.POST.get('password')
-        ####  azuer information
-        new_user_client_id=request.POST.get('id_key')
-        new_user_tenant_id=request.POST.get('tenant')
-        new_user_client_secret=request.POST.get('secret_key')
-
-        super_user_email=request.POST.get('email_of_supervise')
-
-        try:
-            Authentification_for_PowerBI(client_id=str(new_user_client_id),user=str(new_user_email),\
-                                passwd=str(new_user_password),tenant=str(new_user_tenant_id),\
-                                client_secret=str(new_user_client_secret),file=str(new_user_email.split('@')[0]))
-                                
+        a=request.POST.get("url_redirect")
+        if getUrl(file_,a) ==0:
             try:
-                add_new_user(super_user_email,str(new_user_password),str(new_user_client_secret),str(new_user_email),str(new_user_client_id),str(new_user_tenant_id))
+                add_new_user(request.session['super_user_email'],str(request.session['new_user_password']),str(request.session['new_user_client_secret']),str(request.session['new_user_email']),str(request.session['new_user_client_id']),str(request.session['new_user_tenant_id']))
                 messages.success(request,"you're request was send it succesffuly")
                 return redirect('login')
             except:
                 print("mesage didnt go")
                 messages.success(request,"You enter invalid email in superuser")
                 return redirect('registre_me')
+    return render(request,'blog/cc.html',{"initial_login":initial_login})
 
-        except :
-            messages.success(request,"Ther's an error")
-            return redirect('registre_me')
+def registre(request):
+    if request.method=="POST":
+        ####  user information
+        request.session['new_user_email']=request.POST.get('email')
+        request.session['new_user_password']=request.POST.get('password')
+        ####  azuer information
+        request.session['new_user_client_id']=request.POST.get('id_key')
+        request.session['new_user_tenant_id']=request.POST.get('tenant')
+        request.session['new_user_client_secret']=request.POST.get('secret_key')
+
+        request.session['super_user_email']=request.POST.get('email_of_supervise')
+        request.session['file_py_for_redirection']=request.session['new_user_email'].split('@')[0].split(".")[0]
+
+        
+        a="""
+import os
+from powerbi.client import PowerBiClient
+class Authentification_for_PowerBI:
+    def __init__(self,client_id,user,passwd,tenant,client_secret,file):
+        self.CLIENT_ID=client_id 
+        self.username=user
+        self.password=passwd
+        self.TENANT_ID=tenant
+        self.AUTHORITY_URL = 'https://login.microsoftonline.com/'+self.TENANT_ID
+        self.SCOPE = ["https://analysis.windows.net/powerbi/api/.default"]
+        self.URL_TO_GET_GROUPS = 'https://api.powerbi.com/v1.0/myorg/groups'
+        self.file=file
+        self.CLIENT_POWER_BI = PowerBiClient(
+            client_id=self.CLIENT_ID,
+            client_secret=client_secret,
+            scope=['https://analysis.windows.net/powerbi/api/.default'],
+            redirect_uri="https://localhost/redirect",
+            credentials=os.getcwd()+"/dashbord/__pycache__/"+self.file
+        )
+        self.reports_service = self.CLIENT_POWER_BI.reports()
+Authentification_for_PowerBI("{}","{}","{}","{}","{}","{}")
+    """.format(str(request.session['new_user_client_id']),str(request.session['new_user_email']),str(request.session['new_user_password']),str(request.session['new_user_tenant_id']),str(request.session['new_user_client_secret']),str(request.session['new_user_email'].split('@')[0]+".jsonc"))
+        
+        f = open(os.getcwd()+"/"+request.session['file_py_for_redirection']+".py", "w")
+        f.write(a)
+        f.close()
+
+        request.session['log']= getUrl(request.session['file_py_for_redirection'],"")
+        if request.session['log']==0:
+            messages.success(request,"you're request already exist")
+            return redirect('login')
+
+        return redirect("termi")
+        # try:
+        #     add_new_user(request.session['super_user_email'],str(request.session['new_user_password']),str(request.session['new_user_client_secret']),str(request.session['new_user_email']),str(request.session['new_user_client_id']),str(request.session['new_user_tenant_id']))
+        #     messages.success(request,"you're request was send it succesffuly")
+        #     return redirect('login')
+        # except:
+        #     print("mesage didnt go")
+        #     messages.success(request,"You enter invalid email in superuser")
+        #     return redirect('registre_me')
+
         # return redirect('validate')
         
     return render(request,'blog/register.html')

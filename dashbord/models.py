@@ -18,7 +18,7 @@ class Post(models.Model):
             # ('pdf','PDF FILE')
         ],
         default='pdf')
-    at=models.TimeField(auto_now=False,default=datetime.datetime.now())
+    at=models.TimeField(auto_now=False,default=datetime.datetime.now(),null=True)
     every=models.IntegerField(default=2)
     reccurence=models.CharField(
         max_length=19,

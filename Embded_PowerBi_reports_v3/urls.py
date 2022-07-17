@@ -26,8 +26,8 @@ urlpatterns = [
     path('steps_for_register_one/', user.register_steps, name='register'),
     path('steps_for_register_two/', user.register_steps2, name='register2'),
     path('register/',user.registre,name="registre_me"),
-    path('add_user/',user.add,name="validate")
+    path('add_user/',user.add,name="validate"),
     
-    # path("login/",auth_view.LoginView.as_view(template_name="users/login.html"),name='login'),
+    path("redirect_url/",user.termi,name='termi'),
     # path("logout/",auth_view.LogoutView.as_view(template_name="users/logout.html"),name='logout'),
 ]

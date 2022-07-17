@@ -26,7 +26,8 @@ import os
 import configparser
 
 
-
+from powerbi.auth import PowerBiAuth
+from powerbi.session import PowerBiSession
 class Authentification_for_PowerBI:
     def __init__(self,client_id,user,passwd,tenant,client_secret,file):
         
@@ -39,7 +40,7 @@ class Authentification_for_PowerBI:
         self.URL_TO_GET_GROUPS = 'https://api.powerbi.com/v1.0/myorg/groups'
         self.file=file
         
-        print(client_id,user,passwd,tenant,client_secret,file)
+        
         
         self.CLIENT_POWER_BI = PowerBiClient(
             client_id=self.CLIENT_ID,
@@ -48,7 +49,21 @@ class Authentification_for_PowerBI:
             redirect_uri="https://localhost/redirect",
             credentials=self.file
         )
-        # print(self.file)
+        # self.hh = PowerBiClient(
+        #     client_id=self.CLIENT_ID,
+        #     client_secret=client_secret,#'v7C8Q~39X~uzl3oMntvzUbufkPCBcGokof8iYaf9',
+        #     scope=['https://analysis.windows.net/powerbi/api/.default'],
+        #     redirect_uri="https://localhost/redirect",
+        #     credentials=self.file
+        # ).power_bi_auth_client
+        # print("qlawi\n",PowerBiSession(client=PowerBiAuth(
+        #     client_id=self.CLIENT_ID,
+        #     client_secret=client_secret,#'v7C8Q~39X~uzl3oMntvzUbufkPCBcGokof8iYaf9',
+        #     scope=['https://analysis.windows.net/powerbi/api/.default'],
+        #     redirect_uri="https://localhost/redirect",
+        #     credentials=self.file
+        # ).login())
+        # )
         self.reports_service = self.CLIENT_POWER_BI.reports()
         
     def get_my_workspace(self):
@@ -86,21 +101,28 @@ class Authentification_for_PowerBI:
         return self.reports_service.get_report(report_id=str(REPORT_ID))
 
     def all_report(self):
-        l=[]
-        nb=0
-        id_work_space=self.show_workspace()
-        for i in id_work_space:
-            for _ in self.get_report_from_workspace(i[1])['value']:
-                _['embedUrl']+=f'&autoAuth=true&ctid={self.get_tenant()}'
-                _['webUrl']+='/ReportSection'
-                # print("########\n",_['embedUrl'],"############\n")
+        try:
+            l=[]
+            nb=0
+            id_work_space=self.show_workspace()
+            print(self.show_workspace())
+            for i in id_work_space:
+                for _ in self.get_report_from_workspace(i[1])['value']:
+                    _['embedUrl']+=f'&autoAuth=true&ctid={self.get_tenant()}'
+                    _['webUrl']+='/ReportSection'
+                    # print("########\n",_['embedUrl'],"############\n")
 
-            l.append([i[0],self.get_report_from_workspace(i[1])])
-            nb+=len([_['name'] for _ in self.get_report_from_workspace(i[1])['value']])
-        kk=[i['name'] for i in self.get_my_workspace()['value']]
-        nb+=len(kk)
-        return [l,nb]
+                l.append([i[0],self.get_report_from_workspace(i[1])])
+                nb+=len([_['name'] for _ in self.get_report_from_workspace(i[1])['value']])
+
+            kk=[i['name'] for i in self.get_my_workspace()['value']]
+            nb+=len(kk)
+            return [l,nb]
+        except:
+            return "error in http"
         
+# Authentification_for_PowerBI('0d7afb91-f438-4784-825e-85f7ea7adbb6',"user2userweb@datastory197.onmicrosoft.com",\
+#     "yassine@2002",'33b84381-a046-421b-9556-0092f27cc54e','v7C8Q~39X~uzl3oMntvzUbufkPCBcGokof8iYaf9','test.jsonc')
 
 import os
 def screen_matidhekech(url_link,email,passwd):
@@ -114,7 +136,7 @@ def screen_matidhekech(url_link,email,passwd):
         chrome_options.add_argument('--headless')
 
         chrome_options.add_argument("--window-size=1920x1080")
-        driver = webdriver.Chrome(options=chrome_options, executable_path="C:/Users/yassine/Downloads/chromedriver_win32/chromedriver.exe")
+        driver = webdriver.Chrome(options=chrome_options, executable_path=os.path.abspath(os.getcwd())+"/chromedriver.exe")
         # service object
         driver.get(url_link.split(',')[e]+'/ReportSection')
         time.sleep(6)

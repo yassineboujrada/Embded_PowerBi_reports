@@ -15,23 +15,16 @@
         <link rel="stylesheet" href="{% static 'blog/css/jquery.timepicker.css'  %}">
         <link rel="stylesheet" href="{% static 'blog/css/app-light.css' %}" id="lightTheme">
     </head>
-
     
         <body class="vertical  light  ">
             <div class="wrapper">
-        
-        
               <!-------------------------------    NAVBAR SECTION  PART 1 ---------------------------------------------->
-        
               <nav class="topnav navbar navbar-light">
                 <button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar">
                   <i class="fe fe-menu navbar-toggler-icon"></i>
                 </button>
-               
               </nav>
-        
               <!-------------------------------    NAVBAR SECTION  PART 2 ---------------------------------------------->
-        
               <aside class="sidebar-left border-right bg-white shadow" id="leftSidebar" data-simplebar>
                 <a href="#" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
                   <i class="fe fe-x"><span class="sr-only"></span></i>
@@ -54,15 +47,11 @@
                       </a>
                     </li>
                   </ul>
-        
                   <!--   SECOND PART OF DASHBORD  -->
                   <p class="text-muted nav-heading mt-4 mb-1">
                     <span>Workspaces</span>
                   </p>
-        
                   <ul class="navbar-nav flex-fill w-100 mb-2">
-                    
-
                     <li class="nav-item dropdown">
                       <a href="#workspace" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
                         <i class="fe fe-folder fe-16"></i>
@@ -86,7 +75,6 @@
                         {% endfor %}
                         
                       </ul>
-					  
                     </li>
                   </ul>
         
@@ -101,16 +89,12 @@
                         <span class="ml-3 item-text" >New Playlist</span>
                       </a>
                     </li>
-        
                   </ul>
-        
                   <!--   FOURTH PART OF DASHBORD  -->
                   <p class="text-muted nav-heading mt-4 mb-1">
                     <span>Settings</span>
                   </p>
-        
                   <ul class="navbar-nav flex-fill w-100 mb-2">
-        
                     <li class="nav-item dropdown">
                       <a href="#pages" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle nav-link">
                         <i class="fe fe-user fe-16"></i>
@@ -128,7 +112,6 @@
                             <span class="ml-1 item-text">Change password</span>
                           </a>
                         </li>
-                        
                       </ul>
                     </li>
         
@@ -138,7 +121,6 @@
                         <span class="ml-3 item-text">Log out</span>
                       </a>
                     </li>
-        
                   </ul>
         
                   <!--   LAST PART OF DASHBORD  -->
@@ -154,9 +136,7 @@
                       </a>
                     </li>
                   </ul>
-        
                 </nav>
-        
               </aside>
             </div>
         {% block content %}
