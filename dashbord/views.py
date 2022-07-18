@@ -53,8 +53,8 @@ def f(title_of_report,who,form,url,every_what,email):
 
 def minute(title_of_report,who,form,url,every_what,every,email):
     print("minute")
-    # schedule.every(int(every)).minutes.do(f,title_of_report,who,form,url,every_what,email,passwd)
-    schedule.every(5).seconds.do(f,title_of_report,who,form,url,every_what,email)
+    schedule.every(int(every)).minutes.do(f,title_of_report,who,form,url,every_what,email)
+    # schedule.every(5).seconds.do(f,title_of_report,who,form,url,every_what,email)
     while True:
         schedule.run_pending()
         time_.sleep(1)
@@ -102,6 +102,7 @@ def year_(title_of_report,who,form,url,every_what,time,every,email):
 def main2():
     post=Post.objects.all()
     for i in post:
+        print(i)
         title_of_report=i.title
         who=i.delivery
         form=i.format
@@ -110,9 +111,10 @@ def main2():
         every_what=i.reccurence
         url=i.url_of_reports
         email,passwd=i.author.email,i.author.password
-    
-        if every_what == "Minutes":
+        print(every_what)
+        if every_what == "minutes":
             # t1=Thread(target=minute,args=(title_of_report,who,form,url,every_what,every,email,passwd))
+            print("yyaa")
             _thread.start_new_thread(minute,(title_of_report,who,form,url,every_what,every,email))
         
         if every_what == "hour":
@@ -140,8 +142,8 @@ def main2():
             # t6.start()
             _thread.start_new_thread(year_,(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email))
 
-# t = Thread(target=main2)
-# t.start()
+t = Thread(target=main2)
+t.start()
 
 @login_required
 def user_informations(request):

@@ -12672,3 +12672,404 @@ Traceback (most recent call last):
   File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\session.py", line 209, in make_request
     raise requests.HTTPError()
 requests.exceptions.HTTPError
+2022-07-18 11:17:41,941|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:17:42,967|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:17:43,873|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:17:44,826|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:17:45,870|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:17:46,997|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:17:48,030|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:17:48,908|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:17:49,828|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:17:50,748|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:17:51,823|log.py|Not Found: /favicon.ico
+2022-07-18 11:18:30,808|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:18:31,925|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports
+2022-07-18 11:18:32,311|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-07-18 11:18:32,966|log.py|Internal Server Error: /workspace/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 219, in workspace
+    reports=Authentification_for_PowerBI(
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\Power_bi_functions.py", line 95, in get_report_from_workspace
+    report_out=self.reports_service.get_group_reports(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\reports.py", line 72, in get_group_reports
+    content = self.power_bi_session.make_request(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\session.py", line 209, in make_request
+    raise requests.HTTPError()
+requests.exceptions.HTTPError
+2022-07-18 11:18:33,350|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports
+2022-07-18 11:18:34,371|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-07-18 11:18:34,468|log.py|Internal Server Error: /workspace/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 219, in workspace
+    reports=Authentification_for_PowerBI(
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\Power_bi_functions.py", line 95, in get_report_from_workspace
+    report_out=self.reports_service.get_group_reports(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\reports.py", line 72, in get_group_reports
+    content = self.power_bi_session.make_request(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\session.py", line 209, in make_request
+    raise requests.HTTPError()
+requests.exceptions.HTTPError
+2022-07-18 11:18:36,799|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:18:38,308|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:18:38,882|log.py|Internal Server Error: /report/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 292, in report
+    'j':j
+UnboundLocalError: local variable 'j' referenced before assignment
+2022-07-18 11:18:40,553|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:18:41,292|log.py|Internal Server Error: /report/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 292, in report
+    'j':j
+UnboundLocalError: local variable 'j' referenced before assignment
+2022-07-18 11:19:26,370|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:19:27,416|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:19:28,246|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:19:29,205|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:19:29,849|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:19:30,845|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:19:31,873|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:19:32,770|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:19:33,437|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:19:33,807|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:20:10,290|autoreload.py|C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py changed, reloading.
+2022-07-18 11:20:29,032|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:20:29,504|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:20:30,236|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:20:30,587|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:20:31,473|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:20:32,407|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:20:32,681|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:20:32,917|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:20:33,033|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:20:33,335|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:20:33,403|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:20:33,690|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:20:34,044|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:20:34,164|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:20:34,699|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:20:35,874|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:20:36,498|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:20:36,932|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:20:37,790|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:20:38,564|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:23:13,742|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:23:14,072|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:23:15,544|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:23:16,389|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:23:16,963|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:23:17,279|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:23:17,310|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:23:18,158|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:23:19,160|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:23:20,126|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:23:20,213|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:23:20,344|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:23:21,164|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:23:21,343|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:23:21,605|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:23:21,627|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:23:21,989|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:23:22,836|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:23:24,131|log.py|Not Found: /favicon.ico
+2022-07-18 11:23:41,353|session.py|URL: https://api.powerbi.com/v1.0/myorg/capacities
+2022-07-18 11:23:46,853|log.py|Not Found: /user-infos/favicon.ico
+2022-07-18 11:23:47,152|log.py|Not Found: /user-infos/favicon.ico
+2022-07-18 11:23:57,421|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:23:57,790|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:23:58,252|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:23:58,981|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:23:59,900|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:24:00,462|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:24:00,978|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:24:01,746|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:24:02,172|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:24:02,572|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:24:04,423|log.py|Not Found: /favicon.ico
+2022-07-18 11:25:07,623|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:25:11,413|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:25:17,461|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:25:18,110|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:25:18,533|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:25:19,371|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:25:20,095|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:25:20,219|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:25:21,021|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:25:21,603|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:25:22,493|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:25:22,877|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:25:23,673|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:25:24,377|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:26:15,291|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:26:15,849|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:26:16,319|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:26:17,095|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:26:18,035|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:26:19,128|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:26:19,694|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:26:20,110|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:26:21,092|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:26:21,935|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:26:23,648|log.py|Not Found: /favicon.ico
+2022-07-18 11:27:26,215|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:27:26,465|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:27:27,846|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:27:28,005|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:27:28,133|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:27:28,243|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:27:29,482|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:27:29,686|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:29:17,650|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:29:30,078|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:29:30,182|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:29:36,183|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:31:51,689|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:31:52,264|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:32:00,174|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:32:00,381|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:32:00,885|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:32:01,141|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:32:03,764|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:32:04,016|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:33:57,075|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:34:09,297|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:34:14,590|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:34:32,345|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:36:13,248|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:36:13,415|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:36:13,755|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:36:13,896|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:37:26,490|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:37:27,409|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:37:28,372|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:37:29,439|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:37:30,267|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:37:31,491|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:37:32,591|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:37:33,531|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:37:34,012|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:37:34,494|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:37:36,081|log.py|Not Found: /favicon.ico
+2022-07-18 11:37:48,831|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:37:49,213|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:37:50,596|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:37:51,661|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:37:52,772|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:37:53,885|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:37:54,915|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:37:55,795|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:37:56,582|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:37:57,198|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:37:58,640|log.py|Not Found: /favicon.ico
+2022-07-18 11:38:04,633|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:38:05,209|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:38:05,826|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:38:06,322|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:38:07,080|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:38:07,682|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:38:08,393|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:38:09,274|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:38:10,140|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:38:10,591|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:38:12,338|log.py|Not Found: /favicon.ico
+2022-07-18 11:38:48,656|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:38:48,849|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:38:50,491|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:38:50,750|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:38:50,758|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:38:51,119|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:38:55,265|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:38:55,482|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:40:23,628|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:40:23,877|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:40:41,021|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:40:42,215|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:40:46,797|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:40:47,845|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:40:48,763|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:40:49,647|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:40:50,271|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:40:51,333|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:40:52,423|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:40:53,180|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:40:53,969|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:40:54,369|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:40:55,509|log.py|Not Found: /favicon.ico
+2022-07-18 11:40:57,425|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:41:02,966|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:42:33,894|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:42:46,072|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:42:46,513|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:42:47,347|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:42:48,204|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:42:49,212|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:42:50,105|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:42:50,632|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:42:51,415|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:42:52,218|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:42:52,623|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:42:54,112|log.py|Not Found: /favicon.ico
+2022-07-18 11:43:44,703|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:43:44,904|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:43:55,052|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:43:55,280|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:43:57,747|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:43:58,069|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:44:08,413|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:44:08,794|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:44:35,214|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:44:35,661|img2pdf.py|Image contains an alpha channel. Computing a separate soft mask (/SMask) image to store transparency in PDF.
+2022-07-18 11:45:05,321|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:45:06,061|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:45:06,917|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:45:07,815|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:45:08,785|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:45:09,821|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:45:10,362|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:45:11,317|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:45:11,781|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:45:12,568|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:45:14,450|log.py|Not Found: /favicon.ico
+2022-07-18 11:46:37,095|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:46:37,585|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:46:38,056|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:46:38,523|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:46:39,205|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:46:40,323|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:46:41,458|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:46:42,002|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:46:42,507|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:46:43,463|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:47:11,096|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:47:11,940|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:47:12,748|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:47:13,692|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:47:14,302|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:47:14,848|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:47:15,850|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:47:16,743|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:47:17,248|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:47:17,733|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:47:19,038|log.py|Not Found: /favicon.ico
+2022-07-18 11:47:25,980|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:47:26,883|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:47:27,425|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:47:28,008|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:47:28,721|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:47:29,426|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:47:30,151|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:47:30,615|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:47:31,483|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:47:31,937|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:48:17,453|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:48:17,946|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:48:18,432|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:48:18,810|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:48:19,436|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:48:20,078|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:48:20,800|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:48:21,707|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:48:22,153|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:48:22,617|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:48:23,948|log.py|Not Found: /favicon.ico
+2022-07-18 11:50:18,049|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:50:18,917|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:50:19,397|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:50:19,862|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:50:20,905|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:50:22,016|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:50:23,254|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:50:24,134|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:50:25,052|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:50:25,882|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:50:27,464|log.py|Not Found: /favicon.ico
+2022-07-18 11:50:36,302|autoreload.py|C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\Power_bi_functions.py changed, reloading.
+2022-07-18 11:51:05,042|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:51:05,432|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:51:05,808|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:51:06,270|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:51:07,386|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:51:08,332|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:51:09,019|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:51:09,469|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:51:09,928|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:51:10,943|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:51:12,364|log.py|Not Found: /favicon.ico
+2022-07-18 11:51:21,568|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:51:21,934|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:51:22,005|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:51:22,406|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:51:22,485|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:51:22,819|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:51:23,221|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:51:23,667|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:51:23,741|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:51:24,266|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:51:24,308|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:51:24,814|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:51:24,869|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:51:25,330|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:51:25,458|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:51:25,754|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:51:25,851|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:51:26,223|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:51:26,261|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:51:27,014|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:51:27,788|log.py|Not Found: /favicon.ico
+2022-07-18 11:52:01,354|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:52:02,114|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:52:02,920|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-18 11:52:03,584|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:52:04,759|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:52:05,422|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-18 11:52:05,997|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:52:06,400|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:52:06,923|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-18 11:52:07,337|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-18 11:52:08,868|log.py|Not Found: /favicon.ico
+2022-07-18 11:53:40,457|autoreload.py|C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\Power_bi_functions.py changed, reloading.

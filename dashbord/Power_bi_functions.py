@@ -105,7 +105,6 @@ class Authentification_for_PowerBI:
             l=[]
             nb=0
             id_work_space=self.show_workspace()
-            print(self.show_workspace())
             for i in id_work_space:
                 for _ in self.get_report_from_workspace(i[1])['value']:
                     _['embedUrl']+=f'&autoAuth=true&ctid={self.get_tenant()}'
@@ -190,7 +189,7 @@ def screen_matidhekech(url_link,email,passwd):
                                     path_pic=f'{os.path.abspath(os.getcwd())}\\dashbord\\static\\blog\\files\\page{i}{e}.png'
                                     element.screenshot(path_pic)
                                     file.append(path_pic)
-                            kkk.append(file)
+                            return file
 
                         except NoSuchElementException:
                             print('mmmm1')
