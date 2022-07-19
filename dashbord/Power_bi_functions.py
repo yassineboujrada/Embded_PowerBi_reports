@@ -47,7 +47,7 @@ class Authentification_for_PowerBI:
             client_secret=client_secret,#'v7C8Q~39X~uzl3oMntvzUbufkPCBcGokof8iYaf9',
             scope=['https://analysis.windows.net/powerbi/api/.default'],
             redirect_uri="https://localhost/redirect",
-            credentials=self.file
+            credentials=os.getcwd()+self.file
         )
         # self.hh = PowerBiClient(
         #     client_id=self.CLIENT_ID,
@@ -65,7 +65,6 @@ class Authentification_for_PowerBI:
         # ).login())
         # )
         self.reports_service = self.CLIENT_POWER_BI.reports()
-        
     def get_my_workspace(self):
         return self.reports_service.get_reports()
 

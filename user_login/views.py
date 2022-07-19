@@ -133,7 +133,7 @@ def add(request):
 
             with open(os.getcwd()+"\\dashbord\\__pycache__\\configfile.ini", "w") as f:
                 p.write(f)
-                
+
             return redirect("login")
 
     if request.method=='GET':
@@ -179,6 +179,8 @@ def user_login(request):
                 'path_of_json':l.path_of_json
 
             }
+            print(os.getcwd()+request.session['d']['path_of_json'])
+            
             request.session['WORK_DATA']=Authentification_for_PowerBI(
                 client_id=request.session['d']['client_id'],\
                 user=request.session['d']['email'],\
