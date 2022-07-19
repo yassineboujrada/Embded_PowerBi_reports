@@ -14074,3 +14074,297 @@ Traceback (most recent call last):
   File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 294, in report
     'j':j
 UnboundLocalError: local variable 'j' referenced before assignment
+2022-07-19 13:01:28,968|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-19 13:01:31,591|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-19 13:01:32,726|log.py|Internal Server Error: /report/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 295, in report
+    'j':j
+UnboundLocalError: local variable 'j' referenced before assignment
+2022-07-19 13:01:33,742|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-19 13:01:34,913|log.py|Internal Server Error: /report/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 295, in report
+    'j':j
+UnboundLocalError: local variable 'j' referenced before assignment
+2022-07-19 13:02:14,710|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-19 13:02:16,640|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports
+2022-07-19 13:02:17,495|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-07-19 13:02:17,646|log.py|Internal Server Error: /workspace/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 221, in workspace
+    reports=Authentification_for_PowerBI(
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\Power_bi_functions.py", line 94, in get_report_from_workspace
+    report_out=self.reports_service.get_group_reports(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\reports.py", line 72, in get_group_reports
+    content = self.power_bi_session.make_request(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\session.py", line 209, in make_request
+    raise requests.HTTPError()
+requests.exceptions.HTTPError
+2022-07-19 13:02:18,004|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports
+2022-07-19 13:02:18,828|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-07-19 13:02:19,076|log.py|Internal Server Error: /workspace/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 221, in workspace
+    reports=Authentification_for_PowerBI(
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\Power_bi_functions.py", line 94, in get_report_from_workspace
+    report_out=self.reports_service.get_group_reports(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\reports.py", line 72, in get_group_reports
+    content = self.power_bi_session.make_request(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\session.py", line 209, in make_request
+    raise requests.HTTPError()
+requests.exceptions.HTTPError
+2022-07-19 13:07:28,061|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-19 13:07:29,993|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports
+2022-07-19 13:07:30,830|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-07-19 13:07:30,967|log.py|Internal Server Error: /workspace/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 221, in workspace
+    reports=Authentification_for_PowerBI(
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\Power_bi_functions.py", line 94, in get_report_from_workspace
+    report_out=self.reports_service.get_group_reports(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\reports.py", line 72, in get_group_reports
+    content = self.power_bi_session.make_request(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\session.py", line 209, in make_request
+    raise requests.HTTPError()
+requests.exceptions.HTTPError
+2022-07-19 13:07:31,314|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports
+2022-07-19 13:07:32,256|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-07-19 13:07:32,477|log.py|Internal Server Error: /workspace/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 221, in workspace
+    reports=Authentification_for_PowerBI(
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\Power_bi_functions.py", line 94, in get_report_from_workspace
+    report_out=self.reports_service.get_group_reports(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\reports.py", line 72, in get_group_reports
+    content = self.power_bi_session.make_request(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\session.py", line 209, in make_request
+    raise requests.HTTPError()
+requests.exceptions.HTTPError
+2022-07-19 13:07:35,821|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-19 13:07:37,970|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-19 13:07:38,993|log.py|Internal Server Error: /report/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 295, in report
+    'j':j
+UnboundLocalError: local variable 'j' referenced before assignment
+2022-07-19 13:07:41,152|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-19 13:07:42,481|log.py|Internal Server Error: /report/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 295, in report
+    'j':j
+UnboundLocalError: local variable 'j' referenced before assignment
+2022-07-19 13:17:54,032|autoreload.py|C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\Embded_PowerBi_reports_v3\settings.py changed, reloading.
+2022-07-19 13:38:34,517|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-19 13:38:35,423|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-19 13:38:36,361|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-19 13:38:37,271|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-19 13:38:38,321|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-19 13:38:39,418|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-19 13:38:40,476|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-19 13:38:41,315|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-19 13:38:42,245|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-19 13:38:43,156|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-19 13:38:44,782|log.py|Not Found: /favicon.ico
+2022-07-19 13:43:52,472|autoreload.py|C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\user_login\views.py changed, reloading.
+2022-07-19 13:45:07,553|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-19 13:45:08,405|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-19 13:45:09,220|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-19 13:45:09,986|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-19 13:45:10,958|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-19 13:45:11,853|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports
+2022-07-19 13:45:12,780|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-19 13:45:13,890|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-19 13:45:14,694|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/59f25170-0c0b-4b8b-870d-9bbd291aec80/reports
+2022-07-19 13:45:15,482|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-19 13:45:16,491|log.py|Not Found: /favicon.ico
+2022-07-19 13:45:20,197|session.py|URL: https://api.powerbi.com/v1.0/myorg/reports
+2022-07-19 13:45:21,328|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports
+2022-07-19 13:45:21,657|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-07-19 13:45:21,790|log.py|Internal Server Error: /workspace/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 221, in workspace
+    reports=Authentification_for_PowerBI(
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\Power_bi_functions.py", line 94, in get_report_from_workspace
+    report_out=self.reports_service.get_group_reports(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\reports.py", line 72, in get_group_reports
+    content = self.power_bi_session.make_request(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\session.py", line 209, in make_request
+    raise requests.HTTPError()
+requests.exceptions.HTTPError
+2022-07-19 13:45:22,157|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports
+2022-07-19 13:45:22,941|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-19 13:45:22,971|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-07-19 13:45:23,208|log.py|Internal Server Error: /workspace/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 221, in workspace
+    reports=Authentification_for_PowerBI(
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\Power_bi_functions.py", line 94, in get_report_from_workspace
+    report_out=self.reports_service.get_group_reports(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\reports.py", line 72, in get_group_reports
+    content = self.power_bi_session.make_request(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\session.py", line 209, in make_request
+    raise requests.HTTPError()
+requests.exceptions.HTTPError
+2022-07-19 13:45:24,208|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports
+2022-07-19 13:45:24,655|session.py|{
+    "error_code": 401,
+    "response_url": "https://api.powerbi.com/v1.0/myorg/groups/favicon.ico/reports",
+    "response_body": "",
+    "response_request": {
+        "Authorization": "Bearer XXXXXXX",
+        "Content-Type": "application/json",
+        "Content-Length": "2"
+    },
+    "response_method": "GET"
+}
+2022-07-19 13:45:24,758|log.py|Internal Server Error: /workspace/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 221, in workspace
+    reports=Authentification_for_PowerBI(
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\Power_bi_functions.py", line 94, in get_report_from_workspace
+    report_out=self.reports_service.get_group_reports(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\reports.py", line 72, in get_group_reports
+    content = self.power_bi_session.make_request(
+  File "C:\Users\yassine\anaconda3\lib\site-packages\powerbi\session.py", line 209, in make_request
+    raise requests.HTTPError()
+requests.exceptions.HTTPError
+2022-07-19 13:45:24,924|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-19 13:45:26,966|session.py|URL: https://api.powerbi.com/v1.0/myorg/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports
+2022-07-19 13:45:27,559|log.py|Internal Server Error: /report/favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\yassine\anaconda3\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\yassine\Documents\last-projects\Embded_PowerBi_reports\dashbord\views.py", line 295, in report
+    'j':j
+UnboundLocalError: local variable 'j' referenced before assignment

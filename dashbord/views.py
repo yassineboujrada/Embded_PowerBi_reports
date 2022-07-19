@@ -250,6 +250,7 @@ def pass_change(request):
 def report(request,report):
     work_space=request.session['cuurent_space']
     report_id=report
+    print(request.session['d']['path_of_json'])
     if work_space == 'me':
         j=Authentification_for_PowerBI(
                 client_id=request.session['d']['client_id'],\

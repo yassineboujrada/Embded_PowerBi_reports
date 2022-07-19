@@ -47,7 +47,7 @@ class Authentification_for_PowerBI:
             client_secret=client_secret,#'v7C8Q~39X~uzl3oMntvzUbufkPCBcGokof8iYaf9',
             scope=['https://analysis.windows.net/powerbi/api/.default'],
             redirect_uri="https://localhost/redirect",
-            credentials=os.getcwd()+self.file
+            credentials=self.file
         )
         # self.hh = PowerBiClient(
         #     client_id=self.CLIENT_ID,

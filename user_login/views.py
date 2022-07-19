@@ -176,10 +176,10 @@ def user_login(request):
                 'client_id':l.client_id,
                 'client_secret':l.client_secret,
                 'teneant_id':l.teneant_id,
-                'path_of_json':l.path_of_json
+                'path_of_json':os.getcwd()+l.path_of_json
 
             }
-            print(os.getcwd()+request.session['d']['path_of_json'])
+            print((request.session['d']['path_of_json']))
             
             request.session['WORK_DATA']=Authentification_for_PowerBI(
                 client_id=request.session['d']['client_id'],\
