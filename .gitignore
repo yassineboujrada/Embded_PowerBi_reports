@@ -3,6 +3,8 @@
 logs
 *.log
 logs/log_file_custom.log
+*.pot
+*.pyc
 
 # Backup files # 
 *.bak 
