@@ -142,8 +142,8 @@ def main2():
             # t6.start()
             _thread.start_new_thread(year_,(title_of_report,who,form,url,every_what,time.strftime("%H:%M"),every,email))
 
-t = Thread(target=main2)
-t.start()
+# t = Thread(target=main2)
+# t.start()
 
 @login_required
 def user_informations(request):
@@ -311,6 +311,13 @@ def report(request,report):
 
 @login_required
 def select_report(request):
+    print(Authentification_for_PowerBI(
+                client_id=request.session['d']['client_id'],\
+                user=request.session['d']['email'],\
+                passwd=request.session['d']['password_accoount'],\
+                tenant=request.session['d']['teneant_id'],\
+                client_secret=request.session['d']['client_secret'],\
+                file=request.session['d']['path_of_json']).get_tenant())
     try:
         request.session['d']
         d=request.session['WORK_DATA']
@@ -337,6 +344,13 @@ def select_report(request):
                 tenant=request.session['d']['teneant_id'],\
                 client_secret=request.session['d']['client_secret'],\
                 file=request.session['d']['path_of_json']).all_report()[0],
+        'tenant':Authentification_for_PowerBI(
+                client_id=request.session['d']['client_id'],\
+                user=request.session['d']['email'],\
+                passwd=request.session['d']['password_accoount'],\
+                tenant=request.session['d']['teneant_id'],\
+                client_secret=request.session['d']['client_secret'],\
+                file=request.session['d']['path_of_json']).get_tenant(),
     })
 
 ALLOWED_EMAIL_EXTENSIONS = set(['com', 'ma'])

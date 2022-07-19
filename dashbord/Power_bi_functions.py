@@ -118,7 +118,7 @@ class Authentification_for_PowerBI:
             nb+=len(kk)
             return [l,nb]
         except:
-            return "error in http"
+            return self.show_workspace()
         
 # Authentification_for_PowerBI('0d7afb91-f438-4784-825e-85f7ea7adbb6',"user2userweb@datastory197.onmicrosoft.com",\
 #     "yassine@2002",'33b84381-a046-421b-9556-0092f27cc54e','v7C8Q~39X~uzl3oMntvzUbufkPCBcGokof8iYaf9','test.jsonc')

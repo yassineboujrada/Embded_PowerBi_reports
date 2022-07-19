@@ -8,7 +8,7 @@
 <div role="main" class="main-content" style="width: 85vw;">
     <legend class="border-bottom mb-4">Select Reports To Share</legend>
     <div id="form_content">
-        
+        <div style="width: 0%; height:0%; opacity:0;" id="tenant">{{tenant}}</div>
             <br>
             <div class="select_dash">
                 <div class="form-row" style=" width: 24%; height: 70vh;">
@@ -104,12 +104,11 @@
 
             
             if (my_src[0]==="check_area") {
-                
                 document.getElementById(my_src[1]).style.background="red"
 
                 var url_web=String(my_src[5]).split("'webUrl':")[1].trim().split("'")[1]
                 var name_report=my_src[4].split("'name':")[1].trim().split("'")[1]
-                var embd_url=String(my_src[6]).split("'embedUrl':")[1].trim().split("'")[1]+"&autoAuth=true&ctid=a23b80fb-03cf-48e7-b7ea-4a9094cff16c"
+                var embd_url=String(my_src[6]).split("'embedUrl':")[1].trim().split("'")[1]+"&autoAuth=true&ctid="+document.getElementById("tenant").innerHTML
 
                 document.querySelector('iframe').src = String(embd_url);
 

@@ -109,11 +109,17 @@ def add(request):
         if request.POST.get('add','')=="add":
             print(request.user)
             # User(user)
-            user = User.objects.create_user(username=request.session['cc'], email=request.session['email'], password=request.session['passwd'])
-            user.save()
-            print(user)
-            micro_new=microsoft_account(email_account=request.session['email'],password_accoount=request.session['passwd'],client_id=request.session['cle_id'],client_secret=request.session['cle_secret'],teneant_id=request.session['ten'],path_of_json=os.getcwd()+"\\dashbord\\__pycache__\\"+request.session['cc']+".jsonc",author_account=user)
-            micro_new.save()
+            try:
+                user = User.objects.create_user(username=request.session['cc'], email=request.session['email'], password=request.session['passwd'])
+                user.save()
+                print(user)
+                micro_new=microsoft_account(email_account=request.session['email'],password_accoount=request.session['passwd'],client_id=request.session['cle_id'],client_secret=request.session['cle_secret'],teneant_id=request.session['ten'],path_of_json=os.getcwd()+"\\dashbord\\__pycache__\\"+request.session['cc']+".jsonc",author_account=user)
+                micro_new.save()
+            except:
+                messages.success("this user is in database")
+                return redirect("validate")
+
+            return redirect("login")
         else:
             p = configparser.ConfigParser()
             with open(os.getcwd()+"\\dashbord\\__pycache__\\configfile.ini", "r") as f:
@@ -127,12 +133,12 @@ def add(request):
 
             with open(os.getcwd()+"\\dashbord\\__pycache__\\configfile.ini", "w") as f:
                 p.write(f)
+                
+            return redirect("login")
 
     if request.method=='GET':
         try:
             request.session['cc']=request.GET.get('q1','')
-            # request.session['password']=request.GET.get('q1','')
-            # request.session['client_secret']=request.GET.get('q2','')
             print("mmdmmd",request.session['cc'])
             config_obj = configparser.ConfigParser()
             config_obj.read(os.getcwd()+"\\dashbord\\__pycache__\\configfile.ini")
