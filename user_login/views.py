@@ -165,7 +165,6 @@ def user_login(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         user = authenticate(request, username=username, password=password)
-        # print(user)
         
         if user is not None:
             login(request,user)
@@ -177,9 +176,9 @@ def user_login(request):
                 'client_secret':l.client_secret,
                 'teneant_id':l.teneant_id,
                 'path_of_json':os.getcwd()+l.path_of_json
-
             }
-            print((request.session['d']['path_of_json']))
+            
+            print(request.session['d']['path_of_json'])
             
             request.session['WORK_DATA']=Authentification_for_PowerBI(
                 client_id=request.session['d']['client_id'],\
