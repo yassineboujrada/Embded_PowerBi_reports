@@ -5,6 +5,7 @@ logs
 logs/log_file_custom.log
 *.pot
 *.pyc
+__pycache__
 
 # Backup files # 
 *.bak 
