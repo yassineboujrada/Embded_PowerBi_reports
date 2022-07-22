@@ -1,24 +1,19 @@
 
     <style>
         body{
-            background: #373B44;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+            background: #373B44;  
+            background: -webkit-linear-gradient(to right, #4286f4, #373B44);  
+            background: linear-gradient(to right, #4286f4, #373B44); 
         }
         .conponenet{
-          /* border: solid black; */
           height: 90vh;
           display: flex;
           align-items: center;
           justify-content: flex-start;
-          /* padding-top: 9%; */
           padding-left: 13%;
         }
         .description{
-            /* border: solid black; */
           height: 55%;
-          /* width: 30%; */
           color: aliceblue;
           font-size: 30px;
           font-family: 'Big Caslon';
@@ -26,21 +21,17 @@
           text-shadow: 1px 1px 2px black;
         }
         .btn_onbored{
-          border-radius: 10px;
-          height: 7vh;
-          width: 10vw;
-          background: #FF416C;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-          color: aliceblue;
-          font-size: 15px;
-          border: none;
+            border-radius: 10px;
+            height: 7vh;
+            width: 10vw;
+            background: #FF416C; 
+            background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  
+            background: linear-gradient(to right, #FF4B2B, #FF416C);
+            color: aliceblue;
+            font-size: 15px;
+            border: none;
         }
         .btn_div{
-            /* border: solid black; */
-          /* width: 30%; */
           display: flex;
           align-items: center;
           justify-content: flex-start;
@@ -63,15 +54,17 @@ background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, F
         <div class="other">
             <div class="description">
                 After finishing setting up a dev environment, now we open this link to the app registrations of the azure portal follow next video
-            </div>
+
+                you need add this link in azure : <span style="color:#FF416C;">https://localhost/redirect</span>
+            </div><br>
             <div class="btn_div">
             <button class="btn_onbored">click me</button>
             </div>
         </div>
         <div class="tuto">
             <video width="729"height="480" controls>
-                <source src="{% static 'blog/logos/app_tutoriol.mp4' %}" type="video/mp4">
-                <source src="{% static 'blog/logos/app_tutoriol.ogg' %}" type="video/ogg">
+                <source src="{% static 'blog/logos/app_tutoriel.mp4' %}" type="video/mp4">
+                <!-- <source src="{% static 'blog/logos/app_tutoriol.ogg' %}" type="video/ogg"> -->
                 Your browser does not support HTML video.
             </video>
         </div>

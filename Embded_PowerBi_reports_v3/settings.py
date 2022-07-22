@@ -25,7 +25,16 @@ SECRET_KEY = 'django-insecure-q3wyz1-nigwba)15*j@nz*0@tipaq#mpr+y(1+08rvb50_r3r&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','sampledatastorywebdomain.com']
+# ALLOWED_HOSTS = ['127.0.0.1','sampledatastorywebdomain.com']
+ALLOWED_HOSTS=["flag-garmin-skiing-packs.trycloudflare.com","127.0.0.1","localhost"] 
+  
+CORS_ALLOW_CREDENTIALS = True 
+
+CORS_ORIGIN_ALLOW_ALL = True 
+
+CORS_ALLOW_CREDENTIALS = True 
+
+CSRF_TRUSTED_ORIGINS = ["https://flag-garmin-skiing-packs.trycloudflare.com"]
 
 
 # Application definition

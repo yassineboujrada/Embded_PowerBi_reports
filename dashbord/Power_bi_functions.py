@@ -5,19 +5,10 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 import time 
-# from fpdf import FPDF
-# from PIL import Image
-# import glob
-
 import msal
 import requests
-# import json
-from pprint import pprint
 from powerbi.client import PowerBiClient
-# from powerbi.enums import ExportFileFormats
-# from scrapingbee import ScrapingBeeClient
 import img2pdf
-import schedule
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
@@ -26,44 +17,25 @@ import os
 import configparser
 
 
-from powerbi.auth import PowerBiAuth
-from powerbi.session import PowerBiSession
 class Authentification_for_PowerBI:
     def __init__(self,client_id,user,passwd,tenant,client_secret,file):
-        
-        self.CLIENT_ID=client_id #'0d7afb91-f438-4784-825e-85f7ea7adbb6'
-        self.username=user#"user2userweb@datastory197.onmicrosoft.com"
-        self.password=passwd#"yassine@2002"
-        self.TENANT_ID=tenant#'33b84381-a046-421b-9556-0092f27cc54e'
+        self.CLIENT_ID=client_id
+        self.username=user
+        self.password=passwd
+        self.TENANT_ID=tenant
         self.AUTHORITY_URL = 'https://login.microsoftonline.com/'+self.TENANT_ID
         self.SCOPE = ["https://analysis.windows.net/powerbi/api/.default"]
         self.URL_TO_GET_GROUPS = 'https://api.powerbi.com/v1.0/myorg/groups'
         self.file=file
         
-        
-        
         self.CLIENT_POWER_BI = PowerBiClient(
             client_id=self.CLIENT_ID,
-            client_secret=client_secret,#'v7C8Q~39X~uzl3oMntvzUbufkPCBcGokof8iYaf9',
+            client_secret=client_secret,
             scope=['https://analysis.windows.net/powerbi/api/.default'],
             redirect_uri="https://localhost/redirect",
             credentials=self.file
         )
-        # self.hh = PowerBiClient(
-        #     client_id=self.CLIENT_ID,
-        #     client_secret=client_secret,#'v7C8Q~39X~uzl3oMntvzUbufkPCBcGokof8iYaf9',
-        #     scope=['https://analysis.windows.net/powerbi/api/.default'],
-        #     redirect_uri="https://localhost/redirect",
-        #     credentials=self.file
-        # ).power_bi_auth_client
-        # print("qlawi\n",PowerBiSession(client=PowerBiAuth(
-        #     client_id=self.CLIENT_ID,
-        #     client_secret=client_secret,#'v7C8Q~39X~uzl3oMntvzUbufkPCBcGokof8iYaf9',
-        #     scope=['https://analysis.windows.net/powerbi/api/.default'],
-        #     redirect_uri="https://localhost/redirect",
-        #     credentials=self.file
-        # ).login())
-        # )
+
         self.reports_service = self.CLIENT_POWER_BI.reports()
     def get_my_workspace(self):
         return self.reports_service.get_reports()
@@ -80,8 +52,7 @@ class Authentification_for_PowerBI:
             api_out = requests.get(url=self.URL_TO_GET_GROUPS, headers=header)
             return api_out.json()
         else:
-            print(result.get("error"))
-            print(result.get("error_description"))
+            return result.get("error")
 
     def show_workspace(self):
         work_space=[]
@@ -105,26 +76,16 @@ class Authentification_for_PowerBI:
             nb=0
             id_work_space=self.show_workspace()
             for i in id_work_space:
-                for _ in self.get_report_from_workspace(i[1])['value']:
-                    _['embedUrl']+=f'&autoAuth=true&ctid={self.get_tenant()}'
-                    _['webUrl']+='/ReportSection'
-                    # print("########\n",_['embedUrl'],"############\n")
-
                 l.append([i[0],self.get_report_from_workspace(i[1])])
                 nb+=len([_['name'] for _ in self.get_report_from_workspace(i[1])['value']])
 
-            kk=[i['name'] for i in self.get_my_workspace()['value']]
-            nb+=len(kk)
+            nb+=len([i['name'] for i in self.get_my_workspace()['value']])
             return [l,nb]
         except:
             return self.show_workspace()
-        
-# Authentification_for_PowerBI('0d7afb91-f438-4784-825e-85f7ea7adbb6',"user2userweb@datastory197.onmicrosoft.com",\
-#     "yassine@2002",'33b84381-a046-421b-9556-0092f27cc54e','v7C8Q~39X~uzl3oMntvzUbufkPCBcGokof8iYaf9','test.jsonc')
 
 import os
 def screen_matidhekech(url_link,email,passwd):
-    # for e in url_link.split(','):
     kkk=[]
     for e in range(len(url_link.split(','))):
         url_link.split(',')[e]+='/ReportSection'
@@ -140,7 +101,6 @@ def screen_matidhekech(url_link,email,passwd):
         time.sleep(6)
         driver.find_element_by_id('email').send_keys(email)
         driver.find_element_by_id('submitBtn').click()
-
         l=WebDriverWait(driver=driver, timeout=10).until(
             lambda x: x.execute_script("return document.readyState === 'complete'")
         )
@@ -155,7 +115,6 @@ def screen_matidhekech(url_link,email,passwd):
             except:
                 time.sleep(9)
                 driver.find_element_by_name('passwd').send_keys(passwd)
-                # driver.find_element_by_tag_name('input').send_keys("yassine@2002")
                 driver.find_element_by_id('idSIButton9').click()
                 g=WebDriverWait(driver=driver, timeout=12).until(
                     lambda x: x.execute_script("return document.readyState === 'complete'")
@@ -167,14 +126,12 @@ def screen_matidhekech(url_link,email,passwd):
                     lambda x: x.execute_script("return document.readyState === 'complete'")
                 )
                 if h:
-                    print('mmmm')
                     time.sleep(8)
                     file=[]
                     try:
                         element = driver.find_element_by_class_name("displayAreaViewport")
                         try:
                             pages_data=driver.find_element_by_tag_name('mat-list')
-                            print('oh yeah')
                             items = pages_data.find_elements_by_tag_name("li")
                             i=0
                             for item in items:
@@ -191,19 +148,14 @@ def screen_matidhekech(url_link,email,passwd):
                             return file
 
                         except NoSuchElementException:
-                            print('mmmm1')
                             path_pic=f'{os.path.abspath(os.getcwd())}\\dashbord\\static\\blog\\files\\page{0}{e}.png'
                             element.screenshot(path_pic)
-                            # return path_pic
                             kkk.append(path_pic)
-
+                            
                     except NoSuchElementException:
-                        print('ina lilah')
+                        return
     driver.close()
     return kkk
-
-# l=screen_matidhekech("https://app.powerbi.com/groups/3e2cfcff-1fc4-4412-af6d-838fe7707cf6/reports/20d3b902-6605-4c1a-bcbf-fd5895e69afe,https://app.powerbi.com/groups/d72eff1f-51d2-4e98-b093-fddce847145d/reports/a44c6993-6b4d-44d2-b983-d7effe82705a","yassineboujrada@datastory453.onmicrosoft.com","yassine@2002")
-# print(l)
 
 from pptx import Presentation
 
@@ -226,51 +178,33 @@ def transform_file_to_pdf(name_folder,pict_list,format):
         p.save(ppt_name_path)
         return ppt_name_path
 
-
-# transform_file_to_pdf("multiple things","gg","pptx")
 ############################################################  envoyer pbi report ou pdf a une email 
 def send_pdf_file(recieve,subject,path,mesg):
     k=recieve.split(",")
-    print(path)
-    if mesg=="":
-        mesg="Power BI report"
-
+    
     for i in k:
-        print("1",i)
         body = f'{mesg},\npiece jointe:'
         sender,password = 'centre.declaration@gmail.com','rcrtbuvmjyxkofcj'
-        
         message = MIMEMultipart()
         message['From'] = sender
         message['To'] = i
         message['Subject'] = subject
         message.attach(MIMEText(body, 'plain'))
         pdfname=path
-
         binary_pdf = open(pdfname, 'rb')
-
         payload = MIMEBase('application', 'octate-stream', Name=pdfname)
         payload.set_payload((binary_pdf).read())
-
         encoders.encode_base64(payload)
-
         payload.add_header('Content-Decomposition', 'attachment', filename=pdfname)
-        message.attach(payload)
-        
+        message.attach(payload)        
         session = smtplib.SMTP('smtp.gmail.com', 587)
-
         session.starttls()
-
         session.login(sender, password)
-
         text = message.as_string()
         session.sendmail(sender, i, text)
-        session.quit()
-        print('Mail Sent')
-    
+        session.quit()    
     return True
 
-# send_pdf_file("yassine.boujrada@gmail.com","mmm",os.path.abspath(os.getcwd())+"/static/blog/files/test.pptx","hahowa")
 
 def verif_msg(randnbr,email):
     server = smtplib.SMTP("smtp.gmail.com",587)

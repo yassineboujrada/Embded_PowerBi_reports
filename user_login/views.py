@@ -113,7 +113,7 @@ def add(request):
                 user = User.objects.create_user(username=request.session['cc'], email=request.session['email'], password=request.session['passwd'])
                 user.save()
                 print(user)
-                micro_new=microsoft_account(email_account=request.session['email'],password_accoount=request.session['passwd'],client_id=request.session['cle_id'],client_secret=request.session['cle_secret'],teneant_id=request.session['ten'],path_of_json=os.getcwd()+"\\dashbord\\__pycache__\\"+request.session['cc']+".jsonc",author_account=user)
+                micro_new=microsoft_account(email_account=request.session['email'],password_accoount=request.session['passwd'],client_id=request.session['cle_id'],client_secret=request.session['cle_secret'],teneant_id=request.session['ten'],path_of_json="\\dashbord\\__pycache__\\"+request.session['cc']+".jsonc",author_account=user)
                 micro_new.save()
             except:
                 messages.success("this user is in database")
@@ -177,7 +177,7 @@ def user_login(request):
                 'teneant_id':l.teneant_id,
                 'path_of_json':os.getcwd()+l.path_of_json
             }
-            
+
             print(request.session['d']['path_of_json'])
             
             request.session['WORK_DATA']=Authentification_for_PowerBI(
